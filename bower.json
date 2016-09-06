@@ -1,0 +1,26 @@
+{
+  "name": "rhi-core-isncsci-algorithm",
+  "homepage": "https://github.com/EddieMachete/rhi-core-isncsci-algorithm",
+  "authors": [
+    "Eduardo <eduardo.er@gmail.com>"
+  ],
+  "description": "JavaScript version of the ISNCSCI algorithm using Google Polymer as framework.",
+  "main": "em-core-isncsci-algorithm.html",
+  "keywords": [
+    "isncsci",
+    "algorithm",
+    "asia",
+    "impairment",
+    "scale",
+    "polymer",
+    "javascript"
+  ],
+  "license": "Custom",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="isncsci-tests.js"></script>
+    <script src="../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <script src="../../bower_components/web-component-tester/browser.js"></script>
+    <link rel="import" href="../rhi-core-isncsci-algorithm.html">
+</head>
+<body>
+    <rhi-core-isncsci-algorithm id="isncsciAlgorithm"></rhi-core-isncsci-algorithm>
+    <script>
+        /* global assert */
+        /* global rhiIsncsciValidationTests */
+        // Loaded from isncsci-tests.js to keep this file clean.
+        
+        suite('<rhi-core-isncsci-algorithm>', function() {
+            var isncsciAlgorithm = document.getElementById('isncsciAlgorithm');
+            
+            test('Can calculate the totals for test at [index]', function() {
+                // Arrange
+                var test = {};
+                var expectedTotals = rhiIsncsciValidationTests.revisionsToTheLogic[0].totals;
+                
+                // Act
+                var totals = isncsciAlgorithm.getTotalsFor(test);
+                
+                // Assert
+                // chai has the asserts
+                assert.equal(expectedTotals.asiaImpairmentScale, totals.getAsiaImpairmentScaleValues());
+                //assert.equal(document.getElementById('isncsciAlgorithm').blockCount, 3);
+            });
+        });
+    </script>
+</body>
+</html>
