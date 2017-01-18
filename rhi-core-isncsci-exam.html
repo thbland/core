@@ -1,0 +1,331 @@
+<!--
+@license
+Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
+This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/
+Author: Eduardo Echeverria (@eddiemachete)
+-->
+<link rel='import' href='../../bower_components/polymer/polymer.html'/>
+<link rel='import' href='rhi-core-isncsci-binary-observation.html'/>
+<link rel='import' href='rhi-core-isncsci-level.html'/>
+<script>
+    /* global Polymer */
+    'use strict';
+    (function() {
+        /***********************************************/
+        /* ***** Private, static properties ********** */
+        /***********************************************/
+        var _c = 'rhi-core-isncsci-exam';
+        var _ntRegex = /\bNT\b/i;
+        var _nonSciImpairmentRegex = /.+[!]/g;
+        var _nonSciImpairmentFlagsRegex = /[\\*!]/g;
+        var _normalMotorValue = 5;
+        var _normalSensoryValue = 2;
+        
+        /***********************************************/
+        /* ***** Private, static methods ************* */
+        /***********************************************/
+        function _getIsncsciExamLevels() {
+            var levels = {};
+            var c1 = /** @type {!RhiCoreIsncsciLevel} */ (document.createElement('rhi-core-isncsci-level'));
+            c1.name = 'C1';
+            c1.previous = null;
+            c1.setValues(0, false, false,
+                '2', 2, false, '2', 2, false,
+                '2', 2, false, '2', 2, false,
+                '5', 5, false, '5', 5, false);
+          
+            levels['C1'] = c1;
+          
+            var previousLevel = c1;
+            var levelNames = ['C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8',
+                              'T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10', 'T11', 'T12',
+                              'L1', 'L2', 'L3', 'L4', 'L5', 'S1', 'S2', 'S3', 'S4_5'];
+            
+            var keyMuscles = {'C5':true, 'C6':true, 'C7':true, 'C8':true, 'T1':true,
+                              'L2':true, 'L3':true, 'L4':true, 'L5':true, 'S1':true};
+          
+            for (var i = 0; i < levelNames.length; i++) {
+                var name = levelNames[i];
+          
+                var currentLevel = /** @type {!RhiCoreIsncsciLevel} */ (document.createElement('rhi-core-isncsci-level'));
+                currentLevel.isKeyMuscle = keyMuscles[name] == true;
+                currentLevel.isLowerMuscle = (i >= 20 && i <= 24);
+                currentLevel.name = name;
+                currentLevel.ordinal = i + 1;
+                currentLevel.previous = previousLevel;
+                
+                previousLevel.next = currentLevel;
+                previousLevel = currentLevel;
+                levels[name] = currentLevel;
+            }
+          
+            return levels;
+        }
+        
+        /**
+        * Provides the numeric value appropriate for an entry.
+        * It takes into consideration specific elements like asteriks, exclamation signs, or the use of NT.
+        *
+        * @param {String} text (required) The text with the raw entry.
+        * @param {Number} normalValue (required) The numeric value considered 'normal' for that type of neurological level.
+        * @return {Number} The numeric value for a neurology level entry.
+        */
+        function _getDermatomeValue(text, normalValue)
+        {
+            if (typeof text !== 'string' || typeof normalValue !== 'number')
+                throw new Error(_c + ' : _getDermatomeValue : '
+                                + 'Invalid arguments passed. Expected text:String, normalValue:Number');
+                
+            if (text.toUpperCase() == 'NT*')
+                return normalValue;
+        
+            var value = parseInt(text.replace(_nonSciImpairmentFlagsRegex, ''));
+            
+            return isNaN(value) ? 0 : value;
+        }
+        
+        /**
+        * Sets the right names and numeric values for the specified neurology level based on the text based entries provided.
+        *
+        * @param {RhiCoreIsncsciLevel} level (required) The neurological level to be updated.
+        * @param {String} rightTouchName (required)
+        * @param {String} leftTouchName (required)
+        * @param {String} rightPrickName (required)
+        * @param {String} leftPrickName (required)
+        * @param {String} rightMotorName (required)
+        * @param {String} leftMotorName (required)
+        */
+        function _updateLevel(level, rightTouchName, leftTouchName,
+            rightPrickName, leftPrickName, rightMotorName, leftMotorName) {
+            if (!level
+                    || typeof rightTouchName !== 'string' || typeof leftTouchName !== 'string'
+                    || typeof rightPrickName !== 'string' || typeof leftPrickName !== 'string'
+                    || typeof rightMotorName !== 'string' || typeof leftMotorName !== 'string')
+                throw new Error(_c + ' : _updateLevel : '
+                                + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel, rightTouchName:String, leftTouchName:String, rightPrickName:String, leftPrickName:String, rightMotorName:String, leftMotorName:String');
+            
+            // Right Touch
+            level.rightTouchName = rightTouchName;
+            level.rightTouchValue = _getDermatomeValue(rightTouchName, _normalSensoryValue);
+            level.rightTouchImpairmentNotDueToSci = _nonSciImpairmentRegex.test(rightTouchName);
+        
+            // Left Touch
+            level.leftTouchName = leftTouchName;
+            level.leftTouchValue = _getDermatomeValue(leftTouchName, _normalSensoryValue);
+            level.leftTouchImpairmentNotDueToSci = _nonSciImpairmentRegex.test(leftTouchName);
+        
+            // Right Prick
+            level.rightPrickName = rightPrickName;
+            level.rightPrickValue = _getDermatomeValue(rightPrickName, _normalSensoryValue);
+            level.rightPrickImpairmentNotDueToSci = _nonSciImpairmentRegex.test(rightPrickName);
+        
+            // Left Prick
+            level.leftPrickName = leftPrickName;
+            level.leftPrickValue = _getDermatomeValue(leftPrickName, _normalSensoryValue);
+            level.leftPrickImpairmentNotDueToSci = _nonSciImpairmentRegex.test(leftPrickName);
+        
+            // Right Motor
+            level.RightMotorName = rightMotorName;
+            level.RightMotorValue = _getDermatomeValue(rightMotorName, _normalMotorValue);
+            level.RightMotorImpairmentNotDueToSci = _nonSciImpairmentRegex.test(rightMotorName);
+        
+            // Left Motor
+            level.LeftMotorName = leftMotorName;
+            level.LeftMotorValue = _getDermatomeValue(leftMotorName, _normalMotorValue);
+            level.LeftMotorImpairmentNotDueToSci = _nonSciImpairmentRegex.test(leftMotorName);
+        
+            if (level.isKeyMuscle)
+                return;
+                
+            if ((level.rightTouchValue == 2 || level.rightTouchImpairmentNotDueToSci)
+                && (level.rightPrickValue == 2 || level.rightPrickImpairmentNotDueToSci)) {
+                level.rightMotorName = '5';
+                level.rightMotorValue = 5;
+            } else {
+                level.rightMotorName = (_ntRegex.test(level.rightTouchName) || level.rightTouchValue == 2)
+                                        && (_ntRegex.test(level.rightPrickName) || level.rightPrickValue == 2) ? 'NT' : '0';
+                level.rightMotorValue = 0;
+            }
+        
+            if ((level.leftTouchValue == 2 || level.leftTouchImpairmentNotDueToSci)
+                && (level.leftPrickValue == 2 || level.leftPrickImpairmentNotDueToSci)) {
+                level.leftMotorName = '5';
+                level.leftMotorValue = 5;
+            } else {
+                level.leftMotorName = (_ntRegex.test(level.leftTouchName) || level.leftTouchValue == 2)
+                                        && (_ntRegex.test(level.leftPrickName) || level.leftPrickValue == 2) ? 'NT' : '0';
+                level.leftMotorValue = 0;
+            }
+        }
+        
+        /***********************************************/
+        /* ***** Web component declaration *********** */
+        /***********************************************/
+        
+        /**
+        * 'rhi-core-isncsci-exam' contains the raw values from a ISNCSCI Examination.
+        * Instances of this class can be passed to the Algorithm methods to obtain totals.
+        * @demo demo/index.html
+        */
+        Polymer({
+            is: 'rhi-core-isncsci-exam',
+            hostAttributes: {
+                hidden: true
+            },
+            properties: {
+                // NeurologyFormLevel C1 { get; protected set; }
+                _analContraction: {
+                    type: /** @type {!RhiCoreBinaryObservation} */ Number,
+                    value: null
+                },
+                _analSensation: {
+                    type: /** @type {!RhiCoreBinaryObservation} */ Number,
+                    value: null
+                },
+                _rightLowestNonKeyMuscleWithMotorFunction: {
+                    type: /** @type {!RhiCoreIsncsciLevel} */ Object,
+                    value: null
+                },
+                _leftLowestNonKeyMuscleWithMotorFunction: {
+                    type: /** @type {!RhiCoreIsncsciLevel} */ Object,
+                    value: null
+                }
+            },
+            created: function() {
+                this._levels = _getIsncsciExamLevels();
+            },
+            // There is also created which fires earlier
+            //ready: function() { },
+            /**
+            * Use this method to find neurological level in the exam based on a level name.  E.g. C2,C3,C4...S1,S2,S3,S4_5
+            *
+            * @param {String} levelName The level name being searched.
+            * @return {RhiCoreIsncsciLevel} The neurology level that matches the specified level name.
+            */
+            getLevelWithName: function(levelName) {
+                return this._levels[levelName.toLocaleUpperCase()];
+            },
+            /**
+            * Use this method to find neurological level in the exam based on its ordinal position.
+            *
+            * @param {Number} ordinal The ordinal position at which we are trying to find a neurological level.
+            * The valid values are those between 1 and 28.
+            * @return {RhiCoreIsncsciLevel} The neurology level that matches the specified ordinal position.
+            */
+            getLevelAt: function(ordinal) {
+                //return index >= 0 && index < _levels.Count ? _levels.ElementAt(index).Value : null;
+                var topOrdinal = 28;
+                
+                if (ordinal < 1 || ordinal > topOrdinal)
+                    return null;
+                
+                var currentLevel = this.getLevelWithName('C1');
+                var currentOrdinal = 1;
+                var level = null;
+                
+                while (currentOrdinal <= ordinal && level === null) {
+                    currentLevel = currentLevel.next;
+                    
+                    if (currentLevel && currentLevel.ordinal === ordinal)
+                        level = currentLevel;
+                    
+                    currentOrdinal++;
+                }
+                
+                return level;
+            },
+            /**
+            * Specify a neurology level, on the right side of the patient's body.
+            *
+            * @param {String} levelName The name of the right non-key neurological level with motor function.
+            */
+            setRightLowestNonKeyMuscleWithMotorFunction: function(levelName)
+            {
+                if (typeof levelName !== 'string')
+                    throw new Error(_c + ' : setRightLowestNonKeyMuscleWithMotorFunction : '
+                                    + 'Invalid arguments passed. Expected levelName to be a String');
+                
+                if (!levelName)
+                    throw new Error(_c + ' : setRightLowestNonKeyMuscleWithMotorFunction : '
+                                    + 'Missing required arguments: levelName:String');
+            
+                var key = levelName.toUpperCase();
+                var level = this.getLevelWithName(key);
+            
+                if (!level)
+                    throw new Error(_c + ' : setRightLowestNonKeyMuscleWithMotorFunction : '
+                                    + 'Could not find level with name ' + levelName);
+            
+                if (this._rightLowestNonKeyMuscleWithMotorFunction)
+                    this._rightLowestNonKeyMuscleWithMotorFunction.hasOtherRightMotorFunction = false;
+            
+                this._rightLowestNonKeyMuscleWithMotorFunction = level;
+                this._rightLowestNonKeyMuscleWithMotorFunction.hasOtherRightMotorFunction = true;
+            },
+            /**
+            * Specify a neurology level, on the left side of the patient's body.
+            *
+            * @param {String} levelName The name of the left non-key neurological level with motor function.
+            */
+            setLeftLowestNonKeyMuscleWithMotorFunction: function(levelName)
+            {
+                if (typeof levelName !== 'string')
+                    throw new Error(_c + ' : setLeftLowestNonKeyMuscleWithMotorFunction : '
+                                    + 'Invalid arguments passed. Expected levelName to be a String');
+                
+                if (!levelName)
+                    throw new Error(_c + ' : setLeftLowestNonKeyMuscleWithMotorFunction : '
+                                    + 'Missing required arguments: levelName:String');
+            
+                var key = levelName.toUpperCase();
+                var level = this.getLevelWithName(key);
+            
+                if (!level)
+                    throw new Error(_c + ' : setLeftLowestNonKeyMuscleWithMotorFunction : '
+                                    + 'Could not find level with name ' + levelName);
+            
+                if (this._leftLowestNonKeyMuscleWithMotorFunction)
+                    this._leftLowestNonKeyMuscleWithMotorFunction.hasOtherRightMotorFunction = false;
+            
+                this._leftLowestNonKeyMuscleWithMotorFunction = level;
+                this._leftLowestNonKeyMuscleWithMotorFunction.hasOtherRightMotorFunction = true;
+            },
+            /**
+            * Updates the values of the neurology level with the specified name.
+            * You can pass strings containing values between 0-2 for touch and prick and 0-5 for motor.
+            * You can also use the exclamation mark and asterisk at the end of the string to indicate impairment not due to a spinal cord injury.
+            * Finally, you can also pass NT to indicate that a value was not testable.
+            *
+            * @param {String} levelName Name of the respective neurology level.
+            * @param {String} rightTouchName Right touch
+            * @param {String} leftTouchName Left touch
+            * @param {String} rightPrickName Right Prick
+            * @param {String} leftPrickName Left prick
+            * @param {String} rightMotorName Right motor
+            * @param {String} leftMotorName Left motor
+            * @return {RhiCoreIsncsciExam} This exam to allow chaining more requests.
+            */
+            updateLevelAt: function(levelName, rightTouchName, leftTouchName,
+                 rightPrickName, leftPrickName, rightMotorName, leftMotorName)
+            {
+                if (typeof levelName !== 'string')
+                    throw new Error(_c + ' : updateLevelAt : '
+                                    + 'Invalid arguments passed. Expected levelName to be a String');
+                
+                if (!levelName)
+                    throw new Error(_c + ' : updateLevelAt : '
+                                    + 'Missing required arguments: levelName:String');
+                    
+                var level = this.getLevelWithName(levelName);
+            
+                if (!level)
+                    throw new Error(_c + ' : updateLevelAt : '
+                                    + 'Could not find level with name ' + levelName);
+                    
+                _updateLevel(level, rightTouchName, leftTouchName, rightPrickName, leftPrickName, rightMotorName, leftMotorName);
+                
+                return this;
+            }
+        }); // End of Polymer
+    })();
+</script>

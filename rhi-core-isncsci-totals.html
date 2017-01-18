@@ -2,27 +2,39 @@
 @license
 Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
 This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/LICENSE
+Author: Eduardo Echeverria (@eddiemachete)
 -->
-<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html"/>
+<!--
+The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI Examination through the ISNCSCI Algorithm.
+@demo demo/index.html
+-->
 <script>
-    (function() {
-        /* global Polymer */
-        'use strict';
-        
-        Polymer({
-            is: 'rhi-core-neurology-form-totals',
-            hostAttributes: {
-                hidden: true
-            },
-            properties: {},
-            observers: [],
-            // -
-            // - PUBLIC METHODS
-            // -
+  /* global Polymer */
+  'use strict';
+  Polymer({
+    is: 'rhi-core-isncsci-totals',
+    hostAttributes: {
+        hidden: true
+    },
+    properties: {
+      invalid: {
+        type: Boolean,
+        value: true
+      }
+    },
+     /**
+     * Performs an AJAX request to the specified URL.
+     *
+     * @return {!IronRequestElement}
+     */
+    // There is also created which fires earlier
+    ready: function() {
+      
+     
+    },
     
-
-
-// public int RightUpperMotorTotal;
+    // public int RightUpperMotorTotal;
 // public bool RightUpperMotorTotalHasImpairmentNotDueToSci;
 // public bool RightUpperMotorContainsNt;
 // public int LeftUpperMotorTotal;
@@ -316,7 +328,7 @@ This code may only be used under the modified Apache license found at https://ra
 getAsiaImpairmentScaleValues: function() {
     return 'F';
     // return string.Join(",", _asiaImpairmentScaleValues.OrderBy(v => v));
-},
+}
 
 
 // public NeurologyFormLevel MostRostralLeftMotor { get; protected set; }
@@ -329,18 +341,7 @@ getAsiaImpairmentScaleValues: function() {
 // public NeurologyFormLevel MostCaudalRightLevelWithMotorFunction { get; set; }
 // public NeurologyFormLevel MostRostralLeftLevelWithMotorFunction { get; set; }
 // public NeurologyFormLevel MostCaudalLeftLevelWithMotorFunction { get; set; }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        });
-    })();
+  });
 </script>
+
+

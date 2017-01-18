@@ -1,14 +1,22 @@
 <!--
 @license
 Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
-This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/LICENSE
+This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/
+Author: Eduardo Echeverria (@eddiemachete)
 -->
-<link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="rhi-core-neurology-form-totals.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html"/>
+<link rel="import" href="rhi-core-isncsci-exam.html">
+<link rel="import" href="rhi-core-isncsci-totals.html">
+<!--
+The 'rhi-core-isncsci-algorithm' contains the methods which perform the ISNCSCI calculations.
+    <rhi-core-isncsci-algorithm></rhi-core-isncsci-algorithm>
+@demo demo/index.html
+-->
 <script>
+    /* global Polymer */
+    'use strict';
+    
     (function() {
-        /* global Polymer */
-        'use strict';
         
         // Private static
         var _ntRegex = /\bNT\b/i;
@@ -17,284 +25,15 @@ This code may only be used under the modified Apache license found at https://ra
         var _intact = 'INT';
         
         /// <summary>
-        /// Contains the methods which perform the ISNCSCI calculations.
+        /// Recursive method which iterates through the values in a nuerology form while it updates the totals generating the results produced by the algorithm.
         /// </summary>
-        Polymer({
-            is: 'rhi-core-isncsci-algorithm',
-            hostAttributes: {
-                hidden: true
-            },
-            properties: {},
-            observers: [],
-            // -
-            // - PUBLIC METHODS
-            // -
-    
-    //         /// <summary>
-    //         /// Produces a summarized version of a NeurologyFormTotals object which can be used to be displayed in an interface or be stored in a database.
-    //         /// The values in the summary return will have ranges instead of lists of values.
-    //         /// </summary>
-    //         /// <param name="neurologyForm">Neurology form that has been populated with the values to be used in the algorithm calculations.</param>
-    //         /// <returns>
-    //         /// Summarized version of the totals which presents the results as ranges, rather than lists containing every possible value for every field.
-    //         /// </returns>
-    //         public static NeurologyFormTotalsSummary GetTotalsSummaryFor(NeurologyForm neurologyForm)
-    //         {
-    //             return GetTotalsSummaryFor(GetTotalsFor(neurologyForm));
-    //         }
-    
-    //         /// <summary>
-    //         /// Produces a summarized version of a NeurologyFormTotals object which can be used to be displayed in an interface or be stored in a database.
-    //         /// The values in the summary return will have ranges instead of lists of values.
-    //         /// </summary>
-    //         /// <param name="totals">The form totals object to be used to generate the summary.</param>
-    //         /// <returns>
-    //         /// Summarized version of the totals where the enumerations get replaced by ranges.
-    //         /// </returns>
-    //         public static NeurologyFormTotalsSummary GetTotalsSummaryFor(NeurologyFormTotals totals)
-    //         {
-    //             var ais = totals.GetAsiaImpairmentScaleValues();
-    //             var isAsiaA = ais.Contains("A");
-    //             var couldBeOtherThanAsiaA = !isAsiaA || ais.Length > 1;
-    
-    //             var summary = new NeurologyFormTotalsSummary
-    //                 {
-    //                     AsiaImpairmentScale = ais,
-    //                     Completeness = isAsiaA ? (couldBeOtherThanAsiaA ? "C,I" : "C") : "I",
-    //                     LeftLowerMotorTotal = GetSummaryStringFor(totals.LeftLowerMotorTotal, totals.LeftLowerMotorTotalHasImpairmentNotDueToSci, totals.LeftLowerMotorContainsNt),
-    //                     LeftMotor = GetLevelsRange(totals.GetLeftMotorValues(), false),
-    //                     LeftMotorZpp = isAsiaA ? GetLevelsRange(totals.GetLeftMotorZppValues(), couldBeOtherThanAsiaA) : NotApplicable,
-    //                     LeftMotorTotal = GetSummaryStringFor(totals.LeftUpperMotorTotal + totals.LeftLowerMotorTotal,
-    //                                                             totals.LeftUpperMotorTotalHasImpairmentNotDueToSci || totals.LeftLowerMotorTotalHasImpairmentNotDueToSci,
-    //                                                             totals.LeftUpperMotorContainsNt || totals.LeftLowerMotorContainsNt),
-    //                     LeftPrickTotal = GetSummaryStringFor(totals.LeftPrickTotal, totals.LeftPrickTotalHasImpairmentNotDueToSci, totals.LeftPrickContainsNt),
-    //                     LeftSensory = GetLevelsRange(totals.GetLeftSensoryValues(), false),
-    //                     LeftSensoryZpp = isAsiaA ? GetLevelsRange(totals.GetLeftSensoryZppValues(), couldBeOtherThanAsiaA) : NotApplicable,
-    //                     LeftTouchTotal = GetSummaryStringFor(totals.LeftTouchTotal, totals.LeftTouchTotalHasImpairmentNotDueToSci, totals.LeftTouchContainsNt),
-    //                     LeftUpperMotorTotal = GetSummaryStringFor(totals.LeftUpperMotorTotal, totals.LeftUpperMotorTotalHasImpairmentNotDueToSci, totals.LeftUpperMotorContainsNt),
-    //                     LowerMotorTotal = GetSummaryStringFor(totals.LowerMotorTotal,
-    //                                                         totals.RightLowerMotorTotalHasImpairmentNotDueToSci || totals.LeftLowerMotorTotalHasImpairmentNotDueToSci,
-    //                                                         totals.RightLowerMotorContainsNt || totals.LeftLowerMotorContainsNt),
-    //                     NeurologicalLevelOfInjury = GetLevelsRange(totals.GetNeurologicalLevelsOfInjury(), false),
-    //                     PrickTotal = GetSummaryStringFor(totals.RightPrickTotal + totals.LeftPrickTotal,
-    //                                                         totals.RightPrickTotalHasImpairmentNotDueToSci || totals.LeftPrickTotalHasImpairmentNotDueToSci,
-    //                                                         totals.RightPrickContainsNt || totals.LeftPrickContainsNt),
-    //                     RightLowerMotorTotal = GetSummaryStringFor(totals.RightLowerMotorTotal, totals.RightLowerMotorTotalHasImpairmentNotDueToSci, totals.RightLowerMotorContainsNt),
-    //                     RightMotor = GetLevelsRange(totals.GetRightMotorValues(), false),
-    //                     RightMotorZpp = isAsiaA ? GetLevelsRange(totals.GetRightMotorZppValues(), couldBeOtherThanAsiaA) : NotApplicable,
-    //                     RightMotorTotal = GetSummaryStringFor(totals.RightUpperMotorTotal + totals.RightLowerMotorTotal,
-    //                                                             totals.RightUpperMotorTotalHasImpairmentNotDueToSci || totals.RightLowerMotorTotalHasImpairmentNotDueToSci,
-    //                                                             totals.RightUpperMotorContainsNt || totals.RightLowerMotorContainsNt),
-    //                     RightPrickTotal = GetSummaryStringFor(totals.RightPrickTotal, totals.RightPrickTotalHasImpairmentNotDueToSci, totals.RightPrickContainsNt),
-    //                     RightSensory = GetLevelsRange(totals.GetRightSensoryValues(), false),
-    //                     RightSensoryZpp = isAsiaA ? GetLevelsRange(totals.GetRightSensoryZppValues(), couldBeOtherThanAsiaA) : NotApplicable,
-    //                     RightTouchTotal = GetSummaryStringFor(totals.RightTouchTotal, totals.RightTouchTotalHasImpairmentNotDueToSci, totals.RightTouchContainsNt),
-    //                     RightUpperMotorTotal = GetSummaryStringFor(totals.RightUpperMotorTotal, totals.RightUpperMotorTotalHasImpairmentNotDueToSci, totals.RightUpperMotorContainsNt),
-    //                     TouchTotal = GetSummaryStringFor(totals.RightTouchTotal + totals.LeftTouchTotal,
-    //                                                         totals.RightTouchTotalHasImpairmentNotDueToSci || totals.LeftTouchTotalHasImpairmentNotDueToSci,
-    //                                                         totals.RightTouchContainsNt || totals.LeftTouchContainsNt),
-    //                     UpperMotorTotal = GetSummaryStringFor(totals.UpperMotorTotal,
-    //                                                             totals.RightUpperMotorTotalHasImpairmentNotDueToSci || totals.LeftUpperMotorTotalHasImpairmentNotDueToSci,
-    //                                                             totals.RightUpperMotorContainsNt || totals.LeftUpperMotorContainsNt)
-    //                 };
-    
-    //             return summary;
-    //         }
-    
-    //         /// <summary>
-    //         /// Returns the results produced by the ISNCSCI Algorithm ir a raw values format.
-    //         /// </summary>
-    //         /// <param name="neurologyForm">Neurology form that has been populated with the values to be used in the algorithm calculations.</param>
-    //         /// <returns>
-    //         /// Totals in raw values format.  The results contain lists with every prossible value for each field.
-    //         /// You can use the resulting object to obtained a summarized version, which uses ranges, by passing the result to the method GetTotalsSummaryFor
-    //         /// </returns>
-            getTotalsFor: function(neurologyForm) {
-                var totals = new RhiCoreNeurologyFormTotals();
-                console.log(totals);
-                
-    //             UpdateTotalsWithLevelAt(neurologyForm, totals, neurologyForm.GetLevelWithName("C2"), false, false);
-    
-    //             totals.UpperMotorTotal = totals.RightUpperMotorTotal + totals.LeftUpperMotorTotal;
-    //             totals.LowerMotorTotal = totals.RightLowerMotorTotal + totals.LeftLowerMotorTotal;
-    //             totals.TouchTotal = totals.RightTouchTotal + totals.LeftTouchTotal;
-    //             totals.PrickTotal = totals.RightPrickTotal + totals.LeftPrickTotal;
-    
-    //             var s4_5 = neurologyForm.GetLevelWithName("S4_5");
-    
-    //             var c1 = neurologyForm.GetLevelWithName("C2").Previous;
-    
-    //             if (totals.RightSensoryZppHasOnlySoftValues)
-    //                 totals.AddRightSensoryZppValue(c1);
-    
-    //             if (totals.LeftSensoryZppHasOnlySoftValues)
-    //                 totals.AddLeftSensoryZppValue(c1);
-    
-    //             if (totals.RightMotorZppHasOnlySoftValues)
-    //                 totals.AddRightMotorZppValue(c1);
-    
-    //             if (totals.LeftMotorZppHasOnlySoftValues)
-    //                 totals.AddLeftMotorZppValue(c1);
-    
-    //             if (totals.MostRostralRightLevelWithMotorFunction == null)
-    //                 totals.MostRostralRightLevelWithMotorFunction = c1;
-    
-    //             if (totals.MostRostralLeftLevelWithMotorFunction == null)
-    //                 totals.MostRostralLeftLevelWithMotorFunction = c1;
-    
-    //             if (totals.MostCaudalRightLevelWithMotorFunction == null)
-    //                 totals.MostCaudalRightLevelWithMotorFunction = c1;
-    
-    //             if (totals.MostCaudalLeftLevelWithMotorFunction == null)
-    //                 totals.MostCaudalLeftLevelWithMotorFunction = c1;
-    
-    //             // [ASIA learning center 2012-11-14] Sensory incomplete: Sacral sparing of sensory function
-    //             var isSensoryIncomplete = neurologyForm.AnalSensation == BinaryObservation.Yes || neurologyForm.AnalSensation == BinaryObservation.NT
-    //                 || !"0".Equals(s4_5.RightTouchName) || !"0".Equals(s4_5.LeftTouchName)
-    //                 || !"0".Equals(s4_5.RightPrickName) || !"0".Equals(s4_5.LeftPrickName);
-    
-    //             var couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel = CouldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel(neurologyForm, totals);
-    
-    //             var couldNotBeMotorIncomplete = (neurologyForm.AnalContraction == BinaryObservation.No || neurologyForm.AnalContraction == BinaryObservation.NT)
-    //                 && isSensoryIncomplete && couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel;
-    
-    //             if ((neurologyForm.AnalContraction == BinaryObservation.No || neurologyForm.AnalContraction == BinaryObservation.NT)
-    //                 && (neurologyForm.AnalSensation == BinaryObservation.No || neurologyForm.AnalSensation == BinaryObservation.NT)
-    //                 && s4_5.RightTouchValue == 0 && !s4_5.RightTouchImpairmentNotDueToSci
-    //                 && s4_5.RightPrickValue == 0 && !s4_5.RightPrickImpairmentNotDueToSci
-    //                 && s4_5.LeftTouchValue == 0 && !s4_5.LeftTouchImpairmentNotDueToSci
-    //                 && s4_5.LeftPrickValue == 0 && !s4_5.LeftPrickImpairmentNotDueToSci)
-    //                 totals.AddAsiaImpairmentScaleValue("A");
-    
-    //             if (couldNotBeMotorIncomplete && totals.MostRostralNeurologicalLevelOfInjury.Name != "S4_5")
-    //                 totals.AddAsiaImpairmentScaleValue("B");
-    
-    
-    //             //// Not an ASIA E only
-    //             //// AND not an ASIA A only
-    //             if (totals.MostRostralNeurologicalLevelOfInjury.Name != "S4_5"
-    //                 && (isSensoryIncomplete || neurologyForm.AnalContraction == BinaryObservation.Yes || neurologyForm.AnalContraction == BinaryObservation.NT))
-    //             {
-    //                 bool couldBeAsiaC;
-    //                 bool couldBeAsiaD;
-    //                 CouldBeAsiaCorD(neurologyForm, totals, out couldBeAsiaC, out couldBeAsiaD);
-    
-    //                 if (couldBeAsiaC)
-    //                     totals.AddAsiaImpairmentScaleValue("C");
-    
-    //                 if (couldBeAsiaD)
-    //                     totals.AddAsiaImpairmentScaleValue("D");
-    //             }
-    
-    //             if (totals.RightSensoryContains("S4_5") && totals.LeftSensoryContains("S4_5")
-    //                 && totals.RightMotorContains("S4_5") && totals.LeftMotorContains("S4_5"))
-    //                 totals.AddAsiaImpairmentScaleValue("E");
-    
-                return totals; 
-            }
-    
-    //         /// <summary>
-    //         /// Formats a total value depending on the specified flags.
-    //         /// </summary>
-    //         /// <param name="total">Raw total value.</param>
-    //         /// <param name="hasImpairmentNotDueToSci">Flag indicating if any value used in the calculation of this total presents impairment not due to a spinal cord injury.</param>
-    //         /// <param name="containsNt">Flag indicating if any value used in the calculation of this total is set to Not Testable.</param>
-    //         /// <returns>
-    //         /// The value, followed by an exclamation mark if the hasImpairmentNotDueToSci is set to true
-    //         /// or
-    //         /// UTD (Unable to determine) if the containsNt flag is set to true.
-    //         /// </returns>
-    //         private static string GetSummaryStringFor(int total, bool hasImpairmentNotDueToSci, bool containsNt)
-    //         {
-    //             if (containsNt)
-    //                 return NotDeterminable;
-    
-    //             return string.Format("{0}{1}", total, hasImpairmentNotDueToSci ? "!" : string.Empty);
-    //         }
-    
-    //         /// <summary>
-    //         /// Returns a range string based on the specified list.
-    //         /// </summary>
-    //         /// <param name="levels">Neurological levels returned in a calculation.</param>
-    //         /// <param name="addNa">Used in the Zone of Partial Preservation to indicate that one of the possible Asia Impairment Scale values is &quot;A&quot;</param>
-    //         /// <returns>A representation of the list as a range string.  E.g. NA,C4-C6,T1,T2</returns>
-    //         private static string GetLevelsRange(List<NeurologyFormLevel> levels, bool addNa)
-    //         {
-    //             if (levels.Count == 0)
-    //                 return addNa ? NotApplicable : string.Empty;
-    
-    //             levels.Sort(CompareNeurologyFormTotalsLevelByOrdinal);
-    //             NeurologyFormLevel previous = null;
-    //             var text = string.Empty;
-    //             var isRange = false;
-    
-    //             foreach (var level in levels)
-    //             {
-    //                 if (previous == null || previous.Ordinal < level.Ordinal)
-    //                 {
-    //                     var name = level.Ordinal == 28 ? Intact : level.Name;
-    
-    //                     if (previous == null)
-    //                     {
-    //                         text = name;
-    //                     }
-    //                     else if (level.Ordinal == previous.Ordinal + 1)
-    //                     {
-    //                         isRange = true;
-    //                     }
-    //                     else
-    //                     {
-    //                         text += (isRange ? "-" + previous.Name + "," : ",") + name;
-    //                         isRange = false;
-    //                     }
-    
-    //                     previous = level;
-    //                 }
-    //             }
-    
-    //             if (isRange)
-    //                 text += "-" + (previous.Ordinal == 28 ? Intact : previous.Name);
-    
-    //             return addNa ? string.IsNullOrEmpty(text) ? NotApplicable : string.Format("{0},{1}", NotApplicable, text) : text;
-    //         }
-    
-    //         /// <summary>
-    //         /// Compares two neurology levels based on property &quot;Ordinal&quot;.
-    //         /// </summary>
-    //         /// <param name="a">Neurology form level A</param>
-    //         /// <param name="b">Neurology form level B</param>
-    //         /// <returns>
-    //         /// Returns
-    //         /// &ndash; 1 if a is more caudal (the ordinal of a is greater than the one of b)
-    //         /// &ndash; 0 if both ordinal values are the same
-    //         /// &ndash; -1 if b is more caudal (the ordinal of b is greater than the one of a).
-    //         /// </returns>
-    //         private static int CompareNeurologyFormTotalsLevelByOrdinal(NeurologyFormLevel a,
-    //                                                                     NeurologyFormLevel b)
-    //         {
-    //             // Both are null so they are equal
-    //             // OR
-    //             // a is null and b is not so b is greater
-    //             if (a == null)
-    //                 return b == null ? 0 : -1;
-    
-    //             // b is null and a is not so a is greater
-    //             if (b == null)
-    //                 return 1;
-    
-    //             return a.Ordinal > b.Ordinal ? 1 : a.Ordinal == b.Ordinal ? 0 : -1;
-    //         }
-    
-    //         /// <summary>
-    //         /// Recursive method which iterates through the values in a nuerology form while it updates the totals generating the results produced by the algorithm.
-    //         /// </summary>
-    //         /// <param name="neurologyForm">Form being evaluated.</param>
-    //         /// <param name="totals">Brand new totals object where the results are to be stored.</param>
-    //         /// <param name="level">Current neurology level being evaluated</param>
-    //         /// <param name="nextNonKeyMuscleShouldBeRightMotor">Flag used to evaluate the Kathy Collins condition on the right motor results.</param>
-    //         /// <param name="nextNonKeyMuscleShouldBeLeftMotor">Flag used to evaluate the Kathy Collins condition on the left motor results.</param>
-    //         private static void UpdateTotalsWithLevelAt(NeurologyForm neurologyForm, NeurologyFormTotals totals, NeurologyFormLevel level, bool nextNonKeyMuscleShouldBeRightMotor, bool nextNonKeyMuscleShouldBeLeftMotor)
-    //         {
+        /// <param name="neurologyForm">Form being evaluated.</param>
+        /// <param name="totals">Brand new totals object where the results are to be stored.</param>
+        /// <param name="level">Current neurology level being evaluated</param>
+        /// <param name="nextNonKeyMuscleShouldBeRightMotor">Flag used to evaluate the Kathy Collins condition on the right motor results.</param>
+        /// <param name="nextNonKeyMuscleShouldBeLeftMotor">Flag used to evaluate the Kathy Collins condition on the left motor results.</param>
+        function updateTotalsWithLevelAt(isncsciExam, totals, level, nextNonKeyMuscleShouldBeRightMotor, nextNonKeyMuscleShouldBeLeftMotor)
+        {
     //             totals.RightTouchTotal += level.RightTouchValue;
     //             totals.LeftTouchTotal += level.LeftTouchValue;
     //             totals.RightPrickTotal += level.RightPrickValue;
@@ -628,7 +367,278 @@ This code may only be used under the modified Apache license found at https://ra
     //                 totals.RightUpperMotorTotal += level.RightMotorValue;
     //                 totals.LeftUpperMotorTotal += level.LeftMotorValue;
     //             }
+        }
+        
+        Polymer({
+            is: 'rhi-core-isncsci-algorithm',
+            hostAttributes: {
+                hidden: true
+            },
+            properties: {},
+            observers: [],
+            created: function() {
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                console.log('++ Created ' + exam);
+            },
+            // -
+            // - PUBLIC METHODS
+            // -
+    
+    //         /// <summary>
+    //         /// Produces a summarized version of a NeurologyFormTotals object which can be used to be displayed in an interface or be stored in a database.
+    //         /// The values in the summary return will have ranges instead of lists of values.
+    //         /// </summary>
+    //         /// <param name="neurologyForm">Neurology form that has been populated with the values to be used in the algorithm calculations.</param>
+    //         /// <returns>
+    //         /// Summarized version of the totals which presents the results as ranges, rather than lists containing every possible value for every field.
+    //         /// </returns>
+    //         public static NeurologyFormTotalsSummary GetTotalsSummaryFor(NeurologyForm neurologyForm)
+    //         {
+    //             return GetTotalsSummaryFor(GetTotalsFor(neurologyForm));
     //         }
+    
+    //         /// <summary>
+    //         /// Produces a summarized version of a NeurologyFormTotals object which can be used to be displayed in an interface or be stored in a database.
+    //         /// The values in the summary return will have ranges instead of lists of values.
+    //         /// </summary>
+    //         /// <param name="totals">The form totals object to be used to generate the summary.</param>
+    //         /// <returns>
+    //         /// Summarized version of the totals where the enumerations get replaced by ranges.
+    //         /// </returns>
+    //         public static NeurologyFormTotalsSummary GetTotalsSummaryFor(NeurologyFormTotals totals)
+    //         {
+    //             var ais = totals.GetAsiaImpairmentScaleValues();
+    //             var isAsiaA = ais.Contains("A");
+    //             var couldBeOtherThanAsiaA = !isAsiaA || ais.Length > 1;
+    
+    //             var summary = new NeurologyFormTotalsSummary
+    //                 {
+    //                     AsiaImpairmentScale = ais,
+    //                     Completeness = isAsiaA ? (couldBeOtherThanAsiaA ? "C,I" : "C") : "I",
+    //                     LeftLowerMotorTotal = GetSummaryStringFor(totals.LeftLowerMotorTotal, totals.LeftLowerMotorTotalHasImpairmentNotDueToSci, totals.LeftLowerMotorContainsNt),
+    //                     LeftMotor = GetLevelsRange(totals.GetLeftMotorValues(), false),
+    //                     LeftMotorZpp = isAsiaA ? GetLevelsRange(totals.GetLeftMotorZppValues(), couldBeOtherThanAsiaA) : NotApplicable,
+    //                     LeftMotorTotal = GetSummaryStringFor(totals.LeftUpperMotorTotal + totals.LeftLowerMotorTotal,
+    //                                                             totals.LeftUpperMotorTotalHasImpairmentNotDueToSci || totals.LeftLowerMotorTotalHasImpairmentNotDueToSci,
+    //                                                             totals.LeftUpperMotorContainsNt || totals.LeftLowerMotorContainsNt),
+    //                     LeftPrickTotal = GetSummaryStringFor(totals.LeftPrickTotal, totals.LeftPrickTotalHasImpairmentNotDueToSci, totals.LeftPrickContainsNt),
+    //                     LeftSensory = GetLevelsRange(totals.GetLeftSensoryValues(), false),
+    //                     LeftSensoryZpp = isAsiaA ? GetLevelsRange(totals.GetLeftSensoryZppValues(), couldBeOtherThanAsiaA) : NotApplicable,
+    //                     LeftTouchTotal = GetSummaryStringFor(totals.LeftTouchTotal, totals.LeftTouchTotalHasImpairmentNotDueToSci, totals.LeftTouchContainsNt),
+    //                     LeftUpperMotorTotal = GetSummaryStringFor(totals.LeftUpperMotorTotal, totals.LeftUpperMotorTotalHasImpairmentNotDueToSci, totals.LeftUpperMotorContainsNt),
+    //                     LowerMotorTotal = GetSummaryStringFor(totals.LowerMotorTotal,
+    //                                                         totals.RightLowerMotorTotalHasImpairmentNotDueToSci || totals.LeftLowerMotorTotalHasImpairmentNotDueToSci,
+    //                                                         totals.RightLowerMotorContainsNt || totals.LeftLowerMotorContainsNt),
+    //                     NeurologicalLevelOfInjury = GetLevelsRange(totals.GetNeurologicalLevelsOfInjury(), false),
+    //                     PrickTotal = GetSummaryStringFor(totals.RightPrickTotal + totals.LeftPrickTotal,
+    //                                                         totals.RightPrickTotalHasImpairmentNotDueToSci || totals.LeftPrickTotalHasImpairmentNotDueToSci,
+    //                                                         totals.RightPrickContainsNt || totals.LeftPrickContainsNt),
+    //                     RightLowerMotorTotal = GetSummaryStringFor(totals.RightLowerMotorTotal, totals.RightLowerMotorTotalHasImpairmentNotDueToSci, totals.RightLowerMotorContainsNt),
+    //                     RightMotor = GetLevelsRange(totals.GetRightMotorValues(), false),
+    //                     RightMotorZpp = isAsiaA ? GetLevelsRange(totals.GetRightMotorZppValues(), couldBeOtherThanAsiaA) : NotApplicable,
+    //                     RightMotorTotal = GetSummaryStringFor(totals.RightUpperMotorTotal + totals.RightLowerMotorTotal,
+    //                                                             totals.RightUpperMotorTotalHasImpairmentNotDueToSci || totals.RightLowerMotorTotalHasImpairmentNotDueToSci,
+    //                                                             totals.RightUpperMotorContainsNt || totals.RightLowerMotorContainsNt),
+    //                     RightPrickTotal = GetSummaryStringFor(totals.RightPrickTotal, totals.RightPrickTotalHasImpairmentNotDueToSci, totals.RightPrickContainsNt),
+    //                     RightSensory = GetLevelsRange(totals.GetRightSensoryValues(), false),
+    //                     RightSensoryZpp = isAsiaA ? GetLevelsRange(totals.GetRightSensoryZppValues(), couldBeOtherThanAsiaA) : NotApplicable,
+    //                     RightTouchTotal = GetSummaryStringFor(totals.RightTouchTotal, totals.RightTouchTotalHasImpairmentNotDueToSci, totals.RightTouchContainsNt),
+    //                     RightUpperMotorTotal = GetSummaryStringFor(totals.RightUpperMotorTotal, totals.RightUpperMotorTotalHasImpairmentNotDueToSci, totals.RightUpperMotorContainsNt),
+    //                     TouchTotal = GetSummaryStringFor(totals.RightTouchTotal + totals.LeftTouchTotal,
+    //                                                         totals.RightTouchTotalHasImpairmentNotDueToSci || totals.LeftTouchTotalHasImpairmentNotDueToSci,
+    //                                                         totals.RightTouchContainsNt || totals.LeftTouchContainsNt),
+    //                     UpperMotorTotal = GetSummaryStringFor(totals.UpperMotorTotal,
+    //                                                             totals.RightUpperMotorTotalHasImpairmentNotDueToSci || totals.LeftUpperMotorTotalHasImpairmentNotDueToSci,
+    //                                                             totals.RightUpperMotorContainsNt || totals.LeftUpperMotorContainsNt)
+    //                 };
+    
+    //             return summary;
+    //         }
+
+            /**
+            * Returns the results produced by the ISNCSCI Algorithm in a raw values format.
+            *
+            * @param {RhiCoreIsncsciExam} neurologyForm Neurology form that has been populated with the values to be used in the algorithm calculations.
+            * @return {RhiCoreNeurologyFormTotals} Totals in raw values format.
+            * The results contain lists with every prossible value for each field.
+            * You can use the resulting object to obtained a summarized version, which uses ranges, by passing the result to the method GetTotalsSummaryFor
+            */
+            getTotalsFor: function(isncsciExam) {
+                var totals = (document.createElement('rhi-core-isncsci-totals'));
+                
+                //updateTotalsWithLevelAt(isncsciExam, totals, isncsciExam.getLevelWithName('C2'), false, false);
+    
+    //             totals.UpperMotorTotal = totals.RightUpperMotorTotal + totals.LeftUpperMotorTotal;
+    //             totals.LowerMotorTotal = totals.RightLowerMotorTotal + totals.LeftLowerMotorTotal;
+    //             totals.TouchTotal = totals.RightTouchTotal + totals.LeftTouchTotal;
+    //             totals.PrickTotal = totals.RightPrickTotal + totals.LeftPrickTotal;
+    
+    //             var s4_5 = neurologyForm.GetLevelWithName("S4_5");
+    
+    //             var c1 = neurologyForm.GetLevelWithName("C2").Previous;
+    
+    //             if (totals.RightSensoryZppHasOnlySoftValues)
+    //                 totals.AddRightSensoryZppValue(c1);
+    
+    //             if (totals.LeftSensoryZppHasOnlySoftValues)
+    //                 totals.AddLeftSensoryZppValue(c1);
+    
+    //             if (totals.RightMotorZppHasOnlySoftValues)
+    //                 totals.AddRightMotorZppValue(c1);
+    
+    //             if (totals.LeftMotorZppHasOnlySoftValues)
+    //                 totals.AddLeftMotorZppValue(c1);
+    
+    //             if (totals.MostRostralRightLevelWithMotorFunction == null)
+    //                 totals.MostRostralRightLevelWithMotorFunction = c1;
+    
+    //             if (totals.MostRostralLeftLevelWithMotorFunction == null)
+    //                 totals.MostRostralLeftLevelWithMotorFunction = c1;
+    
+    //             if (totals.MostCaudalRightLevelWithMotorFunction == null)
+    //                 totals.MostCaudalRightLevelWithMotorFunction = c1;
+    
+    //             if (totals.MostCaudalLeftLevelWithMotorFunction == null)
+    //                 totals.MostCaudalLeftLevelWithMotorFunction = c1;
+    
+    //             // [ASIA learning center 2012-11-14] Sensory incomplete: Sacral sparing of sensory function
+    //             var isSensoryIncomplete = neurologyForm.AnalSensation == BinaryObservation.Yes || neurologyForm.AnalSensation == BinaryObservation.NT
+    //                 || !"0".Equals(s4_5.RightTouchName) || !"0".Equals(s4_5.LeftTouchName)
+    //                 || !"0".Equals(s4_5.RightPrickName) || !"0".Equals(s4_5.LeftPrickName);
+    
+    //             var couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel = CouldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel(neurologyForm, totals);
+    
+    //             var couldNotBeMotorIncomplete = (neurologyForm.AnalContraction == BinaryObservation.No || neurologyForm.AnalContraction == BinaryObservation.NT)
+    //                 && isSensoryIncomplete && couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel;
+    
+    //             if ((neurologyForm.AnalContraction == BinaryObservation.No || neurologyForm.AnalContraction == BinaryObservation.NT)
+    //                 && (neurologyForm.AnalSensation == BinaryObservation.No || neurologyForm.AnalSensation == BinaryObservation.NT)
+    //                 && s4_5.RightTouchValue == 0 && !s4_5.RightTouchImpairmentNotDueToSci
+    //                 && s4_5.RightPrickValue == 0 && !s4_5.RightPrickImpairmentNotDueToSci
+    //                 && s4_5.LeftTouchValue == 0 && !s4_5.LeftTouchImpairmentNotDueToSci
+    //                 && s4_5.LeftPrickValue == 0 && !s4_5.LeftPrickImpairmentNotDueToSci)
+    //                 totals.AddAsiaImpairmentScaleValue("A");
+    
+    //             if (couldNotBeMotorIncomplete && totals.MostRostralNeurologicalLevelOfInjury.Name != "S4_5")
+    //                 totals.AddAsiaImpairmentScaleValue("B");
+    
+    
+    //             //// Not an ASIA E only
+    //             //// AND not an ASIA A only
+    //             if (totals.MostRostralNeurologicalLevelOfInjury.Name != "S4_5"
+    //                 && (isSensoryIncomplete || neurologyForm.AnalContraction == BinaryObservation.Yes || neurologyForm.AnalContraction == BinaryObservation.NT))
+    //             {
+    //                 bool couldBeAsiaC;
+    //                 bool couldBeAsiaD;
+    //                 CouldBeAsiaCorD(neurologyForm, totals, out couldBeAsiaC, out couldBeAsiaD);
+    
+    //                 if (couldBeAsiaC)
+    //                     totals.AddAsiaImpairmentScaleValue("C");
+    
+    //                 if (couldBeAsiaD)
+    //                     totals.AddAsiaImpairmentScaleValue("D");
+    //             }
+    
+    //             if (totals.RightSensoryContains("S4_5") && totals.LeftSensoryContains("S4_5")
+    //                 && totals.RightMotorContains("S4_5") && totals.LeftMotorContains("S4_5"))
+    //                 totals.AddAsiaImpairmentScaleValue("E");
+    
+                return totals; 
+            }
+    
+    //         /// <summary>
+    //         /// Formats a total value depending on the specified flags.
+    //         /// </summary>
+    //         /// <param name="total">Raw total value.</param>
+    //         /// <param name="hasImpairmentNotDueToSci">Flag indicating if any value used in the calculation of this total presents impairment not due to a spinal cord injury.</param>
+    //         /// <param name="containsNt">Flag indicating if any value used in the calculation of this total is set to Not Testable.</param>
+    //         /// <returns>
+    //         /// The value, followed by an exclamation mark if the hasImpairmentNotDueToSci is set to true
+    //         /// or
+    //         /// UTD (Unable to determine) if the containsNt flag is set to true.
+    //         /// </returns>
+    //         private static string GetSummaryStringFor(int total, bool hasImpairmentNotDueToSci, bool containsNt)
+    //         {
+    //             if (containsNt)
+    //                 return NotDeterminable;
+    
+    //             return string.Format("{0}{1}", total, hasImpairmentNotDueToSci ? "!" : string.Empty);
+    //         }
+    
+    //         /// <summary>
+    //         /// Returns a range string based on the specified list.
+    //         /// </summary>
+    //         /// <param name="levels">Neurological levels returned in a calculation.</param>
+    //         /// <param name="addNa">Used in the Zone of Partial Preservation to indicate that one of the possible Asia Impairment Scale values is &quot;A&quot;</param>
+    //         /// <returns>A representation of the list as a range string.  E.g. NA,C4-C6,T1,T2</returns>
+    //         private static string GetLevelsRange(List<NeurologyFormLevel> levels, bool addNa)
+    //         {
+    //             if (levels.Count == 0)
+    //                 return addNa ? NotApplicable : string.Empty;
+    
+    //             levels.Sort(CompareNeurologyFormTotalsLevelByOrdinal);
+    //             NeurologyFormLevel previous = null;
+    //             var text = string.Empty;
+    //             var isRange = false;
+    
+    //             foreach (var level in levels)
+    //             {
+    //                 if (previous == null || previous.Ordinal < level.Ordinal)
+    //                 {
+    //                     var name = level.Ordinal == 28 ? Intact : level.Name;
+    
+    //                     if (previous == null)
+    //                     {
+    //                         text = name;
+    //                     }
+    //                     else if (level.Ordinal == previous.Ordinal + 1)
+    //                     {
+    //                         isRange = true;
+    //                     }
+    //                     else
+    //                     {
+    //                         text += (isRange ? "-" + previous.Name + "," : ",") + name;
+    //                         isRange = false;
+    //                     }
+    
+    //                     previous = level;
+    //                 }
+    //             }
+    
+    //             if (isRange)
+    //                 text += "-" + (previous.Ordinal == 28 ? Intact : previous.Name);
+    
+    //             return addNa ? string.IsNullOrEmpty(text) ? NotApplicable : string.Format("{0},{1}", NotApplicable, text) : text;
+    //         }
+    
+    //         /// <summary>
+    //         /// Compares two neurology levels based on property &quot;Ordinal&quot;.
+    //         /// </summary>
+    //         /// <param name="a">Neurology form level A</param>
+    //         /// <param name="b">Neurology form level B</param>
+    //         /// <returns>
+    //         /// Returns
+    //         /// &ndash; 1 if a is more caudal (the ordinal of a is greater than the one of b)
+    //         /// &ndash; 0 if both ordinal values are the same
+    //         /// &ndash; -1 if b is more caudal (the ordinal of b is greater than the one of a).
+    //         /// </returns>
+    //         private static int CompareNeurologyFormTotalsLevelByOrdinal(NeurologyFormLevel a,
+    //                                                                     NeurologyFormLevel b)
+    //         {
+    //             // Both are null so they are equal
+    //             // OR
+    //             // a is null and b is not so b is greater
+    //             if (a == null)
+    //                 return b == null ? 0 : -1;
+    
+    //             // b is null and a is not so a is greater
+    //             if (b == null)
+    //                 return 1;
+    
+    //             return a.Ordinal > b.Ordinal ? 1 : a.Ordinal == b.Ordinal ? 0 : -1;
+    //         }
+    
+    //         
     
     //         /// <summary>
     //         /// Evaluates the specified form and totals to determine if any of the different

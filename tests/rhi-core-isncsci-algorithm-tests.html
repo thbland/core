@@ -2,10 +2,10 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <script src="isncsci-tests.js"></script>
-    <script src="../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
-    <script src="../../bower_components/web-component-tester/browser.js"></script>
-    <link rel="import" href="../rhi-core-isncsci-algorithm.html">
+    <script src="isncsci-tests-1.js"></script>
+    <script src="../../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <script src="../../../bower_components/web-component-tester/browser.js"></script>
+    <link rel="import" href="../rhi-core-isncsci-algorithm.html"/>
 </head>
 <body>
     <rhi-core-isncsci-algorithm id="isncsciAlgorithm"></rhi-core-isncsci-algorithm>
@@ -20,7 +20,7 @@
             test('Can calculate the totals for test at [index]', function() {
                 // Arrange
                 var test = {};
-                var expectedTotals = rhiIsncsciValidationTests.revisionsToTheLogic[0].totals;
+                var expectedTotals = rhiIsncsciValidationTests.all[0].totals;
                 
                 // Act
                 var totals = isncsciAlgorithm.getTotalsFor(test);

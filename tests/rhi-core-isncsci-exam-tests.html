@@ -1,0 +1,319 @@
+<!--
+@license
+Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
+This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/
+Author: Eduardo Echeverria (@eddiemachete)
+-->
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="isncsci-tests-1.js"></script>
+    <script src="../../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <script src="../../../bower_components/web-component-tester/browser.js"></script>
+    <link rel="import" href="../rhi-core-isncsci-exam.html"/>
+</head>
+<body>
+    <script>
+        /* global assert */
+        /* global rhiIsncsciValidationTests */
+        // Loaded from isncsci-tests.js to keep this file clean.
+        
+        suite('<rhi-core-isncsci-exam> Initialization', function() {
+            //var isncsciAlgorithm = document.getElementById('isncsciAlgorithm');
+            
+            test('Successfully registers all neurological levels on create', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                var levelNames = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8',
+                         'T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10', 'T11', 'T12',
+                         'L1', 'L2', 'L3', 'L4', 'L5', 'S1', 'S2', 'S3', 'S4_5'];
+                 
+                var level = /** @type {!RhiCoreIsncsciLevel} */exam.getLevelWithName('C1');
+                
+                // Act - Assert
+                // chai has the asserts
+                for (var i=0; i<levelNames.length; i++) {
+                    var name = levelNames[i];
+                    
+                    assert.equal(level.name === name && level.ordinal === i,
+                                 true,
+                                 'Level ' + name + ' was succesfully initialized!');
+                                 
+                    level = /** @type {!RhiCoreIsncsciLevel} */level.next;
+                }
+            });
+            
+            test('Right lowest non-key muscle with motor function is null by default', function() {
+                // Arrange - Act
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                
+                // Assert
+                assert.equal(exam._rightLowestNonKeyMuscleWithMotorFunction, null, 'Right lowest non-key muscle with motor function is null by default');
+            });
+            
+            test('Left lowest non-key muscle with motor function is null by default', function() {
+                // Arrange - Act
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                
+                // Assert
+                assert.equal(exam._leftLowestNonKeyMuscleWithMotorFunction, null, 'Left lowest non-key muscle with motor function is null by default');
+            });
+        });
+        
+        suite('<rhi-core-isncsci-exam> Setting lowest non-key muscle with motor function', function() {
+            
+            test('Can set T7 as the right lowest non-key muscle with motor function', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                
+                // Act
+                exam.setRightLowestNonKeyMuscleWithMotorFunction('T7');
+                
+                // Assert
+                assert.equal(exam._rightLowestNonKeyMuscleWithMotorFunction.name, 'T7', 'T7 was succesfully set as the right lowest non-key muscle with motor function');
+            });
+            
+            test('Throws error when passing a non string for levelName as right lowest non-key muscle with motor function', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                var expectedMessage = 'rhi-core-isncsci-exam : setRightLowestNonKeyMuscleWithMotorFunction : Invalid arguments passed. Expected levelName to be a String';
+                var errorMessage;
+                
+                // Act
+                try {
+                    exam.setRightLowestNonKeyMuscleWithMotorFunction({});
+                } catch(error) {
+                    errorMessage = error.message;
+                }
+                
+                // Assert
+                assert.equal(expectedMessage, errorMessage, 'Succesfully reported ' + errorMessage);
+            });
+            
+            test('Throws error when passing an empty string for levelName as right lowest non-key muscle with motor function', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                var expectedMessage = 'rhi-core-isncsci-exam : setRightLowestNonKeyMuscleWithMotorFunction : Missing required arguments: levelName:String';
+                var errorMessage;
+                
+                // Act
+                try {
+                    exam.setRightLowestNonKeyMuscleWithMotorFunction('');
+                } catch(error) {
+                    errorMessage = error.message;
+                }
+                
+                // Assert
+                assert.equal(expectedMessage, errorMessage, 'Succesfully reported ' + errorMessage);
+            });
+            
+            test('Throws error when setting a right lowest non-key muscle with motor function using a wrong level name', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                var expectedMessage = 'rhi-core-isncsci-exam : setRightLowestNonKeyMuscleWithMotorFunction : Could not find level with name wrongLevelName';
+                var errorMessage;
+                
+                // Act
+                try {
+                    exam.setRightLowestNonKeyMuscleWithMotorFunction('wrongLevelName');
+                } catch(error) {
+                    errorMessage = error.message;
+                }
+                
+                // Assert
+                assert.equal(expectedMessage, errorMessage, 'Succesfully reported ' + errorMessage);
+            });
+            
+            test('Can set T7 as the left lowest non-key muscle with motor function', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                
+                // Act
+                exam.setLeftLowestNonKeyMuscleWithMotorFunction('T7');
+                
+                // Assert
+                assert.equal(exam._leftLowestNonKeyMuscleWithMotorFunction.name, 'T7', 'T7 was succesfully set as the left lowest non-key muscle with motor function');
+            });
+            
+            test('Throws error when passing a non string for levelName as left lowest non-key muscle with motor function', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                var expectedMessage = 'rhi-core-isncsci-exam : setLeftLowestNonKeyMuscleWithMotorFunction : Invalid arguments passed. Expected levelName to be a String';
+                var errorMessage;
+                
+                // Act
+                try {
+                    exam.setLeftLowestNonKeyMuscleWithMotorFunction({});
+                } catch(error) {
+                    errorMessage = error.message;
+                }
+                
+                // Assert
+                assert.equal(expectedMessage, errorMessage, 'Succesfully reported ' + errorMessage);
+            });
+            
+            test('Throws error when passing an empty string for levelName as left lowest non-key muscle with motor function', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                var expectedMessage = 'rhi-core-isncsci-exam : setLeftLowestNonKeyMuscleWithMotorFunction : Missing required arguments: levelName:String';
+                var errorMessage;
+                
+                // Act
+                try {
+                    exam.setLeftLowestNonKeyMuscleWithMotorFunction('');
+                } catch(error) {
+                    errorMessage = error.message;
+                }
+                
+                // Assert
+                assert.equal(expectedMessage, errorMessage, 'Succesfully reported ' + errorMessage);
+            });
+            
+            test('Throws error when setting a left lowest non-key muscle with motor function using a wrong level name', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                var expectedMessage = 'rhi-core-isncsci-exam : setLeftLowestNonKeyMuscleWithMotorFunction : Could not find level with name wrongLevelName';
+                var errorMessage;
+                
+                // Act
+                try {
+                    exam.setLeftLowestNonKeyMuscleWithMotorFunction('wrongLevelName');
+                } catch(error) {
+                    errorMessage = error.message;
+                }
+                
+                // Assert
+                assert.equal(expectedMessage, errorMessage, 'Succesfully reported ' + errorMessage);
+            });
+        });
+        
+        suite('<rhi-core-isncsci-exam> Retrieving values', function() {
+            test('Can get neurological level at ordinal = 1', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                 
+                // Act
+                var level = /** @type {!RhiCoreIsncsciLevel} */exam.getLevelAt(1);
+                
+                // Assert
+                assert.equal(level.name, 'C2', 'Level C2 was succesfully found at ordinal 1');
+            });
+            
+            test('Can get neurological level at ordinal = 28', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                 
+                // Act
+                var level = /** @type {!RhiCoreIsncsciLevel} */exam.getLevelAt(28);
+                
+                // Assert
+                assert.equal(level.name, 'S4_5', 'Level S4_5 was succesfully found at ordinal 1');
+            });
+            
+            test('Returns null when asked to find a level with ordinal = 0', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                 
+                // Act
+                var level = /** @type {!RhiCoreIsncsciLevel} */exam.getLevelAt(0);
+                
+                // Assert
+                assert.equal(level, null, 'Level at ordinal 0 is null');
+            });
+            
+            test('Returns null when asked to find a level with ordinal = 29', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                 
+                // Act
+                var level = /** @type {!RhiCoreIsncsciLevel} */exam.getLevelAt(29);
+                
+                // Assert
+                assert.equal(level, null, 'Level at ordinal 29 is null');
+            });
+            
+            test('Can get neurological level C2', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                 
+                // Act
+                var level = /** @type {!RhiCoreIsncsciLevel} */exam.getLevelWithName('C2');
+                
+                // Assert
+                assert.equal(level.name,'C2', 'Level C2 was succesfully found...');
+                assert.equal(level.ordinal, 1, '...at ordinal 1');
+            });
+            
+            test('Can get neurological level c2 - Lower case support', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                 
+                // Act
+                var level = /** @type {!RhiCoreIsncsciLevel} */exam.getLevelWithName('c2');
+                
+                // Assert
+                assert.equal(level.name,'C2', 'Level C2 was succesfully found...');
+                assert.equal(level.ordinal, 1, '...at ordinal 1');
+            });
+            
+            test('Can get neurological level S4_5', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                 
+                // Act
+                var level = /** @type {!RhiCoreIsncsciLevel} */exam.getLevelWithName('S4_5');
+                
+                // Assert
+                assert.equal(level.name,'S4_5', 'Level S4_5 was succesfully found...');
+                assert.equal(level.ordinal, 28, '...at ordinal 28');
+            });
+        });
+        
+        suite('<rhi-core-isncsci-exam> Updating levels', function() {
+            
+            test('Can assign normal levels to C4', function() {
+                // Arrange
+                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                 
+                // Act
+                var level = /** @type {!RhiCoreIsncsciLevel} */exam.updateLevelAt('C4', '2', '2', '2', '2', '5', '5').getLevelWithName('C4');
+                
+                // Assert
+                assert.equal(level.name,'C4', 'Level C4 was succesfully found...');
+                
+                // Right Touch
+                assert.equal(level.rightTouchName, '2', '...with right touch name equal to "2"');
+                assert.equal(level.rightTouchValue, 2, ' and right touch value equal to 2');
+                assert.equal(level.rightTouchImpairmentNotDueToSci, false, ' and no right touch impairment not due to SCI');
+                
+                // Left Touch
+                assert.equal(level.leftTouchName, '2', ' and left touch name equal to "2"');
+                assert.equal(level.leftTouchValue, 2, ' and left touch value equal to 2');
+                assert.equal(level.leftTouchImpairmentNotDueToSci, false, ' and no left touch impairment not due to SCI');
+            
+                // Right Prick
+                assert.equal(level.rightPrickName, '2', ' and right prick name equal to "2"');
+                assert.equal(level.rightPrickValue, 2, ' and right prick value equal to 2');
+                assert.equal(level.rightPrickImpairmentNotDueToSci, false, ' and no right prick impairment not due to SCI');
+            
+                // Left Prick
+                assert.equal(level.leftPrickName, '2', ' and left prick name equal to "2"');
+                assert.equal(level.leftPrickValue, 2, ' and left prick value equal to 2');
+                assert.equal(level.leftPrickImpairmentNotDueToSci, false, ' and no left prick impairment not due to SCI');
+            
+                // Right Motor
+                assert.equal(level.rightMotorName, '5', ' and right motor name equal to "5"');
+                assert.equal(level.rightMotorValue, 5, ' and right motor value equal to 5');
+                assert.equal(level.rightMotorImpairmentNotDueToSci, false, ' and no right motor impairment not due to SCI');
+            
+                // Left Motor
+                assert.equal(level.leftMotorName, '5', ' and left motor name equal to "5"');
+                assert.equal(level.leftMotorValue, 5, ' and left motor value equal to 5');
+                assert.equal(level.leftMotorImpairmentNotDueToSci, false, ' and no left motor impairment not due to SCI');
+            });
+            
+        });
+    </script>
+</body>
+</html>

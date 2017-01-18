@@ -1,0 +1,153 @@
+<!--
+@license
+Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
+This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/LICENSE
+Author: Eduardo Echeverria (@eddiemachete)
+-->
+<link rel="import" href="../../bower_components/polymer/polymer.html"/>
+<script>
+    /* global Polymer */
+    'use strict';
+    /// <summary>
+    /// </summary>
+    Polymer({
+    is: 'rhi-core-isncsci-level',
+    hostAttributes: {
+        hidden: true
+    },
+    properties: {
+      user: {
+        type: Object,
+        value: null
+      },
+      isKeyMuscle: {
+        type: Boolean,
+        value: false
+      },
+      isLowerMuscle: {
+        type: Boolean,
+        value: false
+      },
+      leftTouchImpairmentNotDueToSci: {
+        type: Boolean,
+        value: false
+      },
+      leftTouchName: {
+        type: String
+      },
+      leftTouchValue: {
+        type: Number
+      },
+      leftPrickImpairmentNotDueToSci: {
+        type: Boolean,
+        value: false
+      },
+      leftPrickName: {
+        type: String
+      },
+      leftPrickValue: {
+        type: Number
+      },
+      leftMotorImpairmentNotDueToSci: {
+        type: Boolean,
+        value: false
+      },
+      hasOtherLeftMotorFunction: {
+        type: Boolean,
+        value: false
+      },
+      leftMotorName: {
+        type: String
+      },
+      leftMotorValue: {
+        type: Number
+      },
+      next: {
+        type: Object
+      },
+      isncsciExam: {
+        type: Object
+      },
+      ordinal: {
+        type: Number
+      },
+      previous: {
+        type: Object
+      },
+      rightTouchImpairmentNotDueToSci: {
+        type: Boolean,
+        value: false
+      },
+      rightTouchName: {
+        type: String
+      },
+      rightTouchValue: {
+        type: Number
+      },
+      rightPrickImpairmentNotDueToSci: {
+        type: Boolean,
+        value: false
+      },
+      rightPrickName: {
+        type: String
+      },
+      rightPrickValue: {
+        type: Number
+      },
+      rightMotorImpairmentNotDueToSci: {
+        type: Boolean,
+        value: false
+      },
+      hasOtherRightMotorFunction: {
+        type: Boolean,
+        value: false
+      },
+      rightMotorName: {
+        type: String
+      },
+      rightMotorValue: {
+        type: Number
+      }
+    },
+    // There is also created which fires earlier
+    ready: function() {
+    },
+    setValues: function(ordinal, isKeyMuscle, isLowerMuscle,
+            rightTouchName, rightTouchValue, rightTouchImpairmentNotDueToSci,
+            leftTouchName, leftTouchValue, leftTouchImpairmentNotDueToSci,
+            rightPrickName, rightPrickValue, rightPrickImpairmentNotDueToSci,
+            leftPrickName, leftPrickValue, leftPrickImpairmentNotDueToSci,
+            rightMotorName, rightMotorValue, rightMotorImpairmentNotDueToSci,
+            leftMotorName, leftMotorValue, leftMotorImpairmentNotDueToSci) {
+        this.isKeyMuscle = isKeyMuscle;
+        this.isLowerMuscle = isLowerMuscle;
+        this.ordinal = ordinal;
+    
+        this.rightTouchName = rightPrickName;
+        this.rightTouchValue = rightPrickValue;
+        this.rightTouchImpairmentNotDueToSci = rightTouchImpairmentNotDueToSci;
+    
+        this.leftTouchName = leftTouchName;
+        this.leftTouchValue = leftTouchValue;
+        this.leftTouchImpairmentNotDueToSci = leftTouchImpairmentNotDueToSci;
+    
+        this.rightPrickName = rightPrickName;
+        this.rightPrickValue = rightPrickValue;
+        this.rightPrickImpairmentNotDueToSci = rightPrickImpairmentNotDueToSci;
+    
+        this.leftPrickName = leftPrickName;
+        this.leftPrickValue = leftPrickValue;
+        this.leftPrickImpairmentNotDueToSci = leftPrickImpairmentNotDueToSci;
+    
+        this.rightMotorName = rightMotorName;
+        this.rightMotorValue = rightMotorValue;
+        this.rightMotorImpairmentNotDueToSci = rightMotorImpairmentNotDueToSci;
+    
+        this.leftMotorName = leftMotorName;
+        this.leftMotorValue = leftMotorValue;
+        this.leftMotorImpairmentNotDueToSci = leftMotorImpairmentNotDueToSci;
+    
+        return this;
+    }
+    });
+</script>
