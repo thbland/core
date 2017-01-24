@@ -12,336 +12,687 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
 <script>
   /* global Polymer */
   'use strict';
-  Polymer({
-    is: 'rhi-core-isncsci-totals',
-    hostAttributes: {
-        hidden: true
-    },
-    properties: {
-      invalid: {
-        type: Boolean,
-        value: true
-      }
-    },
-     /**
-     * Performs an AJAX request to the specified URL.
-     *
-     * @return {!IronRequestElement}
-     */
-    // There is also created which fires earlier
-    ready: function() {
-      
-     
-    },
+  (function() {
+    /***********************************************/
+    /* ***** Private, static properties ********** */
+    /***********************************************/
+    var _c = 'rhi-core-isncsci-totals';
     
-    // public int RightUpperMotorTotal;
-// public bool RightUpperMotorTotalHasImpairmentNotDueToSci;
-// public bool RightUpperMotorContainsNt;
-// public int LeftUpperMotorTotal;
-// public bool LeftUpperMotorTotalHasImpairmentNotDueToSci;
-// public bool LeftUpperMotorContainsNt;
-// public int RightLowerMotorTotal;
-// public bool RightLowerMotorTotalHasImpairmentNotDueToSci;
-// public bool RightLowerMotorContainsNt;
-// public int LeftLowerMotorTotal;
-// public bool LeftLowerMotorTotalHasImpairmentNotDueToSci;
-// public bool LeftLowerMotorContainsNt;
-// public int RightTouchTotal;
-// public bool RightTouchTotalHasImpairmentNotDueToSci;
-// public bool RightTouchContainsNt;
-// public int LeftTouchTotal;
-// public bool LeftTouchTotalHasImpairmentNotDueToSci;
-// public bool LeftTouchContainsNt;
-// public int RightPrickTotal;
-// public bool RightPrickTotalHasImpairmentNotDueToSci;
-// public bool RightPrickContainsNt;
-// public int LeftPrickTotal;
-// public bool LeftPrickTotalHasImpairmentNotDueToSci;
-// public bool LeftPrickContainsNt;
+    /***********************************************/
+    /* ***** Private, static methods ************* */
+    /***********************************************/
+    /**
+    * Returns true if the specified levelName belongs to a level already contained in the values array provided.
+    *
+    * @param {rhiCoreIsncsciLevel[]} values (required) The value array where we are trying to find a match.
+    * @param {String} levelName (required) The name of the ISNCSCI Level name we are searching for.
+    * @return {Boolean} True if a match for levelName is found in the value array, false otherwise.
+    */
+    function _containsLevelWithName(values, levelName) {
+      var index = 0;
+      var notFound = true;
+      var levelNameToUpper = levelName.toUpperCase();
+      var match = null;
+      
+      while (notFound && index < values.length) {
+        var level = values[index];
+        index++;
+        
+        if (level.name === levelNameToUpper) {
+          match = level;
+          notFound = false;
+        }
+      }
+      
+      return match != null;
+    }
+    
+    Polymer({
+      is: 'rhi-core-isncsci-totals',
+      hostAttributes: {
+        hidden: true
+      },
+      properties: {
+        _asiaImpairmentScaleValues: {
+          type: /** @type {String[]} */ Array,
+          value: []
+        },
+        hasLeftCollins: {
+          type: Boolean,
+          value: false
+        },
+        hasRightCollins: {
+          type: Boolean,
+          value: false
+        },
+        leftLowerMotorContainsNt: {
+          type: Boolean,
+          value: false
+        },
+        leftLowerMotorTotal: {
+          type: Number,
+          value: 0
+        },
+        leftLowerMotorTotalHasImpairmentNotDueToSci: {
+          type: Boolean,
+          value: false
+        },
+        leftMotorHasOnlySoftValues: {
+          type: Boolean,
+          value: true
+        },
+        _leftMotorValues: {
+          type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
+          value: []
+        },
+        leftMotorZppHasOnlySoftValues: {
+          type: Boolean,
+          value: true
+        },
+        _leftMotorZppValues: {
+          type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
+          value: []
+        },
+        leftPrickContainsNt: {
+          type: Boolean,
+          value: false
+        },
+        leftPrickTotal: {
+          type: Number,
+          value: 0
+        },
+        leftPrickTotalHasImpairmentNotDueToSci: {
+          type: Boolean,
+          value: false
+        },
+        leftSensoryHasOnlySoftValues: {
+          type: Boolean,
+          value: true
+        },
+        _leftSensoryValues: {
+          type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
+          value: []
+        },
+        leftSensoryZppHasOnlySoftValues: {
+          type: Boolean,
+          value: true
+        },
+        _leftSensoryZppValues: {
+          type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
+          value: []
+        },
+        leftTouchContainsNt: {
+          type: Boolean,
+          value: false
+        },
+        leftTouchTotal: {
+          type: Number,
+          value: 0
+        },
+        leftTouchTotalHasImpairmentNotDueToSci: {
+          type: Boolean,
+          value: false
+        },
+        leftUpperMotorContainsNt: {
+          type: Boolean,
+          value: false
+        },
+        leftUpperMotorTotal: {
+          type: Number,
+          value: 0
+        },
+        leftUpperMotorTotalHasImpairmentNotDueToSci: {
+          type: Boolean,
+          value: false
+        },
+        lowerMotorTotal: {
+          type: Number,
+          value: 0
+        },
+        mostCaudalLeftLevelWithMotorFunction: {
+            type: /** @type {RhiCoreIsncsciLevel} */ Object,
+            value: null
+        },
+        mostCaudalLeftMotor: {
+            type: /** @type {RhiCoreIsncsciLevel} */ Object,
+            value: null
+        },
+        mostCaudalNeurologicalLevelOfInjury: {
+            type: /** @type {RhiCoreIsncsciLevel} */ Object,
+            value: null
+        },
+        mostCaudalRightLevelWithMotorFunction: {
+            type: /** @type {RhiCoreIsncsciLevel} */ Object,
+            value: null
+        },
+        mostCaudalRightMotor: {
+            type: /** @type {RhiCoreIsncsciLevel} */ Object,
+            value: null
+        },
+        mostRostralLeftLevelWithMotorFunction: {
+            type: /** @type {RhiCoreIsncsciLevel} */ Object,
+            value: null
+        },
+        mostRostralLeftMotor: {
+            type: /** @type {RhiCoreIsncsciLevel} */ Object,
+            value: null
+        },
+        mostRostralNeurologicalLevelOfInjury: {
+            type: /** @type {RhiCoreIsncsciLevel} */ Object,
+            value: null
+        },
+        mostRostralRightLevelWithMotorFunction: {
+            type: /** @type {RhiCoreIsncsciLevel} */ Object,
+            value: null
+        },
+        mostRostralRightMotor: {
+            type: /** @type {RhiCoreIsncsciLevel} */ Object,
+            value: null
+        },
+        neurologicalLevelOfInjuryHasOnlySoftValues: {
+          type: Boolean,
+          value: true
+        },
+        _neurologicalLevelsOfInjury: {
+          type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
+          value: []
+        },
+        prickTotal: {
+          type: Number,
+          value: 0
+        },
+        rightLowerMotorContainsNt: {
+          type: Boolean,
+          value: false
+        },
+        rightLowerMotorTotal: {
+          type: Number,
+          value: 0
+        },
+        rightLowerMotorTotalHasImpairmentNotDueToSci: {
+          type: Boolean,
+          value: false
+        },
+        rightMotorHasOnlySoftValues: {
+          type: Boolean,
+          value: true
+        },
+        _rightMotorValues: {
+          type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
+          value: []
+        },
+        rightMotorZppHasOnlySoftValues: {
+          type: Boolean,
+          value: true
+        },
+        _rightMotorZppValues: {
+          type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
+          value: []
+        },
+        rightPrickContainsNt: {
+          type: Boolean,
+          value: false
+        },
+        rightPrickTotal: {
+          type: Number,
+          value: 0
+        },
+        rightPrickTotalHasImpairmentNotDueToSci: {
+          type: Boolean,
+          value: false
+        },
+        rightSensoryHasOnlySoftValues: {
+          type: Boolean,
+          value: true
+        },
+        _rightSensoryValues: {
+          type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
+          value: []
+        },
+        rightSensoryZppHasOnlySoftValues: {
+          type: Boolean,
+          value: true
+        },
+        _rightSensoryZppValues: {
+          type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
+          value: []
+        },
+        rightTouchContainsNt: {
+          type: Boolean,
+          value: false
+        },
+        rightTouchTotal: {
+          type: Number,
+          value: 0
+        },
+        rightTouchTotalHasImpairmentNotDueToSci: {
+          type: Boolean,
+          value: false
+        },
+        rightUpperMotorContainsNt: {
+          type: Boolean,
+          value: false
+        },
+        rightUpperMotorTotal: {
+          type: Number,
+          value: 0
+        },
+        rightUpperMotorTotalHasImpairmentNotDueToSci: {
+          type: Boolean,
+          value: false
+        },
+        touchTotal: {
+          type: Number,
+          value: 0
+        },
+        upperMotorTotal: {
+          type: Number,
+          value: 0
+        }
+      },
+      /**
+      * Checks if there the totals currently have no possible right sensory values.
+      *
+      * @return {Boolean} True if there are no recorded possible right sensory values.
+      */
+      isRightSensoryEmpty: function() {
+        this._rightSensoryValues.length === 0;
+      },
+      /**
+      * Adds a neurological level to the list of possible right sensory values.
+      *
+      * @param {RhiCoreIsncsciLevel} level (required) The neurological level to be added to the right sensory values.
+      */
+      addRightSensoryValue: function(level) {
+        if (typeof level !== 'object')
+              throw new Error(_c + ' : addRightSensoryValue : '
+                              + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+      
+        if (_containsLevelWithName(this._rightSensoryValues, level.name))
+          return;
+      
+        this._rightSensoryValues.push(level);
+      },
+  
+      /**
+      * Produces a list of possible right sensory values.
+      *
+      * @return {RhiCoreIsncsciLevel[]} List possible right sensory values.
+      */
+      getRightSensoryValues: function() {
+        return this._rightSensoryValues.slice(0);
+      },
+  
+      /**
+      * Returns true if the specified levelName belongs to right sensory values list.
+      *
+      * @param {String} levelName (required) The name of the ISNCSCI Level name we are searching for.
+      * @return {Boolean} True if a match for levelName is found in the right sensory value list, false otherwise.
+      */
+      rightSensoryContains: function(levelName) {
+        if (!levelName || typeof levelName !== 'string')
+          throw new Error(_c + ' : rightSensoryContains : '
+                          + 'Invalid arguments passed. Expected levelName:String');
+                          
+        return _containsLevelWithName(this._rightSensoryValues, levelName);
+      },
+      
+      /**
+      * Checks if there the totals currently have no possible leftSensory values.
+      *
+      * @return {Boolean} True if there are no recorded possible left sensory values.
+      */
+      isLeftSensoryEmpty: function() {
+        return this._leftSensoryValues.length === 0;
+      },
+  
+      /**
+      * Adds a neurological level to the list of possible left sensory values.
+      *
+      * @param {RhiCoreIsncsciLevel} level (required) The neurological level to be added to the left sensory values.
+      */
+      addLeftSensoryValue: function(level) {
+        if (typeof level !== 'object')
+              throw new Error(_c + ' : addRightSensoryValue : '
+                              + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+        
+        if (_containsLevelWithName(this._leftSensoryValues, level.name))
+          return;
+      
+        this._leftSensoryValues.push(level);
+      },
+      
+      /**
+      * Produces a list of possible left sensory values.
+      *
+      * @return {RhiCoreIsncsciLevel[]} List possible left sensory values.
+      */
+      getLeftSensoryValues: function() {
+        return this._leftSensoryValues.slice(0);
+      },
+  
+      /**
+      * Returns true if the specified levelName belongs to left sensory values list.
+      *
+      * @param {String} levelName (required) The name of the ISNCSCI Level name we are searching for.
+      * @return {Boolean} True if a match for levelName is found in the left sensory value list, false otherwise.
+      */
+      leftSensoryContains: function(levelName) {
+        if (!levelName || typeof levelName !== 'string')
+          throw new Error(_c + ' : leftMotorContains : '
+                          + 'Invalid arguments passed. Expected levelName:String');
+                          
+        return _containsLevelWithName(this._leftSensoryValues, levelName);
+      },
+      
+      /**
+      * Checks if there the totals currently have no possible right motor values.
+      *
+      * @return {Boolean} True if there are no recorded possible right motor values.
+      */
+      isRightMotorEmpty: function() {
+        return this._rightMotorValues.length === 0;
+      },
+  
+      /**
+      * Adds a neurological level to the list of possible right motor values.
+      *
+      * @param {RhiCoreIsncsciLevel} level (required) The neurological level to be added to the right motor values.
+      */
+      addRightMotorValue: function(level) {
+        if (typeof level !== 'object')
+              throw new Error(_c + ' : addRightMotorValue : '
+                              + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+      
+        if (_containsLevelWithName(this._rightMotorValues, level.name))
+          return;
+        
+        if (this.mostRostralRightMotor == null || level.ordinal < this.mostRostralRightMotor.ordinal)
+          this.mostRostralRightMotor = level;
+        
+        if (this.mostCaudalRightMotor == null || level.ordinal > this.mostCaudalRightMotor.ordinal)
+          this.mostCaudalRightMotor = level;
+      
+        this._rightMotorValues.push(level);
+      },
+      
+      /**
+      * Produces a list of possible right motor values.
+      *
+      * @return {RhiCoreIsncsciLevel[]} List possible right motor values.
+      */
+      getRightMotorValues: function() {
+        return this._rightMotorValues.slice(0);
+      },
+      
+      /**
+      * Returns true if the specified levelName belongs to right motor values list.
+      *
+      * @param {String} levelName (required) The name of the ISNCSCI Level name we are searching for.
+      * @return {Boolean} True if a match for levelName is found in the right motor value list, false otherwise.
+      */
+      rightMotorContains: function(levelName) {
+        if (!levelName || typeof levelName !== 'string')
+          throw new Error(_c + ' : leftMotorContains : '
+                          + 'Invalid arguments passed. Expected levelName:String');
+                          
+        return _containsLevelWithName(this._rightMotorValues, levelName);
+      },
+      
+      /**
+      * Checks if there the totals currently have no possible left motor values.
+      *
+      * @return {Boolean} True if there are no recorded possible left motor values.
+      */
+      isLeftMotorEmpty: function() {
+        return this._leftMotorValues.length === 0;
+      },
+      
+      /**
+      * Adds a neurological level to the list of possible left motor values.
+      *
+      * @param {RhiCoreIsncsciLevel} level (required) The neurological level to be added to the left motor values.
+      */
+      addLeftMotorValue: function(level) {
+        if (typeof level !== 'object')
+              throw new Error(_c + ' : addLeftMotorValue : '
+                              + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+        
+        if (_containsLevelWithName(this._leftMotorValues, level.name))
+          return;
+      
+        if (this.mostRostralLeftMotor == null || level.ordinal < this.mostRostralLeftMotor.ordinal)
+          this.mostRostralLeftMotor = level;
+      
+        if (this.mostCaudalLeftMotor == null || level.ordinal > this.mostCaudalLeftMotor.ordinal)
+          this.mostCaudalLeftMotor = level;
+      
+        this._leftMotorValues.push(level);
+      },
+  
+      /**
+      * Produces a list of possible left motor values.
+      *
+      * @return {RhiCoreIsncsciLevel[]} List possible left motor values.
+      */
+      getLeftMotorValues: function() {
+        return this._leftMotorValues.slice(0);
+      },
+      
+      /**
+      * Returns true if the specified levelName belongs to left motor values list.
+      *
+      * @param {String} levelName (required) The name of the ISNCSCI Level name we are searching for.
+      * @return {Boolean} True if a match for levelName is found in the left motor value list, false otherwise.
+      */
+      leftMotorContains: function(levelName) {
+        if (!levelName || typeof levelName !== 'string')
+          throw new Error(_c + ' : leftMotorContains : '
+                          + 'Invalid arguments passed. Expected levelName:String');
+                          
+        return _containsLevelWithName(this._leftMotorValues, levelName);
+      },
 
-// public int UpperMotorTotal;
-// public int LowerMotorTotal;
-// public int TouchTotal;
-// public int PrickTotal;
-
-// #region Right Sensory
-// private readonly List<NeurologyFormLevel> _rightSensoryValues = new List<NeurologyFormLevel>();
-// public bool RightSensoryHasOnlySoftValues = true;
-
-// public bool RightSensoryIsEmpty()
-// {
-// return !_rightSensoryValues.Any();
-// }
-
-// public void AddRightSensoryValue(NeurologyFormLevel level)
-// {
-// if (_rightSensoryValues.Any(l => l.Name.ToUpper() == level.Name))
-// return;
-
-// _rightSensoryValues.Add(level);
-// }
-
-// public List<NeurologyFormLevel> GetRightSensoryValues()
-// {
-// return new List<NeurologyFormLevel>(_rightSensoryValues);
-// }
-
-// public bool RightSensoryContains(string levelName)
-// {
-// return _rightSensoryValues.Any(l => l.Name.ToUpper() == levelName.ToUpper());
-// }
-// #endregion
-
-// #region Left Sensory
-// private readonly List<NeurologyFormLevel> _leftSensoryValues = new List<NeurologyFormLevel>();
-// public bool LeftSensoryHasOnlySoftValues = true;
-
-// public bool LeftSensoryIsEmpty()
-// {
-// return !_leftSensoryValues.Any();
-// }
-
-// public void AddLeftSensoryValue(NeurologyFormLevel level)
-// {
-// if (_leftSensoryValues.Any(l => l.Name.ToUpper() == level.Name))
-// return;
-
-// _leftSensoryValues.Add(level);
-// }
-
-// public List<NeurologyFormLevel> GetLeftSensoryValues()
-// {
-// return new List<NeurologyFormLevel>(_leftSensoryValues);
-// }
-
-// public bool LeftSensoryContains(string levelName)
-// {
-// return _leftSensoryValues.Any(l => l.Name.ToUpper() == levelName.ToUpper());
-// }
-// #endregion
-
-// #region Right Motor
-// private readonly List<NeurologyFormLevel> _rightMotorValues = new List<NeurologyFormLevel>();
-// public bool RightMotorHasOnlySoftValues = true;
-// public bool HasRightCollins = false;
-// public NeurologyFormLevel MostRostralRightMotor { get; protected set; }
-// public NeurologyFormLevel MostCaudalRightMotor { get; protected set; }
-
-// public bool RightMotorIsEmpty()
-// {
-// return !_rightMotorValues.Any();
-// }
-
-// public void AddRightMotorValue(NeurologyFormLevel level)
-// {
-// if (_rightMotorValues.Any(l => l.Name.ToUpper() == level.Name))
-// return;
-
-// if (MostRostralRightMotor == null || level.Ordinal < MostRostralRightMotor.Ordinal)
-// MostRostralRightMotor = level;
-
-// if (MostCaudalRightMotor == null || level.Ordinal > MostCaudalRightMotor.Ordinal)
-// MostCaudalRightMotor = level;
-
-// _rightMotorValues.Add(level);
-// }
-
-// public List<NeurologyFormLevel> GetRightMotorValues()
-// {
-// return new List<NeurologyFormLevel>(_rightMotorValues);
-// }
-
-// public bool RightMotorContains(string levelName)
-// {
-// return _rightMotorValues.Any(l => l.Name.ToUpper() == levelName.ToUpper());
-// }
-// #endregion
-
-// #region Left Motor
-// private readonly List<NeurologyFormLevel> _leftMotorValues = new List<NeurologyFormLevel>();
-// public bool LeftMotorHasOnlySoftValues = true;
-// public bool HasLeftCollins = false;
-
-// public bool LeftMotorIsEmpty()
-// {
-// return !_leftMotorValues.Any();
-// }
-
-// public void AddLeftMotorValue(NeurologyFormLevel level)
-// {
-// if (_leftMotorValues.Any(l => l.Name.ToUpper() == level.Name))
-// return;
-
-// if (MostRostralLeftMotor == null || level.Ordinal < MostRostralLeftMotor.Ordinal)
-// MostRostralLeftMotor = level;
-
-// if (MostCaudalLeftMotor == null || level.Ordinal > MostCaudalLeftMotor.Ordinal)
-// MostCaudalLeftMotor = level;
-
-// _leftMotorValues.Add(level);
-// }
-
-// public List<NeurologyFormLevel> GetLeftMotorValues()
-// {
-// return new List<NeurologyFormLevel>(_leftMotorValues);
-// }
-
-// public bool LeftMotorContains(string levelName)
-// {
-// return _leftMotorValues.Any(l => l.Name.ToUpper() == levelName.ToUpper());
-// }
-// #endregion
-
-// #region Neurological Level of Injury
-// private readonly List<NeurologyFormLevel> _neurologicalLevelsOfInjury = new List<NeurologyFormLevel>();
-// public bool NeurologicalLevelOfInjuryHasOnlySoftValues = true;
-
-// public void AddNeurologicalLevelOfInjury(NeurologyFormLevel level)
-// {
-// if (_neurologicalLevelsOfInjury.Any(l => l.Name.ToLower() == level.Name.ToLower()))
-// return;
-
-// if (MostRostralNeurologicalLevelOfInjury == null || level.Ordinal < MostRostralNeurologicalLevelOfInjury.Ordinal)
-// MostRostralNeurologicalLevelOfInjury = level;
-
-// if (MostCaudalNeurologicalLevelOfInjury == null || level.Ordinal > MostCaudalNeurologicalLevelOfInjury.Ordinal)
-// MostCaudalNeurologicalLevelOfInjury = level;
-
-// _neurologicalLevelsOfInjury.Add(level);
-// }
-
-// public List<NeurologyFormLevel> GetNeurologicalLevelsOfInjury()
-// {
-// return new List<NeurologyFormLevel>(_neurologicalLevelsOfInjury);
-// }
-// #endregion
-
-// #region Right Sensory ZPP
-// private readonly List<NeurologyFormLevel> _rightSensoryZppValues = new List<NeurologyFormLevel>();
-// public bool RightSensoryZppHasOnlySoftValues = true;
-
-// public bool RightSensoryZppIsEmpty()
-// {
-// return !_rightSensoryZppValues.Any();
-// }
-
-// public void AddRightSensoryZppValue(NeurologyFormLevel level)
-// {
-// if (_rightSensoryZppValues.Any(l => l.Name.ToUpper() == level.Name)
-// || "S4_5".Equals(level.Name))
-// return;
-
-// _rightSensoryZppValues.Add(level);
-// }
-
-// public List<NeurologyFormLevel> GetRightSensoryZppValues()
-// {
-// return new List<NeurologyFormLevel>(_rightSensoryZppValues);
-// }
-// #endregion
-
-// #region Left Sensory ZPP
-// private readonly List<NeurologyFormLevel> _leftSensoryZppValues = new List<NeurologyFormLevel>();
-// public bool LeftSensoryZppHasOnlySoftValues = true;
-// public bool LeftSensoryZppIsEmpty()
-// {
-// return !_leftSensoryZppValues.Any();
-// }
-
-// public void AddLeftSensoryZppValue(NeurologyFormLevel level)
-// {
-// if (_leftSensoryZppValues.Any(l => l.Name.ToUpper() == level.Name)
-// || "S4_5".Equals(level.Name))
-// return;
-
-// _leftSensoryZppValues.Add(level);
-// }
-
-// public List<NeurologyFormLevel> GetLeftSensoryZppValues()
-// {
-// return new List<NeurologyFormLevel>(_leftSensoryZppValues);
-// }
-// #endregion
-
-// #region Right Motor ZPP
-// private readonly List<NeurologyFormLevel> _rightMotorZppValues = new List<NeurologyFormLevel>();
-// public bool RightMotorZppHasOnlySoftValues = true;
-
-// public bool RightMotorZppIsEmpty()
-// {
-// return !_rightMotorZppValues.Any();
-// }
-
-// public void AddRightMotorZppValue(NeurologyFormLevel level)
-// {
-// if (_rightMotorZppValues.Any(l => l.Name.ToUpper() == level.Name)
-// || "S4_5".Equals(level.Name))
-// return;
-
-// _rightMotorZppValues.Add(level);
-// }
-
-// public List<NeurologyFormLevel> GetRightMotorZppValues()
-// {
-// return new List<NeurologyFormLevel>(_rightMotorZppValues);
-// }
-// #endregion
-
-// #region Left Motor ZPP
-// private readonly List<NeurologyFormLevel> _leftMotorZppValues = new List<NeurologyFormLevel>();
-// public bool LeftMotorZppHasOnlySoftValues = true;
-
-// public bool LeftMotorZppIsEmpty()
-// {
-// return !_leftMotorZppValues.Any();
-// }
-
-// public void AddLeftMotorZppValue(NeurologyFormLevel level)
-// {
-// if (_leftMotorZppValues.Any(l => l.Name.ToUpper() == level.Name)
-// || "S4_5".Equals(level.Name))
-// return;
-
-// _leftMotorZppValues.Add(level);
-// }
-
-// public List<NeurologyFormLevel> GetLeftMotorZppValues()
-// {
-// return new List<NeurologyFormLevel>(_leftMotorZppValues);
-// }
-// #endregion
-
-// #region Asia Impairment Scale
-// //public string Complete;
-// //public bool IsSensoryIncomplete;
-// //public bool IsMotorIncomplete;
-// private readonly List<string> _asiaImpairmentScaleValues = new List<string>();
-
-// public void AddAsiaImpairmentScaleValue(string value)
-// {
-// if (string.IsNullOrEmpty(value) || _asiaImpairmentScaleValues.Contains(value.ToUpper()))
-// return;
-
-// _asiaImpairmentScaleValues.Add(value.ToUpper());
-// }
-
-getAsiaImpairmentScaleValues: function() {
-    return 'F';
-    // return string.Join(",", _asiaImpairmentScaleValues.OrderBy(v => v));
-}
-
-
-// public NeurologyFormLevel MostRostralLeftMotor { get; protected set; }
-// public NeurologyFormLevel MostCaudalLeftMotor { get; protected set; }
-
-// public NeurologyFormLevel MostRostralNeurologicalLevelOfInjury { get; protected set; }
-// public NeurologyFormLevel MostCaudalNeurologicalLevelOfInjury { get; protected set; }
-
-// public NeurologyFormLevel MostRostralRightLevelWithMotorFunction { get; set; }
-// public NeurologyFormLevel MostCaudalRightLevelWithMotorFunction { get; set; }
-// public NeurologyFormLevel MostRostralLeftLevelWithMotorFunction { get; set; }
-// public NeurologyFormLevel MostCaudalLeftLevelWithMotorFunction { get; set; }
-  });
+      /**
+      * Adds a neurological level to the list of possible neurological level of injury values.
+      *
+      * @param {RhiCoreIsncsciLevel} level (required) The neurological level to be added to the neurological level of injury values.
+      */
+      addNeurologicalLevelOfInjury: function(level) {
+        if (typeof level !== 'object')
+          throw new Error(_c + ' : addNeurologicalLevelOfInjury : '
+                          + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+        
+        if (_containsLevelWithName(this._neurologicalLevelsOfInjury, level.name))
+          return;
+        
+        if (this.mostRostralNeurologicalLevelOfInjury == null || level.ordinal < this.mostRostralNeurologicalLevelOfInjury.ordinal)
+          this.mostRostralNeurologicalLevelOfInjury = level;
+        
+        if (this.mostCaudalNeurologicalLevelOfInjury == null || level.ordinal > this.mostCaudalNeurologicalLevelOfInjury.ordinal)
+          this.mostCaudalNeurologicalLevelOfInjury = level;
+        
+        this._neurologicalLevelsOfInjury.push(level);
+      },
+      
+      /**
+      * Produces a list of possible neurological levels of injury.
+      *
+      * @return {RhiCoreIsncsciLevel[]} List possible neurological levels of injury.
+      */
+      getNeurologicalLevelsOfInjury: function() {
+        return this._neurologicalLevelsOfInjury.slice(0);
+      },
+      
+      /**
+      * Checks if there the totals currently have no possible right sensory ZPP values.
+      *
+      * @return {Boolean} True if there are no recorded possible right sensory ZPP values.
+      */
+      isRightSensoryZppIsEmpty: function() {
+        return this._rightSensoryZppValues.length === 0;
+      },
+      
+      /**
+      * Adds a neurological level to the list of possible right sensory ZPP values.
+      *
+      * @param {RhiCoreIsncsciLevel} level (required) The neuroligical level to be added to the possible right sensory ZPP values.
+      */
+      addRightSensoryZppValue: function(level) {
+        if (typeof level !== 'object')
+          throw new Error(_c + ' : addRightMotorZppValue : '
+                          + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+        
+        if (_containsLevelWithName(this._rightSensoryZppValues, level.name)
+            || 'S4_5' === level.name)
+            return;
+  
+        this._rightSensoryZppValues.push(level);
+      },
+      
+      /**
+      * Produces a list of possible right sensory ZPP values.
+      *
+      * @return {RhiCoreIsncsciLevel[]} List possible right sensory ZPP values
+      */
+      getRightSensoryZppValues: function() {
+        return this._rightSensoryZppValues.slice(0);
+      },
+      
+      /**
+      * Checks if there the totals currently have no possible left sensory ZPP values.
+      *
+      * @return {Boolean} True if there are no recorded possible left sensory ZPP values.
+      */
+      isLeftSensoryZppEmpty: function() {
+        return this._leftSensoryZppValues.length === 0;
+      },
+  
+      /**
+      * Adds a neurological level to the list of possible left sensory ZPP values.
+      *
+      * @param {RhiCoreIsncsciLevel} level (required) The neuroligical level to be added to the possible left sensory ZPP values.
+      */
+      addLeftSensoryZppValue: function(level) {
+        if (typeof level !== 'object')
+          throw new Error(_c + ' : addRightMotorZppValue : '
+                          + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+        
+        if (_containsLevelWithName(this._leftSensoryZppValues, level.name)
+            || 'S4_5' === level.name)
+            return;
+  
+        this._leftSensoryZppValues.push(level);
+      },
+  
+      /**
+      * Produces a list of possible left sensory ZPP values.
+      *
+      * @return {RhiCoreIsncsciLevel[]} List possible left sensory ZPP values
+      */
+      getLeftSensoryZppValues: function() {
+        return this._leftSensoryZppValues.slice(0);
+      },
+      
+      /**
+      * Checks if there the totals currently have no possible right motor ZPP values.
+      *
+      * @return {Boolean} True if there are no recorded possible right motor ZPP values.
+      */
+      isRightMotorZppEmpty: function() {
+        return this._rightMotorZppValues.length === 0;
+      },
+      
+      /**
+      * Adds a neurological level to the list of possible right motor ZPP values.
+      *
+      * @param {RhiCoreIsncsciLevel} level (required) The neuroligical level to be added to the possible right motor ZPP values.
+      */
+      addRightMotorZppValue: function(level) {
+        if (typeof level !== 'object')
+          throw new Error(_c + ' : addRightMotorZppValue : '
+                          + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+        
+        if (_containsLevelWithName(this._rightMotorZppValues, level.name)
+            || 'S4_5' === level.name)
+            return;
+  
+        this._rightMotorZppValues.push(level);
+      },
+  
+      /**
+      * Produces a list of possible right motor ZPP values.
+      *
+      * @return {RhiCoreIsncsciLevel[]} List possible right motor ZPP values
+      */
+      getRightMotorZppValues: function() {
+        return this._rightMotorZppValues.slice(0);
+      },
+      
+      /**
+      * Checks if there the totals currently have no possible left motor ZPP values.
+      *
+      * @return {Boolean} True if there are no recorded possible left motor ZPP values.
+      */
+      isLeftMotorZppEmpty: function() {
+        return this._leftMotorZppValues.length === 0;
+      },
+  
+      /**
+      * Adds a neurological level to the list of possible left motor ZPP values.
+      *
+      * @param {RhiCoreIsncsciLevel} level (required) The neuroligical level to be added to the possible left motor ZPP values.
+      */
+      addLeftMotorZppValue: function(level) {
+        if (typeof level !== 'object')
+          throw new Error(_c + ' : addLeftMotorZppValue : '
+                          + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+        
+        if (_containsLevelWithName(this._leftMotorZppValues, level.name)
+            || 'S4_5' === level.name)
+          return;
+          
+        this._leftMotorZppValues.push(level);
+      },
+      
+      /**
+      * Produces a list of possible left motor ZPP values.
+      *
+      * @return {RhiCoreIsncsciLevel[]} List possible left motor ZPP values
+      */
+      getLeftMotorZppValues: function() {
+        return this._leftMotorZppValues.slice(0);
+      },
+      
+      /**
+      * Adds an AIS value to the list of possible impairment values.
+      *
+      * @param {String} value (required) The AIS value to be recorded.
+      */
+      addAsiaImpairmentScaleValue: function(value) {
+        if (!value || typeof value !== 'string')
+          throw new Error(_c + ' : addAsiaImpairmentScaleValue : '
+                          + 'Invalid arguments passed. Expected value:String');
+        
+        var valueToUpper = value.toUpperCase();
+        
+        // Do not enter the value twice if it is already contained in the list                
+        if (this._asiaImpairmentScaleValues.indexOf(valueToUpper) != -1)
+          return;
+      
+        this._asiaImpairmentScaleValues.push(valueToUpper);
+      },
+      
+      /**
+      * Produces a string of alphabetically sorted AIS values concatenated by commas.
+      *
+      * @return {String} List of AIS values, sorted alphabetically, and concatenated by commas. E.g. 'A,C,E'
+      */
+      getAsiaImpairmentScaleValues: function() {
+        return this._asiaImpairmentScaleValues.sort().join();
+      }
+    });
+  })();
 </script>
 
 

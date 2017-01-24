@@ -321,8 +321,14 @@ Author: Eduardo Echeverria (@eddiemachete)
                 if (!level)
                     throw new Error(_c + ' : updateLevelAt : '
                                     + 'Could not find level with name ' + levelName);
+                                    
+                if (level.isKeyMuscle) {
+                    _updateLevel(level, rightTouchName, leftTouchName, rightPrickName, leftPrickName, rightMotorName, leftMotorName);
+                } else {
+                    _updateLevel(level, rightTouchName, leftTouchName, rightPrickName, leftPrickName, '0', '0');
+                }
                     
-                _updateLevel(level, rightTouchName, leftTouchName, rightPrickName, leftPrickName, rightMotorName, leftMotorName);
+                
                 
                 return this;
             }

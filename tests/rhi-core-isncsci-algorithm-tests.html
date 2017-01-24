@@ -13,24 +13,99 @@
         /* global assert */
         /* global rhiIsncsciValidationTests */
         // Loaded from isncsci-tests.js to keep this file clean.
+        'use strict';
         
         suite('<rhi-core-isncsci-algorithm>', function() {
             var isncsciAlgorithm = document.getElementById('isncsciAlgorithm');
             
             test('Can calculate the totals for test at [index]', function() {
                 // Arrange
-                var test = {};
-                var expectedTotals = rhiIsncsciValidationTests.all[0].totals;
+                var test = rhiIsncsciValidationTests.all[0];
+                var expectedTotals = test.totals;
+                var isncsciExam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                _bind(isncsciExam, test);
                 
                 // Act
-                var totals = isncsciAlgorithm.getTotalsFor(test);
+                var totals = isncsciAlgorithm.getTotalsFor(isncsciExam);
                 
                 // Assert
-                // chai has the asserts
-                assert.equal(expectedTotals.asiaImpairmentScale, totals.getAsiaImpairmentScaleValues());
-                //assert.equal(document.getElementById('isncsciAlgorithm').blockCount, 3);
+                //assert.equal(expectedTotals.leftPrickTotal, totals.leftPrickTotal, 'leftTouchTotal');
+                //assert.equal(expectedTotals.leftTouchTotal, totals.leftTouchTotal, 'leftTouchTotal');
+                //assert.equal(expectedTotals.rightPrickTotal, totals.rightPrickTotal, 'rightPrickTotal');
+                //assert.equal(expectedTotals.rightTouchTotal, totals.rightTouchTotal, 'rightTouchTotal');
+                compare(expectedTotals, totals);
+            });
+            
+            test('Can calculate the totals for the entire test suite', function () {
+                // Arrange
+                var tests = rhiIsncsciValidationTests.all;
+                var testsLength = tests.length;
+                
+                // Act - Assert
+                for (var i=0; i<testsLength; i++) {
+                    var test = tests[i];
+                    var isncsciExam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+                    _bind(isncsciExam, test);
+                    var totals = isncsciAlgorithm.getTotalsFor(isncsciExam);
+                    
+                    console.log(i + '. ' + test.comments);
+                    compare(test.totals, totals);
+                }
             });
         });
+        
+        function compare (expectedTotals, totals) {
+            //assert.equal(expectedTotals.asiaImpairmentScale, totals.getAsiaImpairmentScaleValues(), 'asiaImpairmentScale');
+            
+            assert.equal(expectedTotals.leftLowerMotorContainsNt, totals.leftLowerMotorContainsNt, 'leftLowerMotorContainsNt');
+            // assert.equal(expectedTotals., totals.leftLowerMotorTotal, 'leftLowerMotorTotal');
+            // assert.equal(expectedTotals., totals.leftMotor, 'leftMotor');
+            // assert.equal(expectedTotals., totals.leftMotorTotal, 'leftMotorTotal');
+            assert.equal(expectedTotals.leftPrickContainsNt, totals.leftPrickContainsNt, 'leftPrickContainsNt');
+            assert.equal(expectedTotals.leftPrickTotal, totals.leftPrickTotal, 'leftTouchTotal');
+            // assert.equal(expectedTotals., totals.leftSensory, 'leftSensory');
+            // assert.equal(expectedTotals., totals.leftSensoryZpp, 'leftSensoryZpp');
+            assert.equal(expectedTotals.leftTouchContainsNt, totals.leftTouchContainsNt, 'leftTouchContainsNt');
+            assert.equal(expectedTotals.leftTouchTotal, totals.leftTouchTotal, 'leftTouchTotal');
+            assert.equal(expectedTotals.leftUpperMotorContainsNt, totals.leftUpperMotorContainsNt, 'leftUpperMotorContainsNt');
+            // assert.equal(expectedTotals., totals.leftUpperMotorTotal, 'leftUpperMotorTotal');
+            // assert.equal(expectedTotals., totals.leftMotorZpp, 'leftMotorZpp');
+            
+            // assert.equal(expectedTotals., totals.lowerMotorTotal, 'lowerMotorTotal');
+            // assert.equal(expectedTotals., totals.neurologicalLevelOfInjury, 'neurologicalLevelOfInjury');
+            // assert.equal(expectedTotals., totals.prickTotal, 'prickTotal');
+            
+            assert.equal(expectedTotals.rightLowerMotorContainsNt, totals.rightLowerMotorContainsNt, 'rightLowerMotorContainsNt');
+            // assert.equal(expectedTotals., totals.rightLowerMotorTotal, 'rightLowerMotorTotal');
+            // assert.equal(expectedTotals., totals.rightMotor, 'rightMotor');
+            // assert.equal(expectedTotals., totals.rightMotorTotal, 'rightMotorTotal');
+            // assert.equal(expectedTotals., totals.rightMotorZpp, 'rightMotorZpp');
+            assert.equal(expectedTotals.rightPrickContainsNt, totals.rightPrickContainsNt, 'rightPrickContainsNt');
+            assert.equal(expectedTotals.rightPrickTotal, totals.rightPrickTotal, 'rightPrickTotal');
+            // assert.equal(expectedTotals., totals.rightSensory, 'rightSensory');
+            // assert.equal(expectedTotals., totals.rightSensoryZpp, 'rightSensoryZpp');
+            assert.equal(expectedTotals.rightTouchContainsNt, totals.rightTouchContainsNt, 'rightTouchContainsNt');
+            assert.equal(expectedTotals.rightTouchTotal, totals.rightTouchTotal, 'rightTouchTotal');
+            assert.equal(expectedTotals.rightUpperMotorContainsNt, totals.rightUpperMotorContainsNt, 'rightUpperMotorContainsNt');
+            // assert.equal(expectedTotals., totals.rightUpperMotorTotal, 'rightUpperMotorTotal');
+            
+            // assert.equal(expectedTotals., totals.touchTotal);
+            // assert.equal(expectedTotals., totals.upperMotorTotal);
+            
+        }
+        
+        function _bind(isncsciExam, test) {
+            var keys = ['C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8',
+                        'T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10', 'T11', 'T12',
+                        'L1', 'L2', 'L3', 'L4', 'L5', 'S1', 'S2', 'S3', 'S4_5'];
+            var dermatomes = test.dermatomes;
+            
+            for (var i=0; i<keys.length; i++) {
+                var key = keys[i];
+                var dermatome = dermatomes[key];
+                isncsciExam.updateLevelAt(key, dermatome.rightTouch, dermatome.leftTouch, dermatome.rightPrick, dermatome.leftPrick, dermatome.rightMotor, dermatome.leftMotor);
+            }
+        }
     </script>
 </body>
 </html>

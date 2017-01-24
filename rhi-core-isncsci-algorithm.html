@@ -7,23 +7,23 @@ Author: Eduardo Echeverria (@eddiemachete)
 <link rel="import" href="../../bower_components/polymer/polymer.html"/>
 <link rel="import" href="rhi-core-isncsci-exam.html">
 <link rel="import" href="rhi-core-isncsci-totals.html">
-<!--
-The 'rhi-core-isncsci-algorithm' contains the methods which perform the ISNCSCI calculations.
-    <rhi-core-isncsci-algorithm></rhi-core-isncsci-algorithm>
-@demo demo/index.html
--->
 <script>
     /* global Polymer */
     'use strict';
     
     (function() {
-        
-        // Private static
+        /***********************************************/
+        /* ***** Private, static properties ********** */
+        /***********************************************/
+        var _c = 'rhi-core-isncsci-algorithm';
         var _ntRegex = /\bNT\b/i;
         var _notDeterminable = 'UTD';
         var _notApplicable = 'NA';
         var _intact = 'INT';
         
+        /***********************************************/
+        /* ***** Private, static methods ************* */
+        /***********************************************/
         /// <summary>
         /// Recursive method which iterates through the values in a nuerology form while it updates the totals generating the results produced by the algorithm.
         /// </summary>
@@ -32,158 +32,140 @@ The 'rhi-core-isncsci-algorithm' contains the methods which perform the ISNCSCI 
         /// <param name="level">Current neurology level being evaluated</param>
         /// <param name="nextNonKeyMuscleShouldBeRightMotor">Flag used to evaluate the Kathy Collins condition on the right motor results.</param>
         /// <param name="nextNonKeyMuscleShouldBeLeftMotor">Flag used to evaluate the Kathy Collins condition on the left motor results.</param>
-        function updateTotalsWithLevelAt(isncsciExam, totals, level, nextNonKeyMuscleShouldBeRightMotor, nextNonKeyMuscleShouldBeLeftMotor)
+        function _updateTotalsWithLevelAt(isncsciExam, totals, level, nextNonKeyMuscleShouldBeRightMotor, nextNonKeyMuscleShouldBeLeftMotor)
         {
-    //             totals.RightTouchTotal += level.RightTouchValue;
-    //             totals.LeftTouchTotal += level.LeftTouchValue;
-    //             totals.RightPrickTotal += level.RightPrickValue;
-    //             totals.LeftPrickTotal += level.LeftPrickValue;
+            totals.rightTouchTotal += level.rightTouchValue;
+            totals.leftTouchTotal += level.leftTouchValue;
+            totals.rightPrickTotal += level.rightPrickValue;
+            totals.leftPrickTotal += level.leftPrickValue;
     
-    //             if (level.IsKeyMuscle)
-    //             {
-    //                 if (level.IsLowerMuscle)
-    //                 {
-    //                     if (level.RightMotorImpairmentNotDueToSci && !totals.RightLowerMotorTotalHasImpairmentNotDueToSci)
-    //                         totals.RightLowerMotorTotalHasImpairmentNotDueToSci = true;
+            if (level.IsKeyMuscle) {
+                if (level.isLowerMuscle) {
+                    if (level.rightMotorImpairmentNotDueToSci && !totals.rightLowerMotorTotalHasImpairmentNotDueToSci)
+                        totals.rightLowerMotorTotalHasImpairmentNotDueToSci = true;
     
-    //                     if (level.LeftMotorImpairmentNotDueToSci && !totals.LeftLowerMotorTotalHasImpairmentNotDueToSci)
-    //                         totals.LeftLowerMotorTotalHasImpairmentNotDueToSci = true;
+                    if (level.leftMotorImpairmentNotDueToSci && !totals.leftLowerMotorTotalHasImpairmentNotDueToSci)
+                        totals.leftLowerMotorTotalHasImpairmentNotDueToSci = true;
     
-    //                     if (NtRegex.IsMatch(level.RightMotorName) && !level.RightMotorImpairmentNotDueToSci)
-    //                         totals.RightLowerMotorContainsNt = true;
+                    if (_ntRegex.test(level.rightMotorName) && !level.rightMotorImpairmentNotDueToSci)
+                        totals.rightLowerMotorContainsNt = true;
     
-    //                     if (NtRegex.IsMatch(level.LeftMotorName) && !level.LeftMotorImpairmentNotDueToSci)
-    //                         totals.LeftLowerMotorContainsNt = true;
-    //                 }
-    //                 else
-    //                 {
-    //                     if (level.RightMotorImpairmentNotDueToSci && !totals.RightUpperMotorTotalHasImpairmentNotDueToSci)
-    //                         totals.RightUpperMotorTotalHasImpairmentNotDueToSci = true;
+                    if (_ntRegex.test(level.leftMotorName) && !level.leftMotorImpairmentNotDueToSci)
+                        totals.leftLowerMotorContainsNt = true;
+                } else {
+                    if (level.rightMotorImpairmentNotDueToSci && !totals.rightUpperMotorTotalHasImpairmentNotDueToSci)
+                        totals.rightUpperMotorTotalHasImpairmentNotDueToSci = true;
     
-    //                     if (level.LeftMotorImpairmentNotDueToSci && !totals.LeftUpperMotorTotalHasImpairmentNotDueToSci)
-    //                         totals.LeftUpperMotorTotalHasImpairmentNotDueToSci = true;
+                    if (level.leftMotorImpairmentNotDueToSci && !totals.leftUpperMotorTotalHasImpairmentNotDueToSci)
+                        totals.leftUpperMotorTotalHasImpairmentNotDueToSci = true;
     
-    //                     if (NtRegex.IsMatch(level.RightMotorName) && !level.RightMotorImpairmentNotDueToSci)
-    //                         totals.RightUpperMotorContainsNt = true;
+                    if (_ntRegex.test(level.rightMotorName) && !level.rightMotorImpairmentNotDueToSci)
+                        totals.rightUpperMotorContainsNt = true;
     
-    //                     if (NtRegex.IsMatch(level.LeftMotorName) && !level.LeftMotorImpairmentNotDueToSci)
-    //                         totals.LeftUpperMotorContainsNt = true;
-    //                 }
-    //             }
-    //             else
-    //             {
-    //                 if (nextNonKeyMuscleShouldBeRightMotor)
-    //                 {
-    //                     nextNonKeyMuscleShouldBeRightMotor = false;
-    //                     totals.AddRightMotorValue(level.Previous);
+                    if (_ntRegex.test(level.leftMotorName) && !level.leftMotorImpairmentNotDueToSci)
+                        totals.leftUpperMotorContainsNt = true;
+                }
+            } else {
+                if (nextNonKeyMuscleShouldBeRightMotor) {
+                    nextNonKeyMuscleShouldBeRightMotor = false;
+                    totals.addRightMotorValue(level.previous);
     
-    //                     if (!totals.RightSensoryHasOnlySoftValues)
-    //                         totals.RightMotorHasOnlySoftValues = false;
-    //                 }
+                    if (!totals.rightSensoryHasOnlySoftValues)
+                        totals.rightMotorHasOnlySoftValues = false;
+                }
     
-    //                 if (nextNonKeyMuscleShouldBeLeftMotor)
-    //                 {
-    //                     nextNonKeyMuscleShouldBeLeftMotor = false;
-    //                     totals.AddLeftMotorValue(level.Previous);
+                if (nextNonKeyMuscleShouldBeLeftMotor) {
+                    nextNonKeyMuscleShouldBeLeftMotor = false;
+                    totals.addLeftMotorValue(level.previous);
     
-    //                     if (!totals.LeftSensoryHasOnlySoftValues)
-    //                         totals.LeftMotorHasOnlySoftValues = false;
-    //                 }
-    //             }
+                    if (!totals.leftSensoryHasOnlySoftValues)
+                        totals.leftMotorHasOnlySoftValues = false;
+                }
+            }
     
-    //             if (level.RightTouchImpairmentNotDueToSci && !totals.RightTouchTotalHasImpairmentNotDueToSci)
-    //                 totals.RightTouchTotalHasImpairmentNotDueToSci = true;
+            if (level.rightTouchImpairmentNotDueToSci && !totals.rightTouchTotalHasImpairmentNotDueToSci)
+                totals.rightTouchTotalHasImpairmentNotDueToSci = true;
     
-    //             if (level.LeftTouchImpairmentNotDueToSci && !totals.LeftTouchTotalHasImpairmentNotDueToSci)
-    //                 totals.LeftTouchTotalHasImpairmentNotDueToSci = true;
+            if (level.leftTouchImpairmentNotDueToSci && !totals.leftTouchTotalHasImpairmentNotDueToSci)
+                totals.leftTouchTotalHasImpairmentNotDueToSci = true;
     
-    //             if (level.RightPrickImpairmentNotDueToSci && !totals.RightPrickTotalHasImpairmentNotDueToSci)
-    //                 totals.RightPrickTotalHasImpairmentNotDueToSci = true;
+            if (level.rightPrickImpairmentNotDueToSci && !totals.rightPrickTotalHasImpairmentNotDueToSci)
+                totals.rightPrickTotalHasImpairmentNotDueToSci = true;
     
-    //             if (level.LeftPrickImpairmentNotDueToSci && !totals.LeftPrickTotalHasImpairmentNotDueToSci)
-    //                 totals.LeftPrickTotalHasImpairmentNotDueToSci = true;
+            if (level.leftPrickImpairmentNotDueToSci && !totals.leftPrickTotalHasImpairmentNotDueToSci)
+                totals.leftPrickTotalHasImpairmentNotDueToSci = true;
     
-    //             // Check if a column contains any NT value so we can properly format the total presented to the user
-    //             if (NtRegex.IsMatch(level.RightTouchName) && !level.RightTouchImpairmentNotDueToSci && !totals.RightTouchContainsNt)
-    //                 totals.RightTouchContainsNt = true;
+            // Check if a column contains any NT value so we can properly format the total presented to the user
+            if (_ntRegex.test(level.rightTouchName) && !level.rightTouchImpairmentNotDueToSci && !totals.rightTouchContainsNt)
+                totals.rightTouchContainsNt = true;
     
-    //             if (NtRegex.IsMatch(level.LeftTouchName) && !level.LeftTouchImpairmentNotDueToSci && !totals.LeftTouchContainsNt)
-    //                 totals.LeftTouchContainsNt = true;
+            if (_ntRegex.test(level.leftTouchName) && !level.leftTouchImpairmentNotDueToSci && !totals.leftTouchContainsNt)
+                totals.leftTouchContainsNt = true;
     
-    //             if (NtRegex.IsMatch(level.RightPrickName) && !level.RightPrickImpairmentNotDueToSci && !totals.RightPrickContainsNt)
-    //                 totals.RightPrickContainsNt = true;
+            if (_ntRegex.test(level.rightPrickName) && !level.rightPrickImpairmentNotDueToSci && !totals.rightPrickContainsNt)
+                totals.rightPrickContainsNt = true;
     
-    //             if (NtRegex.IsMatch(level.LeftPrickName) && !level.LeftPrickImpairmentNotDueToSci && !totals.LeftPrickContainsNt)
-    //                 totals.LeftPrickContainsNt = true;
+            if (_ntRegex.test(level.leftPrickName) && !level.leftPrickImpairmentNotDueToSci && !totals.leftPrickContainsNt)
+                totals.leftPrickContainsNt = true;
     
     
+            if (totals.rightSensoryHasOnlySoftValues &&
+                    ((level.rightTouchValue != 2 && !level.rightTouchImpairmentNotDueToSci) ||
+                    (level.rightPrickValue != 2 && !level.rightPrickImpairmentNotDueToSci))) {
+                totals.addRightSensoryValue(level.previous);
     
+                if ('S4_5' === level.Name
+                        && (level.rightTouchValue == 2 || _ntRegex.test(level.rightTouchName))
+                        && (level.rightPrickValue == 2 || _ntRegex.test(level.rightPrickName))) {
+                    totals.addRightSensoryValue(level);
     
-    //             if (totals.RightSensoryHasOnlySoftValues &&
-    //                 ((level.RightTouchValue != 2 && !level.RightTouchImpairmentNotDueToSci) ||
-    //                  (level.RightPrickValue != 2 && !level.RightPrickImpairmentNotDueToSci)))
-    //             {
-    //                 totals.AddRightSensoryValue(level.Previous);
+                    if (totals.neurologicalLevelOfInjuryHasOnlySoftValues)
+                        totals.addNeurologicalLevelOfInjury(level);
+                }
     
-    //                 if ("S4_5".Equals(level.Name)
-    //                     && (level.RightTouchValue == 2 || NtRegex.IsMatch(level.RightTouchName))
-    //                     && (level.RightPrickValue == 2 || NtRegex.IsMatch(level.RightPrickName)))
-    //                 {
-    //                     totals.AddRightSensoryValue(level);
+                if (totals.neurologicalLevelOfInjuryHasOnlySoftValues)
+                    totals.addNeurologicalLevelOfInjury(level.previous);
     
-    //                     if (totals.NeurologicalLevelOfInjuryHasOnlySoftValues)
-    //                         totals.AddNeurologicalLevelOfInjury(level);
-    //                 }
+                if ((level.rightTouchValue != 2 && !_ntRegex.test(level.rightTouchName))
+                         || (level.rightPrickValue != 2 && !_ntRegex.test(level.rightPrickName))) {
+                         totals.rightSensoryHasOnlySoftValues = false;
+                         totals.neurologicalLevelOfInjuryHasOnlySoftValues = false;
+                }
     
-    //                 if (totals.NeurologicalLevelOfInjuryHasOnlySoftValues)
-    //                     totals.AddNeurologicalLevelOfInjury(level.Previous);
+                if (level.isKeyMuscle) {
+                    nextNonKeyMuscleShouldBeRightMotor = true;
+                    totals.hasRightCollins = true;
+                }
+            }
     
-    //                 if ((level.RightTouchValue != 2 && !NtRegex.IsMatch(level.RightTouchName))
-    //                     || (level.RightPrickValue != 2 && !NtRegex.IsMatch(level.RightPrickName)))
-    //                 {
-    //                     totals.RightSensoryHasOnlySoftValues = false;
-    //                     totals.NeurologicalLevelOfInjuryHasOnlySoftValues = false;
-    //                 }
+            if (totals.leftSensoryHasOnlySoftValues &&
+                    ((level.leftTouchValue != 2 && !level.leftTouchImpairmentNotDueToSci) ||
+                    (level.leftPrickValue != 2 && !level.leftPrickImpairmentNotDueToSci))) {
+                totals.addLeftSensoryValue(level.previous);
     
-    //                 if (level.IsKeyMuscle)
-    //                 {
-    //                     nextNonKeyMuscleShouldBeRightMotor = true;
-    //                     totals.HasRightCollins = true;
-    //                 }
-    //             }
+                if ('S4_5' === (level.name)
+                        && (level.leftTouchValue == 2 || _ntRegex.test(level.leftTouchName))
+                        && (level.leftPrickValue == 2 || _ntRegex.test(level.leftPrickName))) {
+                    totals.addLeftSensoryValue(level);
+        
+                    if (totals.neurologicalLevelOfInjuryHasOnlySoftValues)
+                        totals.addNeurologicalLevelOfInjury(level);
+                }
     
-    //             if (totals.LeftSensoryHasOnlySoftValues &&
-    //                 ((level.LeftTouchValue != 2 && !level.LeftTouchImpairmentNotDueToSci) ||
-    //                  (level.LeftPrickValue != 2 && !level.LeftPrickImpairmentNotDueToSci)))
-    //             {
-    //                 totals.AddLeftSensoryValue(level.Previous);
+                if (totals.neurologicalLevelOfInjuryHasOnlySoftValues)
+                    totals.addNeurologicalLevelOfInjury(level.previous);
     
-    //                 if ("S4_5".Equals(level.Name)
-    //                     && (level.LeftTouchValue == 2 || NtRegex.IsMatch(level.LeftTouchName))
-    //                     && (level.LeftPrickValue == 2 || NtRegex.IsMatch(level.LeftPrickName)))
-    //                 {
-    //                     totals.AddLeftSensoryValue(level);
+                if ((level.leftTouchValue != 2 && !_ntRegex.test(level.leftTouchName))
+                        || (level.leftPrickValue != 2 && !_ntRegex.test(level.leftPrickName))) {
+                    totals.leftSensoryHasOnlySoftValues = false;
+                    totals.neurologicalLevelOfInjuryHasOnlySoftValues = false;
+                }
     
-    //                     if (totals.NeurologicalLevelOfInjuryHasOnlySoftValues)
-    //                         totals.AddNeurologicalLevelOfInjury(level);
-    //                 }
-    
-    //                 if (totals.NeurologicalLevelOfInjuryHasOnlySoftValues)
-    //                     totals.AddNeurologicalLevelOfInjury(level.Previous);
-    
-    //                 if ((level.LeftTouchValue != 2 && !NtRegex.IsMatch(level.LeftTouchName))
-    //                     || (level.LeftPrickValue != 2 && !NtRegex.IsMatch(level.LeftPrickName)))
-    //                 {
-    //                     totals.LeftSensoryHasOnlySoftValues = false;
-    //                     totals.NeurologicalLevelOfInjuryHasOnlySoftValues = false;
-    //                 }
-    
-    //                 if (level.IsKeyMuscle)
-    //                 {
-    //                     nextNonKeyMuscleShouldBeLeftMotor = true;
-    //                     totals.HasLeftCollins = true;
-    //                 }
-    //             }
+                if (level.isKeyMuscle) {
+                    nextNonKeyMuscleShouldBeLeftMotor = true;
+                    totals.hasLeftCollins = true;
+                }
+            }
     
     //             if (totals.RightMotorHasOnlySoftValues && level.RightMotorValue != 5 && !level.RightMotorImpairmentNotDueToSci)
     //             {
@@ -245,11 +227,11 @@ The 'rhi-core-isncsci-algorithm' contains the methods which perform the ISNCSCI 
     //                 }
     //             }
     
-    //             /* -- RECURSIVE CALL --------------- */
-    //             if (level.Next != null)
-    //                 UpdateTotalsWithLevelAt(neurologyForm, totals, level.Next,
-    //                     nextNonKeyMuscleShouldBeRightMotor && totals.RightMotorHasOnlySoftValues,
-    //                     nextNonKeyMuscleShouldBeLeftMotor && totals.LeftMotorHasOnlySoftValues);
+            /* -- RECURSIVE CALL --------------- */
+            if (level.next != null)
+                _updateTotalsWithLevelAt(isncsciExam, totals, level.next,
+                        nextNonKeyMuscleShouldBeRightMotor && totals.rightMotorHasOnlySoftValues,
+                        nextNonKeyMuscleShouldBeLeftMotor && totals.leftMotorHasOnlySoftValues);
     
     //             #region This happens when there are INTACT values -------------------------------------------
     //             if ("S4_5".Equals(level.Name))
@@ -369,6 +351,15 @@ The 'rhi-core-isncsci-algorithm' contains the methods which perform the ISNCSCI 
     //             }
         }
         
+        /***********************************************/
+        /* ***** Web component declaration *********** */
+        /***********************************************/
+
+        /**
+        * The 'rhi-core-isncsci-algorithm' contains the methods which perform the ISNCSCI calculations.Array
+        * <rhi-core-isncsci-algorithm></rhi-core-isncsci-algorithm>
+        * @demo demo/index.html
+        */
         Polymer({
             is: 'rhi-core-isncsci-algorithm',
             hostAttributes: {
@@ -376,13 +367,7 @@ The 'rhi-core-isncsci-algorithm' contains the methods which perform the ISNCSCI 
             },
             properties: {},
             observers: [],
-            created: function() {
-                var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
-                console.log('++ Created ' + exam);
-            },
-            // -
-            // - PUBLIC METHODS
-            // -
+            created: function() {},
     
     //         /// <summary>
     //         /// Produces a summarized version of a NeurologyFormTotals object which can be used to be displayed in an interface or be stored in a database.
@@ -464,9 +449,13 @@ The 'rhi-core-isncsci-algorithm' contains the methods which perform the ISNCSCI 
             * You can use the resulting object to obtained a summarized version, which uses ranges, by passing the result to the method GetTotalsSummaryFor
             */
             getTotalsFor: function(isncsciExam) {
+                if (typeof isncsciExam !== 'object')
+                    throw new Error(_c + ' : getTotalsFor : '
+                                    + 'Invalid arguments passed. Expected isncsciExam:RhiCoreIsncsciExam');
+                
                 var totals = (document.createElement('rhi-core-isncsci-totals'));
                 
-                //updateTotalsWithLevelAt(isncsciExam, totals, isncsciExam.getLevelWithName('C2'), false, false);
+                _updateTotalsWithLevelAt(isncsciExam, totals, isncsciExam.getLevelWithName('C2'), false, false);
     
     //             totals.UpperMotorTotal = totals.RightUpperMotorTotal + totals.LeftUpperMotorTotal;
     //             totals.LowerMotorTotal = totals.RightLowerMotorTotal + totals.LeftLowerMotorTotal;
