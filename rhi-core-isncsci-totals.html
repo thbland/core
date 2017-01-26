@@ -55,7 +55,7 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       properties: {
         _asiaImpairmentScaleValues: {
           type: /** @type {String[]} */ Array,
-          value: []
+          value: () => { return []; }
         },
         hasLeftCollins: {
           type: Boolean,
@@ -83,7 +83,7 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
         },
         _leftMotorValues: {
           type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
-          value: []
+          value: () => { return []; }
         },
         leftMotorZppHasOnlySoftValues: {
           type: Boolean,
@@ -91,7 +91,7 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
         },
         _leftMotorZppValues: {
           type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
-          value: []
+          value: () => { return []; }
         },
         leftPrickContainsNt: {
           type: Boolean,
@@ -111,7 +111,7 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
         },
         _leftSensoryValues: {
           type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
-          value: []
+          value: () => { return []; }
         },
         leftSensoryZppHasOnlySoftValues: {
           type: Boolean,
@@ -119,7 +119,7 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
         },
         _leftSensoryZppValues: {
           type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
-          value: []
+          value: () => { return []; }
         },
         leftTouchContainsNt: {
           type: Boolean,
@@ -195,7 +195,7 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
         },
         _neurologicalLevelsOfInjury: {
           type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
-          value: []
+          value: () => { return []; }
         },
         prickTotal: {
           type: Number,
@@ -219,7 +219,7 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
         },
         _rightMotorValues: {
           type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
-          value: []
+          value: () => { return []; }
         },
         rightMotorZppHasOnlySoftValues: {
           type: Boolean,
@@ -227,7 +227,7 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
         },
         _rightMotorZppValues: {
           type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
-          value: []
+          value: () => { return []; }
         },
         rightPrickContainsNt: {
           type: Boolean,
@@ -247,7 +247,7 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
         },
         _rightSensoryValues: {
           type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
-          value: []
+          value: () => { return []; }
         },
         rightSensoryZppHasOnlySoftValues: {
           type: Boolean,
@@ -255,7 +255,7 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
         },
         _rightSensoryZppValues: {
           type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
-          value: []
+          value: () => { return []; }
         },
         rightTouchContainsNt: {
           type: Boolean,

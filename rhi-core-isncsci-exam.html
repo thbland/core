@@ -125,14 +125,14 @@ Author: Eduardo Echeverria (@eddiemachete)
             level.leftPrickImpairmentNotDueToSci = _nonSciImpairmentRegex.test(leftPrickName);
         
             // Right Motor
-            level.RightMotorName = rightMotorName;
-            level.RightMotorValue = _getDermatomeValue(rightMotorName, _normalMotorValue);
-            level.RightMotorImpairmentNotDueToSci = _nonSciImpairmentRegex.test(rightMotorName);
+            level.rightMotorName = rightMotorName;
+            level.rightMotorValue = _getDermatomeValue(rightMotorName, _normalMotorValue);
+            level.rightMotorImpairmentNotDueToSci = _nonSciImpairmentRegex.test(rightMotorName);
         
             // Left Motor
-            level.LeftMotorName = leftMotorName;
-            level.LeftMotorValue = _getDermatomeValue(leftMotorName, _normalMotorValue);
-            level.LeftMotorImpairmentNotDueToSci = _nonSciImpairmentRegex.test(leftMotorName);
+            level.leftMotorName = leftMotorName;
+            level.leftMotorValue = _getDermatomeValue(leftMotorName, _normalMotorValue);
+            level.leftMotorImpairmentNotDueToSci = _nonSciImpairmentRegex.test(leftMotorName);
         
             if (level.isKeyMuscle)
                 return;
@@ -174,21 +174,21 @@ Author: Eduardo Echeverria (@eddiemachete)
             },
             properties: {
                 // NeurologyFormLevel C1 { get; protected set; }
-                _analContraction: {
+                analContraction: {
                     type: /** @type {!RhiCoreBinaryObservation} */ Number,
                     value: null
                 },
-                _analSensation: {
+                analSensation: {
                     type: /** @type {!RhiCoreBinaryObservation} */ Number,
                     value: null
                 },
                 _rightLowestNonKeyMuscleWithMotorFunction: {
                     type: /** @type {!RhiCoreIsncsciLevel} */ Object,
-                    value: null
+                    value: () => { return null; }
                 },
                 _leftLowestNonKeyMuscleWithMotorFunction: {
                     type: /** @type {!RhiCoreIsncsciLevel} */ Object,
-                    value: null
+                    value: () => { return null; }
                 }
             },
             created: function() {
@@ -327,8 +327,6 @@ Author: Eduardo Echeverria (@eddiemachete)
                 } else {
                     _updateLevel(level, rightTouchName, leftTouchName, rightPrickName, leftPrickName, '0', '0');
                 }
-                    
-                
                 
                 return this;
             }

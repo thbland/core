@@ -6,12 +6,12 @@
     <script src="../../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <script src="../../../bower_components/web-component-tester/browser.js"></script>
     <link rel="import" href="../rhi-core-isncsci-algorithm.html"/>
+    <link rel="import" href="../rhi-core-isncsci-binary-observation.html"/>
 </head>
 <body>
     <rhi-core-isncsci-algorithm id="isncsciAlgorithm"></rhi-core-isncsci-algorithm>
     <script>
-        /* global assert */
-        /* global rhiIsncsciValidationTests */
+        /* global assert Polymer rhiIsncsciValidationTests */
         // Loaded from isncsci-tests.js to keep this file clean.
         'use strict';
         
@@ -29,10 +29,6 @@
                 var totals = isncsciAlgorithm.getTotalsFor(isncsciExam);
                 
                 // Assert
-                //assert.equal(expectedTotals.leftPrickTotal, totals.leftPrickTotal, 'leftTouchTotal');
-                //assert.equal(expectedTotals.leftTouchTotal, totals.leftTouchTotal, 'leftTouchTotal');
-                //assert.equal(expectedTotals.rightPrickTotal, totals.rightPrickTotal, 'rightPrickTotal');
-                //assert.equal(expectedTotals.rightTouchTotal, totals.rightTouchTotal, 'rightTouchTotal');
                 compare(expectedTotals, totals);
             });
             
@@ -55,42 +51,42 @@
         });
         
         function compare (expectedTotals, totals) {
-            //assert.equal(expectedTotals.asiaImpairmentScale, totals.getAsiaImpairmentScaleValues(), 'asiaImpairmentScale');
+            assert.equal(expectedTotals.asiaImpairmentScale, totals.getAsiaImpairmentScaleValues(), 'asiaImpairmentScale');
             
             assert.equal(expectedTotals.leftLowerMotorContainsNt, totals.leftLowerMotorContainsNt, 'leftLowerMotorContainsNt');
-            // assert.equal(expectedTotals., totals.leftLowerMotorTotal, 'leftLowerMotorTotal');
-            // assert.equal(expectedTotals., totals.leftMotor, 'leftMotor');
-            // assert.equal(expectedTotals., totals.leftMotorTotal, 'leftMotorTotal');
+            assert.equal(expectedTotals.leftLowerMotorTotal, totals.leftLowerMotorTotal, 'leftLowerMotorTotal');
+            assert.equal(expectedTotals.leftMotor, _getValuesString(totals.getLeftMotorValues()), 'leftMotor');
+            assert.equal(expectedTotals.leftMotorTotal, totals.leftUpperMotorTotal + totals.leftLowerMotorTotal, 'leftMotorTotal');
+            assert.equal(expectedTotals.leftMotorZpp, _getValuesString(totals.getLeftMotorZppValues()), 'leftMotorZpp');
             assert.equal(expectedTotals.leftPrickContainsNt, totals.leftPrickContainsNt, 'leftPrickContainsNt');
             assert.equal(expectedTotals.leftPrickTotal, totals.leftPrickTotal, 'leftTouchTotal');
-            // assert.equal(expectedTotals., totals.leftSensory, 'leftSensory');
-            // assert.equal(expectedTotals., totals.leftSensoryZpp, 'leftSensoryZpp');
+            assert.equal(expectedTotals.leftSensory, _getValuesString(totals.getLeftSensoryValues()), 'leftSensory');
+            assert.equal(expectedTotals.leftSensoryZpp, _getValuesString(totals.getLeftSensoryZppValues()), 'leftSensoryZpp');
             assert.equal(expectedTotals.leftTouchContainsNt, totals.leftTouchContainsNt, 'leftTouchContainsNt');
             assert.equal(expectedTotals.leftTouchTotal, totals.leftTouchTotal, 'leftTouchTotal');
             assert.equal(expectedTotals.leftUpperMotorContainsNt, totals.leftUpperMotorContainsNt, 'leftUpperMotorContainsNt');
-            // assert.equal(expectedTotals., totals.leftUpperMotorTotal, 'leftUpperMotorTotal');
-            // assert.equal(expectedTotals., totals.leftMotorZpp, 'leftMotorZpp');
+            assert.equal(expectedTotals.leftUpperMotorTotal, totals.leftUpperMotorTotal, 'leftUpperMotorTotal');
             
-            // assert.equal(expectedTotals., totals.lowerMotorTotal, 'lowerMotorTotal');
-            // assert.equal(expectedTotals., totals.neurologicalLevelOfInjury, 'neurologicalLevelOfInjury');
-            // assert.equal(expectedTotals., totals.prickTotal, 'prickTotal');
+            assert.equal(expectedTotals.lowerMotorTotal, totals.lowerMotorTotal, 'lowerMotorTotal');
+            assert.equal(expectedTotals.neurologicalLevelOfInjury, _getValuesString(totals.getNeurologicalLevelsOfInjury()), 'neurologicalLevelOfInjury');
+            assert.equal(expectedTotals.prickTotal, totals.prickTotal, 'prickTotal');
             
             assert.equal(expectedTotals.rightLowerMotorContainsNt, totals.rightLowerMotorContainsNt, 'rightLowerMotorContainsNt');
-            // assert.equal(expectedTotals., totals.rightLowerMotorTotal, 'rightLowerMotorTotal');
-            // assert.equal(expectedTotals., totals.rightMotor, 'rightMotor');
-            // assert.equal(expectedTotals., totals.rightMotorTotal, 'rightMotorTotal');
-            // assert.equal(expectedTotals., totals.rightMotorZpp, 'rightMotorZpp');
+            assert.equal(expectedTotals.rightLowerMotorTotal, totals.rightLowerMotorTotal, 'rightLowerMotorTotal');
+            assert.equal(expectedTotals.rightMotor, _getValuesString(totals.getRightMotorValues()), 'rightMotor');
+            assert.equal(expectedTotals.rightMotorTotal, totals.rightUpperMotorTotal + totals.rightLowerMotorTotal, 'rightMotorTotal');
+            assert.equal(expectedTotals.rightMotorZpp, _getValuesString(totals.getRightMotorZppValues()), 'rightMotorZpp');
             assert.equal(expectedTotals.rightPrickContainsNt, totals.rightPrickContainsNt, 'rightPrickContainsNt');
             assert.equal(expectedTotals.rightPrickTotal, totals.rightPrickTotal, 'rightPrickTotal');
-            // assert.equal(expectedTotals., totals.rightSensory, 'rightSensory');
-            // assert.equal(expectedTotals., totals.rightSensoryZpp, 'rightSensoryZpp');
+            assert.equal(expectedTotals.rightSensory, _getValuesString(totals.getRightSensoryValues()), 'rightSensory');
+            assert.equal(expectedTotals.rightSensoryZpp, _getValuesString(totals.getRightSensoryZppValues()), 'rightSensoryZpp');
             assert.equal(expectedTotals.rightTouchContainsNt, totals.rightTouchContainsNt, 'rightTouchContainsNt');
             assert.equal(expectedTotals.rightTouchTotal, totals.rightTouchTotal, 'rightTouchTotal');
             assert.equal(expectedTotals.rightUpperMotorContainsNt, totals.rightUpperMotorContainsNt, 'rightUpperMotorContainsNt');
-            // assert.equal(expectedTotals., totals.rightUpperMotorTotal, 'rightUpperMotorTotal');
+            assert.equal(expectedTotals.rightUpperMotorTotal, totals.rightUpperMotorTotal, 'rightUpperMotorTotal');
             
-            // assert.equal(expectedTotals., totals.touchTotal);
-            // assert.equal(expectedTotals., totals.upperMotorTotal);
+            assert.equal(expectedTotals.touchTotal, totals.touchTotal);
+            assert.equal(expectedTotals.upperMotorTotal, totals.upperMotorTotal);
             
         }
         
@@ -99,12 +95,39 @@
                         'T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10', 'T11', 'T12',
                         'L1', 'L2', 'L3', 'L4', 'L5', 'S1', 'S2', 'S3', 'S4_5'];
             var dermatomes = test.dermatomes;
+            isncsciExam.analContraction = _getBinaryObservationFor(test.analContraction);
+            isncsciExam.analSensation = _getBinaryObservationFor(test.analSensation);
             
             for (var i=0; i<keys.length; i++) {
                 var key = keys[i];
                 var dermatome = dermatomes[key];
                 isncsciExam.updateLevelAt(key, dermatome.rightTouch, dermatome.leftTouch, dermatome.rightPrick, dermatome.leftPrick, dermatome.rightMotor, dermatome.leftMotor);
             }
+        }
+        
+        function _getBinaryObservationFor(value) {
+            var valueToLower = value ? value.toLowerCase() : 'none';
+                
+            if (valueToLower === 'yes')
+                return Polymer.rhiCoreIsncsciBinaryObservationYes;
+                
+            if (valueToLower === 'no')
+                return Polymer.rhiCoreIsncsciBinaryObservationNo;
+                
+            if (valueToLower === 'nt')
+                return Polymer.rhiCoreIsncsciBinaryObservationNt;
+            
+            return Polymer.rhiCoreIsncsciBinaryObservationNone;
+        }
+        
+        function _getValuesString(values) {
+            var result = '';
+            
+            for (var i=0; i<values.length; i++) {
+                result += i > 0 ? ',' + values[i].name : values[i].name;
+            }
+            
+            return result;
         }
     </script>
 </body>

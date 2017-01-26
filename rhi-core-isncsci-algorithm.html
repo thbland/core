@@ -24,14 +24,15 @@ Author: Eduardo Echeverria (@eddiemachete)
         /***********************************************/
         /* ***** Private, static methods ************* */
         /***********************************************/
-        /// <summary>
-        /// Recursive method which iterates through the values in a nuerology form while it updates the totals generating the results produced by the algorithm.
-        /// </summary>
-        /// <param name="neurologyForm">Form being evaluated.</param>
-        /// <param name="totals">Brand new totals object where the results are to be stored.</param>
-        /// <param name="level">Current neurology level being evaluated</param>
-        /// <param name="nextNonKeyMuscleShouldBeRightMotor">Flag used to evaluate the Kathy Collins condition on the right motor results.</param>
-        /// <param name="nextNonKeyMuscleShouldBeLeftMotor">Flag used to evaluate the Kathy Collins condition on the left motor results.</param>
+        /**
+        * Recursive method which iterates through the values in a nuerology form while it updates the totals generating the results produced by the algorithm.
+        *
+        * @param {rhiCoreIsncsciExam isncsciExam An ISNCSCI exam with all the values required to perform the calculations.
+        * @param {rhiCoreIsncsciTotals totals A totals object where the results of the calculations will be recorded.
+        * @param {rhiCoreIsncsciLevel} level The current neurological level to be evaluated.
+        * @param {Boolean} nextNonKeyMuscleShouldBeRightMotor Flag used to evaluate the Kathy Collins condition on the right motor results.
+        * @param {Boolean} nextNonKeyMuscleShouldBeLeftMotor Flag used to evaluate the Kathy Collins condition on the left motor results.
+        */
         function _updateTotalsWithLevelAt(isncsciExam, totals, level, nextNonKeyMuscleShouldBeRightMotor, nextNonKeyMuscleShouldBeLeftMotor)
         {
             totals.rightTouchTotal += level.rightTouchValue;
@@ -167,65 +168,56 @@ Author: Eduardo Echeverria (@eddiemachete)
                 }
             }
     
-    //             if (totals.RightMotorHasOnlySoftValues && level.RightMotorValue != 5 && !level.RightMotorImpairmentNotDueToSci)
-    //             {
-    //                 if (level.IsKeyMuscle && (level.RightMotorValue >= 3 || NtRegex.IsMatch(level.RightMotorName)))
-    //                 {
-    //                     totals.AddRightMotorValue(level);
+            if (totals.rightMotorHasOnlySoftValues && level.rightMotorValue != 5 && !level.rightMotorImpairmentNotDueToSci) {
+                if (level.isKeyMuscle && (level.rightMotorValue >= 3 || _ntRegex.test(level.rightMotorName))) {
+                    totals.addRightMotorValue(level);
     
-    //                     // Check if left won't make the NLI have to be the previous level.
-    //                     // Let the logic for left motor handle the SNL instead
-    //                     if (totals.NeurologicalLevelOfInjuryHasOnlySoftValues
-    //                         && (level.LeftMotorValue > 2 || level.LeftMotorImpairmentNotDueToSci || NtRegex.IsMatch(level.LeftMotorName)))
-    //                     {
-    //                         totals.AddNeurologicalLevelOfInjury(level);
+                    // Check if left won't make the NLI have to be the previous level.
+                    // Let the logic for left motor handle the SNL instead
+                    if (totals.neurologicalLevelOfInjuryHasOnlySoftValues
+                            && (level.leftMotorValue > 2 || level.leftMotorImpairmentNotDueToSci || _ntRegex.test(level.leftMotorName))) {
+                        totals.addNeurologicalLevelOfInjury(level);
+        
+                        if (!_ntRegex.test(level.rightMotorName))
+                            totals.neurologicalLevelOfInjuryHasOnlySoftValues = false;
+                    }
+                }
     
-    //                         if (!NtRegex.IsMatch(level.RightMotorName))
-    //                             totals.NeurologicalLevelOfInjuryHasOnlySoftValues = false;
-    //                     }
-    //                 }
+                if (level.rightMotorValue < 3 || _ntRegex.test(level.rightMotorName)) {
+                    totals.addRightMotorValue(level.previous);
     
-    //                 if (level.RightMotorValue < 3 || NtRegex.IsMatch(level.RightMotorName))
-    //                 {
-    //                     totals.AddRightMotorValue(level.Previous);
+                    if (totals.neurologicalLevelOfInjuryHasOnlySoftValues) {
+                        totals.addNeurologicalLevelOfInjury(level.previous);
     
-    //                     if (totals.NeurologicalLevelOfInjuryHasOnlySoftValues)
-    //                     {
-    //                         totals.AddNeurologicalLevelOfInjury(level.Previous);
+                        if (!_ntRegex.test(level.rightMotorName))
+                            totals.neurologicalLevelOfInjuryHasOnlySoftValues = false;
+                    }
+                }
     
-    //                         if (!NtRegex.IsMatch(level.RightMotorName))
-    //                             totals.NeurologicalLevelOfInjuryHasOnlySoftValues = false;
-    //                     }
-    //                 }
+                if (!_ntRegex.test(level.rightMotorName))
+                    totals.rightMotorHasOnlySoftValues = false;
+            }
     
-    //                 if (!NtRegex.IsMatch(level.RightMotorName))
-    //                     totals.RightMotorHasOnlySoftValues = false;
-    //             }
+            if (totals.leftMotorHasOnlySoftValues && level.leftMotorValue != 5 && !level.leftMotorImpairmentNotDueToSci) {
+                if (level.isKeyMuscle && (level.leftMotorValue >= 3 || _ntRegex.test(level.leftMotorName))) {
+                    totals.addLeftMotorValue(level);
     
-    //             if (totals.LeftMotorHasOnlySoftValues && level.LeftMotorValue != 5 && !level.LeftMotorImpairmentNotDueToSci)
-    //             {
-    //                 if (level.IsKeyMuscle && (level.LeftMotorValue >= 3 || NtRegex.IsMatch(level.LeftMotorName)))
-    //                 {
-    //                     totals.AddLeftMotorValue(level);
+                    if (totals.neurologicalLevelOfInjuryHasOnlySoftValues)
+                        totals.addNeurologicalLevelOfInjury(level);
+                }
     
-    //                     if (totals.NeurologicalLevelOfInjuryHasOnlySoftValues)
-    //                         totals.AddNeurologicalLevelOfInjury(level);
-    //                 }
+                if (level.leftMotorValue < 3 || _ntRegex.test(level.leftMotorName)) {
+                    totals.addLeftMotorValue(level.previous);
     
-    //                 if (level.LeftMotorValue < 3 || NtRegex.IsMatch(level.LeftMotorName))
-    //                 {
-    //                     totals.AddLeftMotorValue(level.Previous);
+                    if (totals.neurologicalLevelOfInjuryHasOnlySoftValues)
+                        totals.addNeurologicalLevelOfInjury(level.previous);
+                }
     
-    //                     if (totals.NeurologicalLevelOfInjuryHasOnlySoftValues)
-    //                         totals.AddNeurologicalLevelOfInjury(level.Previous);
-    //                 }
-    
-    //                 if (!NtRegex.IsMatch(level.LeftMotorName))
-    //                 {
-    //                     totals.LeftMotorHasOnlySoftValues = false;
-    //                     totals.NeurologicalLevelOfInjuryHasOnlySoftValues = false;
-    //                 }
-    //             }
+                if (!_ntRegex.test(level.leftMotorName)) {
+                    totals.leftMotorHasOnlySoftValues = false;
+                    totals.neurologicalLevelOfInjuryHasOnlySoftValues = false;
+                }
+            }
     
             /* -- RECURSIVE CALL --------------- */
             if (level.next != null)
@@ -233,122 +225,110 @@ Author: Eduardo Echeverria (@eddiemachete)
                         nextNonKeyMuscleShouldBeRightMotor && totals.rightMotorHasOnlySoftValues,
                         nextNonKeyMuscleShouldBeLeftMotor && totals.leftMotorHasOnlySoftValues);
     
-    //             #region This happens when there are INTACT values -------------------------------------------
-    //             if ("S4_5".Equals(level.Name))
-    //             {
-    //                 if (totals.RightSensoryHasOnlySoftValues && totals.LeftSensoryHasOnlySoftValues
-    //                 && totals.RightMotorHasOnlySoftValues && totals.LeftMotorHasOnlySoftValues)
-    //                     totals.AddNeurologicalLevelOfInjury(level);
+            // #region This happens when there are INTACT values -------------------------------------------
+            if ('S4_5' === level.name) {
+                if (totals.rightSensoryHasOnlySoftValues && totals.leftSensoryHasOnlySoftValues
+                        && totals.rightMotorHasOnlySoftValues && totals.leftMotorHasOnlySoftValues)
+                    totals.addNeurologicalLevelOfInjury(level);
     
-    //                 if (totals.RightSensoryHasOnlySoftValues)
-    //                 {
-    //                     totals.AddRightSensoryValue(level);
-    //                     totals.RightSensoryHasOnlySoftValues = false;
-    //                 }
+                if (totals.rightSensoryHasOnlySoftValues) {
+                    totals.addRightSensoryValue(level);
+                    totals.rightSensoryHasOnlySoftValues = false;
+                }
     
-    //                 if (totals.LeftSensoryHasOnlySoftValues)
-    //                 {
-    //                     totals.AddLeftSensoryValue(level);
-    //                     totals.LeftSensoryHasOnlySoftValues = false;
-    //                 }
+                if (totals.leftSensoryHasOnlySoftValues) {
+                    totals.addLeftSensoryValue(level);
+                    totals.leftSensoryHasOnlySoftValues = false;
+                }
     
-    //                 if (totals.RightMotorHasOnlySoftValues)
-    //                 {
-    //                     totals.AddRightMotorValue(level);
-    //                     totals.RightMotorHasOnlySoftValues = false;
-    //                 }
+                if (totals.rightMotorHasOnlySoftValues) {
+                    totals.addRightMotorValue(level);
+                    totals.rightMotorHasOnlySoftValues = false;
+                }
     
-    //                 if (totals.LeftMotorHasOnlySoftValues)
-    //                 {
-    //                     totals.AddLeftMotorValue(level);
-    //                     totals.LeftMotorHasOnlySoftValues = false;
-    //                 }
-    //             }
-    //             #endregion
+                if (totals.leftMotorHasOnlySoftValues) {
+                    totals.addLeftMotorValue(level);
+                    totals.leftMotorHasOnlySoftValues = false;
+                }
+            }
+            // #endregion
     
-    //             if (totals.RightSensoryZppHasOnlySoftValues && (!"0".Equals(level.RightTouchName) || !"0".Equals(level.RightPrickName)))
-    //             {
-    //                 if ((level.RightTouchValue > 0 || level.RightTouchImpairmentNotDueToSci)
-    //                     || (level.RightPrickValue > 0 || level.RightPrickImpairmentNotDueToSci))
-    //                     totals.RightSensoryZppHasOnlySoftValues = false;
+            if (totals.rightSensoryZppHasOnlySoftValues && ('0' !== level.rightTouchName || '0' !== level.rightPrickName)) {
+                if ((level.rightTouchValue > 0 || level.rightTouchImpairmentNotDueToSci)
+                        || (level.rightPrickValue > 0 || level.rightPrickImpairmentNotDueToSci))
+                    totals.rightSensoryZppHasOnlySoftValues = false;
     
-    //                 totals.AddRightSensoryZppValue(level);
-    //             }
+                totals.addRightSensoryZppValue(level);
+            }
     
-    //             if (totals.LeftSensoryZppHasOnlySoftValues && (!"0".Equals(level.LeftTouchName) || !"0".Equals(level.LeftPrickName)))
-    //             {
-    //                 if ((level.LeftTouchValue > 0 || level.LeftTouchImpairmentNotDueToSci)
-    //                     || (level.LeftPrickValue > 0 || level.LeftPrickImpairmentNotDueToSci))
-    //                     totals.LeftSensoryZppHasOnlySoftValues = false;
+            if (totals.leftSensoryZppHasOnlySoftValues && ('0' !== level.leftTouchName || '0' !== level.leftPrickName)) {
+                if ((level.leftTouchValue > 0 || level.leftTouchImpairmentNotDueToSci)
+                        || (level.leftPrickValue > 0 || level.leftPrickImpairmentNotDueToSci))
+                    totals.leftSensoryZppHasOnlySoftValues = false;
     
-    //                 totals.AddLeftSensoryZppValue(level);
-    //             }
+                totals.addLeftSensoryZppValue(level);
+            }
     
-    //             if (totals.RightMotorZppHasOnlySoftValues
-    //                 && (level.HasOtherRightMotorFunction
-    //                     || (!"0".Equals(level.RightMotorName) && (level.IsKeyMuscle || totals.RightMotorContains(level.Name)))))
-    //             {
-    //                 if ((level.RightMotorImpairmentNotDueToSci || level.HasOtherRightMotorFunction || !NtRegex.IsMatch(level.RightMotorName)) &&
-    //                     (level.IsKeyMuscle
-    //                     || level.Ordinal < 4
-    //                     || (level.Ordinal > 25 && !totals.RightUpperMotorContainsNt && !totals.RightLowerMotorContainsNt && !totals.HasRightCollins)
-    //                     || (level.Ordinal > 8 && level.Ordinal < 21 && !totals.RightUpperMotorContainsNt)))
-    //                     totals.RightMotorZppHasOnlySoftValues = false;
+            if (totals.rightMotorZppHasOnlySoftValues
+                    && (level.hasOtherRightMotorFunction
+                    || ('0' !== level.rightMotorName && (level.isKeyMuscle || totals.rightMotorContains(level.name))))) {
+                if ((level.rightMotorImpairmentNotDueToSci || level.hasOtherRightMotorFunction || !_ntRegex.test(level.rightMotorName)) &&
+                        (level.isKeyMuscle
+                        || level.ordinal < 4
+                        || (level.ordinal > 25 && !totals.rightUpperMotorContainsNt && !totals.rightLowerMotorContainsNt && !totals.hasRightCollins)
+                        || (level.ordinal > 8 && level.ordinal < 21 && !totals.rightUpperMotorContainsNt)))
+                    totals.rightMotorZppHasOnlySoftValues = false;
     
-    //                 totals.AddRightMotorZppValue(level);
-    //             }
+                totals.addRightMotorZppValue(level);
+            }
     
-    //             if (totals.LeftMotorZppHasOnlySoftValues
-    //                 && (level.HasOtherLeftMotorFunction
-    //                     || (!"0".Equals(level.LeftMotorName) && (level.IsKeyMuscle || totals.LeftMotorContains(level.Name)))))
-    //             {
-    //                 if ((level.LeftMotorImpairmentNotDueToSci || level.HasOtherLeftMotorFunction || !NtRegex.IsMatch(level.LeftMotorName)) &&
-    //                     (level.IsKeyMuscle
-    //                     || level.Ordinal < 4
-    //                     || (level.Ordinal > 25 && !totals.LeftUpperMotorContainsNt && !totals.LeftLowerMotorContainsNt && !totals.HasLeftCollins)
-    //                     || (level.Ordinal > 8 && level.Ordinal < 21 && !totals.LeftUpperMotorContainsNt)))
-    //                     totals.LeftMotorZppHasOnlySoftValues = false;
+            if (totals.leftMotorZppHasOnlySoftValues
+                    && (level.hasOtherLeftMotorFunction
+                    || ('0' !== level.leftMotorName && (level.isKeyMuscle || totals.leftMotorContains(level.name))))) {
+                if ((level.leftMotorImpairmentNotDueToSci || level.hasOtherLeftMotorFunction || !_ntRegex.test(level.leftMotorName)) &&
+                        (level.isKeyMuscle
+                        || level.ordinal < 4
+                        || (level.ordinal > 25 && !totals.leftUpperMotorContainsNt && !totals.leftLowerMotorContainsNt && !totals.hasLeftCollins)
+                        || (level.ordinal > 8 && level.ordinal < 21 && !totals.leftUpperMotorContainsNt)))
+                    totals.leftMotorZppHasOnlySoftValues = false;
     
-    //                 totals.AddLeftMotorZppValue(level);
-    //             }
+                totals.addLeftMotorZppValue(level);
+            }
     
     
-    //             // Update most Rostral levels with motor function
-    //             if ((level.IsKeyMuscle || level.HasOtherRightMotorFunction)
-    //                 && totals.MostRostralRightLevelWithMotorFunction == null
-    //                 && (level.RightMotorImpairmentNotDueToSci || level.HasOtherRightMotorFunction || (level.RightMotorValue != 0 && level.IsKeyMuscle)))
-    //                 totals.MostRostralRightLevelWithMotorFunction = level;
+            // Update most Rostral levels with motor function
+            if ((level.isKeyMuscle || level.hasOtherRightMotorFunction)
+                    && totals.mostRostralRightLevelWithMotorFunction == null
+                    && (level.rightMotorImpairmentNotDueToSci || level.hasOtherRightMotorFunction || (level.rightMotorValue != 0 && level.isKeyMuscle)))
+                totals.mostRostralRightLevelWithMotorFunction = level;
     
-    //             if ((level.IsKeyMuscle || level.HasOtherLeftMotorFunction)
-    //                 && totals.MostRostralLeftLevelWithMotorFunction == null
-    //                 && (level.LeftMotorImpairmentNotDueToSci || level.HasOtherLeftMotorFunction || (level.LeftMotorValue != 0 && level.IsKeyMuscle)))
-    //                 totals.MostRostralLeftLevelWithMotorFunction = level;
+            if ((level.isKeyMuscle || level.hasOtherLeftMotorFunction)
+                    && totals.mostRostralLeftLevelWithMotorFunction == null
+                    && (level.leftMotorImpairmentNotDueToSci || level.hasOtherLeftMotorFunction || (level.leftMotorValue != 0 && level.isKeyMuscle)))
+                totals.mostRostralLeftLevelWithMotorFunction = level;
     
-    //             // Update most Caudal levels with motor function
-    //             if ((level.IsKeyMuscle || level.HasOtherRightMotorFunction)
-    //                 && totals.MostCaudalRightLevelWithMotorFunction == null
-    //                 && (!"0".Equals(level.RightMotorName) || level.HasOtherRightMotorFunction))
-    //                 totals.MostCaudalRightLevelWithMotorFunction = level;
+            // Update most Caudal levels with motor function
+            if ((level.isKeyMuscle || level.hasOtherRightMotorFunction)
+                    && totals.mostCaudalRightLevelWithMotorFunction == null
+                    && ('0' !== level.rightMotorName || level.hasOtherRightMotorFunction))
+                totals.mostCaudalRightLevelWithMotorFunction = level;
     
-    //             if ((level.IsKeyMuscle || level.HasOtherLeftMotorFunction)
-    //                 && totals.MostCaudalLeftLevelWithMotorFunction == null
-    //                 && (!"0".Equals(level.LeftMotorName) || level.HasOtherLeftMotorFunction))
-    //                 totals.MostCaudalLeftLevelWithMotorFunction = level;
+            if ((level.isKeyMuscle || level.hasOtherLeftMotorFunction)
+                    && totals.mostCaudalLeftLevelWithMotorFunction == null
+                    && ('0' !== level.leftMotorName || level.hasOtherLeftMotorFunction))
+                totals.mostCaudalLeftLevelWithMotorFunction = level;
     
     
-    //             if (!level.IsKeyMuscle)
-    //                 return;
+            if (!level.isKeyMuscle)
+                return;
     
-    //             if (level.IsLowerMuscle)
-    //             {
-    //                 totals.RightLowerMotorTotal += level.RightMotorValue;
-    //                 totals.LeftLowerMotorTotal += level.LeftMotorValue;
-    //             }
-    //             else
-    //             {
-    //                 totals.RightUpperMotorTotal += level.RightMotorValue;
-    //                 totals.LeftUpperMotorTotal += level.LeftMotorValue;
-    //             }
+            if (level.isLowerMuscle) {
+                totals.rightLowerMotorTotal += level.rightMotorValue;
+                totals.leftLowerMotorTotal += level.leftMotorValue;
+            } else {
+                totals.rightUpperMotorTotal += level.rightMotorValue;
+                totals.leftUpperMotorTotal += level.leftMotorValue;
+            }
         }
         
         /***********************************************/
@@ -394,47 +374,47 @@ Author: Eduardo Echeverria (@eddiemachete)
     //         {
     //             var ais = totals.GetAsiaImpairmentScaleValues();
     //             var isAsiaA = ais.Contains("A");
-    //             var couldBeOtherThanAsiaA = !isAsiaA || ais.Length > 1;
+    //             var couldBeOtherThanAsiaA = !isAsiaA || ais.length > 1;
     
     //             var summary = new NeurologyFormTotalsSummary
     //                 {
     //                     AsiaImpairmentScale = ais,
     //                     Completeness = isAsiaA ? (couldBeOtherThanAsiaA ? "C,I" : "C") : "I",
-    //                     LeftLowerMotorTotal = GetSummaryStringFor(totals.LeftLowerMotorTotal, totals.LeftLowerMotorTotalHasImpairmentNotDueToSci, totals.LeftLowerMotorContainsNt),
+    //                     LeftLowerMotorTotal = GetSummaryStringFor(totals.leftLowerMotorTotal, totals.leftLowerMotorTotalHasImpairmentNotDueToSci, totals.leftLowerMotorContainsNt),
     //                     LeftMotor = GetLevelsRange(totals.GetLeftMotorValues(), false),
     //                     LeftMotorZpp = isAsiaA ? GetLevelsRange(totals.GetLeftMotorZppValues(), couldBeOtherThanAsiaA) : NotApplicable,
-    //                     LeftMotorTotal = GetSummaryStringFor(totals.LeftUpperMotorTotal + totals.LeftLowerMotorTotal,
-    //                                                             totals.LeftUpperMotorTotalHasImpairmentNotDueToSci || totals.LeftLowerMotorTotalHasImpairmentNotDueToSci,
-    //                                                             totals.LeftUpperMotorContainsNt || totals.LeftLowerMotorContainsNt),
-    //                     LeftPrickTotal = GetSummaryStringFor(totals.LeftPrickTotal, totals.LeftPrickTotalHasImpairmentNotDueToSci, totals.LeftPrickContainsNt),
+    //                     LeftMotorTotal = GetSummaryStringFor(totals.leftUpperMotorTotal + totals.leftLowerMotorTotal,
+    //                                                             totals.leftUpperMotorTotalHasImpairmentNotDueToSci || totals.leftLowerMotorTotalHasImpairmentNotDueToSci,
+    //                                                             totals.leftUpperMotorContainsNt || totals.leftLowerMotorContainsNt),
+    //                     LeftPrickTotal = GetSummaryStringFor(totals.leftPrickTotal, totals.leftPrickTotalHasImpairmentNotDueToSci, totals.leftPrickContainsNt),
     //                     LeftSensory = GetLevelsRange(totals.GetLeftSensoryValues(), false),
     //                     LeftSensoryZpp = isAsiaA ? GetLevelsRange(totals.GetLeftSensoryZppValues(), couldBeOtherThanAsiaA) : NotApplicable,
-    //                     LeftTouchTotal = GetSummaryStringFor(totals.LeftTouchTotal, totals.LeftTouchTotalHasImpairmentNotDueToSci, totals.LeftTouchContainsNt),
-    //                     LeftUpperMotorTotal = GetSummaryStringFor(totals.LeftUpperMotorTotal, totals.LeftUpperMotorTotalHasImpairmentNotDueToSci, totals.LeftUpperMotorContainsNt),
-    //                     LowerMotorTotal = GetSummaryStringFor(totals.LowerMotorTotal,
-    //                                                         totals.RightLowerMotorTotalHasImpairmentNotDueToSci || totals.LeftLowerMotorTotalHasImpairmentNotDueToSci,
-    //                                                         totals.RightLowerMotorContainsNt || totals.LeftLowerMotorContainsNt),
+    //                     LeftTouchTotal = GetSummaryStringFor(totals.leftTouchTotal, totals.leftTouchTotalHasImpairmentNotDueToSci, totals.leftTouchContainsNt),
+    //                     LeftUpperMotorTotal = GetSummaryStringFor(totals.leftUpperMotorTotal, totals.leftUpperMotorTotalHasImpairmentNotDueToSci, totals.leftUpperMotorContainsNt),
+    //                     LowerMotorTotal = GetSummaryStringFor(totals.lowerMotorTotal,
+    //                                                         totals.rightLowerMotorTotalHasImpairmentNotDueToSci || totals.leftLowerMotorTotalHasImpairmentNotDueToSci,
+    //                                                         totals.rightLowerMotorContainsNt || totals.leftLowerMotorContainsNt),
     //                     NeurologicalLevelOfInjury = GetLevelsRange(totals.GetNeurologicalLevelsOfInjury(), false),
-    //                     PrickTotal = GetSummaryStringFor(totals.RightPrickTotal + totals.LeftPrickTotal,
-    //                                                         totals.RightPrickTotalHasImpairmentNotDueToSci || totals.LeftPrickTotalHasImpairmentNotDueToSci,
-    //                                                         totals.RightPrickContainsNt || totals.LeftPrickContainsNt),
-    //                     RightLowerMotorTotal = GetSummaryStringFor(totals.RightLowerMotorTotal, totals.RightLowerMotorTotalHasImpairmentNotDueToSci, totals.RightLowerMotorContainsNt),
+    //                     PrickTotal = GetSummaryStringFor(totals.rightPrickTotal + totals.leftPrickTotal,
+    //                                                         totals.rightPrickTotalHasImpairmentNotDueToSci || totals.leftPrickTotalHasImpairmentNotDueToSci,
+    //                                                         totals.rightPrickContainsNt || totals.leftPrickContainsNt),
+    //                     RightLowerMotorTotal = GetSummaryStringFor(totals.rightLowerMotorTotal, totals.rightLowerMotorTotalHasImpairmentNotDueToSci, totals.rightLowerMotorContainsNt),
     //                     RightMotor = GetLevelsRange(totals.GetRightMotorValues(), false),
     //                     RightMotorZpp = isAsiaA ? GetLevelsRange(totals.GetRightMotorZppValues(), couldBeOtherThanAsiaA) : NotApplicable,
-    //                     RightMotorTotal = GetSummaryStringFor(totals.RightUpperMotorTotal + totals.RightLowerMotorTotal,
-    //                                                             totals.RightUpperMotorTotalHasImpairmentNotDueToSci || totals.RightLowerMotorTotalHasImpairmentNotDueToSci,
-    //                                                             totals.RightUpperMotorContainsNt || totals.RightLowerMotorContainsNt),
-    //                     RightPrickTotal = GetSummaryStringFor(totals.RightPrickTotal, totals.RightPrickTotalHasImpairmentNotDueToSci, totals.RightPrickContainsNt),
+    //                     RightMotorTotal = GetSummaryStringFor(totals.rightUpperMotorTotal + totals.rightLowerMotorTotal,
+    //                                                             totals.rightUpperMotorTotalHasImpairmentNotDueToSci || totals.rightLowerMotorTotalHasImpairmentNotDueToSci,
+    //                                                             totals.rightUpperMotorContainsNt || totals.rightLowerMotorContainsNt),
+    //                     RightPrickTotal = GetSummaryStringFor(totals.rightPrickTotal, totals.rightPrickTotalHasImpairmentNotDueToSci, totals.rightPrickContainsNt),
     //                     RightSensory = GetLevelsRange(totals.GetRightSensoryValues(), false),
     //                     RightSensoryZpp = isAsiaA ? GetLevelsRange(totals.GetRightSensoryZppValues(), couldBeOtherThanAsiaA) : NotApplicable,
-    //                     RightTouchTotal = GetSummaryStringFor(totals.RightTouchTotal, totals.RightTouchTotalHasImpairmentNotDueToSci, totals.RightTouchContainsNt),
-    //                     RightUpperMotorTotal = GetSummaryStringFor(totals.RightUpperMotorTotal, totals.RightUpperMotorTotalHasImpairmentNotDueToSci, totals.RightUpperMotorContainsNt),
-    //                     TouchTotal = GetSummaryStringFor(totals.RightTouchTotal + totals.LeftTouchTotal,
-    //                                                         totals.RightTouchTotalHasImpairmentNotDueToSci || totals.LeftTouchTotalHasImpairmentNotDueToSci,
-    //                                                         totals.RightTouchContainsNt || totals.LeftTouchContainsNt),
+    //                     RightTouchTotal = GetSummaryStringFor(totals.rightTouchTotal, totals.rightTouchTotalHasImpairmentNotDueToSci, totals.rightTouchContainsNt),
+    //                     RightUpperMotorTotal = GetSummaryStringFor(totals.rightUpperMotorTotal, totals.rightUpperMotorTotalHasImpairmentNotDueToSci, totals.rightUpperMotorContainsNt),
+    //                     TouchTotal = GetSummaryStringFor(totals.rightTouchTotal + totals.leftTouchTotal,
+    //                                                         totals.rightTouchTotalHasImpairmentNotDueToSci || totals.leftTouchTotalHasImpairmentNotDueToSci,
+    //                                                         totals.rightTouchContainsNt || totals.leftTouchContainsNt),
     //                     UpperMotorTotal = GetSummaryStringFor(totals.UpperMotorTotal,
-    //                                                             totals.RightUpperMotorTotalHasImpairmentNotDueToSci || totals.LeftUpperMotorTotalHasImpairmentNotDueToSci,
-    //                                                             totals.RightUpperMotorContainsNt || totals.LeftUpperMotorContainsNt)
+    //                                                             totals.rightUpperMotorTotalHasImpairmentNotDueToSci || totals.leftUpperMotorTotalHasImpairmentNotDueToSci,
+    //                                                             totals.rightUpperMotorContainsNt || totals.leftUpperMotorContainsNt)
     //                 };
     
     //             return summary;
@@ -454,83 +434,82 @@ Author: Eduardo Echeverria (@eddiemachete)
                                     + 'Invalid arguments passed. Expected isncsciExam:RhiCoreIsncsciExam');
                 
                 var totals = (document.createElement('rhi-core-isncsci-totals'));
+                var c2 = isncsciExam.getLevelWithName('C2');
                 
-                _updateTotalsWithLevelAt(isncsciExam, totals, isncsciExam.getLevelWithName('C2'), false, false);
+                _updateTotalsWithLevelAt(isncsciExam, totals, c2, false, false);
     
-    //             totals.UpperMotorTotal = totals.RightUpperMotorTotal + totals.LeftUpperMotorTotal;
-    //             totals.LowerMotorTotal = totals.RightLowerMotorTotal + totals.LeftLowerMotorTotal;
-    //             totals.TouchTotal = totals.RightTouchTotal + totals.LeftTouchTotal;
-    //             totals.PrickTotal = totals.RightPrickTotal + totals.LeftPrickTotal;
+                totals.upperMotorTotal = totals.rightUpperMotorTotal + totals.leftUpperMotorTotal;
+                totals.lowerMotorTotal = totals.rightLowerMotorTotal + totals.leftLowerMotorTotal;
+                totals.touchTotal = totals.rightTouchTotal + totals.leftTouchTotal;
+                totals.prickTotal = totals.rightPrickTotal + totals.leftPrickTotal;
     
-    //             var s4_5 = neurologyForm.GetLevelWithName("S4_5");
+                var s4_5 = isncsciExam.getLevelWithName('S4_5');
+                var c1 = c2.previous;
     
-    //             var c1 = neurologyForm.GetLevelWithName("C2").Previous;
+                if (totals.rightSensoryZppHasOnlySoftValues)
+                    totals.addRightSensoryZppValue(c1);
     
-    //             if (totals.RightSensoryZppHasOnlySoftValues)
-    //                 totals.AddRightSensoryZppValue(c1);
+                if (totals.leftSensoryZppHasOnlySoftValues)
+                    totals.addLeftSensoryZppValue(c1);
     
-    //             if (totals.LeftSensoryZppHasOnlySoftValues)
-    //                 totals.AddLeftSensoryZppValue(c1);
+                if (totals.rightMotorZppHasOnlySoftValues)
+                    totals.addRightMotorZppValue(c1);
     
-    //             if (totals.RightMotorZppHasOnlySoftValues)
-    //                 totals.AddRightMotorZppValue(c1);
+                if (totals.leftMotorZppHasOnlySoftValues)
+                    totals.addLeftMotorZppValue(c1);
     
-    //             if (totals.LeftMotorZppHasOnlySoftValues)
-    //                 totals.AddLeftMotorZppValue(c1);
+                if (totals.mostRostralRightLevelWithMotorFunction == null)
+                    totals.mostRostralRightLevelWithMotorFunction = c1;
     
-    //             if (totals.MostRostralRightLevelWithMotorFunction == null)
-    //                 totals.MostRostralRightLevelWithMotorFunction = c1;
+                if (totals.mostRostralLeftLevelWithMotorFunction == null)
+                    totals.mostRostralLeftLevelWithMotorFunction = c1;
     
-    //             if (totals.MostRostralLeftLevelWithMotorFunction == null)
-    //                 totals.MostRostralLeftLevelWithMotorFunction = c1;
+                if (totals.mostCaudalRightLevelWithMotorFunction == null)
+                    totals.mostCaudalRightLevelWithMotorFunction = c1;
     
-    //             if (totals.MostCaudalRightLevelWithMotorFunction == null)
-    //                 totals.MostCaudalRightLevelWithMotorFunction = c1;
+                if (totals.mostCaudalLeftLevelWithMotorFunction == null)
+                    totals.mostCaudalLeftLevelWithMotorFunction = c1;
     
-    //             if (totals.MostCaudalLeftLevelWithMotorFunction == null)
-    //                 totals.MostCaudalLeftLevelWithMotorFunction = c1;
+                // [ASIA learning center 2012-11-14] Sensory incomplete: Sacral sparing of sensory function
+                var isSensoryIncomplete = isncsciExam.analSensation == Polymer.rhiCoreIsncsciBinaryObservationYes || isncsciExam.analSensation == Polymer.rhiCoreIsncsciBinaryObservationNT
+                        || '0' !== s4_5.rightTouchName || '0' !== s4_5.leftTouchName
+                        || '0' !== s4_5.rightPrickName || '0' !== s4_5.leftPrickName;
     
-    //             // [ASIA learning center 2012-11-14] Sensory incomplete: Sacral sparing of sensory function
-    //             var isSensoryIncomplete = neurologyForm.AnalSensation == BinaryObservation.Yes || neurologyForm.AnalSensation == BinaryObservation.NT
-    //                 || !"0".Equals(s4_5.RightTouchName) || !"0".Equals(s4_5.LeftTouchName)
-    //                 || !"0".Equals(s4_5.RightPrickName) || !"0".Equals(s4_5.LeftPrickName);
+                //var couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel = CouldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel(isncsciExam, totals);
     
-    //             var couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel = CouldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel(neurologyForm, totals);
-    
-    //             var couldNotBeMotorIncomplete = (neurologyForm.AnalContraction == BinaryObservation.No || neurologyForm.AnalContraction == BinaryObservation.NT)
+    //             var couldNotBeMotorIncomplete = (isncsciExam.AnalContraction == BinaryObservation.No || isncsciExam.AnalContraction == BinaryObservation.NT)
     //                 && isSensoryIncomplete && couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel;
     
-    //             if ((neurologyForm.AnalContraction == BinaryObservation.No || neurologyForm.AnalContraction == BinaryObservation.NT)
-    //                 && (neurologyForm.AnalSensation == BinaryObservation.No || neurologyForm.AnalSensation == BinaryObservation.NT)
-    //                 && s4_5.RightTouchValue == 0 && !s4_5.RightTouchImpairmentNotDueToSci
-    //                 && s4_5.RightPrickValue == 0 && !s4_5.RightPrickImpairmentNotDueToSci
-    //                 && s4_5.LeftTouchValue == 0 && !s4_5.LeftTouchImpairmentNotDueToSci
-    //                 && s4_5.LeftPrickValue == 0 && !s4_5.LeftPrickImpairmentNotDueToSci)
-    //                 totals.AddAsiaImpairmentScaleValue("A");
+                if ((isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNo || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNT)
+                        && (isncsciExam.analSensation == Polymer.rhiCoreIsncsciBinaryObservationNo || isncsciExam.analSensation == Polymer.rhiCoreIsncsciBinaryObservationNT)
+                        && s4_5.rightTouchValue === 0 && !s4_5.rightTouchImpairmentNotDueToSci
+                        && s4_5.rightPrickValue === 0 && !s4_5.rightPrickImpairmentNotDueToSci
+                        && s4_5.leftTouchValue === 0 && !s4_5.leftTouchImpairmentNotDueToSci
+                        && s4_5.leftPrickValue === 0 && !s4_5.leftPrickImpairmentNotDueToSci)
+                    totals.addAsiaImpairmentScaleValue('A');
     
-    //             if (couldNotBeMotorIncomplete && totals.MostRostralNeurologicalLevelOfInjury.Name != "S4_5")
-    //                 totals.AddAsiaImpairmentScaleValue("B");
+                //if (couldNotBeMotorIncomplete && totals.mostRostralNeurologicalLevelOfInjury.Name !== 'S4_5')
+                //    totals.AddAsiaImpairmentScaleValue('B');
     
     
-    //             //// Not an ASIA E only
-    //             //// AND not an ASIA A only
-    //             if (totals.MostRostralNeurologicalLevelOfInjury.Name != "S4_5"
-    //                 && (isSensoryIncomplete || neurologyForm.AnalContraction == BinaryObservation.Yes || neurologyForm.AnalContraction == BinaryObservation.NT))
-    //             {
+                // Not an ASIA E only
+                // AND not an ASIA A only
+                if (totals.mostRostralNeurologicalLevelOfInjury.name !== 'S4_5'
+                        && (isSensoryIncomplete || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationYes || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNT)) {
     //                 bool couldBeAsiaC;
     //                 bool couldBeAsiaD;
-    //                 CouldBeAsiaCorD(neurologyForm, totals, out couldBeAsiaC, out couldBeAsiaD);
+    //                 CouldBeAsiaCorD(isncsciExam, totals, out couldBeAsiaC, out couldBeAsiaD);
     
     //                 if (couldBeAsiaC)
-    //                     totals.AddAsiaImpairmentScaleValue("C");
+    //                     totals.AddAsiaImpairmentScaleValue('C');
     
     //                 if (couldBeAsiaD)
-    //                     totals.AddAsiaImpairmentScaleValue("D");
-    //             }
+    //                     totals.AddAsiaImpairmentScaleValue('D');
+                }
     
-    //             if (totals.RightSensoryContains("S4_5") && totals.LeftSensoryContains("S4_5")
-    //                 && totals.RightMotorContains("S4_5") && totals.LeftMotorContains("S4_5"))
-    //                 totals.AddAsiaImpairmentScaleValue("E");
+                if (totals.rightSensoryContains('S4_5') && totals.leftSensoryContains('S4_5')
+                        && totals.rightMotorContains('S4_5') && totals.leftMotorContains('S4_5'))
+                    totals.addAsiaImpairmentScaleValue('E');
     
                 return totals; 
             }
@@ -646,21 +625,21 @@ Author: Eduardo Echeverria (@eddiemachete)
     
     //             while ((mostRostralRightLevelWithMotor == null || mostRostralLeftLevelWithMotor == null)
     //                 && currentLevel != null // Could happen if SNL is C1
-    //                 && currentLevel.Ordinal >= totals.MostCaudalNeurologicalLevelOfInjury.Ordinal)
+    //                 && currentLevel.Ordinal >= totals.mostCaudalNeurologicalLevelOfInjury.Ordinal)
     //             {
     //                 if (mostRostralRightLevelWithMotor == null && 
-    //                     (currentLevel.RightMotorImpairmentNotDueToSci || currentLevel.HasOtherRightMotorFunction || (currentLevel.RightMotorValue != 0 && currentLevel.IsKeyMuscle)))
+    //                     (currentLevel.rightMotorImpairmentNotDueToSci || currentLevel.HasOtherRightMotorFunction || (currentLevel.rightMotorValue != 0 && currentLevel.IsKeyMuscle)))
     //                     mostRostralRightLevelWithMotor = currentLevel;
     
     //                 if (mostRostralLeftLevelWithMotor == null &&
-    //                     (currentLevel.LeftMotorImpairmentNotDueToSci || currentLevel.HasOtherLeftMotorFunction || (currentLevel.LeftMotorValue != 0 && currentLevel.IsKeyMuscle)))
+    //                     (currentLevel.leftMotorImpairmentNotDueToSci || currentLevel.HasOtherLeftMotorFunction || (currentLevel.leftMotorValue != 0 && currentLevel.IsKeyMuscle)))
     //                     mostRostralLeftLevelWithMotor = currentLevel;
     
     //                 currentLevel = currentLevel.Previous;
     //             }
     
-    //             return (mostRostralRightLevelWithMotor == null || mostRostralRightLevelWithMotor.Ordinal - totals.MostCaudalRightMotor.Ordinal <= 3)
-    //                 && (mostRostralLeftLevelWithMotor == null || mostRostralLeftLevelWithMotor.Ordinal - totals.MostCaudalLeftMotor.Ordinal <= 3);
+    //             return (mostRostralRightLevelWithMotor == null || mostRostralRightLevelWithMotor.Ordinal - totals.mostCaudalRightMotor.Ordinal <= 3)
+    //                 && (mostRostralLeftLevelWithMotor == null || mostRostralLeftLevelWithMotor.Ordinal - totals.mostCaudalLeftMotor.Ordinal <= 3);
     //         }
     
     //         /// <summary>
@@ -685,7 +664,7 @@ Author: Eduardo Echeverria (@eddiemachete)
     
     //             var nliEnum = totals.GetNeurologicalLevelsOfInjury().GetEnumerator();
     
-    //             while (nliEnum.MoveNext() && (!couldBeAsiaC || !couldBeAsiaD))
+    //             while (nliEnum.moveNext() && (!couldBeAsiaC || !couldBeAsiaD))
     //             {
     //                 //var otherMotorIsMoreThanThreeLevelsBelowNli = (neurologyForm.)
     
@@ -696,7 +675,7 @@ Author: Eduardo Echeverria (@eddiemachete)
     //                     var rightMotorValues = totals.GetRightMotorValues().GetEnumerator();
     //                     rightMotor = null;
     
-    //                     while (rightMotor == null && rightMotorValues.MoveNext())
+    //                     while (rightMotor == null && rightMotorValues.moveNext())
     //                     {
     //                         if (rightMotorValues.Current.Ordinal >= nliEnum.Current.Ordinal)
     //                             rightMotor = rightMotorValues.Current;
@@ -712,7 +691,7 @@ Author: Eduardo Echeverria (@eddiemachete)
     //                     var leftMotorValues = totals.GetLeftMotorValues().GetEnumerator();
     //                     leftMotor = null;
     
-    //                     while (leftMotor == null && leftMotorValues.MoveNext())
+    //                     while (leftMotor == null && leftMotorValues.moveNext())
     //                     {
     //                         if (leftMotorValues.Current.Ordinal >= nliEnum.Current.Ordinal)
     //                             leftMotor = leftMotorValues.Current;
@@ -722,14 +701,14 @@ Author: Eduardo Echeverria (@eddiemachete)
     //                 }
     
     //                 //if (couldNotHaveAnalContraction
-    //                 //    && (rightMotor == null || totals.MostCaudalRightLevelWithMotorFunction.Ordinal - rightMotor.Ordinal <= 3)
-    //                 //    && (leftMotor == null || totals.MostCaudalLeftLevelWithMotorFunction.Ordinal - leftMotor.Ordinal <= 3))
+    //                 //    && (rightMotor == null || totals.mostCaudalRightLevelWithMotorFunction.Ordinal - rightMotor.Ordinal <= 3)
+    //                 //    && (leftMotor == null || totals.mostCaudalLeftLevelWithMotorFunction.Ordinal - leftMotor.Ordinal <= 3))
     //                 //    couldBeAsiaB = true;
     
     //                 // If the test is not motor incomplete at this level, do not continue to count motor levels, move to the next nli available.
     //                 if (!couldHaveAnalContraction
-    //                     && totals.MostCaudalRightLevelWithMotorFunction.Ordinal - rightMotor.Ordinal <= 3
-    //                     && totals.MostCaudalLeftLevelWithMotorFunction.Ordinal - leftMotor.Ordinal <= 3)
+    //                     && totals.mostCaudalRightLevelWithMotorFunction.Ordinal - rightMotor.Ordinal <= 3
+    //                     && totals.mostCaudalLeftLevelWithMotorFunction.Ordinal - leftMotor.Ordinal <= 3)
     //                     continue;
     
     //                 // When motor incomplete and the nli is S1 or more caudal, it is automatically D since there are no myotomes to count from.
@@ -752,16 +731,16 @@ Author: Eduardo Echeverria (@eddiemachete)
     //                     {
     //                         eligibleLevelCount += 2;
     
-    //                         if (currentLevel.RightMotorValue > 2 || currentLevel.RightMotorImpairmentNotDueToSci || NtRegex.IsMatch(currentLevel.RightMotorName))
+    //                         if (currentLevel.rightMotorValue > 2 || currentLevel.rightMotorImpairmentNotDueToSci || NtRegex.IsMatch(currentLevel.rightMotorName))
     //                             levelsWithMuscleGradeGreaterThanTwo++;
     
-    //                         if ((currentLevel.RightMotorValue < 3 || NtRegex.IsMatch(currentLevel.RightMotorName)) && !currentLevel.RightMotorImpairmentNotDueToSci)
+    //                         if ((currentLevel.rightMotorValue < 3 || NtRegex.IsMatch(currentLevel.rightMotorName)) && !currentLevel.rightMotorImpairmentNotDueToSci)
     //                             levelsWithMuscleGradeLessThanThree++;
     
-    //                         if (currentLevel.LeftMotorValue > 2 || currentLevel.LeftMotorImpairmentNotDueToSci || NtRegex.IsMatch(currentLevel.LeftMotorName))
+    //                         if (currentLevel.leftMotorValue > 2 || currentLevel.leftMotorImpairmentNotDueToSci || NtRegex.IsMatch(currentLevel.leftMotorName))
     //                             levelsWithMuscleGradeGreaterThanTwo++;
     
-    //                         if ((currentLevel.LeftMotorValue < 3 || NtRegex.IsMatch(currentLevel.LeftMotorName)) && !currentLevel.LeftMotorImpairmentNotDueToSci)
+    //                         if ((currentLevel.leftMotorValue < 3 || NtRegex.IsMatch(currentLevel.leftMotorName)) && !currentLevel.leftMotorImpairmentNotDueToSci)
     //                             levelsWithMuscleGradeLessThanThree++;
     //                     }
     
@@ -779,21 +758,8 @@ Author: Eduardo Echeverria (@eddiemachete)
     
     //             nliEnum.Dispose();
     //         }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+    
+    
         });
     })();
 </script>
