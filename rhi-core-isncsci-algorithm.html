@@ -15,11 +15,11 @@ Author: Eduardo Echeverria (@eddiemachete)
         /***********************************************/
         /* ***** Private, static properties ********** */
         /***********************************************/
-        var _c = 'rhi-core-isncsci-algorithm';
-        var _ntRegex = /\bNT\b/i;
-        var _notDeterminable = 'UTD';
-        var _notApplicable = 'NA';
-        var _intact = 'INT';
+        const _c = 'rhi-core-isncsci-algorithm';
+        const _ntRegex = /\bNT\b/i;
+        const _notDeterminable = 'UTD';
+        const _notApplicable = 'NA';
+        const _intact = 'INT';
         
         /***********************************************/
         /* ***** Private, static methods ************* */
@@ -27,14 +27,13 @@ Author: Eduardo Echeverria (@eddiemachete)
         /**
         * Recursive method which iterates through the values in a nuerology form while it updates the totals generating the results produced by the algorithm.
         *
-        * @param {rhiCoreIsncsciExam isncsciExam An ISNCSCI exam with all the values required to perform the calculations.
-        * @param {rhiCoreIsncsciTotals totals A totals object where the results of the calculations will be recorded.
+        * @param {rhiCoreIsncsciExam} isncsciExam An ISNCSCI exam with all the values required to perform the calculations.
+        * @param {rhiCoreIsncsciTotals} totals A totals object where the results of the calculations will be recorded.
         * @param {rhiCoreIsncsciLevel} level The current neurological level to be evaluated.
         * @param {Boolean} nextNonKeyMuscleShouldBeRightMotor Flag used to evaluate the Kathy Collins condition on the right motor results.
         * @param {Boolean} nextNonKeyMuscleShouldBeLeftMotor Flag used to evaluate the Kathy Collins condition on the left motor results.
         */
-        function _updateTotalsWithLevelAt(isncsciExam, totals, level, nextNonKeyMuscleShouldBeRightMotor, nextNonKeyMuscleShouldBeLeftMotor)
-        {
+        function _updateTotalsWithLevelAt(isncsciExam, totals, level, nextNonKeyMuscleShouldBeRightMotor, nextNonKeyMuscleShouldBeLeftMotor) {
             totals.rightTouchTotal += level.rightTouchValue;
             totals.leftTouchTotal += level.leftTouchValue;
             totals.rightPrickTotal += level.rightPrickValue;
@@ -331,6 +330,158 @@ Author: Eduardo Echeverria (@eddiemachete)
             }
         }
         
+        /**
+        * Evaluates the specified form and totals to determine if any of the different
+        * return conditions could produce a case where there could be motor function more
+        * than 3 levels below the injury level.
+        *
+        * @param {rhiCoreIsncsciExam} isncsciExam that was used to produce the totals.
+        * @param {rhiCoreIsncsciTotals} totals Totals retunred by the algorithm.
+        * @return {Boolean} Flag indicating if any combination in the totals could have a case with motor function more than 3 levels below the injury level.
+        */
+        function _couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel(isncsciExam, totals) {
+            var mostRostralRightLevelWithMotor = null;
+            var mostRostralLeftLevelWithMotor = null;
+            
+            var currentLevel = isncsciExam.getLevelWithName('S1');
+            
+            while ((mostRostralRightLevelWithMotor == null || mostRostralLeftLevelWithMotor == null)
+                    && currentLevel != null // Could happen if SNL is C1
+                    && currentLevel.ordinal >= totals.mostCaudalNeurologicalLevelOfInjury.ordinal) {
+                if (mostRostralRightLevelWithMotor == null &&
+                        (currentLevel.rightMotorImpairmentNotDueToSci || currentLevel.hasOtherRightMotorFunction || (currentLevel.rightMotorValue != 0 && currentLevel.isKeyMuscle)))
+                    mostRostralRightLevelWithMotor = currentLevel;
+                    
+                if (mostRostralLeftLevelWithMotor == null &&
+                        (currentLevel.leftMotorImpairmentNotDueToSci || currentLevel.hasOtherLeftMotorFunction || (currentLevel.leftMotorValue != 0 && currentLevel.isKeyMuscle)))
+                    mostRostralLeftLevelWithMotor = currentLevel;
+    
+                currentLevel = currentLevel.Previous;
+            }
+    
+            return (mostRostralRightLevelWithMotor == null || mostRostralRightLevelWithMotor.ordinal - totals.mostCaudalRightMotor.ordinal <= 3)
+                    && (mostRostralLeftLevelWithMotor == null || mostRostralLeftLevelWithMotor.ordinal - totals.mostCaudalLeftMotor.ordinal <= 3);
+        }
+    
+        /**
+        * Evaluates the specified form and totals to determine if any of the different
+        * return conditions could produce a case where the Asia Impairment Scale is C o D.
+        *
+        * @param {rhiCoreIsncsciExam} isncsciExam that was used to produce the totals.
+        * @param {rhiCoreIsncsciTotals} totals Totals retunred by the algorithm.
+        * @return {Object} Object with the flags couldBeAsiaC:boolean and  couldBeAsiaD:boolean
+        * couldBeAsiaC indicates if this case is a possible ASIA C.
+        * couldBeAsiaD indicates if this case is a possible ASIA D.
+        */
+        function _couldBeAsiaCorD(isncsciExam, totals) {
+            var rightMotor = null;
+            var leftMotor = null;
+    
+            // Check if the patient could be motor incoplete via sphincter contraction
+            // Otherwise we need to check for motor function more than 3 levels below motor level.
+            var couldHaveAnalContraction = isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationYes
+                    || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNT;
+
+            var neurologicalLevelsOfInjury = totals.GetNeurologicalLevelsOfInjury().GetEnumerator();
+            const levelsLength = neurologicalLevelsOfInjury.length;
+            var index = 0;
+    
+            while (index < levelsLength && (!couldBeAsiaC || !couldBeAsiaD)) {
+                // RIGHT MOTOR
+                // If not motor incomplete already, find the right motor level that correspond to this particular neurological level
+                var currentNli = neurologicalLevelsOfInjury[index];
+                index++;
+                
+                if (!couldHaveAnalContraction && (rightMotor == null || rightMotor.ordinal < currentNli.ordinal)) {
+                    var rightMotorValues = totals.getRightMotorValues();
+                    const rightMotorValuesLength = rightMotorValues.length;
+                    var rmIndex = 0;
+                    rightMotor = null;
+    
+                    while (rightMotor == null && rmIndex < rightMotorValuesLength) {
+                        var currentRightMotor = rightMotorValues[rmIndex];
+                        
+                        if (currentRightMotor.ordinal >= currentNli.ordinal)
+                            rightMotor = currentRightMotor;
+                    }
+                }
+    
+                // LEFT MOTOR
+                // If not motor incomplete already, find the left motor level that correspond to this particular neurological level
+                if (!couldHaveAnalContraction && (leftMotor == null || leftMotor.ordinal < currentNli.ordinal)) {
+                    var leftMotorValues = totals.getLeftMotorValues();
+                    const leftMotorValuesLength = leftMotorValues.length;
+                    var lmIndex = 0;
+                    leftMotor = null;
+    
+                    while (leftMotor == null && lmIndex < leftMotorValuesLength) {
+                        var currentLeftMotor = leftMotorValues[lmIndex];
+                        
+                        if (currentLeftMotor.ordinal >= currentNli.ordinal)
+                            leftMotor = currentLeftMotor;
+                    }
+                }
+    
+                // If the test is not motor incomplete at this level, do not continue to count motor levels, move to the next nli available.
+                if (!couldHaveAnalContraction
+                        && totals.mostCaudalRightLevelWithMotorFunction.ordinal - rightMotor.ordinal <= 3
+                        && totals.mostCaudalLeftLevelWithMotorFunction.ordinal - leftMotor.ordinal <= 3)
+                    continue;
+    
+                // When motor incomplete and the nli is S1 or more caudal, it is automatically D since there are no myotomes to count from.
+                // We can break the loop.
+                // Greater than L5 (24)
+                if (currentNli.ordinal > 24) {
+                    couldBeAsiaD = true;
+                    break;
+                }
+                
+                // If motor incomplete, count the motor levels with muscle grade greater than two
+                var levelsWithMuscleGradeGreaterThanTwo = 0;
+                var levelsWithMuscleGradeLessThanThree = 0;
+                var eligibleLevelCount = 0;
+                var currentLevel = currentNli.Next;
+    
+                while (currentLevel != null) {
+                    if (currentLevel.isKeyMuscle) {
+                        eligibleLevelCount += 2;
+                        
+                        if (currentLevel.rightMotorValue > 2 || currentLevel.rightMotorImpairmentNotDueToSci
+                                || _ntRegex.test(currentLevel.rightMotorName))
+                            levelsWithMuscleGradeGreaterThanTwo++;
+                        
+                        if ((currentLevel.rightMotorValue < 3 || _ntRegex.test(currentLevel.rightMotorName))
+                                && !currentLevel.rightMotorImpairmentNotDueToSci)
+                            levelsWithMuscleGradeLessThanThree++;
+    
+                        if (currentLevel.leftMotorValue > 2
+                                || currentLevel.leftMotorImpairmentNotDueToSci 
+                                || _ntRegex.test(currentLevel.leftMotorName))
+                            levelsWithMuscleGradeGreaterThanTwo++;
+    
+                        if ((currentLevel.leftMotorValue < 3 || _ntRegex.test(currentLevel.leftMotorName))
+                                && !currentLevel.leftMotorImpairmentNotDueToSci)
+                            levelsWithMuscleGradeLessThanThree++;
+                    }
+    
+                    currentLevel = currentLevel.next;
+                }
+    
+                // If not more than half the myotomes contain values less to 3, this is an Asia C
+                if (levelsWithMuscleGradeLessThanThree > eligibleLevelCount / 2)
+                    couldBeAsiaC = true;
+    
+                // If at least half the myotomes below the current NLI containing values greater or equal to 3, hooray! it is ASIA D.
+                if (levelsWithMuscleGradeGreaterThanTwo >= eligibleLevelCount / 2)
+                    couldBeAsiaD = true;
+            }
+            
+            return {
+                couldBeAsiaC: couldBeAsiaC,
+                couldBeAsiaD: couldBeAsiaD
+            };
+        }
+        
         /***********************************************/
         /* ***** Web component declaration *********** */
         /***********************************************/
@@ -475,10 +626,10 @@ Author: Eduardo Echeverria (@eddiemachete)
                         || '0' !== s4_5.rightTouchName || '0' !== s4_5.leftTouchName
                         || '0' !== s4_5.rightPrickName || '0' !== s4_5.leftPrickName;
     
-                //var couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel = CouldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel(isncsciExam, totals);
+                var couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel = _couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel(isncsciExam, totals);
     
-    //             var couldNotBeMotorIncomplete = (isncsciExam.AnalContraction == BinaryObservation.No || isncsciExam.AnalContraction == BinaryObservation.NT)
-    //                 && isSensoryIncomplete && couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel;
+                var couldNotBeMotorIncomplete = (isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNo || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNT)
+                        && isSensoryIncomplete && couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel;
     
                 if ((isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNo || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNT)
                         && (isncsciExam.analSensation == Polymer.rhiCoreIsncsciBinaryObservationNo || isncsciExam.analSensation == Polymer.rhiCoreIsncsciBinaryObservationNT)
@@ -488,23 +639,21 @@ Author: Eduardo Echeverria (@eddiemachete)
                         && s4_5.leftPrickValue === 0 && !s4_5.leftPrickImpairmentNotDueToSci)
                     totals.addAsiaImpairmentScaleValue('A');
     
-                //if (couldNotBeMotorIncomplete && totals.mostRostralNeurologicalLevelOfInjury.Name !== 'S4_5')
-                //    totals.AddAsiaImpairmentScaleValue('B');
+                if (couldNotBeMotorIncomplete && totals.mostRostralNeurologicalLevelOfInjury.name !== 'S4_5')
+                    totals.addAsiaImpairmentScaleValue('B');
     
     
                 // Not an ASIA E only
                 // AND not an ASIA A only
                 if (totals.mostRostralNeurologicalLevelOfInjury.name !== 'S4_5'
                         && (isSensoryIncomplete || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationYes || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNT)) {
-    //                 bool couldBeAsiaC;
-    //                 bool couldBeAsiaD;
-    //                 CouldBeAsiaCorD(isncsciExam, totals, out couldBeAsiaC, out couldBeAsiaD);
+                    const cdCheck = _couldBeAsiaCorD(isncsciExam, totals);
     
-    //                 if (couldBeAsiaC)
-    //                     totals.AddAsiaImpairmentScaleValue('C');
+                    if (cdCheck.couldBeAsiaC)
+                        totals.addAsiaImpairmentScaleValue('C');
     
-    //                 if (couldBeAsiaD)
-    //                     totals.AddAsiaImpairmentScaleValue('D');
+                    if (cdCheck.couldBeAsiaD)
+                        totals.AddAsiaImpairmentScaleValue('D');
                 }
     
                 if (totals.rightSensoryContains('S4_5') && totals.leftSensoryContains('S4_5')
@@ -608,156 +757,7 @@ Author: Eduardo Echeverria (@eddiemachete)
     
     //         
     
-    //         /// <summary>
-    //         /// Evaluates the specified form and totals to determine if any of the different
-    //         /// return conditions could produce a case where there could be motor function more
-    //         /// than 3 levels below the injury level.
-    //         /// </summary>
-    //         /// <param name="neurologyForm">Form that was used to produce the totals.</param>
-    //         /// <param name="totals">Totals retunred by the algorithm.</param>
-    //         /// <returns>Flag indicating if any combination in the totals could have a case with motor function more than 3 levels below the injury level.</returns>
-    //         private static bool CouldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel(NeurologyForm neurologyForm, NeurologyFormTotals totals)
-    //         {
-    //             NeurologyFormLevel mostRostralRightLevelWithMotor = null;
-    //             NeurologyFormLevel mostRostralLeftLevelWithMotor = null;
     
-    //             var currentLevel = neurologyForm.GetLevelWithName("S1");
-    
-    //             while ((mostRostralRightLevelWithMotor == null || mostRostralLeftLevelWithMotor == null)
-    //                 && currentLevel != null // Could happen if SNL is C1
-    //                 && currentLevel.Ordinal >= totals.mostCaudalNeurologicalLevelOfInjury.Ordinal)
-    //             {
-    //                 if (mostRostralRightLevelWithMotor == null && 
-    //                     (currentLevel.rightMotorImpairmentNotDueToSci || currentLevel.HasOtherRightMotorFunction || (currentLevel.rightMotorValue != 0 && currentLevel.IsKeyMuscle)))
-    //                     mostRostralRightLevelWithMotor = currentLevel;
-    
-    //                 if (mostRostralLeftLevelWithMotor == null &&
-    //                     (currentLevel.leftMotorImpairmentNotDueToSci || currentLevel.HasOtherLeftMotorFunction || (currentLevel.leftMotorValue != 0 && currentLevel.IsKeyMuscle)))
-    //                     mostRostralLeftLevelWithMotor = currentLevel;
-    
-    //                 currentLevel = currentLevel.Previous;
-    //             }
-    
-    //             return (mostRostralRightLevelWithMotor == null || mostRostralRightLevelWithMotor.Ordinal - totals.mostCaudalRightMotor.Ordinal <= 3)
-    //                 && (mostRostralLeftLevelWithMotor == null || mostRostralLeftLevelWithMotor.Ordinal - totals.mostCaudalLeftMotor.Ordinal <= 3);
-    //         }
-    
-    //         /// <summary>
-    //         /// Evaluates the specified form and totals to determine if any of the different
-    //         /// return conditions could produce a case where the Asia Impairment Scale is C o D.
-    //         /// </summary>
-    //         /// <param name="neurologyForm">Form that was used to produce the totals.</param>
-    //         /// <param name="totals">Totals retunred by the algorithm.</param>
-    //         /// <param name="couldBeAsiaC">out variable use as flag indicating if this case is a possible ASIA C.</param>
-    //         /// <param name="couldBeAsiaD">out variable use as flag indicating if this case is a possible ASIA D.</param>
-    //         private static void CouldBeAsiaCorD(NeurologyForm neurologyForm, NeurologyFormTotals totals, out bool couldBeAsiaC, out bool couldBeAsiaD)
-    //         {
-    //             couldBeAsiaC = false;
-    //             couldBeAsiaD = false;
-    //             NeurologyFormLevel rightMotor = null;
-    //             NeurologyFormLevel leftMotor = null;
-    
-    //             // Check if the patient could be motor incoplete via sphincter contraction
-    //             // Otherwise we need to check for motor function more than 3 levels below motor level.
-    //             var couldHaveAnalContraction = neurologyForm.AnalContraction == BinaryObservation.Yes || neurologyForm.AnalContraction == BinaryObservation.NT;
-    //             //var couldNotHaveAnalContraction = neurologyForm.AnalContraction == BinaryObservation.No || neurologyForm.AnalContraction == BinaryObservation.NT;
-    
-    //             var nliEnum = totals.GetNeurologicalLevelsOfInjury().GetEnumerator();
-    
-    //             while (nliEnum.moveNext() && (!couldBeAsiaC || !couldBeAsiaD))
-    //             {
-    //                 //var otherMotorIsMoreThanThreeLevelsBelowNli = (neurologyForm.)
-    
-    //                 // RIGHT MOTOR
-    //                 // If not motor incomplete already, find the right motor level that correspond to this particular neurological level
-    //                 if (!couldHaveAnalContraction && (rightMotor == null || rightMotor.Ordinal < nliEnum.Current.Ordinal))
-    //                 {
-    //                     var rightMotorValues = totals.GetRightMotorValues().GetEnumerator();
-    //                     rightMotor = null;
-    
-    //                     while (rightMotor == null && rightMotorValues.moveNext())
-    //                     {
-    //                         if (rightMotorValues.Current.Ordinal >= nliEnum.Current.Ordinal)
-    //                             rightMotor = rightMotorValues.Current;
-    //                     }
-    
-    //                     rightMotorValues.Dispose();
-    //                 }
-    
-    //                 // LEFT MOTOR
-    //                 // If not motor incomplete already, find the left motor level that correspond to this particular neurological level
-    //                 if (!couldHaveAnalContraction && (leftMotor == null || leftMotor.Ordinal < nliEnum.Current.Ordinal))
-    //                 {
-    //                     var leftMotorValues = totals.GetLeftMotorValues().GetEnumerator();
-    //                     leftMotor = null;
-    
-    //                     while (leftMotor == null && leftMotorValues.moveNext())
-    //                     {
-    //                         if (leftMotorValues.Current.Ordinal >= nliEnum.Current.Ordinal)
-    //                             leftMotor = leftMotorValues.Current;
-    //                     }
-    
-    //                     leftMotorValues.Dispose();
-    //                 }
-    
-    //                 //if (couldNotHaveAnalContraction
-    //                 //    && (rightMotor == null || totals.mostCaudalRightLevelWithMotorFunction.Ordinal - rightMotor.Ordinal <= 3)
-    //                 //    && (leftMotor == null || totals.mostCaudalLeftLevelWithMotorFunction.Ordinal - leftMotor.Ordinal <= 3))
-    //                 //    couldBeAsiaB = true;
-    
-    //                 // If the test is not motor incomplete at this level, do not continue to count motor levels, move to the next nli available.
-    //                 if (!couldHaveAnalContraction
-    //                     && totals.mostCaudalRightLevelWithMotorFunction.Ordinal - rightMotor.Ordinal <= 3
-    //                     && totals.mostCaudalLeftLevelWithMotorFunction.Ordinal - leftMotor.Ordinal <= 3)
-    //                     continue;
-    
-    //                 // When motor incomplete and the nli is S1 or more caudal, it is automatically D since there are no myotomes to count from.
-    //                 // We can break the loop.
-    //                 if (nliEnum.Current.Ordinal > 24) // Greater than L5 (24)
-    //                 {
-    //                     couldBeAsiaD = true;
-    //                     break;
-    //                 }
-    
-    //                 // If motor incomplete, count the motor levels with muscle grade greater than two
-    //                 var levelsWithMuscleGradeGreaterThanTwo = 0;
-    //                 var levelsWithMuscleGradeLessThanThree = 0;
-    //                 var eligibleLevelCount = 0;
-    //                 var currentLevel = nliEnum.Current.Next;
-    
-    //                 while (currentLevel != null)
-    //                 {
-    //                     if (currentLevel.IsKeyMuscle)
-    //                     {
-    //                         eligibleLevelCount += 2;
-    
-    //                         if (currentLevel.rightMotorValue > 2 || currentLevel.rightMotorImpairmentNotDueToSci || NtRegex.IsMatch(currentLevel.rightMotorName))
-    //                             levelsWithMuscleGradeGreaterThanTwo++;
-    
-    //                         if ((currentLevel.rightMotorValue < 3 || NtRegex.IsMatch(currentLevel.rightMotorName)) && !currentLevel.rightMotorImpairmentNotDueToSci)
-    //                             levelsWithMuscleGradeLessThanThree++;
-    
-    //                         if (currentLevel.leftMotorValue > 2 || currentLevel.leftMotorImpairmentNotDueToSci || NtRegex.IsMatch(currentLevel.leftMotorName))
-    //                             levelsWithMuscleGradeGreaterThanTwo++;
-    
-    //                         if ((currentLevel.leftMotorValue < 3 || NtRegex.IsMatch(currentLevel.leftMotorName)) && !currentLevel.leftMotorImpairmentNotDueToSci)
-    //                             levelsWithMuscleGradeLessThanThree++;
-    //                     }
-    
-    //                     currentLevel = currentLevel.Next;
-    //                 }
-    
-    //                 // If not more than half the myotomes contain values less to 3, this is an Asia C
-    //                 if (levelsWithMuscleGradeLessThanThree > eligibleLevelCount / 2)
-    //                     couldBeAsiaC = true;
-    
-    //                 // If at least half the myotomes below the current NLI containing values greater or equal to 3, hooray! it is ASIA D.
-    //                 if (levelsWithMuscleGradeGreaterThanTwo >= eligibleLevelCount / 2)
-    //                     couldBeAsiaD = true;
-    //             }
-    
-    //             nliEnum.Dispose();
-    //         }
     
     
         });
