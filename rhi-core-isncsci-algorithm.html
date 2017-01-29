@@ -374,6 +374,8 @@ Author: Eduardo Echeverria (@eddiemachete)
         * couldBeAsiaD indicates if this case is a possible ASIA D.
         */
         function _couldBeAsiaCorD(isncsciExam, totals) {
+            var couldBeAsiaC = false;
+            var couldBeAsiaD = false;
             var rightMotor = null;
             var leftMotor = null;
     
@@ -382,7 +384,7 @@ Author: Eduardo Echeverria (@eddiemachete)
             var couldHaveAnalContraction = isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationYes
                     || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNT;
 
-            var neurologicalLevelsOfInjury = totals.GetNeurologicalLevelsOfInjury().GetEnumerator();
+            var neurologicalLevelsOfInjury = totals.getNeurologicalLevelsOfInjury();
             const levelsLength = neurologicalLevelsOfInjury.length;
             var index = 0;
     
@@ -653,7 +655,7 @@ Author: Eduardo Echeverria (@eddiemachete)
                         totals.addAsiaImpairmentScaleValue('C');
     
                     if (cdCheck.couldBeAsiaD)
-                        totals.AddAsiaImpairmentScaleValue('D');
+                        totals.addAsiaImpairmentScaleValue('D');
                 }
     
                 if (totals.rightSensoryContains('S4_5') && totals.leftSensoryContains('S4_5')
