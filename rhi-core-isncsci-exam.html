@@ -239,15 +239,10 @@ Author: Eduardo Echeverria (@eddiemachete)
             *
             * @param {String} levelName The name of the right non-key neurological level with motor function.
             */
-            setRightLowestNonKeyMuscleWithMotorFunction: function(levelName)
-            {
+            setRightLowestNonKeyMuscleWithMotorFunction: function(levelName) {
                 if (typeof levelName !== 'string')
                     throw new Error(_c + ' : setRightLowestNonKeyMuscleWithMotorFunction : '
-                                    + 'Invalid arguments passed. Expected levelName to be a String');
-                
-                if (!levelName)
-                    throw new Error(_c + ' : setRightLowestNonKeyMuscleWithMotorFunction : '
-                                    + 'Missing required arguments: levelName:String');
+                                    + 'Invalid arguments passed. Expected levelName:String');
             
                 var key = levelName.toUpperCase();
                 var level = this.getLevelWithName(key);
@@ -267,15 +262,10 @@ Author: Eduardo Echeverria (@eddiemachete)
             *
             * @param {String} levelName The name of the left non-key neurological level with motor function.
             */
-            setLeftLowestNonKeyMuscleWithMotorFunction: function(levelName)
-            {
+            setLeftLowestNonKeyMuscleWithMotorFunction: function(levelName) {
                 if (typeof levelName !== 'string')
                     throw new Error(_c + ' : setLeftLowestNonKeyMuscleWithMotorFunction : '
                                     + 'Invalid arguments passed. Expected levelName to be a String');
-                
-                if (!levelName)
-                    throw new Error(_c + ' : setLeftLowestNonKeyMuscleWithMotorFunction : '
-                                    + 'Missing required arguments: levelName:String');
             
                 var key = levelName.toUpperCase();
                 var level = this.getLevelWithName(key);
@@ -306,8 +296,7 @@ Author: Eduardo Echeverria (@eddiemachete)
             * @return {RhiCoreIsncsciExam} This exam to allow chaining more requests.
             */
             updateLevelAt: function(levelName, rightTouchName, leftTouchName,
-                 rightPrickName, leftPrickName, rightMotorName, leftMotorName)
-            {
+                    rightPrickName, leftPrickName, rightMotorName, leftMotorName) {
                 if (typeof levelName !== 'string')
                     throw new Error(_c + ' : updateLevelAt : '
                                     + 'Invalid arguments passed. Expected levelName to be a String');

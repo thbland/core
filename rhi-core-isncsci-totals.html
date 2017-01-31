@@ -47,6 +47,28 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       return match != null;
     }
     
+    /**
+    * Produces a string containing the values in the provided array, ordered by ordinal, and separated by commas.
+    *
+    * @param {RhiCoreIsncsciLevel[]} values (required) The value array to be converted to a string.
+    * @return {String} Comma separated list.
+    */
+    function _getValuesString(values) {
+      if (typeof values !== 'object')
+            throw new Error(_c + ' : _getValuesString : '
+                            + 'Invalid arguments passed. Expected values:RhiCoreIsncsciLevel[]');
+                            
+      var result = '';
+      const sortedList = values.sort((a,b) => { return a.ordinal - b.ordinal; });
+      const sortedListLength = sortedList.length;
+      
+      for (var i=0; i<sortedListLength; i++) {
+          result += i > 0 ? ',' + sortedList[i].name : sortedList[i].name;
+      }
+      
+      return result;
+    }
+    
     Polymer({
       is: 'rhi-core-isncsci-totals',
       hostAttributes: {
@@ -299,6 +321,7 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       isRightSensoryEmpty: function() {
         this._rightSensoryValues.length === 0;
       },
+      
       /**
       * Adds a neurological level to the list of possible right sensory values.
       *
@@ -322,6 +345,15 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       */
       getRightSensoryValues: function() {
         return this._rightSensoryValues.slice(0);
+      },
+      
+      /**
+      * Produces an ordered list of all possible right sensory values, separated by commas.
+      *
+      * @return {String} Comma separated list of possible right sensory values.
+      */
+      getRightSensoryLongValueString: function() {
+        return _getValuesString(this._rightSensoryValues);
       },
   
       /**
@@ -371,6 +403,15 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       getLeftSensoryValues: function() {
         return this._leftSensoryValues.slice(0);
       },
+      
+      /**
+      * Produces an ordered list of all possible left sensory values, separated by commas.
+      *
+      * @return {String} Comma separated list of possible left sensory values.
+      */
+      getLeftSensoryLongValueString: function() {
+        return _getValuesString(this._leftSensoryValues);
+      },
   
       /**
       * Returns true if the specified levelName belongs to left sensory values list.
@@ -380,7 +421,7 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       */
       leftSensoryContains: function(levelName) {
         if (!levelName || typeof levelName !== 'string')
-          throw new Error(_c + ' : leftMotorContains : '
+          throw new Error(_c + ' : leftSensoryContains : '
                           + 'Invalid arguments passed. Expected levelName:String');
                           
         return _containsLevelWithName(this._leftSensoryValues, levelName);
@@ -427,6 +468,15 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       },
       
       /**
+      * Produces an ordered list of all possible right motor values, separated by commas.
+      *
+      * @return {String} Comma separated list of possible right motor values.
+      */
+      getRightMotorLongValueString: function() {
+        return _getValuesString(this._rightMotorValues);
+      },
+      
+      /**
       * Returns true if the specified levelName belongs to right motor values list.
       *
       * @param {String} levelName (required) The name of the ISNCSCI Level name we are searching for.
@@ -434,7 +484,7 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       */
       rightMotorContains: function(levelName) {
         if (!levelName || typeof levelName !== 'string')
-          throw new Error(_c + ' : leftMotorContains : '
+          throw new Error(_c + ' : rightMotorContains : '
                           + 'Invalid arguments passed. Expected levelName:String');
                           
         return _containsLevelWithName(this._rightMotorValues, levelName);
@@ -478,6 +528,15 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       */
       getLeftMotorValues: function() {
         return this._leftMotorValues.slice(0);
+      },
+      
+      /**
+      * Produces an ordered list of all possible left motor values, separated by commas.
+      *
+      * @return {String} Comma separated list of possible left motor values.
+      */
+      getLeftMotorLongValueString: function() {
+        return _getValuesString(this._leftMotorValues);
       },
       
       /**
@@ -526,6 +585,15 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       },
       
       /**
+      * Produces an alphabetically ordered list of all possible Neurological Levels of Injury, separated by commas.
+      *
+      * @return {String} Comma separated list of possible Neurological Levels of Injury.
+      */
+      getNeurologicalLevelsOfInjuryLongValueString: function() {
+        return _getValuesString(this._neurologicalLevelsOfInjury);
+      },
+      
+      /**
       * Checks if there the totals currently have no possible right sensory ZPP values.
       *
       * @return {Boolean} True if there are no recorded possible right sensory ZPP values.
@@ -558,6 +626,15 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       */
       getRightSensoryZppValues: function() {
         return this._rightSensoryZppValues.slice(0);
+      },
+      
+      /**
+      * Produces an ordered list of all possible right sensory Zone of Partial Preservation values, separated by commas.
+      *
+      * @return {String} Comma separated list of possible right sensory Zone of Partial Preservation values.
+      */
+      getRightSensoryZppLongValueString: function() {
+        return _getValuesString(this._rightSensoryZppValues);
       },
       
       /**
@@ -596,6 +673,15 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       },
       
       /**
+      * Produces an ordered list of all possible left sensory Zone of Partial Preservation values, separated by commas.
+      *
+      * @return {String} Comma separated list of possible left sensory Zone of Partial Preservation values.
+      */
+      getLeftSensoryZppLongValueString: function() {
+        return _getValuesString(this._leftSensoryZppValues);
+      },
+      
+      /**
       * Checks if there the totals currently have no possible right motor ZPP values.
       *
       * @return {Boolean} True if there are no recorded possible right motor ZPP values.
@@ -628,6 +714,15 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       */
       getRightMotorZppValues: function() {
         return this._rightMotorZppValues.slice(0);
+      },
+      
+      /**
+      * Produces an ordered list of all possible right motor Zone of Partial Preservation values, separated by commas.
+      *
+      * @return {String} Comma separated list of possible right motor Zone of Partial Preservation values.
+      */
+      getRightMotorZppLongValueString: function() {
+        return _getValuesString(this._rightMotorZppValues);
       },
       
       /**
@@ -666,6 +761,15 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       },
       
       /**
+      * Produces an ordered list of all possible left motor Zone of Partial Preservation values, separated by commas.
+      *
+      * @return {String} Comma separated list of possible left motor Zone of Partial Preservation values.
+      */
+      getLeftMotorZppLongValueString: function() {
+        return _getValuesString(this._leftMotorZppValues);
+      },
+      
+      /**
       * Adds an AIS value to the list of possible impairment values.
       *
       * @param {String} value (required) The AIS value to be recorded.
@@ -695,5 +799,3 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
     });
   })();
 </script>
-
-
