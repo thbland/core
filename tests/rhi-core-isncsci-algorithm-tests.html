@@ -20,7 +20,7 @@
             
             test('Can calculate the totals for test at [index]', function() {
                 // Arrange
-                var test = rhiIsncsciValidationTests.all[22];
+                var test = rhiIsncsciValidationTests.all[52];
                 var expectedTotals = test.totals;
                 var isncsciExam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
                 _bind(isncsciExam, test);
@@ -54,39 +54,39 @@
             assert.equal(expectedTotals.asiaImpairmentScale, totals.getAsiaImpairmentScaleValues(), 'asiaImpairmentScale');
             
             assert.equal(expectedTotals.leftLowerMotorContainsNt, totals.leftLowerMotorContainsNt, 'leftLowerMotorContainsNt');
-            assert.equal(expectedTotals.leftLowerMotorTotal, totals.leftLowerMotorTotal, 'leftLowerMotorTotal');
+            assert.equal(expectedTotals.leftLowerMotorTotal, totals.getLeftLowerMotorTotal(), 'leftLowerMotorTotal');
             assert.equal(expectedTotals.leftMotor, totals.getLeftMotorLongValueString(), 'leftMotor');
-            assert.equal(expectedTotals.leftMotorTotal, totals.leftUpperMotorTotal + totals.leftLowerMotorTotal, 'leftMotorTotal');
+            assert.equal(expectedTotals.leftMotorTotal, totals.getLeftMotorTotal(), 'leftMotorTotal');
             assert.equal(expectedTotals.leftMotorZpp, totals.getLeftMotorZppLongValueString(), 'leftMotorZpp');
             assert.equal(expectedTotals.leftPrickContainsNt, totals.leftPrickContainsNt, 'leftPrickContainsNt');
-            assert.equal(expectedTotals.leftPrickTotal, totals.leftPrickTotal, 'leftTouchTotal');
+            assert.equal(expectedTotals.leftPrickTotal, totals.getLeftPrickTotal(), 'leftPrickTotal');
             assert.equal(expectedTotals.leftSensory, totals.getLeftSensoryLongValueString(), 'leftSensory');
             assert.equal(expectedTotals.leftSensoryZpp, totals.getLeftSensoryZppLongValueString(), 'leftSensoryZpp');
             assert.equal(expectedTotals.leftTouchContainsNt, totals.leftTouchContainsNt, 'leftTouchContainsNt');
-            assert.equal(expectedTotals.leftTouchTotal, totals.leftTouchTotal, 'leftTouchTotal');
+            assert.equal(expectedTotals.leftTouchTotal, totals.getLeftTouchTotal(), 'leftTouchTotal');
             assert.equal(expectedTotals.leftUpperMotorContainsNt, totals.leftUpperMotorContainsNt, 'leftUpperMotorContainsNt');
-            assert.equal(expectedTotals.leftUpperMotorTotal, totals.leftUpperMotorTotal, 'leftUpperMotorTotal');
+            assert.equal(expectedTotals.leftUpperMotorTotal, totals.getLeftUpperMotorTotal(), 'leftUpperMotorTotal');
             
-            assert.equal(expectedTotals.lowerMotorTotal, totals.lowerMotorTotal, 'lowerMotorTotal');
+            assert.equal(expectedTotals.lowerMotorTotal, totals.getLowerMotorTotal(), 'lowerMotorTotal');
             assert.equal(expectedTotals.neurologicalLevelOfInjury, totals.getNeurologicalLevelsOfInjuryLongValueString(), 'neurologicalLevelOfInjury');
-            assert.equal(expectedTotals.prickTotal, totals.prickTotal, 'prickTotal');
+            assert.equal(expectedTotals.prickTotal, totals.getPrickTotal(), 'prickTotal');
             
             assert.equal(expectedTotals.rightLowerMotorContainsNt, totals.rightLowerMotorContainsNt, 'rightLowerMotorContainsNt');
-            assert.equal(expectedTotals.rightLowerMotorTotal, totals.rightLowerMotorTotal, 'rightLowerMotorTotal');
+            assert.equal(expectedTotals.rightLowerMotorTotal, totals.getRightLowerMotorTotal(), 'rightLowerMotorTotal');
             assert.equal(expectedTotals.rightMotor, totals.getRightMotorLongValueString(), 'rightMotor');
-            assert.equal(expectedTotals.rightMotorTotal, totals.rightUpperMotorTotal + totals.rightLowerMotorTotal, 'rightMotorTotal');
+            assert.equal(expectedTotals.rightMotorTotal, totals.getRightMotorTotal(), 'rightMotorTotal');
             assert.equal(expectedTotals.rightMotorZpp, totals.getRightMotorZppLongValueString(), 'rightMotorZpp');
             assert.equal(expectedTotals.rightPrickContainsNt, totals.rightPrickContainsNt, 'rightPrickContainsNt');
-            assert.equal(expectedTotals.rightPrickTotal, totals.rightPrickTotal, 'rightPrickTotal');
+            assert.equal(expectedTotals.rightPrickTotal, totals.getRightPrickTotal(), 'rightPrickTotal');
             assert.equal(expectedTotals.rightSensory, totals.getRightSensoryLongValueString(), 'rightSensory');
             assert.equal(expectedTotals.rightSensoryZpp, totals.getRightSensoryZppLongValueString(), 'rightSensoryZpp');
             assert.equal(expectedTotals.rightTouchContainsNt, totals.rightTouchContainsNt, 'rightTouchContainsNt');
-            assert.equal(expectedTotals.rightTouchTotal, totals.rightTouchTotal, 'rightTouchTotal');
+            assert.equal(expectedTotals.rightTouchTotal, totals.getRightTouchTotal(), 'rightTouchTotal');
             assert.equal(expectedTotals.rightUpperMotorContainsNt, totals.rightUpperMotorContainsNt, 'rightUpperMotorContainsNt');
-            assert.equal(expectedTotals.rightUpperMotorTotal, totals.rightUpperMotorTotal, 'rightUpperMotorTotal');
+            assert.equal(expectedTotals.rightUpperMotorTotal, totals.getRightUpperMotorTotal(), 'rightUpperMotorTotal');
             
-            assert.equal(expectedTotals.touchTotal, totals.touchTotal);
-            assert.equal(expectedTotals.upperMotorTotal, totals.upperMotorTotal);
+            assert.equal(expectedTotals.touchTotal, totals.getTouchTotal(), 'touch total');
+            assert.equal(expectedTotals.upperMotorTotal, totals.getUpperMotorTotal(), 'upper motor total');
             
         }
         

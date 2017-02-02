@@ -16,7 +16,8 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
     /***********************************************/
     /* ***** Private, static properties ********** */
     /***********************************************/
-    var _c = 'rhi-core-isncsci-totals';
+    const _c = 'rhi-core-isncsci-totals';
+    const _notDeterminable = 'UTD';
     
     /***********************************************/
     /* ***** Private, static methods ************* */
@@ -67,6 +68,25 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       }
       
       return result;
+    }
+    
+    /// <summary>
+    /// Formats a total value depending on the specified flags.
+    /// </summary>
+    /// <param name="total">Raw total value.</param>
+    /// <param name="hasImpairmentNotDueToSci">Flag indicating if any value used in the calculation of this total presents impairment not due to a spinal cord injury.</param>
+    /// <param name="containsNt">Flag indicating if any value used in the calculation of this total is set to Not Testable.</param>
+    /// <returns>
+    /// The value, followed by an exclamation mark if the hasImpairmentNotDueToSci is set to true
+    /// or
+    /// UTD (Unable to determine) if the containsNt flag is set to true.
+    /// </returns>
+    function _getSummaryStringFor(total, hasImpairmentNotDueToSci, containsNt)
+    {
+        if (containsNt)
+            return _notDeterminable;
+        
+        return hasImpairmentNotDueToSci ? (total + '!') : total;
     }
     
     Polymer({
@@ -167,10 +187,10 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
           type: Boolean,
           value: false
         },
-        lowerMotorTotal: {
-          type: Number,
-          value: 0
-        },
+        //lowerMotorTotal: {
+        //  type: Number,
+        //  value: 0
+        //},
         mostCaudalLeftLevelWithMotorFunction: {
             type: /** @type {RhiCoreIsncsciLevel} */ Object,
             value: null
@@ -219,10 +239,10 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
           type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
           value: () => { return []; }
         },
-        prickTotal: {
-          type: Number,
-          value: 0
-        },
+        //prickTotal: {
+        //  type: Number,
+        //  value: 0
+        //},
         rightLowerMotorContainsNt: {
           type: Boolean,
           value: false
@@ -302,15 +322,15 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
         rightUpperMotorTotalHasImpairmentNotDueToSci: {
           type: Boolean,
           value: false
-        },
-        touchTotal: {
-          type: Number,
-          value: 0
-        },
-        upperMotorTotal: {
-          type: Number,
-          value: 0
-        }
+        }//,
+        //touchTotal: {
+        //  type: Number,
+        //  value: 0
+        //},
+        //upperMotorTotal: {
+        //  type: Number,
+        //  value: 0
+        //}
       },
       
       /**
@@ -795,6 +815,74 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       */
       getAsiaImpairmentScaleValues: function() {
         return this._asiaImpairmentScaleValues.sort().join();
+      },
+      
+      getLeftLowerMotorTotal: function() {
+        return _getSummaryStringFor(this.leftLowerMotorTotal, this.leftLowerMotorTotalHasImpairmentNotDueToSci, this.leftLowerMotorContainsNt);
+      },
+      
+      getLeftMotorTotal: function() {
+        return _getSummaryStringFor(this.leftUpperMotorTotal + this.leftLowerMotorTotal,
+                  this.leftUpperMotorTotalHasImpairmentNotDueToSci || this.leftLowerMotorTotalHasImpairmentNotDueToSci,
+                  this.leftUpperMotorContainsNt || this.leftLowerMotorContainsNt);
+      },
+      
+      getLeftPrickTotal: function() {
+        return _getSummaryStringFor(this.leftPrickTotal, this.leftPrickTotalHasImpairmentNotDueToSci, this.leftPrickContainsNt);
+      },
+      
+      getLeftTouchTotal: function() {
+        return _getSummaryStringFor(this.leftTouchTotal, this.leftTouchTotalHasImpairmentNotDueToSci, this.leftTouchContainsNt);
+      },
+      
+      getLeftUpperMotorTotal: function() {
+        return _getSummaryStringFor(this.leftUpperMotorTotal, this.leftUpperMotorTotalHasImpairmentNotDueToSci, this.leftUpperMotorContainsNt);
+      },
+      
+      getLowerMotorTotal: function() {
+        return _getSummaryStringFor(this.rightLowerMotorTotal + this.leftLowerMotorTotal,
+                  this.rightLowerMotorTotalHasImpairmentNotDueToSci || this.leftLowerMotorTotalHasImpairmentNotDueToSci,
+                  this.rightLowerMotorContainsNt || this.leftLowerMotorContainsNt);
+      },
+      
+      getPrickTotal: function() {
+        return _getSummaryStringFor(this.rightPrickTotal + this.leftPrickTotal,
+                  this.rightPrickTotalHasImpairmentNotDueToSci || this.leftPrickTotalHasImpairmentNotDueToSci,
+                  this.rightPrickContainsNt || this.leftPrickContainsNt);
+      },
+      
+      getRightLowerMotorTotal: function() {
+        return _getSummaryStringFor(this.rightLowerMotorTotal, this.rightLowerMotorTotalHasImpairmentNotDueToSci, this.rightLowerMotorContainsNt);
+      },
+      
+      getRightMotorTotal: function() {
+        return _getSummaryStringFor(this.rightUpperMotorTotal + this.rightLowerMotorTotal,
+                  this.rightUpperMotorTotalHasImpairmentNotDueToSci || this.rightLowerMotorTotalHasImpairmentNotDueToSci,
+                  this.rightUpperMotorContainsNt || this.rightLowerMotorContainsNt);
+      },
+      
+      getRightPrickTotal: function() {
+        return _getSummaryStringFor(this.rightPrickTotal, this.rightPrickTotalHasImpairmentNotDueToSci, this.rightPrickContainsNt);
+      },
+      
+      getRightTouchTotal: function() {
+        return _getSummaryStringFor(this.rightTouchTotal, this.rightTouchTotalHasImpairmentNotDueToSci, this.rightTouchContainsNt);
+      },
+      
+      getRightUpperMotorTotal: function() {
+        return _getSummaryStringFor(this.rightUpperMotorTotal, this.rightUpperMotorTotalHasImpairmentNotDueToSci, this.rightUpperMotorContainsNt);
+      },
+      
+      getTouchTotal: function() {
+        return _getSummaryStringFor(this.rightTouchTotal + this.leftTouchTotal,
+                  this.rightTouchTotalHasImpairmentNotDueToSci || this.leftTouchTotalHasImpairmentNotDueToSci,
+                  this.rightTouchContainsNt || this.leftTouchContainsNt);
+      },
+      
+      getUpperMotorTotal: function() {
+        return _getSummaryStringFor(this.rightUpperMotorTotal + this.leftUpperMotorTotal,
+                  this.rightUpperMotorTotalHasImpairmentNotDueToSci || this.leftUpperMotorTotalHasImpairmentNotDueToSci,
+                  this.rightUpperMotorContainsNt || this.leftUpperMotorContainsNt);
       }
     });
   })();

@@ -16,8 +16,8 @@ Author: Eduardo Echeverria (@eddiemachete)
         /***********************************************/
         var _c = 'rhi-core-isncsci-exam';
         var _ntRegex = /\bNT\b/i;
-        var _nonSciImpairmentRegex = /.+[!]/g;
-        var _nonSciImpairmentFlagsRegex = /[\\*!]/g;
+        var _nonSciImpairmentRegex = /.+[!]/;
+        var _nonSciImpairmentFlagsRegex = /[\\*!]/;
         var _normalMotorValue = 5;
         var _normalSensoryValue = 2;
         
@@ -275,10 +275,10 @@ Author: Eduardo Echeverria (@eddiemachete)
                                     + 'Could not find level with name ' + levelName);
             
                 if (this._leftLowestNonKeyMuscleWithMotorFunction)
-                    this._leftLowestNonKeyMuscleWithMotorFunction.hasOtherRightMotorFunction = false;
+                    this._leftLowestNonKeyMuscleWithMotorFunction.hasOtherLeftMotorFunction = false;
             
                 this._leftLowestNonKeyMuscleWithMotorFunction = level;
-                this._leftLowestNonKeyMuscleWithMotorFunction.hasOtherRightMotorFunction = true;
+                this._leftLowestNonKeyMuscleWithMotorFunction.hasOtherLeftMotorFunction = true;
             },
             /**
             * Updates the values of the neurology level with the specified name.

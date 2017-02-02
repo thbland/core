@@ -382,7 +382,7 @@ Author: Eduardo Echeverria (@eddiemachete)
             // Check if the patient could be motor incoplete via sphincter contraction
             // Otherwise we need to check for motor function more than 3 levels below motor level.
             var couldHaveAnalContraction = isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationYes
-                    || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNT;
+                    || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNt;
 
             var neurologicalLevelsOfInjury = totals.getNeurologicalLevelsOfInjury();
             const levelsLength = neurologicalLevelsOfInjury.length;
@@ -402,6 +402,7 @@ Author: Eduardo Echeverria (@eddiemachete)
     
                     while (rightMotor == null && rmIndex < rightMotorValuesLength) {
                         var currentRightMotor = rightMotorValues[rmIndex];
+                        rmIndex++;
                         
                         if (currentRightMotor.ordinal >= currentNli.ordinal)
                             rightMotor = currentRightMotor;
@@ -418,6 +419,7 @@ Author: Eduardo Echeverria (@eddiemachete)
     
                     while (leftMotor == null && lmIndex < leftMotorValuesLength) {
                         var currentLeftMotor = leftMotorValues[lmIndex];
+                        lmIndex++;
                         
                         if (currentLeftMotor.ordinal >= currentNli.ordinal)
                             leftMotor = currentLeftMotor;
@@ -520,11 +522,6 @@ Author: Eduardo Echeverria (@eddiemachete)
                 
                 _updateTotalsWithLevelAt(isncsciExam, totals, c2, false, false);
     
-                totals.upperMotorTotal = totals.rightUpperMotorTotal + totals.leftUpperMotorTotal;
-                totals.lowerMotorTotal = totals.rightLowerMotorTotal + totals.leftLowerMotorTotal;
-                totals.touchTotal = totals.rightTouchTotal + totals.leftTouchTotal;
-                totals.prickTotal = totals.rightPrickTotal + totals.leftPrickTotal;
-    
                 var s4_5 = isncsciExam.getLevelWithName('S4_5');
                 var c1 = c2.previous;
     
@@ -553,17 +550,17 @@ Author: Eduardo Echeverria (@eddiemachete)
                     totals.mostCaudalLeftLevelWithMotorFunction = c1;
     
                 // [ASIA learning center 2012-11-14] Sensory incomplete: Sacral sparing of sensory function
-                var isSensoryIncomplete = isncsciExam.analSensation == Polymer.rhiCoreIsncsciBinaryObservationYes || isncsciExam.analSensation == Polymer.rhiCoreIsncsciBinaryObservationNT
+                var isSensoryIncomplete = isncsciExam.analSensation == Polymer.rhiCoreIsncsciBinaryObservationYes || isncsciExam.analSensation == Polymer.rhiCoreIsncsciBinaryObservationNt
                         || '0' !== s4_5.rightTouchName || '0' !== s4_5.leftTouchName
                         || '0' !== s4_5.rightPrickName || '0' !== s4_5.leftPrickName;
     
                 var couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel = _couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel(isncsciExam, totals);
     
-                var couldNotBeMotorIncomplete = (isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNo || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNT)
+                var couldNotBeMotorIncomplete = (isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNo || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNt)
                         && isSensoryIncomplete && couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel;
     
-                if ((isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNo || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNT)
-                        && (isncsciExam.analSensation == Polymer.rhiCoreIsncsciBinaryObservationNo || isncsciExam.analSensation == Polymer.rhiCoreIsncsciBinaryObservationNT)
+                if ((isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNo || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNt)
+                        && (isncsciExam.analSensation == Polymer.rhiCoreIsncsciBinaryObservationNo || isncsciExam.analSensation == Polymer.rhiCoreIsncsciBinaryObservationNt)
                         && s4_5.rightTouchValue === 0 && !s4_5.rightTouchImpairmentNotDueToSci
                         && s4_5.rightPrickValue === 0 && !s4_5.rightPrickImpairmentNotDueToSci
                         && s4_5.leftTouchValue === 0 && !s4_5.leftTouchImpairmentNotDueToSci
@@ -576,7 +573,7 @@ Author: Eduardo Echeverria (@eddiemachete)
                 // Not an ASIA E only
                 // AND not an ASIA A only
                 if (totals.mostRostralNeurologicalLevelOfInjury.name !== 'S4_5'
-                        && (isSensoryIncomplete || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationYes || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNT)) {
+                        && (isSensoryIncomplete || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationYes || isncsciExam.analContraction == Polymer.rhiCoreIsncsciBinaryObservationNt)) {
                     const cdCheck = _couldBeAsiaCorD(isncsciExam, totals);
     
                     if (cdCheck.couldBeAsiaC)
