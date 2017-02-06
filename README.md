@@ -3,5 +3,6 @@ JavaScript version of the ISNCSCI algorithm using Google Polymer as framework.
 
 IMPORTANT!!!
 
-The current component is under development. The algorithm is not performing calculations yet.
-I'm very close to completing the work. Please get in touch with me in github or on twitter @eddiemachete if you require more details.
+The current component is in beta. The algorithm can calculate RHI's 83 test cases.
+In the following weeks, I will perform more testing and complete the examples and code documentation.
+Version 1 will be ready soon.
