@@ -109,9 +109,34 @@ Author: Eduardo Echeverria (@eddiemachete)
         type: Number
       }
     },
-    // There is also created which fires earlier
-    ready: function() {
-    },
+    
+    /**
+    * Updates all dermatome related values on the neurological level.
+    *
+    * @param {Number} ordinal The position of the level on the human spine.
+    * @param {Boolean} isKeyMuscle
+    * @param {Boolean} isKowerMuscle
+    * @param {String} rightTouchName
+    * @param {Number} rightTouchValue
+    * @param {Boolean} rightTouchImpairmentNotDueToSci
+    * @param {String} leftTouchName
+    * @param {Number} leftTouchValue
+    * @param {Boolean} leftTouchImpairmentNotDueToSci
+    * @param {String} rightPrickName
+    * @param {Number} rightPrickValue
+    * @param {Boolean} rightPrickImpairmentNotDueToSci
+    * @param {String} leftPrickName
+    * @param {Number} leftPrickValue
+    * @param {Boolean} leftPrickImpairmentNotDueToSci
+    * @param {String} rightMotorName
+    * @param {Number} rightMotorValue
+    * @param {Boolean} rightMotorImpairmentNotDueToSci
+    * @param {String} leftMotorName
+    * @param {Number} leftMotorValue
+    * @param {Boolean} leftMotorImpairmentNotDueToSci
+    * 
+    * @return {RhiCoreIsncsciLevel} Returns itself to allow chaining methods.
+    */
     setValues: function(ordinal, isKeyMuscle, isLowerMuscle,
             rightTouchName, rightTouchValue, rightTouchImpairmentNotDueToSci,
             leftTouchName, leftTouchValue, leftTouchImpairmentNotDueToSci,

@@ -14,12 +14,12 @@ Author: Eduardo Echeverria (@eddiemachete)
         /***********************************************/
         /* ***** Private, static properties ********** */
         /***********************************************/
-        var _c = 'rhi-core-isncsci-exam';
-        var _ntRegex = /\bNT\b/i;
-        var _nonSciImpairmentRegex = /.+[!]/;
-        var _nonSciImpairmentFlagsRegex = /[\\*!]/;
-        var _normalMotorValue = 5;
-        var _normalSensoryValue = 2;
+        const _c = 'rhi-core-isncsci-exam';
+        const _ntRegex = /\bNT\b/i;
+        const _nonSciImpairmentRegex = /.+[!]/;
+        const _nonSciImpairmentFlagsRegex = /[\\*!]/;
+        const _normalMotorValue = 5;
+        const _normalSensoryValue = 2;
         
         /***********************************************/
         /* ***** Private, static methods ************* */
@@ -37,12 +37,12 @@ Author: Eduardo Echeverria (@eddiemachete)
             levels['C1'] = c1;
           
             var previousLevel = c1;
-            var levelNames = ['C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8',
-                              'T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10', 'T11', 'T12',
-                              'L1', 'L2', 'L3', 'L4', 'L5', 'S1', 'S2', 'S3', 'S4_5'];
+            const levelNames = ['C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8',
+                                'T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10', 'T11', 'T12',
+                                'L1', 'L2', 'L3', 'L4', 'L5', 'S1', 'S2', 'S3', 'S4_5'];
             
-            var keyMuscles = {'C5':true, 'C6':true, 'C7':true, 'C8':true, 'T1':true,
-                              'L2':true, 'L3':true, 'L4':true, 'L5':true, 'S1':true};
+            const keyMuscles = {'C5':true, 'C6':true, 'C7':true, 'C8':true, 'T1':true,
+                                'L2':true, 'L3':true, 'L4':true, 'L5':true, 'S1':true};
           
             for (var i = 0; i < levelNames.length; i++) {
                 var name = levelNames[i];

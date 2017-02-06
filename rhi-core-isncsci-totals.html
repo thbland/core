@@ -187,10 +187,6 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
           type: Boolean,
           value: false
         },
-        //lowerMotorTotal: {
-        //  type: Number,
-        //  value: 0
-        //},
         mostCaudalLeftLevelWithMotorFunction: {
             type: /** @type {RhiCoreIsncsciLevel} */ Object,
             value: null
@@ -239,10 +235,6 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
           type: /** @type {RhiCoreIsncsciLevel[]} */ Array,
           value: () => { return []; }
         },
-        //prickTotal: {
-        //  type: Number,
-        //  value: 0
-        //},
         rightLowerMotorContainsNt: {
           type: Boolean,
           value: false
@@ -322,15 +314,7 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
         rightUpperMotorTotalHasImpairmentNotDueToSci: {
           type: Boolean,
           value: false
-        }//,
-        //touchTotal: {
-        //  type: Number,
-        //  value: 0
-        //},
-        //upperMotorTotal: {
-        //  type: Number,
-        //  value: 0
-        //}
+        }
       },
       
       /**
@@ -817,6 +801,13 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
         return this._asiaImpairmentScaleValues.sort().join();
       },
       
+      /**
+      * Produces a string of alphabetically sorted AIS values concatenated by commas.
+      *
+      * @return {String} The left lower motor total produced by adding all left lower motor values.
+      * An ! is added if any of the values involved has some type of impairment not due to an SCI.
+      * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
+      */
       getLeftLowerMotorTotal: function() {
         return _getSummaryStringFor(this.leftLowerMotorTotal, this.leftLowerMotorTotalHasImpairmentNotDueToSci, this.leftLowerMotorContainsNt);
       },
