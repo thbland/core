@@ -5,10 +5,6 @@ This code may only be used under the modified Apache license found at https://ra
 Author: Eduardo Echeverria (@eddiemachete)
 -->
 <link rel="import" href="../../bower_components/polymer/polymer.html"/>
-<!--
-The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI Examination through the ISNCSCI Algorithm.
-@demo demo/index.html
--->
 <script>
   /* global Polymer */
   'use strict';
@@ -70,17 +66,15 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       return result;
     }
     
-    /// <summary>
-    /// Formats a total value depending on the specified flags.
-    /// </summary>
-    /// <param name="total">Raw total value.</param>
-    /// <param name="hasImpairmentNotDueToSci">Flag indicating if any value used in the calculation of this total presents impairment not due to a spinal cord injury.</param>
-    /// <param name="containsNt">Flag indicating if any value used in the calculation of this total is set to Not Testable.</param>
-    /// <returns>
-    /// The value, followed by an exclamation mark if the hasImpairmentNotDueToSci is set to true
-    /// or
-    /// UTD (Unable to determine) if the containsNt flag is set to true.
-    /// </returns>
+    /**
+    * Formats a total value depending on the specified flags.
+    *
+    * @param {Number} total Raw total value.
+    * @param {Boolean} hasImpairmentNotDueToSci Flag indicating if any value used in the calculation of this total presents impairment not due to a spinal cord injury.
+    * @param {Boolean} containsNt Flag indicating if any value used in the calculation of this total is set to Not Testable.
+    *
+    * @return {String} The value, followed by an exclamation mark if the hasImpairmentNotDueToSci is set to true or UTD (Unable to determine) if the containsNt flag is set to true.
+    */
     function _getSummaryStringFor(total, hasImpairmentNotDueToSci, containsNt)
     {
         if (containsNt)
@@ -89,6 +83,10 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
         return hasImpairmentNotDueToSci ? (total + '!') : total;
     }
     
+    /**
+    * The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI Examination through the ISNCSCI Algorithm.
+    * @demo demo/index.html
+    */
     Polymer({
       is: 'rhi-core-isncsci-totals',
       hostAttributes: {
@@ -802,9 +800,9 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
       },
       
       /**
-      * Produces a string of alphabetically sorted AIS values concatenated by commas.
+      * Total from adding all left lower motor values.
       *
-      * @return {String} The left lower motor total produced by adding all left lower motor values.
+      * @return {String} The total produced by adding all left lower motor values.
       * An ! is added if any of the values involved has some type of impairment not due to an SCI.
       * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
       */
@@ -812,64 +810,155 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
         return _getSummaryStringFor(this.leftLowerMotorTotal, this.leftLowerMotorTotalHasImpairmentNotDueToSci, this.leftLowerMotorContainsNt);
       },
       
+      /**
+      * Total from adding all left motor values.
+      *
+      * @return {String} The total produced by adding all left motor values.
+      * An ! is added if any of the values involved has some type of impairment not due to an SCI.
+      * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
+      */
       getLeftMotorTotal: function() {
         return _getSummaryStringFor(this.leftUpperMotorTotal + this.leftLowerMotorTotal,
                   this.leftUpperMotorTotalHasImpairmentNotDueToSci || this.leftLowerMotorTotalHasImpairmentNotDueToSci,
                   this.leftUpperMotorContainsNt || this.leftLowerMotorContainsNt);
       },
       
+      /**
+      * Total from adding all left prick values.
+      *
+      * @return {String} The total produced by adding all left prick values.
+      * An ! is added if any of the values involved has some type of impairment not due to an SCI.
+      * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
+      */
       getLeftPrickTotal: function() {
         return _getSummaryStringFor(this.leftPrickTotal, this.leftPrickTotalHasImpairmentNotDueToSci, this.leftPrickContainsNt);
       },
       
+      /**
+      * Total from adding all left touch values.
+      *
+      * @return {String} The total produced by adding all left touch values.
+      * An ! is added if any of the values involved has some type of impairment not due to an SCI.
+      * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
+      */
       getLeftTouchTotal: function() {
         return _getSummaryStringFor(this.leftTouchTotal, this.leftTouchTotalHasImpairmentNotDueToSci, this.leftTouchContainsNt);
       },
       
+      /**
+      * Total from adding all left upper motor values.
+      *
+      * @return {String} The total produced by adding all left upper motor values.
+      * An ! is added if any of the values involved has some type of impairment not due to an SCI.
+      * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
+      */
       getLeftUpperMotorTotal: function() {
         return _getSummaryStringFor(this.leftUpperMotorTotal, this.leftUpperMotorTotalHasImpairmentNotDueToSci, this.leftUpperMotorContainsNt);
       },
       
+      /**
+      * Total from adding all lower motor values.
+      *
+      * @return {String} The total produced by adding all lower motor values.
+      * An ! is added if any of the values involved has some type of impairment not due to an SCI.
+      * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
+      */
       getLowerMotorTotal: function() {
         return _getSummaryStringFor(this.rightLowerMotorTotal + this.leftLowerMotorTotal,
                   this.rightLowerMotorTotalHasImpairmentNotDueToSci || this.leftLowerMotorTotalHasImpairmentNotDueToSci,
                   this.rightLowerMotorContainsNt || this.leftLowerMotorContainsNt);
       },
       
+      /**
+      * Total from adding all prick values.
+      *
+      * @return {String} The total produced by adding all prick values.
+      * An ! is added if any of the values involved has some type of impairment not due to an SCI.
+      * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
+      */
       getPrickTotal: function() {
         return _getSummaryStringFor(this.rightPrickTotal + this.leftPrickTotal,
                   this.rightPrickTotalHasImpairmentNotDueToSci || this.leftPrickTotalHasImpairmentNotDueToSci,
                   this.rightPrickContainsNt || this.leftPrickContainsNt);
       },
       
+      /**
+      * Total from adding all right lower motor values.
+      *
+      * @return {String} The total produced by adding all right lower motor values.
+      * An ! is added if any of the values involved has some type of impairment not due to an SCI.
+      * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
+      */
       getRightLowerMotorTotal: function() {
         return _getSummaryStringFor(this.rightLowerMotorTotal, this.rightLowerMotorTotalHasImpairmentNotDueToSci, this.rightLowerMotorContainsNt);
       },
       
+      /**
+      * Total from adding all right motor values.
+      *
+      * @return {String} The total produced by adding all right motor values.
+      * An ! is added if any of the values involved has some type of impairment not due to an SCI.
+      * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
+      */
       getRightMotorTotal: function() {
         return _getSummaryStringFor(this.rightUpperMotorTotal + this.rightLowerMotorTotal,
                   this.rightUpperMotorTotalHasImpairmentNotDueToSci || this.rightLowerMotorTotalHasImpairmentNotDueToSci,
                   this.rightUpperMotorContainsNt || this.rightLowerMotorContainsNt);
       },
       
+      /**
+      * Total from adding all right prick values.
+      *
+      * @return {String} The total produced by adding all right prick values.
+      * An ! is added if any of the values involved has some type of impairment not due to an SCI.
+      * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
+      */
       getRightPrickTotal: function() {
         return _getSummaryStringFor(this.rightPrickTotal, this.rightPrickTotalHasImpairmentNotDueToSci, this.rightPrickContainsNt);
       },
       
+      /**
+      * Total from adding all right touch values.
+      *
+      * @return {String} The total produced by adding all right touch values.
+      * An ! is added if any of the values involved has some type of impairment not due to an SCI.
+      * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
+      */
       getRightTouchTotal: function() {
         return _getSummaryStringFor(this.rightTouchTotal, this.rightTouchTotalHasImpairmentNotDueToSci, this.rightTouchContainsNt);
       },
       
+      /**
+      * Total from adding all right upper motor values.
+      *
+      * @return {String} The total produced by adding all right upper motor values.
+      * An ! is added if any of the values involved has some type of impairment not due to an SCI.
+      * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
+      */
       getRightUpperMotorTotal: function() {
         return _getSummaryStringFor(this.rightUpperMotorTotal, this.rightUpperMotorTotalHasImpairmentNotDueToSci, this.rightUpperMotorContainsNt);
       },
       
+      /**
+      * Total from adding all touch values.
+      *
+      * @return {String} The total produced by adding all touch values.
+      * An ! is added if any of the values involved has some type of impairment not due to an SCI.
+      * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
+      */
       getTouchTotal: function() {
         return _getSummaryStringFor(this.rightTouchTotal + this.leftTouchTotal,
                   this.rightTouchTotalHasImpairmentNotDueToSci || this.leftTouchTotalHasImpairmentNotDueToSci,
                   this.rightTouchContainsNt || this.leftTouchContainsNt);
       },
       
+      /**
+      * Total from adding all upper motor values.
+      *
+      * @return {String} The total produced by adding all upper motor values.
+      * An ! is added if any of the values involved has some type of impairment not due to an SCI.
+      * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
+      */
       getUpperMotorTotal: function() {
         return _getSummaryStringFor(this.rightUpperMotorTotal + this.leftUpperMotorTotal,
                   this.rightUpperMotorTotalHasImpairmentNotDueToSci || this.leftUpperMotorTotalHasImpairmentNotDueToSci,

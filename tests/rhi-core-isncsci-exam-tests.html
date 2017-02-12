@@ -8,7 +8,6 @@ Author: Eduardo Echeverria (@eddiemachete)
 <html>
 <head>
     <meta charset="utf-8">
-    <script src="isncsci-tests-1.js"></script>
     <script src="../../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <script src="../../../bower_components/web-component-tester/browser.js"></script>
     <link rel="import" href="../rhi-core-isncsci-exam.html"/>
@@ -16,9 +15,6 @@ Author: Eduardo Echeverria (@eddiemachete)
 <body>
     <script>
         /* global assert */
-        /* global rhiIsncsciValidationTests */
-        // Loaded from isncsci-tests.js to keep this file clean.
-        
         suite('<rhi-core-isncsci-exam> Initialization', function() {
             //var isncsciAlgorithm = document.getElementById('isncsciAlgorithm');
             
@@ -77,7 +73,7 @@ Author: Eduardo Echeverria (@eddiemachete)
             test('Throws error when passing a non string for levelName as right lowest non-key muscle with motor function', function() {
                 // Arrange
                 var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
-                var expectedMessage = 'rhi-core-isncsci-exam : setRightLowestNonKeyMuscleWithMotorFunction : Invalid arguments passed. Expected levelName to be a String';
+                var expectedMessage = 'rhi-core-isncsci-exam : setRightLowestNonKeyMuscleWithMotorFunction : Invalid arguments passed. Expected levelName:String';
                 var errorMessage;
                 
                 // Act
@@ -94,7 +90,7 @@ Author: Eduardo Echeverria (@eddiemachete)
             test('Throws error when passing an empty string for levelName as right lowest non-key muscle with motor function', function() {
                 // Arrange
                 var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
-                var expectedMessage = 'rhi-core-isncsci-exam : setRightLowestNonKeyMuscleWithMotorFunction : Missing required arguments: levelName:String';
+                var expectedMessage = 'rhi-core-isncsci-exam : setRightLowestNonKeyMuscleWithMotorFunction : Invalid arguments passed. Expected levelName:String';
                 var errorMessage;
                 
                 // Act
@@ -139,7 +135,7 @@ Author: Eduardo Echeverria (@eddiemachete)
             test('Throws error when passing a non string for levelName as left lowest non-key muscle with motor function', function() {
                 // Arrange
                 var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
-                var expectedMessage = 'rhi-core-isncsci-exam : setLeftLowestNonKeyMuscleWithMotorFunction : Invalid arguments passed. Expected levelName to be a String';
+                var expectedMessage = 'rhi-core-isncsci-exam : setLeftLowestNonKeyMuscleWithMotorFunction : Invalid arguments passed. Expected levelName:String';
                 var errorMessage;
                 
                 // Act
@@ -156,7 +152,7 @@ Author: Eduardo Echeverria (@eddiemachete)
             test('Throws error when passing an empty string for levelName as left lowest non-key muscle with motor function', function() {
                 // Arrange
                 var exam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
-                var expectedMessage = 'rhi-core-isncsci-exam : setLeftLowestNonKeyMuscleWithMotorFunction : Missing required arguments: levelName:String';
+                var expectedMessage = 'rhi-core-isncsci-exam : setLeftLowestNonKeyMuscleWithMotorFunction : Invalid arguments passed. Expected levelName:String';
                 var errorMessage;
                 
                 // Act

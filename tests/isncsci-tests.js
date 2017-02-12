@@ -1,896 +1,198 @@
 var rhiIsncsciValidationTests = {};
 rhiIsncsciValidationTests.all = [
   {
-    "id": 0,
+    "id": 1,
+    "group": "Instep",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      NT - Severe left wrist pain.\n    ",
+    "comments": "InStep - Module 5 - Assesment Case A",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "4"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
-        "rightMotor": "5",
-        "leftMotor": "NT",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "3",
-        "leftMotor": "2",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
+        "leftMotor": "4"
       },
-      "c8": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t4": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t6": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t7": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t8": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t9": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t10": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t11": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t12": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l1": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "13",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "7",
-      "leftUpperMotorContainsNt": "true",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "10",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "10",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "10",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "10",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "13",
-      "leftMotorTotal": "7",
-      "upperMotorTotal": "20",
-      "lowerMotorTotal": "0",
-      "touchTotal": "20",
-      "prickTotal": "20",
-      "rightSensory": "C6",
-      "leftSensory": "C6",
-      "rightMotor": "C7",
-      "leftMotor": "C5,C6",
-      "neurologicalLevelOfInjury": "C5,C6",
-      "rightSensoryZpp": "C6",
-      "leftSensoryZpp": "C6",
-      "rightMotorZpp": "C7",
-      "leftMotorZpp": "C7",
-      "asiaImpairmentScale": "A"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "No",
-    "analSensation": "Yes",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      NT- Splint in place on left hand unable to test T1 motor.\n    ",
-    "dermatomes": {
-      "c2": {
+      "C7": {
         "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c5": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
-        "rightMotor": "1",
-        "leftMotor": "2",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c7": {
-        "rightMotor": "1",
-        "leftMotor": "2",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c8": {
-        "rightMotor": "1",
-        "leftMotor": "2",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t1": {
-        "rightMotor": "0",
-        "leftMotor": "NT",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t2": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t3": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t4": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t5": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t6": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t7": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t8": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t9": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t10": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t11": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t12": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l1": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l2": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l3": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l4": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s2": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s3": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s4_5": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "8",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "11",
-      "leftUpperMotorContainsNt": "true",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "32",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "32",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "32",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "32",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "8",
-      "leftMotorTotal": "11",
-      "upperMotorTotal": "19",
-      "lowerMotorTotal": "0",
-      "touchTotal": "64",
-      "prickTotal": "64",
-      "rightSensory": "C5",
-      "leftSensory": "C5",
-      "rightMotor": "C5",
-      "leftMotor": "C5",
-      "neurologicalLevelOfInjury": "C5",
-      "rightSensoryZpp": "",
-      "leftSensoryZpp": "",
-      "rightMotorZpp": "C8",
-      "leftMotorZpp": "C8,T1",
-      "asiaImpairmentScale": "B,C"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "Yes",
-    "analSensation": "Yes",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      NT - Splint in place on left hand and unable to test C8 and T1 motor.\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c5": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
-        "rightMotor": "5",
-        "leftMotor": "3",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
-        "rightMotor": "3",
-        "leftMotor": "NT",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t1": {
-        "rightMotor": "3",
-        "leftMotor": "NT",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t2": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t3": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t4": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t5": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t6": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t7": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t8": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t9": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t10": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t11": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t12": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l1": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l2": {
-        "rightMotor": "3",
-        "leftMotor": "1",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l3": {
-        "rightMotor": "3",
-        "leftMotor": "1",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l4": {
-        "rightMotor": "3",
-        "leftMotor": "3",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l5": {
-        "rightMotor": "1",
-        "leftMotor": "2",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s1": {
-        "rightMotor": "1",
-        "leftMotor": "2",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s2": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s3": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s4_5": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "21",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "13",
-      "leftUpperMotorContainsNt": "true",
-      "rightLowerMotorTotal": "11",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "9",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "34",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "34",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "34",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "34",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "32",
-      "leftMotorTotal": "22",
-      "upperMotorTotal": "34",
-      "lowerMotorTotal": "20",
-      "touchTotal": "68",
-      "prickTotal": "68",
-      "rightSensory": "C7",
-      "leftSensory": "C7",
-      "rightMotor": "C8",
-      "leftMotor": "C7",
-      "neurologicalLevelOfInjury": "C7",
-      "rightSensoryZpp": "",
-      "leftSensoryZpp": "",
-      "rightMotorZpp": "S1",
-      "leftMotorZpp": "S1",
-      "asiaImpairmentScale": "C,D"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "No",
-    "analSensation": "Yes",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c5": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
-        "rightMotor": "4",
-        "leftMotor": "4",
-        "rightTouch": "0",
         "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c7": {
+        "rightPrick": "1",
+        "leftPrick": "0",
         "rightMotor": "2",
-        "leftMotor": "2",
-        "rightTouch": "0",
+        "leftMotor": "4"
+      },
+      "C8": {
+        "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
+        "leftPrick": "0",
+        "rightMotor": "2",
+        "leftMotor": "0"
       },
-      "c8": {
+      "T1": {
+        "rightTouch": "1",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "1",
-        "leftMotor": "1",
+        "leftMotor": "0"
+      },
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t1": {
-        "rightMotor": "1",
-        "leftMotor": "0",
+      "T3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t2": {
+      "T4": {
+        "rightTouch": "1",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T5": {
+        "rightTouch": "1",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t3": {
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t4": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T10": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T11": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T12": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "L2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t11": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t12": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l1": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -899,3749 +201,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "13",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "12",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "8",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "8",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "8",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "8",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "13",
-      "leftMotorTotal": "12",
-      "upperMotorTotal": "25",
-      "lowerMotorTotal": "0",
-      "touchTotal": "16",
-      "prickTotal": "16",
-      "rightSensory": "C5",
-      "leftSensory": "C5",
-      "rightMotor": "C6",
-      "leftMotor": "C6",
-      "neurologicalLevelOfInjury": "C5",
-      "rightSensoryZpp": "C5",
-      "leftSensoryZpp": "C5",
-      "rightMotorZpp": "T1",
-      "leftMotorZpp": "C8",
-      "asiaImpairmentScale": "B"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "No",
-    "analSensation": "Yes",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Edge case - Bug discovered by Dr. Reeves - Feb 9th, 2012\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "c5": {
-        "rightMotor": "5",
-        "leftMotor": "3",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c6": {
-        "rightMotor": "4",
-        "leftMotor": "3",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "0",
-        "leftPrick": "1"
-      },
-      "c7": {
-        "rightMotor": "1",
-        "leftMotor": "1",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
-        "rightMotor": "0",
-        "leftMotor": "1",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t4": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t6": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t7": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t8": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t9": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t10": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t11": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t12": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l1": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "10",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "8",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "9",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "9",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "6",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "8",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "10",
-      "leftMotorTotal": "8",
-      "upperMotorTotal": "18",
-      "lowerMotorTotal": "0",
-      "touchTotal": "18",
-      "prickTotal": "14",
-      "rightSensory": "C3",
-      "leftSensory": "C4",
-      "rightMotor": "C3",
-      "leftMotor": "C5",
-      "neurologicalLevelOfInjury": "C3",
-      "rightSensoryZpp": "C7",
-      "leftSensoryZpp": "C7",
-      "rightMotorZpp": "C7",
-      "leftMotorZpp": "C8",
-      "asiaImpairmentScale": "C"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "Yes",
-    "analSensation": "Yes",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      A 5* on a motor cell does not rise the flags: RightUpperMotorTotalHasImpairmentNotDueToSci, LeftUpperMotorTotalHasImpairmentNotDueToSci, RightLowerMotorTotalHasImpairmentNotDueToSci or LeftLowerMotorTotalHasImpairmentNotDueToSci.\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c5": {
-        "rightMotor": "5*",
-        "leftMotor": "5*",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
-        "rightMotor": "5*",
-        "leftMotor": "5*",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
-        "rightMotor": "5*",
-        "leftMotor": "5*",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
-        "rightMotor": "5*",
-        "leftMotor": "5*",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
-        "rightMotor": "5*",
-        "leftMotor": "5*",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t5": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t6": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t7": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t8": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t9": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t10": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t11": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t12": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l1": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l2": {
-        "rightMotor": "5*",
-        "leftMotor": "5*",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l3": {
-        "rightMotor": "5*",
-        "leftMotor": "5*",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l4": {
-        "rightMotor": "5*",
-        "leftMotor": "5*",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l5": {
-        "rightMotor": "5*",
-        "leftMotor": "5*",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s1": {
-        "rightMotor": "5*",
-        "leftMotor": "5*",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s4_5": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "25",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "25",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "56",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "56",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "56",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "56",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "50",
-      "leftMotorTotal": "50",
-      "upperMotorTotal": "50",
-      "lowerMotorTotal": "50",
-      "touchTotal": "112",
-      "prickTotal": "112",
-      "rightSensory": "S4_5",
-      "leftSensory": "S4_5",
-      "rightMotor": "S4_5",
-      "leftMotor": "S4_5",
-      "neurologicalLevelOfInjury": "S4_5",
-      "rightSensoryZpp": "",
-      "leftSensoryZpp": "",
-      "rightMotorZpp": "",
-      "leftMotorZpp": "",
-      "asiaImpairmentScale": "E"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "No",
-    "analSensation": "No",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      ZPP for motor does not seem to be calculating correctly.  It is giving a value of S4-5 for motor when it should be S1.\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c5": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t5": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t6": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t7": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t8": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t9": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t10": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t11": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t12": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l1": {
-        "rightTouch": "0",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l2": {
-        "rightMotor": "0",
-        "leftMotor": "5",
-        "rightTouch": "0",
-        "leftTouch": "1",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
-        "rightMotor": "0",
-        "leftMotor": "5",
-        "rightTouch": "0",
-        "leftTouch": "1",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
-        "rightMotor": "0",
-        "leftMotor": "5",
-        "rightTouch": "0",
-        "leftTouch": "1",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
-        "rightMotor": "0",
-        "leftMotor": "5",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
-        "rightMotor": "0",
-        "leftMotor": "5",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "25",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "38",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "43",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "40",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "40",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "25",
-      "leftMotorTotal": "50",
-      "upperMotorTotal": "50",
-      "lowerMotorTotal": "25",
-      "touchTotal": "81",
-      "prickTotal": "80",
-      "rightSensory": "T12",
-      "leftSensory": "L1",
-      "rightMotor": "T12",
-      "leftMotor": "S1",
-      "neurologicalLevelOfInjury": "T12",
-      "rightSensoryZpp": "L1",
-      "leftSensoryZpp": "L4",
-      "rightMotorZpp": "T12",
-      "leftMotorZpp": "S1",
-      "asiaImpairmentScale": "A"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "No",
-    "analSensation": "No",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Motor ZPP is incorrect when all motor values are set to 0 and there are normal sensory values in the first four rows.\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "0"
-      },
-      "c3": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c4": {
-        "rightTouch": "1",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c6": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c7": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t4": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t6": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t7": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t8": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t9": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t10": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t11": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t12": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l1": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "0",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "4",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "3",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "2",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "0",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "0",
-      "leftMotorTotal": "0",
-      "upperMotorTotal": "0",
-      "lowerMotorTotal": "0",
-      "touchTotal": "7",
-      "prickTotal": "2",
-      "rightSensory": "C2",
-      "leftSensory": "C1",
-      "rightMotor": "C2",
-      "leftMotor": "C1",
-      "neurologicalLevelOfInjury": "C1",
-      "rightSensoryZpp": "C4",
-      "leftSensoryZpp": "C3",
-      "rightMotorZpp": "C2",
-      "leftMotorZpp": "C1",
-      "asiaImpairmentScale": "A"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "No",
-    "analSensation": "No",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Motor ZPP is incorrect when all motor values are set to 0 and there are normal sensory values in the first four rows.\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c7": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t4": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t6": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t7": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t8": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t9": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t10": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t11": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t12": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l1": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "0",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "8",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "8",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "8",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "8",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "0",
-      "leftMotorTotal": "0",
-      "upperMotorTotal": "0",
-      "lowerMotorTotal": "0",
-      "touchTotal": "16",
-      "prickTotal": "16",
-      "rightSensory": "C5",
-      "leftSensory": "C5",
-      "rightMotor": "C4",
-      "leftMotor": "C4",
-      "neurologicalLevelOfInjury": "C4",
-      "rightSensoryZpp": "C5",
-      "leftSensoryZpp": "C5",
-      "rightMotorZpp": "C4",
-      "leftMotorZpp": "C4",
-      "asiaImpairmentScale": "A"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "Yes",
-    "analSensation": "Yes",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Impairment not due to SCI should not be reflected on the motor totals when a sensory value has it on a non-key muscle.  This is a check for the algorithm sice I know how it is performing the comparisons.\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c5": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t5": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t6": {
-        "rightTouch": "0!",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t7": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t8": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t9": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t10": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t11": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t12": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l1": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l2": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l3": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l4": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l5": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s1": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s4_5": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "25",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "25",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "54!",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "56",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "56",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "56",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "50",
-      "leftMotorTotal": "50",
-      "upperMotorTotal": "50",
-      "lowerMotorTotal": "50",
-      "touchTotal": "110!",
-      "prickTotal": "112",
-      "rightSensory": "S4_5",
-      "leftSensory": "S4_5",
-      "rightMotor": "S4_5",
-      "leftMotor": "S4_5",
-      "neurologicalLevelOfInjury": "S4_5",
-      "rightSensoryZpp": "",
-      "leftSensoryZpp": "",
-      "rightMotorZpp": "",
-      "leftMotorZpp": "",
-      "asiaImpairmentScale": "E"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "Yes",
-    "analSensation": "Yes",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Error calculating motor scores when sensory is not 2 on a line with all motor scores set to 5\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c5": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c6": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t5": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t6": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t7": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t8": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t9": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t10": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t11": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t12": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l1": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l2": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l3": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l4": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l5": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s1": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s4_5": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "25",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "25",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "54",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "54",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "54",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "54",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "50",
-      "leftMotorTotal": "50",
-      "upperMotorTotal": "50",
-      "lowerMotorTotal": "50",
-      "touchTotal": "108",
-      "prickTotal": "108",
-      "rightSensory": "C4",
-      "leftSensory": "C4",
-      "rightMotor": "T1",
-      "leftMotor": "T1",
-      "neurologicalLevelOfInjury": "C4",
-      "rightSensoryZpp": "",
-      "leftSensoryZpp": "",
-      "rightMotorZpp": "S1",
-      "leftMotorZpp": "S1",
-      "asiaImpairmentScale": "D"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "No",
-    "analSensation": "No",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Defect found after our first public release.\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c5": {
-        "rightMotor": "3",
-        "leftMotor": "0",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
-        "rightMotor": "3",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c7": {
-        "rightMotor": "3",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c8": {
-        "rightMotor": "3",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "0"
-      },
-      "t1": {
-        "rightMotor": "3",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t4": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t6": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t7": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t8": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t9": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t10": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t11": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t12": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l1": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "15",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "11",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "9",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "10",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "9",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "15",
-      "leftMotorTotal": "0",
-      "upperMotorTotal": "15",
-      "lowerMotorTotal": "0",
-      "touchTotal": "20",
-      "prickTotal": "19",
-      "rightSensory": "C5",
-      "leftSensory": "C5",
-      "rightMotor": "C5",
-      "leftMotor": "C4",
-      "neurologicalLevelOfInjury": "C4",
-      "rightSensoryZpp": "T1",
-      "leftSensoryZpp": "C8",
-      "rightMotorZpp": "T1",
-      "leftMotorZpp": "C4",
-      "asiaImpairmentScale": "A"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "No",
-    "analSensation": "Yes",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Defect found after our first public release.\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c5": {
-        "rightMotor": "4",
-        "leftMotor": "0",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
-        "rightMotor": "2",
-        "leftMotor": "0",
-        "rightTouch": "2",
-        "leftTouch": "1",
-        "rightPrick": "2",
-        "leftPrick": "1"
-      },
-      "c7": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "0",
-        "rightPrick": "1",
-        "leftPrick": "0"
-      },
-      "c8": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "2",
-        "leftTouch": "1",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "0"
-      },
-      "t4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t5": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t6": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t7": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t8": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t9": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t10": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t11": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t12": {
-        "rightTouch": "2",
-        "leftTouch": "0",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l1": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l2": {
-        "rightMotor": "2",
-        "leftMotor": "0",
-        "rightTouch": "2",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l3": {
-        "rightMotor": "2",
-        "leftMotor": "0",
-        "rightTouch": "2",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l4": {
-        "rightMotor": "4",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l5": {
-        "rightMotor": "4",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s1": {
-        "rightMotor": "5",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s2": {
-        "rightTouch": "2",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s3": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "2",
-        "leftPrick": "1"
-      },
-      "s4_5": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "6",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "17",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "48",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "39",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "42",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "37",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "23",
-      "leftMotorTotal": "0",
-      "upperMotorTotal": "6",
-      "lowerMotorTotal": "17",
-      "touchTotal": "87",
-      "prickTotal": "79",
-      "rightSensory": "C6",
-      "leftSensory": "C5",
-      "rightMotor": "C5",
-      "leftMotor": "C4",
-      "neurologicalLevelOfInjury": "C4",
-      "rightSensoryZpp": "",
-      "leftSensoryZpp": "",
-      "rightMotorZpp": "S1",
-      "leftMotorZpp": "C4",
-      "asiaImpairmentScale": "C"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "Yes",
-    "analSensation": "Yes",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Defect found after our first public release.\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c5": {
-        "rightMotor": "4",
-        "leftMotor": "2",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
-        "rightMotor": "5",
-        "leftMotor": "4",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
-        "rightMotor": "5",
-        "leftMotor": "4",
-        "rightTouch": "2",
-        "leftTouch": "1",
-        "rightPrick": "2",
-        "leftPrick": "1"
-      },
-      "c8": {
-        "rightMotor": "5",
-        "leftMotor": "4",
-        "rightTouch": "2",
-        "leftTouch": "1",
-        "rightPrick": "2",
-        "leftPrick": "1"
-      },
-      "t1": {
-        "rightMotor": "5",
-        "leftMotor": "4",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t5": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t6": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t7": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t8": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t9": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t10": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t11": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t12": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l1": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l2": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l3": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l4": {
-        "rightMotor": "4",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l5": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s1": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s4_5": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "24",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "18",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "24",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "25",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "56",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "54",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "56",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "54",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "48",
-      "leftMotorTotal": "43",
-      "upperMotorTotal": "42",
-      "lowerMotorTotal": "49",
-      "touchTotal": "110",
-      "prickTotal": "110",
-      "rightSensory": "S4_5",
-      "leftSensory": "C6",
-      "rightMotor": "C5",
-      "leftMotor": "C4",
-      "neurologicalLevelOfInjury": "C4",
-      "rightSensoryZpp": "",
-      "leftSensoryZpp": "",
-      "rightMotorZpp": "S1",
-      "leftMotorZpp": "S1",
-      "asiaImpairmentScale": "D"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "No",
-    "analSensation": "No",
-    "rightLowestNonKeyMuscleWithMotorFunction": "T2",
-    "leftLowestNonKeyMuscleWithMotorFunction": "T5",
-    "comments": "\n      Edge case - Bug discovered by Dr. Waring - Feb 9th, 2012, regarding non-key muscles.\n      [EE: Aug 20, 2012] This case got ammended after implementing Ronald Reeves suggestion on reflecting the non-key muscles on the ZPP.\n      Before the changes the Most Caudal Right Motor Name was C5 and the Most Caudal Left Motor Name was C6.\n      After the changes the Most Caudal Right Motor Name became T2 and the Most Caudal Left Motor Name became T5\n      Right motor function at T2\n      Left motor function at T5\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c5": {
-        "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
-        "rightMotor": "0",
-        "leftMotor": "3",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c8": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t2": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t3": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t4": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t5": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t6": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t7": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t8": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t9": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t10": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t11": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t12": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l1": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l2": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l3": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l4": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s2": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s3": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s4_5": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "5",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "8",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "33",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "33",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "33",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "33",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "5",
-      "leftMotorTotal": "8",
-      "upperMotorTotal": "13",
-      "lowerMotorTotal": "0",
-      "touchTotal": "66",
-      "prickTotal": "66",
-      "rightSensory": "C6",
-      "leftSensory": "C6",
-      "rightMotor": "C5",
-      "leftMotor": "C6",
-      "neurologicalLevelOfInjury": "C5",
-      "rightSensoryZpp": "",
-      "leftSensoryZpp": "",
-      "rightMotorZpp": "T2",
-      "leftMotorZpp": "T5",
-      "asiaImpairmentScale": "C"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "No",
-    "analSensation": "No",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Edge case - Bug discovered by Dr. Reeves - Feb 9th, 2012\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c4": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c5": {
-        "rightMotor": "2",
-        "leftMotor": "2",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c6": {
-        "rightMotor": "2",
-        "leftMotor": "2",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c7": {
-        "rightMotor": "2",
-        "leftMotor": "2",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c8": {
-        "rightMotor": "2",
-        "leftMotor": "2",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t1": {
-        "rightMotor": "2",
-        "leftMotor": "2",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t2": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t3": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t4": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t5": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t6": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t7": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t8": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t9": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t10": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t11": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t12": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l1": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l2": {
-        "rightMotor": "2",
-        "leftMotor": "2",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l3": {
-        "rightMotor": "2",
-        "leftMotor": "2",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l4": {
-        "rightMotor": "2",
-        "leftMotor": "2",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l5": {
-        "rightMotor": "2",
-        "leftMotor": "2",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s2": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "10",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "10",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "8",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "8",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "28",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "28",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "29",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "29",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "18",
-      "leftMotorTotal": "18",
-      "upperMotorTotal": "20",
-      "lowerMotorTotal": "16",
-      "touchTotal": "56",
-      "prickTotal": "58",
-      "rightSensory": "C3",
-      "leftSensory": "C3",
-      "rightMotor": "C3",
-      "leftMotor": "C3",
-      "neurologicalLevelOfInjury": "C3",
-      "rightSensoryZpp": "S2",
-      "leftSensoryZpp": "S2",
-      "rightMotorZpp": "L5",
-      "leftMotorZpp": "L5",
-      "asiaImpairmentScale": "A"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "No",
-    "analSensation": "No",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Edge case - Bug discovered by Dr. Reeves - Feb 9th, 2012\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c4": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c5": {
-        "rightMotor": "3",
-        "leftMotor": "4",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c6": {
-        "rightMotor": "3",
-        "leftMotor": "5",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c7": {
-        "rightMotor": "2",
-        "leftMotor": "3",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c8": {
-        "rightMotor": "1",
-        "leftMotor": "3",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t1": {
-        "rightMotor": "1",
-        "leftMotor": "3",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t2": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t3": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t4": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t5": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t6": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t7": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t8": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t9": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t10": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t11": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t12": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l1": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l2": {
-        "rightMotor": "1",
-        "leftMotor": "3",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l3": {
-        "rightMotor": "1",
-        "leftMotor": "3",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l4": {
-        "rightMotor": "1",
-        "leftMotor": "3",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l5": {
-        "rightMotor": "1",
-        "leftMotor": "3",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "10",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "18",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "4",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "12",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "26",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "26",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "26",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "26",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "14",
-      "leftMotorTotal": "30",
-      "upperMotorTotal": "28",
-      "lowerMotorTotal": "16",
-      "touchTotal": "52",
-      "prickTotal": "52",
-      "rightSensory": "C2",
-      "leftSensory": "C2",
-      "rightMotor": "C2",
-      "leftMotor": "C2",
-      "neurologicalLevelOfInjury": "C2",
-      "rightSensoryZpp": "S1",
-      "leftSensoryZpp": "S1",
-      "rightMotorZpp": "L5",
-      "leftMotorZpp": "L5",
-      "asiaImpairmentScale": "A"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "No",
-    "analSensation": "No",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      There was an issue when the single level is less than C5 and there are no motor scores.  The most caudal left motor property was null, since no motor value was forcing it to update.  This caused a null reference exception.  As fix, before calculating the totals, we check if the property is null.  We set it to equal the value for left sensory if so.\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c4": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c6": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c7": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
-        "rightMotor": "5",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t4": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t6": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t7": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t8": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t9": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t10": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t11": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t12": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l1": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "5",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "2",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "2",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "2",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "2",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "5",
-      "leftMotorTotal": "0",
-      "upperMotorTotal": "5",
-      "lowerMotorTotal": "0",
-      "touchTotal": "4",
-      "prickTotal": "4",
-      "rightSensory": "C2",
-      "leftSensory": "C2",
-      "rightMotor": "C2",
-      "leftMotor": "C2",
-      "neurologicalLevelOfInjury": "C2",
-      "rightSensoryZpp": "C2",
-      "leftSensoryZpp": "C2",
-      "rightMotorZpp": "T1",
-      "leftMotorZpp": "C2",
-      "asiaImpairmentScale": "A"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "No",
-    "analSensation": "No",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      There was an issue when the single level is less than C5 and there are no motor scores.  The most caudal right motor property was null, since no motor value was forcing it to update.  This caused a null reference exception.  As fix, before calculating the totals, we check if the property is null.  We set it to equal the value for right sensory if so.\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c4": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c6": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c7": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t4": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t6": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t7": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t8": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t9": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t10": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t11": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t12": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l1": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "0",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "2",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "2",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "2",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "2",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "0",
-      "leftMotorTotal": "0",
-      "upperMotorTotal": "0",
-      "lowerMotorTotal": "0",
-      "touchTotal": "4",
-      "prickTotal": "4",
-      "rightSensory": "C2",
-      "leftSensory": "C2",
-      "rightMotor": "C2",
-      "leftMotor": "C2",
-      "neurologicalLevelOfInjury": "C2",
-      "rightSensoryZpp": "C2",
-      "leftSensoryZpp": "C2",
-      "rightMotorZpp": "C2",
-      "leftMotorZpp": "C2",
-      "asiaImpairmentScale": "A"
-    }
-  },
-  {
-    "id": 0,
-    "examDate": "0001-01-01T00:00:00",
-    "analContraction": "No",
-    "analSensation": "No",
-    "rightLowestNonKeyMuscleWithMotorFunction": "0",
-    "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      InStep - Module 5 - Assesment Case A\n    ",
-    "dermatomes": {
-      "c2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c5": {
-        "rightMotor": "5",
-        "leftMotor": "4",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
-        "rightMotor": "3",
-        "leftMotor": "4",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
-        "rightMotor": "2",
-        "leftMotor": "4",
-        "rightTouch": "2",
-        "leftTouch": "0",
-        "rightPrick": "1",
-        "leftPrick": "0"
-      },
-      "c8": {
-        "rightMotor": "2",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
-        "rightMotor": "1",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t4": {
-        "rightTouch": "1",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t5": {
-        "rightTouch": "1",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t6": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t7": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t8": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t9": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t10": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t11": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t12": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l1": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      }
-    },
-    "totals": {
-      "rightUpperMotorTotal": "13",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "12",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "16",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "10",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "11",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "10",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "13",
       "leftMotorTotal": "12",
       "upperMotorTotal": "25",
@@ -4661,197 +235,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 2,
+    "group": "Instep",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      InStep - Module 5 - Assesment Case B\n    ",
+    "comments": "InStep - Module 5 - Assesment Case B",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t11": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t12": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "0"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -4860,21 +435,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "38",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "37",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "38",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "36",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "25",
       "leftMotorTotal": "25",
       "upperMotorTotal": "50",
@@ -4894,197 +469,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 3,
+    "group": "Instep",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      InStep - Module 5 - Assesment Case C\n    ",
+    "comments": "InStep - Module 5 - Assesment Case C",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t12": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l1": {
+      "L1": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
         "rightMotor": "3",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "L3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "0",
+        "leftPrick": "1",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S3": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "l3": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "0",
-        "leftPrick": "1"
-      },
-      "l4": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
-        "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s3": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
@@ -5093,21 +669,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "3",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "4",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "43",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "44",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "42",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "45",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "28",
       "leftMotorTotal": "29",
       "upperMotorTotal": "50",
@@ -5127,197 +703,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 4,
+    "group": "Instep",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "Yes",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      InStep - Module 5 - Assesment Case D\n    ",
+    "comments": "InStep - Module 5 - Assesment Case D",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "0",
+        "leftTouch": "1",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "4",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "C6": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c6": {
+        "leftPrick": "0",
         "rightMotor": "1",
-        "leftMotor": "3",
-        "rightTouch": "0",
-        "leftTouch": "1",
-        "rightPrick": "0",
-        "leftPrick": "0"
+        "leftMotor": "3"
       },
-      "c7": {
+      "C7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "2",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "C8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "1",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "T1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "1",
-        "leftMotor": "1",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
+        "leftMotor": "1"
       },
-      "t2": {
+      "T2": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "2",
         "leftPrick": "0"
       },
-      "t3": {
+      "T3": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t4": {
+      "T4": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T6": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "t7": {
+      "T7": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "t8": {
+      "T8": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "t9": {
+      "T9": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "t10": {
+      "T10": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T11": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "2",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "3",
-        "leftMotor": "3",
+        "leftMotor": "3"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "1",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "1",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "3",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s3": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
@@ -5326,21 +903,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "9",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "10",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "10",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "19",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "17",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "19",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "8",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "12",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "19",
       "leftMotorTotal": "29",
       "upperMotorTotal": "19",
@@ -5360,197 +937,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 5,
+    "group": "Instep",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      InStep - Module 5 - Assesment Case E\n    ",
+    "comments": "InStep - Module 5 - Assesment Case E",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t12": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l1": {
+      "L1": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
         "rightMotor": "1",
-        "leftMotor": "3",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
+        "leftMotor": "3"
       },
-      "l3": {
+      "L3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -5559,21 +1137,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "1",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "4",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "40",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "40",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "40",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "40",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "26",
       "leftMotorTotal": "29",
       "upperMotorTotal": "50",
@@ -5593,197 +1171,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 6,
+    "group": "Instep",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      InStep - Module 5 - Sample Case 1\n    ",
+    "comments": "InStep - Module 5 - Sample Case 1",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "4",
-        "leftMotor": "4",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
+        "leftMotor": "4"
       },
-      "c7": {
+      "C7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "1",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "C8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -5792,21 +1371,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "10",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "10",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "10",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "10",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "10",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "10",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "10",
       "leftMotorTotal": "10",
       "upperMotorTotal": "20",
@@ -5826,197 +1405,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 7,
+    "group": "Instep",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      InStep - Module 5 - Sample Case 2\n    ",
+    "comments": "InStep - Module 5 - Sample Case 2",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "c5": {
-        "rightMotor": "3",
-        "leftMotor": "4",
+      "C5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
+        "leftPrick": "1",
+        "rightMotor": "3",
+        "leftMotor": "4"
       },
-      "c6": {
+      "C6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "1",
-        "leftMotor": "2",
+        "leftMotor": "2"
+      },
+      "C7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c7": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -6025,21 +1605,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "4",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "6",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "6",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "7",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "6",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "7",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "4",
       "leftMotorTotal": "6",
       "upperMotorTotal": "10",
@@ -6059,197 +1639,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 8,
+    "group": "Instep",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      InStep - Module 5 - Sample Case 3\n    ",
+    "comments": "InStep - Module 5 - Sample Case 3",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t12": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l1": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
-        "rightMotor": "0",
-        "leftMotor": "2",
+      "L2": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "1",
+        "leftMotor": "2"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "1"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -6258,21 +1839,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "4",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "38",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "42",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "38",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "38",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "25",
       "leftMotorTotal": "29",
       "upperMotorTotal": "50",
@@ -6292,197 +1873,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 9,
+    "group": "Instep",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      InStep - Module 5 - Sample Case 4\n    ",
+    "comments": "InStep - Module 5 - Sample Case 4",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t12": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l1": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
-        "rightMotor": "0",
-        "leftMotor": "2",
+      "L2": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "2"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -6491,21 +2073,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "2",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "38",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "42",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "38",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "38",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "25",
       "leftMotorTotal": "27",
       "upperMotorTotal": "50",
@@ -6525,197 +2107,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 10,
+    "group": "Instep",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "Yes",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      InStep - Module 5 - Sample Case 5\n    ",
+    "comments": "InStep - Module 5 - Sample Case 5",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "3",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
+        "leftMotor": "3"
       },
-      "c7": {
-        "rightMotor": "4",
-        "leftMotor": "3",
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "0",
         "rightPrick": "2",
-        "leftPrick": "1"
+        "leftPrick": "1",
+        "rightMotor": "4",
+        "leftMotor": "3"
       },
-      "c8": {
-        "rightMotor": "0",
-        "leftMotor": "0",
+      "C8": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "1",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "1",
-        "leftPrick": "0"
-      },
-      "t2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t4": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t6": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t7": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t8": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t9": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t10": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t11": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t12": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l1": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l3": {
+      "T3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T9": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T10": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T11": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T12": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
@@ -6724,21 +2307,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "14",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "11",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "14",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "11",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "14",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "11",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "14",
       "leftMotorTotal": "11",
       "upperMotorTotal": "25",
@@ -6758,197 +2341,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 11,
+    "group": "Instep",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      InStep - Module 5 - Sample Case 6\n    ",
+    "comments": "InStep - Module 5 - Sample Case 6",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
+        "leftMotor": "5"
       },
-      "c6": {
-        "rightMotor": "3",
-        "leftMotor": "5",
+      "C6": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "3",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "3",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
+        "leftPrick": "2",
+        "rightMotor": "3",
+        "leftMotor": "5"
       },
-      "t1": {
+      "T1": {
+        "rightTouch": "1",
+        "leftTouch": "2",
+        "rightPrick": "1",
+        "leftPrick": "2",
         "rightMotor": "2",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "T2": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "l2": {
+        "leftPrick": "2",
         "rightMotor": "3",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L3": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "l3": {
+        "leftPrick": "2",
         "rightMotor": "4",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L4": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "l4": {
+        "leftPrick": "2",
         "rightMotor": "3",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L5": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "l5": {
+        "leftPrick": "2",
         "rightMotor": "3",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "S1": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "s1": {
+        "leftPrick": "2",
         "rightMotor": "3",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "S2": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "s3": {
-        "rightTouch": "1",
-        "leftTouch": "2",
-        "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
@@ -6957,21 +2541,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "16",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "24",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "16",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "21",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "32",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "56",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "32",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "56",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "32",
       "leftMotorTotal": "45",
       "upperMotorTotal": "40",
@@ -6991,197 +2575,1836 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 12,
+    "group": "AsiaSpecialArticle",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "ISNCSCI NT Case 1",
+    "comments": "NT - Severe left wrist pain.",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "NT"
+      },
+      "C7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "3",
+        "leftMotor": "2"
+      },
+      "C8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c6": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "c7": {
+      "T3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T9": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T10": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T11": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T12": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "NT",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
+        "leftMotor": "0"
       },
-      "t2": {
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t4": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t6": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t7": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t8": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t9": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t10": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t11": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t12": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l1": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l4": {
+      "S3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S4_5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "13",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "UTD",
+      "leftUpperMotorContainsNt": true,
+      "rightLowerMotorTotal": "0",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "0",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "10",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "10",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "10",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "10",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "13",
+      "leftMotorTotal": "UTD",
+      "upperMotorTotal": "UTD",
+      "lowerMotorTotal": "0",
+      "touchTotal": "20",
+      "prickTotal": "20",
+      "rightSensory": "C6",
+      "leftSensory": "C6",
+      "rightMotor": "C7",
+      "leftMotor": "C5,C6",
+      "neurologicalLevelOfInjury": "C5,C6",
+      "rightSensoryZpp": "C6",
+      "leftSensoryZpp": "C6",
+      "rightMotorZpp": "C7",
+      "leftMotorZpp": "C7",
+      "asiaImpairmentScale": "A"
+    }
+  },
+  {
+    "id": 13,
+    "group": "AsiaSpecialArticle",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "No",
+    "analSensation": "Yes",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "NT- Splint in place on left hand unable to test T1 motor.",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "1",
+        "leftMotor": "2"
+      },
+      "C7": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "1",
+        "leftMotor": "2"
+      },
+      "C8": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "1",
+        "leftMotor": "2"
+      },
+      "T1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
         "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
+        "leftMotor": "NT"
       },
-      "l5": {
+      "T2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T4": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T6": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T7": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T8": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T9": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T10": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T11": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T12": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "L1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "L2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
         "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
+        "leftMotor": "0"
       },
-      "s1": {
+      "L3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "S3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "S4_5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "8",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "UTD",
+      "leftUpperMotorContainsNt": true,
+      "rightLowerMotorTotal": "0",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "0",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "32",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "32",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "32",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "32",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "8",
+      "leftMotorTotal": "UTD",
+      "upperMotorTotal": "UTD",
+      "lowerMotorTotal": "0",
+      "touchTotal": "64",
+      "prickTotal": "64",
+      "rightSensory": "C5",
+      "leftSensory": "C5",
+      "rightMotor": "C5",
+      "leftMotor": "C5",
+      "neurologicalLevelOfInjury": "C5",
+      "rightSensoryZpp": "",
+      "leftSensoryZpp": "",
+      "rightMotorZpp": "C8",
+      "leftMotorZpp": "C8,T1",
+      "asiaImpairmentScale": "B,C"
+    }
+  },
+  {
+    "id": 14,
+    "group": "AsiaSpecialArticle",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "Yes",
+    "analSensation": "Yes",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "NT - Splint in place on left hand and unable to test C8 and T1 motor.",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "3"
+      },
+      "C8": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "3",
+        "leftMotor": "NT"
+      },
+      "T1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "3",
+        "leftMotor": "NT"
+      },
+      "T2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T4": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T6": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T7": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T8": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T9": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T10": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T11": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T12": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "L1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "L2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "3",
+        "leftMotor": "1"
+      },
+      "L3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "3",
+        "leftMotor": "1"
+      },
+      "L4": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "3",
+        "leftMotor": "3"
+      },
+      "L5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "1",
+        "leftMotor": "2"
+      },
+      "S1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "1",
+        "leftMotor": "2"
+      },
+      "S2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "S3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "S4_5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "21",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "UTD",
+      "leftUpperMotorContainsNt": true,
+      "rightLowerMotorTotal": "11",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "9",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "34",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "34",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "34",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "34",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "32",
+      "leftMotorTotal": "UTD",
+      "upperMotorTotal": "UTD",
+      "lowerMotorTotal": "20",
+      "touchTotal": "68",
+      "prickTotal": "68",
+      "rightSensory": "C7",
+      "leftSensory": "C7",
+      "rightMotor": "C8",
+      "leftMotor": "C7",
+      "neurologicalLevelOfInjury": "C7",
+      "rightSensoryZpp": "",
+      "leftSensoryZpp": "",
+      "rightMotorZpp": "S1",
+      "leftMotorZpp": "S1",
+      "asiaImpairmentScale": "C,D"
+    }
+  },
+  {
+    "id": 15,
+    "group": "AsiaSpecialArticle",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "No",
+    "analSensation": "No",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "Note - Radial nerve palsy on the left side affecting the left C6 motor and left C6 and C7 sensory testing.\n ~C6 to C7 Left Touch:\n ~C6 to C7 Left Prick:\n ~C6 Left Motor:",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
+        "rightTouch": "2",
+        "leftTouch": "1!",
+        "rightPrick": "2",
+        "leftPrick": "0!",
+        "rightMotor": "5",
+        "leftMotor": "0!"
+      },
+      "C7": {
+        "rightTouch": "2",
+        "leftTouch": "1!",
+        "rightPrick": "2",
+        "leftPrick": "0!",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s4_5": {
+      "T10": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T11": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T12": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S4_5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "25",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "20!",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "0",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "0",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "26",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "24!",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "26",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "22!",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "25",
+      "leftMotorTotal": "20!",
+      "upperMotorTotal": "45!",
+      "lowerMotorTotal": "0",
+      "touchTotal": "50!",
+      "prickTotal": "48!",
+      "rightSensory": "T6",
+      "leftSensory": "T6",
+      "rightMotor": "T6",
+      "leftMotor": "T6",
+      "neurologicalLevelOfInjury": "T6",
+      "rightSensoryZpp": "T6",
+      "leftSensoryZpp": "T6",
+      "rightMotorZpp": "T6",
+      "leftMotorZpp": "T6",
+      "asiaImpairmentScale": "A"
+    }
+  },
+  {
+    "id": 16,
+    "group": "AsiaSpecialArticle",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "No",
+    "analSensation": "Yes",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "4",
+        "leftMotor": "4"
+      },
+      "C7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "2",
+        "leftMotor": "2"
+      },
+      "C8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "1",
+        "leftMotor": "1"
+      },
+      "T1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "1",
+        "leftMotor": "0"
+      },
+      "T2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T9": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T10": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T11": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T12": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S4_5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "13",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "12",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "0",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "0",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "8",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "8",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "8",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "8",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "13",
+      "leftMotorTotal": "12",
+      "upperMotorTotal": "25",
+      "lowerMotorTotal": "0",
+      "touchTotal": "16",
+      "prickTotal": "16",
+      "rightSensory": "C5",
+      "leftSensory": "C5",
+      "rightMotor": "C6",
+      "leftMotor": "C6",
+      "neurologicalLevelOfInjury": "C5",
+      "rightSensoryZpp": "C5",
+      "leftSensoryZpp": "C5",
+      "rightMotorZpp": "T1",
+      "leftMotorZpp": "C8",
+      "asiaImpairmentScale": "B"
+    }
+  },
+  {
+    "id": 17,
+    "group": "Fixes",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "No",
+    "analSensation": "Yes",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "Edge case - Bug discovered by Dr. Reeves - Feb 9th, 2012",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "1",
+        "leftPrick": "2"
+      },
+      "C5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "5",
+        "leftMotor": "3"
+      },
+      "C6": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "0",
+        "leftPrick": "1",
+        "rightMotor": "4",
+        "leftMotor": "3"
+      },
+      "C7": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "1",
+        "leftMotor": "1"
+      },
+      "C8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "1"
+      },
+      "T1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T9": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T10": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T11": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T12": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S4_5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "10",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "8",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "0",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "0",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "9",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "9",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "6",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "8",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "10",
+      "leftMotorTotal": "8",
+      "upperMotorTotal": "18",
+      "lowerMotorTotal": "0",
+      "touchTotal": "18",
+      "prickTotal": "14",
+      "rightSensory": "C3",
+      "leftSensory": "C4",
+      "rightMotor": "C3",
+      "leftMotor": "C5",
+      "neurologicalLevelOfInjury": "C3",
+      "rightSensoryZpp": "C7",
+      "leftSensoryZpp": "C7",
+      "rightMotorZpp": "C7",
+      "leftMotorZpp": "C8",
+      "asiaImpairmentScale": "C"
+    }
+  },
+  {
+    "id": 18,
+    "group": "Fixes",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "Yes",
+    "analSensation": "Yes",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "A 5* on a motor cell does not rise the flags: RightUpperMotorTotalHasImpairmentNotDueToSci, LeftUpperMotorTotalHasImpairmentNotDueToSci, RightLowerMotorTotalHasImpairmentNotDueToSci or LeftLowerMotorTotalHasImpairmentNotDueToSci.",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "C6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "C7": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "C8": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "T1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "T2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T7": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T8": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T9": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T10": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T11": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T12": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "L3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "L4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "L5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "S1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "S2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "S3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "S4_5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "25",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "25",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "25",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "25",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "56",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "56",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "56",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "56",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "50",
+      "leftMotorTotal": "50",
+      "upperMotorTotal": "50",
+      "lowerMotorTotal": "50",
+      "touchTotal": "112",
+      "prickTotal": "112",
+      "rightSensory": "S4_5",
+      "leftSensory": "S4_5",
+      "rightMotor": "S4_5",
+      "leftMotor": "S4_5",
+      "neurologicalLevelOfInjury": "S4_5",
+      "rightSensoryZpp": "",
+      "leftSensoryZpp": "",
+      "rightMotorZpp": "",
+      "leftMotorZpp": "",
+      "asiaImpairmentScale": "E"
+    }
+  },
+  {
+    "id": 19,
+    "group": "Fixes",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "No",
+    "analSensation": "No",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "There was an issue when the single level is less than C5 and there are no motor scores. The most caudal right motor property was null, since no motor value was forcing it to update. This caused a null reference exception. As fix, before calculating the totals, we check if the property is null. We set it to equal the value for right sensory if so.",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "C4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "C5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T9": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T10": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T11": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T12": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -7190,33 +4413,3075 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "0",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "6",
-      "rightTouchContainsNt": "true",
-      "leftTouchTotal": "6",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "6",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "6",
-      "leftPrickContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "2",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "2",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "2",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "2",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "0",
       "leftMotorTotal": "0",
       "upperMotorTotal": "0",
       "lowerMotorTotal": "0",
-      "touchTotal": "12",
+      "touchTotal": "4",
+      "prickTotal": "4",
+      "rightSensory": "C2",
+      "leftSensory": "C2",
+      "rightMotor": "C2",
+      "leftMotor": "C2",
+      "neurologicalLevelOfInjury": "C2",
+      "rightSensoryZpp": "C2",
+      "leftSensoryZpp": "C2",
+      "rightMotorZpp": "C2",
+      "leftMotorZpp": "C2",
+      "asiaImpairmentScale": "A"
+    }
+  },
+  {
+    "id": 20,
+    "group": "Fixes",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "No",
+    "analSensation": "No",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "There was an issue when the single level is less than C5 and there are no motor scores. The most caudal left motor property was null, since no motor value was forcing it to update. This caused a null reference exception. As fix, before calculating the totals, we check if the property is null. We set it to equal the value for left sensory if so.",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "C4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "C5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "5",
+        "leftMotor": "0"
+      },
+      "T2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T9": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T10": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T11": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T12": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S4_5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "5",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "0",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "0",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "0",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "2",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "2",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "2",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "2",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "5",
+      "leftMotorTotal": "0",
+      "upperMotorTotal": "5",
+      "lowerMotorTotal": "0",
+      "touchTotal": "4",
+      "prickTotal": "4",
+      "rightSensory": "C2",
+      "leftSensory": "C2",
+      "rightMotor": "C2",
+      "leftMotor": "C2",
+      "neurologicalLevelOfInjury": "C2",
+      "rightSensoryZpp": "C2",
+      "leftSensoryZpp": "C2",
+      "rightMotorZpp": "T1",
+      "leftMotorZpp": "C2",
+      "asiaImpairmentScale": "A"
+    }
+  },
+  {
+    "id": 21,
+    "group": "Fixes",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "No",
+    "analSensation": "No",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "Edge case - Bug discovered by Dr. Reeves - Feb 9th, 2012",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "C4": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "C5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "3",
+        "leftMotor": "4"
+      },
+      "C6": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "3",
+        "leftMotor": "5"
+      },
+      "C7": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "2",
+        "leftMotor": "3"
+      },
+      "C8": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "1",
+        "leftMotor": "3"
+      },
+      "T1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "1",
+        "leftMotor": "3"
+      },
+      "T2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T4": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T6": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T7": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T8": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T9": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T10": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T11": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T12": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "L1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "L2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "1",
+        "leftMotor": "3"
+      },
+      "L3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "1",
+        "leftMotor": "3"
+      },
+      "L4": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "1",
+        "leftMotor": "3"
+      },
+      "L5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "1",
+        "leftMotor": "3"
+      },
+      "S1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S4_5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "10",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "18",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "4",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "12",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "26",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "26",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "26",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "26",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "14",
+      "leftMotorTotal": "30",
+      "upperMotorTotal": "28",
+      "lowerMotorTotal": "16",
+      "touchTotal": "52",
+      "prickTotal": "52",
+      "rightSensory": "C2",
+      "leftSensory": "C2",
+      "rightMotor": "C2",
+      "leftMotor": "C2",
+      "neurologicalLevelOfInjury": "C2",
+      "rightSensoryZpp": "S1",
+      "leftSensoryZpp": "S1",
+      "rightMotorZpp": "L5",
+      "leftMotorZpp": "L5",
+      "asiaImpairmentScale": "A"
+    }
+  },
+  {
+    "id": 22,
+    "group": "Fixes",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "No",
+    "analSensation": "No",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "Edge case - Bug discovered by Dr. Reeves - Feb 9th, 2012",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C4": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "2",
+        "leftMotor": "2"
+      },
+      "C6": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "2",
+        "leftMotor": "2"
+      },
+      "C7": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "2",
+        "leftMotor": "2"
+      },
+      "C8": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "2",
+        "leftMotor": "2"
+      },
+      "T1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "2",
+        "leftMotor": "2"
+      },
+      "T2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T4": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T6": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T7": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T8": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T9": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T10": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T11": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T12": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "L1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "L2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "2",
+        "leftMotor": "2"
+      },
+      "L3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "2",
+        "leftMotor": "2"
+      },
+      "L4": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "2",
+        "leftMotor": "2"
+      },
+      "L5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "2",
+        "leftMotor": "2"
+      },
+      "S1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "S3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S4_5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "10",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "10",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "8",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "8",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "28",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "28",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "29",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "29",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "18",
+      "leftMotorTotal": "18",
+      "upperMotorTotal": "20",
+      "lowerMotorTotal": "16",
+      "touchTotal": "56",
+      "prickTotal": "58",
+      "rightSensory": "C3",
+      "leftSensory": "C3",
+      "rightMotor": "C3",
+      "leftMotor": "C3",
+      "neurologicalLevelOfInjury": "C3",
+      "rightSensoryZpp": "S2",
+      "leftSensoryZpp": "S2",
+      "rightMotorZpp": "L5",
+      "leftMotorZpp": "L5",
+      "asiaImpairmentScale": "A"
+    }
+  },
+  {
+    "id": 23,
+    "group": "Fixes",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "No",
+    "analSensation": "No",
+    "rightLowestNonKeyMuscleWithMotorFunction": "T2",
+    "leftLowestNonKeyMuscleWithMotorFunction": "T5",
+    "comments": "Edge case - Bug discovered by Dr. Waring - Feb 9th, 2012, regarding non-key muscles.\n [EE: Aug 20, 2012] This case got ammended after implementing Ronald Reeves suggestion on reflecting the non-key muscles on the ZPP.\n Before the changes the Most Caudal Right Motor Name was C5 and the Most Caudal Left Motor Name was C6.\n After the changes the Most Caudal Right Motor Name became T2 and the Most Caudal Left Motor Name became T5\n Right motor function at T2\n Left motor function at T5",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "0",
+        "leftMotor": "3"
+      },
+      "C7": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T4": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T6": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T7": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T8": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T9": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T10": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T11": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "T12": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "L1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "L2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "S3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "S4_5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "5",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "8",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "0",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "0",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "33",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "33",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "33",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "33",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "5",
+      "leftMotorTotal": "8",
+      "upperMotorTotal": "13",
+      "lowerMotorTotal": "0",
+      "touchTotal": "66",
+      "prickTotal": "66",
+      "rightSensory": "C6",
+      "leftSensory": "C6",
+      "rightMotor": "C5",
+      "leftMotor": "C6",
+      "neurologicalLevelOfInjury": "C5",
+      "rightSensoryZpp": "",
+      "leftSensoryZpp": "",
+      "rightMotorZpp": "T2",
+      "leftMotorZpp": "T5",
+      "asiaImpairmentScale": "C"
+    }
+  },
+  {
+    "id": 24,
+    "group": "Fixes",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "Yes",
+    "analSensation": "Yes",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "Defect found after our first public release.",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "4",
+        "leftMotor": "2"
+      },
+      "C6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "4"
+      },
+      "C7": {
+        "rightTouch": "2",
+        "leftTouch": "1",
+        "rightPrick": "2",
+        "leftPrick": "1",
+        "rightMotor": "5",
+        "leftMotor": "4"
+      },
+      "C8": {
+        "rightTouch": "2",
+        "leftTouch": "1",
+        "rightPrick": "2",
+        "leftPrick": "1",
+        "rightMotor": "5",
+        "leftMotor": "4"
+      },
+      "T1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "4"
+      },
+      "T2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T7": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T8": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T9": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T10": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T11": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T12": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "L3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "L4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "4",
+        "leftMotor": "5"
+      },
+      "L5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "S1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "S2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "S3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "S4_5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "24",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "18",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "24",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "25",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "56",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "54",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "56",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "54",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "48",
+      "leftMotorTotal": "43",
+      "upperMotorTotal": "42",
+      "lowerMotorTotal": "49",
+      "touchTotal": "110",
+      "prickTotal": "110",
+      "rightSensory": "S4_5",
+      "leftSensory": "C6",
+      "rightMotor": "C5",
+      "leftMotor": "C4",
+      "neurologicalLevelOfInjury": "C4",
+      "rightSensoryZpp": "",
+      "leftSensoryZpp": "",
+      "rightMotorZpp": "S1",
+      "leftMotorZpp": "S1",
+      "asiaImpairmentScale": "D"
+    }
+  },
+  {
+    "id": 25,
+    "group": "Fixes",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "No",
+    "analSensation": "Yes",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "Defect found after our first public release.",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "4",
+        "leftMotor": "0"
+      },
+      "C6": {
+        "rightTouch": "2",
+        "leftTouch": "1",
+        "rightPrick": "2",
+        "leftPrick": "1",
+        "rightMotor": "2",
+        "leftMotor": "0"
+      },
+      "C7": {
+        "rightTouch": "1",
+        "leftTouch": "0",
+        "rightPrick": "1",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
+        "rightTouch": "1",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
+        "rightTouch": "2",
+        "leftTouch": "1",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "0"
+      },
+      "T4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T7": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T8": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T9": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T10": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T11": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T12": {
+        "rightTouch": "2",
+        "leftTouch": "0",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "L2": {
+        "rightTouch": "2",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "2",
+        "leftMotor": "0"
+      },
+      "L3": {
+        "rightTouch": "2",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "2",
+        "leftMotor": "0"
+      },
+      "L4": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "4",
+        "leftMotor": "0"
+      },
+      "L5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "4",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "5",
+        "leftMotor": "0"
+      },
+      "S2": {
+        "rightTouch": "2",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1"
+      },
+      "S3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "2",
+        "leftPrick": "1"
+      },
+      "S4_5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "6",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "0",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "17",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "0",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "48",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "39",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "42",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "37",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "23",
+      "leftMotorTotal": "0",
+      "upperMotorTotal": "6",
+      "lowerMotorTotal": "17",
+      "touchTotal": "87",
+      "prickTotal": "79",
+      "rightSensory": "C6",
+      "leftSensory": "C5",
+      "rightMotor": "C5",
+      "leftMotor": "C4",
+      "neurologicalLevelOfInjury": "C4",
+      "rightSensoryZpp": "",
+      "leftSensoryZpp": "",
+      "rightMotorZpp": "S1",
+      "leftMotorZpp": "C4",
+      "asiaImpairmentScale": "C"
+    }
+  },
+  {
+    "id": 26,
+    "group": "Fixes",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "No",
+    "analSensation": "No",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "Defect found after our first public release.",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "3",
+        "leftMotor": "0"
+      },
+      "C6": {
+        "rightTouch": "1",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "3",
+        "leftMotor": "0"
+      },
+      "C7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "1",
+        "leftPrick": "1",
+        "rightMotor": "3",
+        "leftMotor": "0"
+      },
+      "C8": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "0",
+        "rightMotor": "3",
+        "leftMotor": "0"
+      },
+      "T1": {
+        "rightTouch": "1",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "3",
+        "leftMotor": "0"
+      },
+      "T2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T9": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T10": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T11": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T12": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S4_5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "15",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "0",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "0",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "0",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "11",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "9",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "10",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "9",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "15",
+      "leftMotorTotal": "0",
+      "upperMotorTotal": "15",
+      "lowerMotorTotal": "0",
+      "touchTotal": "20",
+      "prickTotal": "19",
+      "rightSensory": "C5",
+      "leftSensory": "C5",
+      "rightMotor": "C5",
+      "leftMotor": "C4",
+      "neurologicalLevelOfInjury": "C4",
+      "rightSensoryZpp": "T1",
+      "leftSensoryZpp": "C8",
+      "rightMotorZpp": "T1",
+      "leftMotorZpp": "C4",
+      "asiaImpairmentScale": "A"
+    }
+  },
+  {
+    "id": 27,
+    "group": "Fixes",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "Yes",
+    "analSensation": "Yes",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "Error calculating motor scores when sensory is not 2 on a line with all motor scores set to 5",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T7": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T8": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T9": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T10": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T11": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T12": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "L3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "L4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "L5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "S1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "S2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "S3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "S4_5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "25",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "25",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "25",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "25",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "54",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "54",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "54",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "54",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "50",
+      "leftMotorTotal": "50",
+      "upperMotorTotal": "50",
+      "lowerMotorTotal": "50",
+      "touchTotal": "108",
+      "prickTotal": "108",
+      "rightSensory": "C4",
+      "leftSensory": "C4",
+      "rightMotor": "T1",
+      "leftMotor": "T1",
+      "neurologicalLevelOfInjury": "C4",
+      "rightSensoryZpp": "",
+      "leftSensoryZpp": "",
+      "rightMotorZpp": "S1",
+      "leftMotorZpp": "S1",
+      "asiaImpairmentScale": "D"
+    }
+  },
+  {
+    "id": 28,
+    "group": "Fixes",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "Yes",
+    "analSensation": "Yes",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "Impairment not due to SCI should not be reflected on the motor totals when a sensory value has it on a non-key muscle. This is a check for the algorithm sice I know how it is performing the comparisons.",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T6": {
+        "rightTouch": "0!",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T7": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T8": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T9": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T10": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T11": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T12": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "L3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "L4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "L5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "S1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "S2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "S3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "S4_5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "25",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "25",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "25",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "25",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "54!",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "56",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "56",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "56",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "50",
+      "leftMotorTotal": "50",
+      "upperMotorTotal": "50",
+      "lowerMotorTotal": "50",
+      "touchTotal": "110!",
+      "prickTotal": "112",
+      "rightSensory": "S4_5",
+      "leftSensory": "S4_5",
+      "rightMotor": "S4_5",
+      "leftMotor": "S4_5",
+      "neurologicalLevelOfInjury": "S4_5",
+      "rightSensoryZpp": "",
+      "leftSensoryZpp": "",
+      "rightMotorZpp": "",
+      "leftMotorZpp": "",
+      "asiaImpairmentScale": "E"
+    }
+  },
+  {
+    "id": 29,
+    "group": "Fixes",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "No",
+    "analSensation": "No",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "Motor ZPP is incorrect when all motor values are set to 0 and there are normal sensory values in the first four rows.",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T9": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T10": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T11": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T12": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S4_5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "0",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "0",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "0",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "0",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "8",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "8",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "8",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "8",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "0",
+      "leftMotorTotal": "0",
+      "upperMotorTotal": "0",
+      "lowerMotorTotal": "0",
+      "touchTotal": "16",
+      "prickTotal": "16",
+      "rightSensory": "C5",
+      "leftSensory": "C5",
+      "rightMotor": "C4",
+      "leftMotor": "C4",
+      "neurologicalLevelOfInjury": "C4",
+      "rightSensoryZpp": "C5",
+      "leftSensoryZpp": "C5",
+      "rightMotorZpp": "C4",
+      "leftMotorZpp": "C4",
+      "asiaImpairmentScale": "A"
+    }
+  },
+  {
+    "id": 30,
+    "group": "Fixes",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "No",
+    "analSensation": "No",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "Motor ZPP is incorrect when all motor values are set to 0 and there are normal sensory values in the first four rows.",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "0"
+      },
+      "C3": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "C4": {
+        "rightTouch": "1",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "C5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T9": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T10": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T11": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T12": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S4_5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "0",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "0",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "0",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "0",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "4",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "3",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "2",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "0",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "0",
+      "leftMotorTotal": "0",
+      "upperMotorTotal": "0",
+      "lowerMotorTotal": "0",
+      "touchTotal": "7",
+      "prickTotal": "2",
+      "rightSensory": "C2",
+      "leftSensory": "C1",
+      "rightMotor": "C2",
+      "leftMotor": "C1",
+      "neurologicalLevelOfInjury": "C1",
+      "rightSensoryZpp": "C4",
+      "leftSensoryZpp": "C3",
+      "rightMotorZpp": "C2",
+      "leftMotorZpp": "C1",
+      "asiaImpairmentScale": "A"
+    }
+  },
+  {
+    "id": 31,
+    "group": "Fixes",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "No",
+    "analSensation": "No",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "ZPP for motor does not seem to be calculating correctly. It is giving a value of S4-5 for motor when it should be S1.",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T7": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T8": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T9": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T10": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T11": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T12": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L1": {
+        "rightTouch": "0",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "1",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "5"
+      },
+      "L3": {
+        "rightTouch": "0",
+        "leftTouch": "1",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "5"
+      },
+      "L4": {
+        "rightTouch": "0",
+        "leftTouch": "1",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "5"
+      },
+      "L5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "5"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "5"
+      },
+      "S2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S4_5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "25",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "25",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "0",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "25",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "38",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "43",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "40",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "40",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "25",
+      "leftMotorTotal": "50",
+      "upperMotorTotal": "50",
+      "lowerMotorTotal": "25",
+      "touchTotal": "81",
+      "prickTotal": "80",
+      "rightSensory": "T12",
+      "leftSensory": "L1",
+      "rightMotor": "T12",
+      "leftMotor": "S1",
+      "neurologicalLevelOfInjury": "T12",
+      "rightSensoryZpp": "L1",
+      "leftSensoryZpp": "L4",
+      "rightMotorZpp": "T12",
+      "leftMotorZpp": "S1",
+      "asiaImpairmentScale": "A"
+    }
+  },
+  {
+    "id": 32,
+    "group": "NtCases",
+    "examDate": "0001-01-01T00:00:00",
+    "analContraction": "No",
+    "analSensation": "No",
+    "rightLowestNonKeyMuscleWithMotorFunction": "0",
+    "leftLowestNonKeyMuscleWithMotorFunction": "0",
+    "comments": "ISNCSCI NT Case 1",
+    "dermatomes": {
+      "C2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "C5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
+        "rightTouch": "NT",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T9": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T10": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T11": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T12": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "S4_5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      }
+    },
+    "totals": {
+      "rightUpperMotorTotal": "0",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "0",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "0",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "0",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
+      "leftTouchTotal": "6",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "6",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "6",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "0",
+      "leftMotorTotal": "0",
+      "upperMotorTotal": "0",
+      "lowerMotorTotal": "0",
+      "touchTotal": "UTD",
       "prickTotal": "12",
       "rightSensory": "C4",
       "leftSensory": "C4",
       "rightMotor": "C4",
       "leftMotor": "C4",
       "neurologicalLevelOfInjury": "C4",
-      "rightSensoryZpp": "C4, T1",
+      "rightSensoryZpp": "C4,T1",
       "leftSensoryZpp": "C4",
       "rightMotorZpp": "C4",
       "leftMotorZpp": "C4",
@@ -7224,197 +7489,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 33,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      ISNCSCI NT Case 2\n      NT 2 degree ++ spasms and pain\n    ",
+    "comments": "ISNCSCI NT Case 2\n NT 2 degree ++ spasms and pain",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
+        "leftMotor": "5"
       },
-      "c6": {
-        "rightMotor": "1",
-        "leftMotor": "1",
+      "C6": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "0"
+        "leftPrick": "0",
+        "rightMotor": "1",
+        "leftMotor": "1"
       },
-      "c7": {
-        "rightMotor": "0",
-        "leftMotor": "0",
+      "C7": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "1",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "1",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "1",
-        "leftPrick": "0"
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
       },
-      "t2": {
+      "T2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t3": {
+      "T3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t4": {
+      "T4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t5": {
+      "T5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t6": {
+      "T6": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t7": {
+      "T7": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t8": {
+      "T8": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t9": {
+      "T9": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t10": {
+      "T10": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t11": {
+      "T11": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "NT",
+        "leftTouch": "NT",
+        "rightPrick": "NT",
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l3": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l4": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l5": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "S1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "s1": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "S2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s3": {
-        "rightTouch": "NT",
-        "leftTouch": "NT",
-        "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
@@ -7423,27 +7689,27 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "6",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "6",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "true",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "true",
-      "rightTouchTotal": "12",
-      "rightTouchContainsNt": "true",
-      "leftTouchTotal": "9",
-      "leftTouchContainsNt": "true",
-      "rightPrickTotal": "12",
-      "rightPrickContainsNt": "true",
-      "leftPrickTotal": "8",
-      "leftPrickContainsNt": "true",
-      "rightMotorTotal": "6",
-      "leftMotorTotal": "6",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "UTD",
+      "rightLowerMotorContainsNt": true,
+      "leftLowerMotorTotal": "UTD",
+      "leftLowerMotorContainsNt": true,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
+      "leftTouchTotal": "UTD",
+      "leftTouchContainsNt": true,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
+      "rightMotorTotal": "UTD",
+      "leftMotorTotal": "UTD",
       "upperMotorTotal": "12",
-      "lowerMotorTotal": "0",
-      "touchTotal": "21",
-      "prickTotal": "20",
+      "lowerMotorTotal": "UTD",
+      "touchTotal": "UTD",
+      "prickTotal": "UTD",
       "rightSensory": "C5",
       "leftSensory": "C5",
       "rightMotor": "C5",
@@ -7453,201 +7719,202 @@ rhiIsncsciValidationTests.all = [
       "leftSensoryZpp": "C6,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
       "rightMotorZpp": "C6,L2,L3,L4,L5,S1",
       "leftMotorZpp": "C6,L2,L3,L4,L5,S1",
-      "asiaImpairmentScale": "B, C, D"
+      "asiaImpairmentScale": "B,C,D"
     }
   },
   {
-    "id": 0,
+    "id": 34,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      ISNCSCI NT Case 3\n      Cast (L) wrist\/hand\n    ",
+    "comments": "ISNCSCI NT Case 3\n Cast (L) wrist\/hand",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
+        "leftMotor": "5"
       },
-      "c6": {
-        "rightMotor": "5",
-        "leftMotor": "NT",
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "NT",
         "rightPrick": "2",
-        "leftPrick": "NT"
-      },
-      "c7": {
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "NT"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "NT",
         "rightPrick": "2",
-        "leftPrick": "NT"
-      },
-      "c8": {
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "NT",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "NT",
         "rightPrick": "2",
-        "leftPrick": "NT"
-      },
-      "t1": {
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "T1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "NT"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t7": {
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "T10": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T11": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -7656,27 +7923,27 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "10",
-      "leftUpperMotorContainsNt": "true",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "UTD",
+      "leftUpperMotorContainsNt": true,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "26",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "20",
-      "leftTouchContainsNt": "true",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "UTD",
+      "leftTouchContainsNt": true,
       "rightPrickTotal": "26",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "20",
-      "leftPrickContainsNt": "true",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
       "rightMotorTotal": "25",
-      "leftMotorTotal": "10",
-      "upperMotorTotal": "35",
+      "leftMotorTotal": "UTD",
+      "upperMotorTotal": "UTD",
       "lowerMotorTotal": "0",
-      "touchTotal": "46",
-      "prickTotal": "46",
+      "touchTotal": "UTD",
+      "prickTotal": "UTD",
       "rightSensory": "T6",
       "leftSensory": "C5,C6,C7,T6",
       "rightMotor": "T6",
@@ -7690,197 +7957,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 35,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "NT",
     "analSensation": "NT",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      ISNCSCI NT Case 4\n      Previous abdominoperitoneal surgery (no rectum) & skin grafts on bottom.\n    ",
+    "comments": "ISNCSCI NT Case 4\n Previous abdominoperitoneal surgery (no rectum) & skin grafts on bottom.",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c6": {
+        "leftPrick": "1",
         "rightMotor": "2",
-        "leftMotor": "2",
+        "leftMotor": "2"
+      },
+      "C7": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c7": {
+        "leftPrick": "1",
         "rightMotor": "1",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "C8": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c8": {
+        "leftPrick": "1",
         "rightMotor": "1",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "T1": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t1": {
+        "leftPrick": "1",
         "rightMotor": "1",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "T2": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l2": {
+        "leftPrick": "1",
         "rightMotor": "3",
-        "leftMotor": "3",
+        "leftMotor": "3"
+      },
+      "L3": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l3": {
+        "leftPrick": "1",
         "rightMotor": "3",
-        "leftMotor": "3",
+        "leftMotor": "3"
+      },
+      "L4": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l4": {
+        "leftPrick": "1",
         "rightMotor": "4",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "L5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l5": {
+        "leftPrick": "1",
         "rightMotor": "3",
-        "leftMotor": "3",
+        "leftMotor": "3"
+      },
+      "S1": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s1": {
+        "leftPrick": "1",
         "rightMotor": "3",
-        "leftMotor": "3",
+        "leftMotor": "3"
+      },
+      "S2": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "s2": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s3": {
+      "S3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
@@ -7889,27 +8157,27 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "10",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "10",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "16",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "16",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "29",
-      "rightTouchContainsNt": "true",
-      "leftTouchTotal": "29",
-      "leftTouchContainsNt": "true",
-      "rightPrickTotal": "29",
-      "rightPrickContainsNt": "true",
-      "leftPrickTotal": "29",
-      "leftPrickContainsNt": "true",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
+      "leftTouchTotal": "UTD",
+      "leftTouchContainsNt": true,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
       "rightMotorTotal": "26",
       "leftMotorTotal": "26",
       "upperMotorTotal": "20",
       "lowerMotorTotal": "32",
-      "touchTotal": "58",
-      "prickTotal": "58",
+      "touchTotal": "UTD",
+      "prickTotal": "UTD",
       "rightSensory": "C4",
       "leftSensory": "C4",
       "rightMotor": "C5",
@@ -7919,11 +8187,12 @@ rhiIsncsciValidationTests.all = [
       "leftSensoryZpp": "S2,S3",
       "rightMotorZpp": "S1",
       "leftMotorZpp": "S1",
-      "asiaImpairmentScale": "A, D"
+      "asiaImpairmentScale": "A,D"
     }
   },
   {
-    "id": 0,
+    "id": 36,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "Yes",
@@ -7931,189 +8200,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
+        "leftMotor": "5"
       },
-      "c7": {
-        "rightMotor": "1",
-        "leftMotor": "1",
+      "C7": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c8": {
+        "leftPrick": "1",
         "rightMotor": "1",
-        "leftMotor": "0",
+        "leftMotor": "1"
+      },
+      "C8": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "1"
+        "leftPrick": "1",
+        "rightMotor": "1",
+        "leftMotor": "0"
       },
-      "t1": {
+      "T1": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t2": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t3": {
+      "T3": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "1",
         "leftPrick": "0"
       },
-      "t4": {
+      "T4": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t5": {
+      "T5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t6": {
+      "T6": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t7": {
+      "T7": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t8": {
+      "T8": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t9": {
+      "T9": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t10": {
+      "T10": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t11": {
+      "T11": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l3": {
+        "leftPrick": "1",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l4": {
+        "leftPrick": "1",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l5": {
+        "leftPrick": "1",
         "rightMotor": "NT",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s1": {
+        "leftPrick": "1",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "s3": {
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
@@ -8122,25 +8391,25 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "12",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "11",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "true",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "UTD",
+      "rightLowerMotorContainsNt": true,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "32",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "32",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "32",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "32",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "12",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "UTD",
       "leftMotorTotal": "11",
       "upperMotorTotal": "23",
-      "lowerMotorTotal": "0",
+      "lowerMotorTotal": "UTD",
       "touchTotal": "64",
       "prickTotal": "64",
       "rightSensory": "C6",
@@ -8152,11 +8421,12 @@ rhiIsncsciValidationTests.all = [
       "leftSensoryZpp": "",
       "rightMotorZpp": "C8,L5",
       "leftMotorZpp": "C7",
-      "asiaImpairmentScale": "B, C"
+      "asiaImpairmentScale": "B,C"
     }
   },
   {
-    "id": 0,
+    "id": 37,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "Yes",
     "analSensation": "Yes",
@@ -8164,189 +8434,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "3",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
+        "leftMotor": "5"
       },
-      "c7": {
-        "rightMotor": "2",
-        "leftMotor": "5",
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
-        "leftPrick": "1"
+        "leftPrick": "1",
+        "rightMotor": "2",
+        "leftMotor": "5"
       },
-      "c8": {
-        "rightMotor": "1",
-        "leftMotor": "5",
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "0",
         "rightPrick": "2",
-        "leftPrick": "1"
-      },
-      "t1": {
+        "leftPrick": "1",
         "rightMotor": "1",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
-        "leftPrick": "0"
+        "leftPrick": "0",
+        "rightMotor": "1",
+        "leftMotor": "5"
       },
-      "t2": {
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "1"
       },
-      "t3": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "1"
       },
-      "t5": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "1"
       },
-      "t7": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "1"
       },
-      "t8": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "1"
       },
-      "t9": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "1"
       },
-      "t10": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "1"
       },
-      "t11": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "1"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "1"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "1"
       },
-      "l2": {
-        "rightMotor": "1",
-        "leftMotor": "5",
+      "L2": {
         "rightTouch": "NT",
         "leftTouch": "1",
         "rightPrick": "NT",
-        "leftPrick": "1"
+        "leftPrick": "1",
+        "rightMotor": "1",
+        "leftMotor": "5"
       },
-      "l3": {
+      "L3": {
+        "rightTouch": "NT",
+        "leftTouch": "1",
+        "rightPrick": "NT",
+        "leftPrick": "1",
         "rightMotor": "NT",
-        "leftMotor": "5",
-        "rightTouch": "NT",
-        "leftTouch": "1",
-        "rightPrick": "NT",
-        "leftPrick": "1"
+        "leftMotor": "5"
       },
-      "l4": {
-        "rightMotor": "1",
-        "leftMotor": "5",
+      "L4": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
-        "leftPrick": "1"
-      },
-      "l5": {
+        "leftPrick": "1",
         "rightMotor": "1",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L5": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
-        "leftPrick": "1"
+        "leftPrick": "1",
+        "rightMotor": "1",
+        "leftMotor": "5"
       },
-      "s1": {
+      "S1": {
+        "rightTouch": "2",
+        "leftTouch": "1",
+        "rightPrick": "2",
+        "leftPrick": "1",
         "rightMotor": "2",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "S2": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "1"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "1"
       },
-      "s3": {
-        "rightTouch": "2",
-        "leftTouch": "1",
-        "rightPrick": "2",
-        "leftPrick": "1"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
@@ -8355,27 +8625,27 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "12",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "5",
-      "rightLowerMotorContainsNt": "true",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "UTD",
+      "rightLowerMotorContainsNt": true,
       "leftLowerMotorTotal": "25",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "52",
-      "rightTouchContainsNt": "true",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
       "leftTouchTotal": "34",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "52",
-      "rightPrickContainsNt": "true",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
       "leftPrickTotal": "34",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "17",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "UTD",
       "leftMotorTotal": "50",
       "upperMotorTotal": "37",
-      "lowerMotorTotal": "30",
-      "touchTotal": "86",
-      "prickTotal": "86",
+      "lowerMotorTotal": "UTD",
+      "touchTotal": "UTD",
+      "prickTotal": "UTD",
       "rightSensory": "L1,L2,S4_5",
       "leftSensory": "C6",
       "rightMotor": "C6",
@@ -8389,7 +8659,8 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 38,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "Yes",
     "analSensation": "Yes",
@@ -8397,189 +8668,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
-        "rightMotor": "5",
-        "leftMotor": "5",
+      "C5": {
         "rightTouch": "NT",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "NT",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "NT",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t5": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t6": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t7": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t8": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t9": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t10": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t11": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t12": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l1": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l2": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T7": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T8": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T9": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T10": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T11": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T12": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L2": {
         "rightTouch": "NT",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l3": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l4": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l5": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "S1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "S2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "s3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
@@ -8588,26 +8859,26 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "25",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "25",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "48",
-      "rightTouchContainsNt": "true",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
       "leftTouchTotal": "56",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "56",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "56",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "50",
       "leftMotorTotal": "50",
       "upperMotorTotal": "50",
       "lowerMotorTotal": "50",
-      "touchTotal": "104",
+      "touchTotal": "UTD",
       "prickTotal": "112",
       "rightSensory": "C4,C5,C6,L1,S4_5",
       "leftSensory": "S4_5",
@@ -8618,11 +8889,12 @@ rhiIsncsciValidationTests.all = [
       "leftSensoryZpp": "",
       "rightMotorZpp": "S1",
       "leftMotorZpp": "",
-      "asiaImpairmentScale": "D, E"
+      "asiaImpairmentScale": "D,E"
     }
   },
   {
-    "id": 0,
+    "id": 39,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "Yes",
     "analSensation": "Yes",
@@ -8630,189 +8902,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
-        "rightMotor": "5",
-        "leftMotor": "5",
+      "C5": {
         "rightTouch": "NT",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t5": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t6": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t7": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t8": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t9": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t10": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t11": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t12": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l1": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l2": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "l3": {
+      "T3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T7": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T8": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T9": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T10": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T11": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T12": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l4": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l5": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "S1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "S2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "s3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
@@ -8821,26 +9093,26 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "25",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "25",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "54",
-      "rightTouchContainsNt": "true",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
       "leftTouchTotal": "56",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "56",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "56",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "50",
       "leftMotorTotal": "50",
       "upperMotorTotal": "50",
       "lowerMotorTotal": "50",
-      "touchTotal": "110",
+      "touchTotal": "UTD",
       "prickTotal": "112",
       "rightSensory": "C4,S4_5",
       "leftSensory": "S4_5",
@@ -8851,11 +9123,12 @@ rhiIsncsciValidationTests.all = [
       "leftSensoryZpp": "",
       "rightMotorZpp": "S1",
       "leftMotorZpp": "",
-      "asiaImpairmentScale": "D, E"
+      "asiaImpairmentScale": "D,E"
     }
   },
   {
-    "id": 0,
+    "id": 40,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
@@ -8863,189 +9136,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c6": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c7": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "NT",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -9054,25 +9327,25 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "0",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "true",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "UTD",
+      "rightLowerMotorContainsNt": true,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "6",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "6",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "6",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "6",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "0",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "UTD",
       "leftMotorTotal": "0",
       "upperMotorTotal": "0",
-      "lowerMotorTotal": "0",
+      "lowerMotorTotal": "UTD",
       "touchTotal": "12",
       "prickTotal": "12",
       "rightSensory": "C4",
@@ -9088,7 +9361,8 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 41,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
@@ -9096,189 +9370,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c6": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c7": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -9287,25 +9561,25 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "0",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "true",
+      "rightLowerMotorContainsNt": false,
+      "leftLowerMotorTotal": "UTD",
+      "leftLowerMotorContainsNt": true,
       "rightTouchTotal": "6",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "6",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "6",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "6",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "0",
-      "leftMotorTotal": "0",
+      "leftMotorTotal": "UTD",
       "upperMotorTotal": "0",
-      "lowerMotorTotal": "0",
+      "lowerMotorTotal": "UTD",
       "touchTotal": "12",
       "prickTotal": "12",
       "rightSensory": "C4",
@@ -9321,7 +9595,8 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 42,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
@@ -9329,189 +9604,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
+      "C5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c6": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c7": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "NT",
-        "leftPrick": "0"
-      },
-      "t2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t4": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t6": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t7": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t8": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t9": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t10": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t11": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t12": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l1": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l3": {
+      "T3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T9": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T10": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T11": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T12": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -9520,27 +9795,27 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "0",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "6",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "6",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "6",
-      "rightPrickContainsNt": "true",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
       "leftPrickTotal": "6",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "0",
       "leftMotorTotal": "0",
       "upperMotorTotal": "0",
       "lowerMotorTotal": "0",
       "touchTotal": "12",
-      "prickTotal": "12",
+      "prickTotal": "UTD",
       "rightSensory": "C4",
       "leftSensory": "C4",
       "rightMotor": "C4",
@@ -9554,7 +9829,8 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 43,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
@@ -9562,189 +9838,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c6": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c7": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "NT"
+        "leftMotor": "0"
       },
-      "t2": {
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t3": {
+      "T3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t4": {
+      "T4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "T10": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T11": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -9753,27 +10029,27 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "0",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "6",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "6",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "6",
-      "rightPrickContainsNt": "false",
-      "leftPrickTotal": "6",
-      "leftPrickContainsNt": "true",
+      "rightPrickContainsNt": false,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
       "rightMotorTotal": "0",
       "leftMotorTotal": "0",
       "upperMotorTotal": "0",
       "lowerMotorTotal": "0",
       "touchTotal": "12",
-      "prickTotal": "12",
+      "prickTotal": "UTD",
       "rightSensory": "C4",
       "leftSensory": "C4",
       "rightMotor": "C4",
@@ -9787,7 +10063,8 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 44,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
@@ -9795,189 +10072,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
+      "C5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c6": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c7": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
         "rightTouch": "0",
         "leftTouch": "NT",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t4": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t6": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t7": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t8": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t9": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t10": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t11": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t12": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l1": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l3": {
+      "T3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T9": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T10": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T11": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T12": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -9986,26 +10263,26 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "0",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "6",
-      "rightTouchContainsNt": "false",
-      "leftTouchTotal": "6",
-      "leftTouchContainsNt": "true",
+      "rightTouchContainsNt": false,
+      "leftTouchTotal": "UTD",
+      "leftTouchContainsNt": true,
       "rightPrickTotal": "6",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "6",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "0",
       "leftMotorTotal": "0",
       "upperMotorTotal": "0",
       "lowerMotorTotal": "0",
-      "touchTotal": "12",
+      "touchTotal": "UTD",
       "prickTotal": "12",
       "rightSensory": "C4",
       "leftSensory": "C4",
@@ -10020,7 +10297,8 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 45,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
@@ -10028,189 +10306,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
+      "C5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c6": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c7": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
       },
-      "t1": {
+      "T1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "NT",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -10218,25 +10496,25 @@ rhiIsncsciValidationTests.all = [
       }
     },
     "totals": {
-      "rightUpperMotorTotal": "0",
-      "rightUpperMotorContainsNt": "true",
+      "rightUpperMotorTotal": "UTD",
+      "rightUpperMotorContainsNt": true,
       "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "6",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "6",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "6",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "6",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "0",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "UTD",
       "leftMotorTotal": "0",
-      "upperMotorTotal": "0",
+      "upperMotorTotal": "UTD",
       "lowerMotorTotal": "0",
       "touchTotal": "12",
       "prickTotal": "12",
@@ -10253,7 +10531,8 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 46,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
@@ -10261,189 +10540,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c6": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c7": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -10452,24 +10731,24 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "0",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "true",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "UTD",
+      "leftUpperMotorContainsNt": true,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "6",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "6",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "6",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "6",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "0",
-      "leftMotorTotal": "0",
-      "upperMotorTotal": "0",
+      "leftMotorTotal": "UTD",
+      "upperMotorTotal": "UTD",
       "lowerMotorTotal": "0",
       "touchTotal": "12",
       "prickTotal": "12",
@@ -10486,7 +10765,8 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 47,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "NT",
     "analSensation": "NT",
@@ -10494,189 +10774,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "NT!",
+        "leftTouch": "NT!",
+        "rightPrick": "NT!",
+        "leftPrick": "NT!",
         "rightMotor": "NT!",
-        "leftMotor": "NT!",
+        "leftMotor": "NT!"
+      },
+      "C6": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
-        "leftPrick": "NT!"
-      },
-      "c6": {
+        "leftPrick": "NT!",
         "rightMotor": "NT!",
-        "leftMotor": "NT!",
+        "leftMotor": "NT!"
+      },
+      "C7": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
-        "leftPrick": "NT!"
-      },
-      "c7": {
+        "leftPrick": "NT!",
         "rightMotor": "NT!",
-        "leftMotor": "NT!",
+        "leftMotor": "NT!"
+      },
+      "C8": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
-        "leftPrick": "NT!"
-      },
-      "c8": {
+        "leftPrick": "NT!",
         "rightMotor": "NT!",
-        "leftMotor": "NT!",
+        "leftMotor": "NT!"
+      },
+      "T1": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
-        "leftPrick": "NT!"
-      },
-      "t1": {
+        "leftPrick": "NT!",
         "rightMotor": "NT!",
-        "leftMotor": "NT!",
+        "leftMotor": "NT!"
+      },
+      "T2": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
-        "leftPrick": "NT!"
-      },
-      "l2": {
+        "leftPrick": "NT!",
         "rightMotor": "NT!",
-        "leftMotor": "NT!",
+        "leftMotor": "NT!"
+      },
+      "L3": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
-        "leftPrick": "NT!"
-      },
-      "l3": {
+        "leftPrick": "NT!",
         "rightMotor": "NT!",
-        "leftMotor": "NT!",
+        "leftMotor": "NT!"
+      },
+      "L4": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
-        "leftPrick": "NT!"
-      },
-      "l4": {
+        "leftPrick": "NT!",
         "rightMotor": "NT!",
-        "leftMotor": "NT!",
+        "leftMotor": "NT!"
+      },
+      "L5": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
-        "leftPrick": "NT!"
-      },
-      "l5": {
+        "leftPrick": "NT!",
         "rightMotor": "NT!",
-        "leftMotor": "NT!",
+        "leftMotor": "NT!"
+      },
+      "S1": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
-        "leftPrick": "NT!"
-      },
-      "s1": {
+        "leftPrick": "NT!",
         "rightMotor": "NT!",
-        "leftMotor": "NT!",
+        "leftMotor": "NT!"
+      },
+      "S2": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
         "leftPrick": "NT!"
       },
-      "s3": {
-        "rightTouch": "NT!",
-        "leftTouch": "NT!",
-        "rightPrick": "NT!",
-        "leftPrick": "NT!"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "NT!",
         "leftTouch": "NT!",
         "rightPrick": "NT!",
@@ -10685,21 +10965,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "0!",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "0!",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0!",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0!",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "0!",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "0!",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "0!",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "0!",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "0!",
       "leftMotorTotal": "0!",
       "upperMotorTotal": "0!",
@@ -10719,7 +10999,8 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 48,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "Yes",
     "analSensation": "Yes",
@@ -10727,189 +11008,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "NT",
+        "leftTouch": "NT",
+        "rightPrick": "1",
+        "leftPrick": "1",
         "rightMotor": "3",
-        "leftMotor": "2",
+        "leftMotor": "2"
+      },
+      "C6": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c6": {
+        "leftPrick": "1",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C7": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c7": {
+        "leftPrick": "1",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c8": {
+        "leftPrick": "1",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t1": {
+        "leftPrick": "1",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l2": {
+        "leftPrick": "1",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l3": {
+        "leftPrick": "1",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l4": {
+        "leftPrick": "1",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "l5": {
+        "leftPrick": "1",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "S1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s1": {
+        "leftPrick": "1",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "S2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "s3": {
-        "rightTouch": "NT",
-        "leftTouch": "NT",
-        "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "1",
@@ -10918,26 +11199,26 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "3",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "2",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "true",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "true",
-      "rightTouchTotal": "0",
-      "rightTouchContainsNt": "true",
-      "leftTouchTotal": "0",
-      "leftTouchContainsNt": "true",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "UTD",
+      "rightLowerMotorContainsNt": true,
+      "leftLowerMotorTotal": "UTD",
+      "leftLowerMotorContainsNt": true,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
+      "leftTouchTotal": "UTD",
+      "leftTouchContainsNt": true,
       "rightPrickTotal": "31",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "31",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "3",
-      "leftMotorTotal": "2",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "UTD",
+      "leftMotorTotal": "UTD",
       "upperMotorTotal": "5",
-      "lowerMotorTotal": "0",
-      "touchTotal": "0",
+      "lowerMotorTotal": "UTD",
+      "touchTotal": "UTD",
       "prickTotal": "62",
       "rightSensory": "C1,C2,C3,C4",
       "leftSensory": "C1,C2,C3,C4",
@@ -10948,11 +11229,12 @@ rhiIsncsciValidationTests.all = [
       "leftSensoryZpp": "",
       "rightMotorZpp": "C5,L2,L3,L4,L5,S1",
       "leftMotorZpp": "C5,L2,L3,L4,L5,S1",
-      "asiaImpairmentScale": "C, D"
+      "asiaImpairmentScale": "C,D"
     }
   },
   {
-    "id": 0,
+    "id": 49,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
@@ -10960,189 +11242,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t11": {
+      "T11": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
@@ -11151,27 +11433,27 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "36",
-      "rightTouchContainsNt": "true",
-      "leftTouchTotal": "36",
-      "leftTouchContainsNt": "true",
-      "rightPrickTotal": "37",
-      "rightPrickContainsNt": "true",
-      "leftPrickTotal": "37",
-      "leftPrickContainsNt": "true",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
+      "leftTouchTotal": "UTD",
+      "leftTouchContainsNt": true,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
       "rightMotorTotal": "25",
       "leftMotorTotal": "25",
       "upperMotorTotal": "50",
       "lowerMotorTotal": "0",
-      "touchTotal": "72",
-      "prickTotal": "74",
+      "touchTotal": "UTD",
+      "prickTotal": "UTD",
       "rightSensory": "T10",
       "leftSensory": "T10",
       "rightMotor": "T10",
@@ -11185,7 +11467,8 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 50,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "NT",
     "analSensation": "NT",
@@ -11193,189 +11476,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t11": {
+      "T11": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
@@ -11384,27 +11667,27 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "36",
-      "rightTouchContainsNt": "true",
-      "leftTouchTotal": "36",
-      "leftTouchContainsNt": "true",
-      "rightPrickTotal": "37",
-      "rightPrickContainsNt": "true",
-      "leftPrickTotal": "37",
-      "leftPrickContainsNt": "true",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
+      "leftTouchTotal": "UTD",
+      "leftTouchContainsNt": true,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
       "rightMotorTotal": "25",
       "leftMotorTotal": "25",
       "upperMotorTotal": "50",
       "lowerMotorTotal": "0",
-      "touchTotal": "72",
-      "prickTotal": "74",
+      "touchTotal": "UTD",
+      "prickTotal": "UTD",
       "rightSensory": "T10",
       "leftSensory": "T10",
       "rightMotor": "T10",
@@ -11418,7 +11701,8 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 51,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "NT",
     "analSensation": "NT",
@@ -11426,189 +11710,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l2": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l3": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l4": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l5": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "S1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "S2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "s3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
@@ -11617,27 +11901,27 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "25",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "25",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "54",
-      "rightTouchContainsNt": "true",
-      "leftTouchTotal": "54",
-      "leftTouchContainsNt": "true",
-      "rightPrickTotal": "54",
-      "rightPrickContainsNt": "true",
-      "leftPrickTotal": "54",
-      "leftPrickContainsNt": "true",
-      "rightMotorTotal": "25",
-      "leftMotorTotal": "25",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
+      "leftTouchTotal": "UTD",
+      "leftTouchContainsNt": true,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
+      "rightMotorTotal": "50",
+      "leftMotorTotal": "50",
       "upperMotorTotal": "50",
       "lowerMotorTotal": "50",
-      "touchTotal": "108",
-      "prickTotal": "108",
+      "touchTotal": "UTD",
+      "prickTotal": "UTD",
       "rightSensory": "S3,S4_5",
       "leftSensory": "S3,S4_5",
       "rightMotor": "S3,S4_5",
@@ -11651,197 +11935,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 52,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "NT",
     "analSensation": "NT",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      ISNCSCI NT Case 21:\n      The algorithm was not running all possibilities for when VAC and DAP have NT.\n      The algorithm was reporting an AIS score equal to A and D, when it should be A, B, C, and D.\n    ",
+    "comments": "ISNCSCI NT Case 21:\n The algorithm was not running all possibilities for when VAC and DAP have NT.\n The algorithm was reporting an AIS score equal to A and D, when it should be A, B, C, and D.",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "NT",
+        "leftTouch": "NT",
+        "rightPrick": "NT",
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c6": {
+        "leftPrick": "NT",
         "rightMotor": "4",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "C7": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c7": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "C8": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c8": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "2",
+        "leftMotor": "2"
+      },
+      "T1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "t1": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "2",
+        "leftMotor": "2"
+      },
+      "T2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l2": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l3": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l4": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l5": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "S1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "s1": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "S2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s3": {
-        "rightTouch": "NT",
-        "leftTouch": "NT",
-        "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
@@ -11850,27 +12135,27 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "9",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "17",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "true",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "true",
-      "rightTouchTotal": "0",
-      "rightTouchContainsNt": "true",
-      "leftTouchTotal": "0",
-      "leftTouchContainsNt": "true",
-      "rightPrickTotal": "0",
-      "rightPrickContainsNt": "true",
-      "leftPrickTotal": "0",
-      "leftPrickContainsNt": "true",
-      "rightMotorTotal": "9",
-      "leftMotorTotal": "17",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "UTD",
+      "rightLowerMotorContainsNt": true,
+      "leftLowerMotorTotal": "UTD",
+      "leftLowerMotorContainsNt": true,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
+      "leftTouchTotal": "UTD",
+      "leftTouchContainsNt": true,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
+      "rightMotorTotal": "UTD",
+      "leftMotorTotal": "UTD",
       "upperMotorTotal": "26",
-      "lowerMotorTotal": "0",
-      "touchTotal": "0",
-      "prickTotal": "0",
+      "lowerMotorTotal": "UTD",
+      "touchTotal": "UTD",
+      "prickTotal": "UTD",
       "rightSensory": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
       "leftSensory": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
       "rightMotor": "C1,C2,C3,C6",
@@ -11884,197 +12169,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 53,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      ISNCSCI NT Case 22:\n      This case is being reviewed to determine if a form will all intact and no for VAC and\/or DAP should be E or something else.\n    ",
+    "comments": "ISNCSCI NT Case 22:\n This case is being reviewed to determine if a form will all intact and no for VAC and\/or DAP should be E or something else.",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "NT",
+        "leftTouch": "NT",
+        "rightPrick": "NT",
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c6": {
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c7": {
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c8": {
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "t1": {
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l2": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l3": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l4": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l5": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "S1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "s1": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "S2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s3": {
-        "rightTouch": "NT",
-        "leftTouch": "NT",
-        "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
@@ -12083,231 +12369,232 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "true",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "true",
-      "rightTouchTotal": "0",
-      "rightTouchContainsNt": "true",
-      "leftTouchTotal": "0",
-      "leftTouchContainsNt": "true",
-      "rightPrickTotal": "0",
-      "rightPrickContainsNt": "true",
-      "leftPrickTotal": "0",
-      "leftPrickContainsNt": "true",
-      "rightMotorTotal": "25",
-      "leftMotorTotal": "true",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "UTD",
+      "rightLowerMotorContainsNt": true,
+      "leftLowerMotorTotal": "UTD",
+      "leftLowerMotorContainsNt": true,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
+      "leftTouchTotal": "UTD",
+      "leftTouchContainsNt": true,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
+      "rightMotorTotal": "UTD",
+      "leftMotorTotal": "UTD",
       "upperMotorTotal": "50",
-      "lowerMotorTotal": "0",
-      "touchTotal": "0",
-      "prickTotal": "0",
+      "lowerMotorTotal": "UTD",
+      "touchTotal": "UTD",
+      "prickTotal": "UTD",
       "rightSensory": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
       "leftSensory": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
       "rightMotor": "C1,C2,C3,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
       "leftMotor": "C1,C2,C3,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
       "neurologicalLevelOfInjury": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
-      "rightSensoryZpp": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
-      "leftSensoryZpp": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
-      "rightMotorZpp": "T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
-      "leftMotorZpp": "T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
-      "asiaImpairmentScale": "B, C, D, E"
+      "rightSensoryZpp": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
+      "leftSensoryZpp": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
+      "rightMotorZpp": "T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
+      "leftMotorZpp": "T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
+      "asiaImpairmentScale": "B,C,D,E"
     }
   },
   {
-    "id": 0,
+    "id": 54,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "NT",
     "analSensation": "NT",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      AIS D should also be reported as a possibility. Currently only B, C and E are.\n    ",
+    "comments": "AIS D should also be reported as a possibility. Currently only B, C and E are.",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
-        "rightMotor": "NT",
-        "leftMotor": "NT",
+      "C5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "T1": {
         "rightTouch": "NT",
         "leftTouch": "2",
         "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "t2": {
-        "rightTouch": "NT",
-        "leftTouch": "2",
-        "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "t3": {
-        "rightTouch": "NT",
-        "leftTouch": "2",
-        "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "t4": {
-        "rightTouch": "NT",
-        "leftTouch": "2",
-        "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "t5": {
-        "rightTouch": "NT",
-        "leftTouch": "2",
-        "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "t6": {
-        "rightTouch": "NT",
-        "leftTouch": "2",
-        "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "t7": {
-        "rightTouch": "NT",
-        "leftTouch": "2",
-        "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "t8": {
-        "rightTouch": "NT",
-        "leftTouch": "2",
-        "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "t9": {
-        "rightTouch": "NT",
-        "leftTouch": "2",
-        "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "t10": {
-        "rightTouch": "NT",
-        "leftTouch": "2",
-        "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "t11": {
-        "rightTouch": "NT",
-        "leftTouch": "2",
-        "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "t12": {
-        "rightTouch": "NT",
-        "leftTouch": "2",
-        "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "l1": {
-        "rightTouch": "NT",
-        "leftTouch": "2",
-        "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "l2": {
+        "leftPrick": "2",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "T2": {
         "rightTouch": "NT",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "2"
       },
-      "l3": {
+      "T3": {
+        "rightTouch": "NT",
+        "leftTouch": "2",
+        "rightPrick": "NT",
+        "leftPrick": "2"
+      },
+      "T4": {
+        "rightTouch": "NT",
+        "leftTouch": "2",
+        "rightPrick": "NT",
+        "leftPrick": "2"
+      },
+      "T5": {
+        "rightTouch": "NT",
+        "leftTouch": "2",
+        "rightPrick": "NT",
+        "leftPrick": "2"
+      },
+      "T6": {
+        "rightTouch": "NT",
+        "leftTouch": "2",
+        "rightPrick": "NT",
+        "leftPrick": "2"
+      },
+      "T7": {
+        "rightTouch": "NT",
+        "leftTouch": "2",
+        "rightPrick": "NT",
+        "leftPrick": "2"
+      },
+      "T8": {
+        "rightTouch": "NT",
+        "leftTouch": "2",
+        "rightPrick": "NT",
+        "leftPrick": "2"
+      },
+      "T9": {
+        "rightTouch": "NT",
+        "leftTouch": "2",
+        "rightPrick": "NT",
+        "leftPrick": "2"
+      },
+      "T10": {
+        "rightTouch": "NT",
+        "leftTouch": "2",
+        "rightPrick": "NT",
+        "leftPrick": "2"
+      },
+      "T11": {
+        "rightTouch": "NT",
+        "leftTouch": "2",
+        "rightPrick": "NT",
+        "leftPrick": "2"
+      },
+      "T12": {
+        "rightTouch": "NT",
+        "leftTouch": "2",
+        "rightPrick": "NT",
+        "leftPrick": "2"
+      },
+      "L1": {
+        "rightTouch": "NT",
+        "leftTouch": "2",
+        "rightPrick": "NT",
+        "leftPrick": "2"
+      },
+      "L2": {
+        "rightTouch": "NT",
+        "leftTouch": "2",
+        "rightPrick": "NT",
+        "leftPrick": "2",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L3": {
         "rightTouch": "NT",
         "leftTouch": "2",
         "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "l4": {
+        "leftPrick": "2",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L4": {
         "rightTouch": "NT",
         "leftTouch": "2",
         "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "l5": {
+        "leftPrick": "2",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L5": {
         "rightTouch": "NT",
         "leftTouch": "2",
         "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "s1": {
+        "leftPrick": "2",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "S1": {
+        "rightTouch": "NT",
+        "leftTouch": "2",
+        "rightPrick": "NT",
+        "leftPrick": "2",
+        "rightMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "S2": {
         "rightTouch": "NT",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "2"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "NT",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "2"
       },
-      "s3": {
-        "rightTouch": "NT",
-        "leftTouch": "2",
-        "rightPrick": "NT",
-        "leftPrick": "2"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "NT",
         "leftTouch": "2",
         "rightPrick": "NT",
@@ -12315,28 +12602,28 @@ rhiIsncsciValidationTests.all = [
       }
     },
     "totals": {
-      "rightUpperMotorTotal": "0",
-      "rightUpperMotorContainsNt": "true",
-      "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "true",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "true",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "true",
-      "rightTouchTotal": "14",
-      "rightTouchContainsNt": "true",
+      "rightUpperMotorTotal": "UTD",
+      "rightUpperMotorContainsNt": true,
+      "leftUpperMotorTotal": "UTD",
+      "leftUpperMotorContainsNt": true,
+      "rightLowerMotorTotal": "UTD",
+      "rightLowerMotorContainsNt": true,
+      "leftLowerMotorTotal": "UTD",
+      "leftLowerMotorContainsNt": true,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
       "leftTouchTotal": "56",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "14",
-      "rightPrickContainsNt": "true",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
       "leftPrickTotal": "56",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "0",
-      "leftMotorTotal": "0",
-      "upperMotorTotal": "0",
-      "lowerMotorTotal": "0",
-      "touchTotal": "70",
-      "prickTotal": "70",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "UTD",
+      "leftMotorTotal": "UTD",
+      "upperMotorTotal": "UTD",
+      "lowerMotorTotal": "UTD",
+      "touchTotal": "UTD",
+      "prickTotal": "UTD",
       "rightSensory": "C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
       "leftSensory": "S4_5",
       "rightMotor": "C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
@@ -12346,201 +12633,202 @@ rhiIsncsciValidationTests.all = [
       "leftSensoryZpp": "",
       "rightMotorZpp": "C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
       "leftMotorZpp": "C4,C5,C6,C7,C8,T1,L1,L2,L3,L4,L5,S1",
-      "asiaImpairmentScale": "B, C, D, E"
+      "asiaImpairmentScale": "B,C,D,E"
     }
   },
   {
-    "id": 0,
+    "id": 55,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      ISNCSCI NT Case 24\n      AIS D should also be reported as a possibility. Currently only A and B are.\n    ",
+    "comments": "ISNCSCI NT Case 24\n AIS D should also be reported as a possibility. Currently only A and B are.",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "NT",
+        "leftTouch": "NT",
+        "rightPrick": "NT",
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c6": {
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c7": {
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c8": {
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "t1": {
+        "leftPrick": "NT",
         "rightMotor": "4",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "T2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l2": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l3": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l4": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l5": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "s1": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s3": {
-        "rightTouch": "NT",
-        "leftTouch": "NT",
-        "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
@@ -12549,27 +12837,27 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "24",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "24",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "0",
-      "rightTouchContainsNt": "true",
-      "leftTouchTotal": "0",
-      "leftTouchContainsNt": "true",
-      "rightPrickTotal": "0",
-      "rightPrickContainsNt": "true",
-      "leftPrickTotal": "0",
-      "leftPrickContainsNt": "true",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
+      "leftTouchTotal": "UTD",
+      "leftTouchContainsNt": true,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
       "rightMotorTotal": "24",
       "leftMotorTotal": "24",
       "upperMotorTotal": "48",
       "lowerMotorTotal": "0",
-      "touchTotal": "0",
-      "prickTotal": "0",
+      "touchTotal": "UTD",
+      "prickTotal": "UTD",
       "rightSensory": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
       "leftSensory": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
       "rightMotor": "C1,C2,C3,T1",
@@ -12583,197 +12871,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 56,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      ISNCSCI NT Case 25\n      AIS B should also be reported as a possibility. Currently only C is.\n    ",
+    "comments": "ISNCSCI NT Case 25\n AIS B should also be reported as a possibility. Currently only C is.",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t12": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l1": {
+      "L1": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "0",
-        "leftPrick": "0"
+        "leftMotor": "0"
       },
-      "l4": {
-        "rightMotor": "NT",
-        "leftMotor": "NT",
+      "L4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
+        "leftPrick": "NT",
+        "rightMotor": "NT",
+        "leftMotor": "NT"
       },
-      "l5": {
-        "rightMotor": "0",
-        "leftMotor": "0",
+      "L5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "NT",
-        "leftPrick": "NT"
+        "leftPrick": "NT",
+        "rightMotor": "0",
+        "leftMotor": "0"
       },
-      "s1": {
-        "rightMotor": "NT",
-        "leftMotor": "NT",
+      "S1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
+        "leftPrick": "NT",
+        "rightMotor": "NT",
+        "leftMotor": "NT"
       },
-      "s2": {
+      "S2": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s3": {
+      "S3": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
@@ -12782,27 +13071,27 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "true",
-      "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "true",
-      "rightTouchTotal": "44",
-      "rightTouchContainsNt": "true",
-      "leftTouchTotal": "44",
-      "leftTouchContainsNt": "true",
-      "rightPrickTotal": "38",
-      "rightPrickContainsNt": "true",
-      "leftPrickTotal": "38",
-      "leftPrickContainsNt": "true",
-      "rightMotorTotal": "25",
-      "leftMotorTotal": "25",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "UTD",
+      "rightLowerMotorContainsNt": true,
+      "leftLowerMotorTotal": "UTD",
+      "leftLowerMotorContainsNt": true,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
+      "leftTouchTotal": "UTD",
+      "leftTouchContainsNt": true,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
+      "rightMotorTotal": "UTD",
+      "leftMotorTotal": "UTD",
       "upperMotorTotal": "50",
-      "lowerMotorTotal": "0",
-      "touchTotal": "88",
-      "prickTotal": "76",
+      "lowerMotorTotal": "UTD",
+      "touchTotal": "UTD",
+      "prickTotal": "UTD",
       "rightSensory": "T12",
       "leftSensory": "T12",
       "rightMotor": "T12",
@@ -12816,197 +13105,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 57,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      ISNCSCI NT Case 26\n    ",
+    "comments": "ISNCSCI NT Case 26",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
-        "rightMotor": "5",
-        "leftMotor": "5",
+      "C5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "0"
-      },
-      "c7": {
+        "leftPrick": "0",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "5",
-        "leftMotor": "1",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "5",
-        "leftMotor": "3",
+        "leftMotor": "1"
+      },
+      "T1": {
+        "rightTouch": "2",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "0",
+        "rightMotor": "5",
+        "leftMotor": "3"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "0"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "0"
       },
-      "t3": {
-        "rightTouch": "2",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "0"
-      },
-      "t4": {
+      "T4": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "T10": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T11": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "NT",
@@ -13015,27 +13305,27 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "19",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "21",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "17",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "15",
-      "rightPrickContainsNt": "true",
-      "leftPrickTotal": "8",
-      "leftPrickContainsNt": "true",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
       "rightMotorTotal": "25",
       "leftMotorTotal": "19",
       "upperMotorTotal": "44",
       "lowerMotorTotal": "0",
       "touchTotal": "38",
-      "prickTotal": "23",
+      "prickTotal": "UTD",
       "rightSensory": "C6",
       "leftSensory": "C5",
       "rightMotor": "T1",
@@ -13049,197 +13339,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 58,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      ISNCSCI NT Case 24\n      AIS D should also be reported as a possibility. Currently only A and B are.\n    ",
+    "comments": "ISNCSCI NT Case 24\n AIS D should also be reported as a possibility. Currently only A and B are.",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "NT",
+        "leftTouch": "NT",
+        "rightPrick": "NT",
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "C6": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c6": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "C7": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c7": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "C8": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c8": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "T1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "t1": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "T2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l2": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l3": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l4": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l5": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "s1": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s3": {
-        "rightTouch": "NT",
-        "leftTouch": "NT",
-        "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
@@ -13247,28 +13538,28 @@ rhiIsncsciValidationTests.all = [
       }
     },
     "totals": {
-      "rightUpperMotorTotal": "0",
-      "rightUpperMotorContainsNt": "true",
-      "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "true",
+      "rightUpperMotorTotal": "UTD",
+      "rightUpperMotorContainsNt": true,
+      "leftUpperMotorTotal": "UTD",
+      "leftUpperMotorContainsNt": true,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "0",
-      "rightTouchContainsNt": "true",
-      "leftTouchTotal": "0",
-      "leftTouchContainsNt": "true",
-      "rightPrickTotal": "0",
-      "rightPrickContainsNt": "true",
-      "leftPrickTotal": "0",
-      "leftPrickContainsNt": "true",
-      "rightMotorTotal": "0",
-      "leftMotorTotal": "0",
-      "upperMotorTotal": "0",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
+      "leftTouchTotal": "UTD",
+      "leftTouchContainsNt": true,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
+      "rightMotorTotal": "UTD",
+      "leftMotorTotal": "UTD",
+      "upperMotorTotal": "UTD",
       "lowerMotorTotal": "0",
-      "touchTotal": "0",
-      "prickTotal": "0",
+      "touchTotal": "UTD",
+      "prickTotal": "UTD",
       "rightSensory": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
       "leftSensory": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
       "rightMotor": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1",
@@ -13282,197 +13573,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 59,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      ISNCSCI NT Case 28\n    ",
+    "comments": "ISNCSCI NT Case 28",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "2",
-        "leftTouch": "2",
+        "leftTouch": "NT",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l2": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L3": {
         "rightTouch": "2",
         "leftTouch": "NT",
         "rightPrick": "2",
-        "leftPrick": "NT"
-      },
-      "l3": {
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "L4": {
         "rightTouch": "2",
         "leftTouch": "NT",
         "rightPrick": "2",
-        "leftPrick": "NT"
-      },
-      "l4": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "NT",
-        "rightPrick": "2",
-        "leftPrick": "NT"
+        "leftMotor": "5"
       },
-      "l5": {
+      "L5": {
+        "rightTouch": "NT",
+        "leftTouch": "NT",
+        "rightPrick": "NT",
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "S1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "s1": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "S2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s3": {
-        "rightTouch": "NT",
-        "leftTouch": "NT",
-        "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
@@ -13481,27 +13773,27 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "5",
-      "rightLowerMotorContainsNt": "true",
-      "leftLowerMotorTotal": "16",
-      "leftLowerMotorContainsNt": "true",
-      "rightTouchTotal": "46",
-      "rightTouchContainsNt": "true",
-      "leftTouchTotal": "40",
-      "leftTouchContainsNt": "true",
-      "rightPrickTotal": "46",
-      "rightPrickContainsNt": "true",
-      "leftPrickTotal": "40",
-      "leftPrickContainsNt": "true",
-      "rightMotorTotal": "30",
-      "leftMotorTotal": "41",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "UTD",
+      "rightLowerMotorContainsNt": true,
+      "leftLowerMotorTotal": "UTD",
+      "leftLowerMotorContainsNt": true,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
+      "leftTouchTotal": "UTD",
+      "leftTouchContainsNt": true,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
+      "rightMotorTotal": "UTD",
+      "leftMotorTotal": "UTD",
       "upperMotorTotal": "50",
-      "lowerMotorTotal": "21",
-      "touchTotal": "86",
-      "prickTotal": "86",
+      "lowerMotorTotal": "UTD",
+      "touchTotal": "UTD",
+      "prickTotal": "UTD",
       "rightSensory": "L4,L5,S1,S2,S3,S4_5",
       "leftSensory": "L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
       "rightMotor": "L1,L2,L3",
@@ -13515,197 +13807,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 60,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      ISNCSCI NT Case 28\n    ",
+    "comments": "ISNCSCI NT Case 28",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "NT",
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c6": {
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c7": {
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c8": {
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "t1": {
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l2": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l3": {
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "4",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "NT",
-        "leftPrick": "NT"
+        "leftMotor": "4"
       },
-      "l4": {
-        "rightMotor": "NT",
-        "leftMotor": "NT",
+      "L4": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l5": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "L5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "s1": {
+        "leftPrick": "NT",
         "rightMotor": "NT",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "S1": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "NT",
-        "leftPrick": "NT"
+        "leftPrick": "NT",
+        "rightMotor": "NT",
+        "leftMotor": "NT"
       },
-      "s2": {
+      "S2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s3": {
+      "S3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "NT",
@@ -13714,27 +14007,27 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
-      "rightLowerMotorTotal": "5",
-      "rightLowerMotorContainsNt": "true",
-      "leftLowerMotorTotal": "4",
-      "leftLowerMotorContainsNt": "true",
+      "leftUpperMotorContainsNt": false,
+      "rightLowerMotorTotal": "UTD",
+      "rightLowerMotorContainsNt": true,
+      "leftLowerMotorTotal": "UTD",
+      "leftLowerMotorContainsNt": true,
       "rightTouchTotal": "53",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "53",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "0",
-      "rightPrickContainsNt": "true",
-      "leftPrickTotal": "0",
-      "leftPrickContainsNt": "true",
-      "rightMotorTotal": "30",
-      "leftMotorTotal": "29",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
+      "rightMotorTotal": "UTD",
+      "leftMotorTotal": "UTD",
       "upperMotorTotal": "50",
-      "lowerMotorTotal": "9",
+      "lowerMotorTotal": "UTD",
       "touchTotal": "106",
-      "prickTotal": "0",
+      "prickTotal": "UTD",
       "rightSensory": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3",
       "leftSensory": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3",
       "rightMotor": "C1,C2,C3,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1",
@@ -13748,7 +14041,8 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 61,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "Yes",
     "analSensation": "Yes",
@@ -13756,189 +14050,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "NT",
+        "leftTouch": "NT",
+        "rightPrick": "NT",
+        "leftPrick": "NT",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c6": {
+        "leftPrick": "NT",
         "rightMotor": "4",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "C7": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c7": {
+        "leftPrick": "NT",
         "rightMotor": "4",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "C8": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "c8": {
+        "leftPrick": "NT",
         "rightMotor": "4",
-        "leftMotor": "3",
+        "leftMotor": "3"
+      },
+      "T1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "t1": {
+        "leftPrick": "NT",
         "rightMotor": "2",
-        "leftMotor": "NT",
+        "leftMotor": "NT"
+      },
+      "T2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l2": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l3": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l4": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "l5": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "s1": {
+        "leftPrick": "NT",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
         "leftPrick": "NT"
       },
-      "s3": {
-        "rightTouch": "NT",
-        "leftTouch": "NT",
-        "rightPrick": "NT",
-        "leftPrick": "NT"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "NT",
         "leftTouch": "NT",
         "rightPrick": "NT",
@@ -13947,41 +14241,42 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "19",
-      "rightUpperMotorContainsNt": "false",
-      "leftUpperMotorTotal": "12",
-      "leftUpperMotorContainsNt": "true",
+      "rightUpperMotorContainsNt": false,
+      "leftUpperMotorTotal": "UTD",
+      "leftUpperMotorContainsNt": true,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
-      "rightTouchTotal": "0",
-      "rightTouchContainsNt": "true",
-      "leftTouchTotal": "0",
-      "leftTouchContainsNt": "true",
-      "rightPrickTotal": "0",
-      "rightPrickContainsNt": "true",
-      "leftPrickTotal": "0",
-      "leftPrickContainsNt": "true",
+      "leftLowerMotorContainsNt": false,
+      "rightTouchTotal": "UTD",
+      "rightTouchContainsNt": true,
+      "leftTouchTotal": "UTD",
+      "leftTouchContainsNt": true,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
       "rightMotorTotal": "19",
-      "leftMotorTotal": "12",
-      "upperMotorTotal": "31",
+      "leftMotorTotal": "UTD",
+      "upperMotorTotal": "UTD",
       "lowerMotorTotal": "0",
-      "touchTotal": "0",
-      "prickTotal": "0",
+      "touchTotal": "UTD",
+      "prickTotal": "UTD",
       "rightSensory": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
       "leftSensory": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
       "rightMotor": "C1,C2,C3,C6",
       "leftMotor": "C1,C2,C3,C5,C6,C7",
       "neurologicalLevelOfInjury": "C1,C2,C3,C4,C5,C6",
-      "rightSensoryZpp": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
-      "leftSensoryZpp": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3,S4_5",
+      "rightSensoryZpp": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
+      "leftSensoryZpp": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
       "rightMotorZpp": "T1",
       "leftMotorZpp": "C8,T1",
       "asiaImpairmentScale": "C"
     }
   },
   {
-    "id": 0,
+    "id": 62,
+    "group": "NtCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
@@ -13989,189 +14284,189 @@ rhiIsncsciValidationTests.all = [
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
     "comments": "",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
-        "rightMotor": "5",
-        "leftMotor": "5",
+      "C5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "0"
-      },
-      "c7": {
+        "leftPrick": "0",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "5",
-        "leftMotor": "1",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "5",
-        "leftMotor": "3",
+        "leftMotor": "1"
+      },
+      "T1": {
+        "rightTouch": "2",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "0",
+        "rightMotor": "5",
+        "leftMotor": "3"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "0"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "0"
       },
-      "t3": {
-        "rightTouch": "2",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "0"
-      },
-      "t4": {
+      "T4": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "T10": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T11": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "NT",
@@ -14180,231 +14475,232 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "19",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "21",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "17",
-      "leftTouchContainsNt": "false",
-      "rightPrickTotal": "15",
-      "rightPrickContainsNt": "true",
-      "leftPrickTotal": "8",
-      "leftPrickContainsNt": "true",
+      "leftTouchContainsNt": false,
+      "rightPrickTotal": "UTD",
+      "rightPrickContainsNt": true,
+      "leftPrickTotal": "UTD",
+      "leftPrickContainsNt": true,
       "rightMotorTotal": "25",
       "leftMotorTotal": "19",
       "upperMotorTotal": "44",
       "lowerMotorTotal": "0",
       "touchTotal": "38",
-      "prickTotal": "23",
+      "prickTotal": "UTD",
       "rightSensory": "C6",
       "leftSensory": "C5",
       "rightMotor": "T1",
       "leftMotor": "C7",
       "neurologicalLevelOfInjury": "C5",
-      "rightSensoryZpp": "T4,S4_5",
-      "leftSensoryZpp": "T4,S4_5",
+      "rightSensoryZpp": "T4",
+      "leftSensoryZpp": "T4",
       "rightMotorZpp": "T1",
       "leftMotorZpp": "T1",
       "asiaImpairmentScale": "A,B"
     }
   },
   {
-    "id": 0,
+    "id": 63,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "Yes",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "",
     "leftLowestNonKeyMuscleWithMotorFunction": "",
-    "comments": "\n      ASIA E with 5* values\n    ",
+    "comments": "ASIA E with 5* values",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5*",
-        "leftMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5*",
-        "leftMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5*",
-        "leftMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5*",
-        "leftMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5*",
-        "leftMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l2": {
+        "leftPrick": "2",
         "rightMotor": "5*",
-        "leftMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "L3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l3": {
+        "leftPrick": "2",
         "rightMotor": "5*",
-        "leftMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "L4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l4": {
+        "leftPrick": "2",
         "rightMotor": "5*",
-        "leftMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "L5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l5": {
+        "leftPrick": "2",
         "rightMotor": "5*",
-        "leftMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "S1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s1": {
+        "leftPrick": "2",
         "rightMotor": "5*",
-        "leftMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "S2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "s3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
@@ -14413,21 +14709,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "25",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "25",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "56",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "56",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "56",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "56",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "50",
       "leftMotorTotal": "50",
       "upperMotorTotal": "50",
@@ -14447,197 +14743,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 64,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Given that I complete a form with all values set to Zero, I get an ASIA impairment of C1\n    ",
+    "comments": "Given that I complete a form with all values set to Zero, I get an ASIA impairment of C1",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c6": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c7": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -14646,21 +14943,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "0",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "0",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "0",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "0",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "0",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "0",
       "leftMotorTotal": "0",
       "upperMotorTotal": "0",
@@ -14680,197 +14977,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 65,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "Yes",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Given that I complete a form with impairment values not due to SCI, I get an ASIA impairment score equal to E\n    ",
+    "comments": "Given that I complete a form with impairment values not due to SCI, I get an ASIA impairment score equal to E",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "1!",
         "leftTouch": "1!",
         "rightPrick": "1!",
         "leftPrick": "1!"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
         "leftPrick": "0!"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "0!",
+        "leftTouch": "0!",
+        "rightPrick": "0!",
+        "leftPrick": "0!",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
-        "leftPrick": "0!"
-      },
-      "c6": {
+        "leftPrick": "0!",
         "rightMotor": "4!",
-        "leftMotor": "4!",
+        "leftMotor": "4!"
+      },
+      "C7": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
-        "leftPrick": "0!"
-      },
-      "c7": {
+        "leftPrick": "0!",
         "rightMotor": "3!",
-        "leftMotor": "3!",
+        "leftMotor": "3!"
+      },
+      "C8": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
-        "leftPrick": "0!"
-      },
-      "c8": {
+        "leftPrick": "0!",
         "rightMotor": "2!",
-        "leftMotor": "2!",
+        "leftMotor": "2!"
+      },
+      "T1": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
-        "leftPrick": "0!"
-      },
-      "t1": {
+        "leftPrick": "0!",
         "rightMotor": "1!",
-        "leftMotor": "1!",
+        "leftMotor": "1!"
+      },
+      "T2": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
         "leftPrick": "0!"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
         "leftPrick": "0!"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
         "leftPrick": "0!"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
         "leftPrick": "0!"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
         "leftPrick": "0!"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
         "leftPrick": "0!"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
         "leftPrick": "0!"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
         "leftPrick": "0!"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
         "leftPrick": "0!"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
         "leftPrick": "0!"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
         "leftPrick": "0!"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
         "leftPrick": "0!"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
-        "leftPrick": "0!"
-      },
-      "l2": {
+        "leftPrick": "0!",
         "rightMotor": "0!",
-        "leftMotor": "0!",
+        "leftMotor": "0!"
+      },
+      "L3": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
-        "leftPrick": "0!"
-      },
-      "l3": {
+        "leftPrick": "0!",
         "rightMotor": "0!",
-        "leftMotor": "0!",
+        "leftMotor": "0!"
+      },
+      "L4": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
-        "leftPrick": "0!"
-      },
-      "l4": {
+        "leftPrick": "0!",
         "rightMotor": "0!",
-        "leftMotor": "0!",
+        "leftMotor": "0!"
+      },
+      "L5": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
-        "leftPrick": "0!"
-      },
-      "l5": {
+        "leftPrick": "0!",
         "rightMotor": "0!",
-        "leftMotor": "0!",
+        "leftMotor": "0!"
+      },
+      "S1": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
-        "leftPrick": "0!"
-      },
-      "s1": {
+        "leftPrick": "0!",
         "rightMotor": "0!",
-        "leftMotor": "0!",
+        "leftMotor": "0!"
+      },
+      "S2": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
         "leftPrick": "0!"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
         "leftPrick": "0!"
       },
-      "s3": {
-        "rightTouch": "0!",
-        "leftTouch": "0!",
-        "rightPrick": "0!",
-        "leftPrick": "0!"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
@@ -14879,21 +15177,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "15!",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "15!",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0!",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0!",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "3!",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "3!",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "3!",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "3!",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "15!",
       "leftMotorTotal": "15!",
       "upperMotorTotal": "30!",
@@ -14913,197 +15211,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 66,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "T4",
     "leftLowestNonKeyMuscleWithMotorFunction": "",
-    "comments": "\n      Edge case 1.  [EE: Aug 20, 2012] This case got ammended after implementing Ronald Reeves suggestion on reflecting the non-key muscles on the ZPP.\n      Before the changes the Most Caudal Right Motor Name was C7.\n      After the changes the Most Caudal Right Motor Name became T4\n      Right motor function at T4\n    ",
+    "comments": "Edge case 1. [EE: Aug 20, 2012] This case got ammended after implementing Ronald Reeves suggestion on reflecting the non-key muscles on the ZPP.\n Before the changes the Most Caudal Right Motor Name was C7.\n After the changes the Most Caudal Right Motor Name became T4\n Right motor function at T4",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
+        "leftMotor": "5"
       },
-      "c7": {
-        "rightMotor": "4",
-        "leftMotor": "3",
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "0",
         "rightPrick": "2",
-        "leftPrick": "1"
+        "leftPrick": "1",
+        "rightMotor": "4",
+        "leftMotor": "3"
       },
-      "c8": {
-        "rightMotor": "0",
-        "leftMotor": "0",
+      "C8": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "1",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "1",
-        "leftPrick": "0"
-      },
-      "t2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t4": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t5": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t6": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t7": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t8": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t9": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t10": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t11": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t12": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l1": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l3": {
+      "T3": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T4": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T6": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T8": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T9": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T10": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T11": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "T12": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0"
+      },
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
@@ -15112,21 +15411,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "14",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "13",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "14",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "11",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "14",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "11",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "14",
       "leftMotorTotal": "13",
       "upperMotorTotal": "27",
@@ -15138,205 +15437,206 @@ rhiIsncsciValidationTests.all = [
       "rightMotor": "C7",
       "leftMotor": "C7",
       "neurologicalLevelOfInjury": "C6",
-      "rightSensoryZpp": "S4_5",
-      "leftSensoryZpp": "S4_5",
+      "rightSensoryZpp": "",
+      "leftSensoryZpp": "",
       "rightMotorZpp": "T4",
       "leftMotorZpp": "C7",
       "asiaImpairmentScale": "C"
     }
   },
   {
-    "id": 0,
+    "id": 67,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Edge case 2.  Given that I enter all the values for case 13, then the algorighmt calculates the correct results\n    ",
+    "comments": "Edge case 2. Given that I enter all the values for case 13, then the algorighmt calculates the correct results",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t11": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t12": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "0"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -15345,21 +15645,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "38",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "37",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "38",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "36",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "25",
       "leftMotorTotal": "25",
       "upperMotorTotal": "50",
@@ -15379,197 +15679,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 68,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Edge case 3.  Given that I enter all the values for case 14, then the algorighmt calculates the correct results\n    ",
+    "comments": "Edge case 3. Given that I enter all the values for case 14, then the algorighmt calculates the correct results",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "l1": {
-        "rightTouch": "2",
+      "L2": {
+        "rightTouch": "1",
         "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l2": {
+        "rightPrick": "1",
+        "leftPrick": "2",
         "rightMotor": "2",
-        "leftMotor": "1",
-        "rightTouch": "1",
-        "leftTouch": "2",
-        "rightPrick": "1",
-        "leftPrick": "2"
+        "leftMotor": "1"
       },
-      "l3": {
-        "rightMotor": "0",
-        "leftMotor": "0",
+      "L3": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "1"
-      },
-      "l4": {
+        "leftPrick": "1",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s3": {
+      "S3": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
@@ -15578,21 +15879,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "2",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "1",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "44",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "45",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "43",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "46",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "27",
       "leftMotorTotal": "26",
       "upperMotorTotal": "50",
@@ -15612,197 +15913,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 69,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Edge case 4.  Given that I enter all the values for case 15, then the algorighmt calculates the correct results\n    ",
+    "comments": "Edge case 4. Given that I enter all the values for case 15, then the algorighmt calculates the correct results",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "4",
-        "leftMotor": "4",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
+        "leftMotor": "4"
       },
-      "c7": {
+      "C7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "1",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "C8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -15811,21 +16113,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "10",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "10",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "10",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "10",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "10",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "10",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "10",
       "leftMotorTotal": "10",
       "upperMotorTotal": "20",
@@ -15845,197 +16147,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 70,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "Yes",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Edge case 5.  Given that I enter all the values for case 16, then the algorighmt calculates the correct results\n    ",
+    "comments": "Edge case 5. Given that I enter all the values for case 16, then the algorighmt calculates the correct results",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "0",
+        "leftTouch": "1",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "4",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "C6": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c6": {
+        "leftPrick": "0",
         "rightMotor": "1",
-        "leftMotor": "2",
-        "rightTouch": "0",
-        "leftTouch": "1",
-        "rightPrick": "0",
-        "leftPrick": "0"
+        "leftMotor": "2"
       },
-      "c7": {
+      "C7": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "2",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "C8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "1",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "T1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "1",
-        "leftMotor": "1",
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
+        "leftMotor": "1"
       },
-      "t2": {
+      "T2": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "2",
         "leftPrick": "0"
       },
-      "t3": {
+      "T3": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t4": {
+      "T4": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T6": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "t7": {
+      "T7": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "t8": {
+      "T8": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "t9": {
+      "T9": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "t10": {
+      "T10": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T11": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "2",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "3",
-        "leftMotor": "3",
+        "leftMotor": "3"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "1",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "1",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "2",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s3": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
@@ -16044,21 +16347,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "9",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "9",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "9",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "19",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "17",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "19",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "8",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "12",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "18",
       "leftMotorTotal": "28",
       "upperMotorTotal": "18",
@@ -16078,197 +16381,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 71,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Edge case 6.  Given that I enter all the values for case 17, then the algorighmt calculates the correct results\n    ",
+    "comments": "Edge case 6. Given that I enter all the values for case 17, then the algorighmt calculates the correct results",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t12": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l1": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "1",
-        "leftMotor": "2",
+        "leftMotor": "2"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -16277,21 +16581,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "1",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "3",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "38",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "38",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "38",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "38",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "26",
       "leftMotorTotal": "28",
       "upperMotorTotal": "50",
@@ -16311,197 +16615,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 72,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "Yes",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Edge case 7.  Given that I enter all the values for case 18, then the algorighmt calculates the correct results\n    ",
+    "comments": "Edge case 7. Given that I enter all the values for case 18, then the algorighmt calculates the correct results",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
+        "leftMotor": "5"
       },
-      "c6": {
-        "rightMotor": "3",
-        "leftMotor": "5",
+      "C6": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "3",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "3",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
+        "leftPrick": "2",
+        "rightMotor": "3",
+        "leftMotor": "5"
       },
-      "t1": {
+      "T1": {
+        "rightTouch": "1",
+        "leftTouch": "2",
+        "rightPrick": "1",
+        "leftPrick": "2",
         "rightMotor": "2",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "T2": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "l2": {
+        "leftPrick": "2",
         "rightMotor": "3",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L3": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "l3": {
+        "leftPrick": "2",
         "rightMotor": "4",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L4": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "l4": {
+        "leftPrick": "2",
         "rightMotor": "3",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L5": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "l5": {
+        "leftPrick": "2",
         "rightMotor": "3",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "S1": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "s1": {
+        "leftPrick": "2",
         "rightMotor": "3",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "S2": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "s3": {
-        "rightTouch": "1",
-        "leftTouch": "2",
-        "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
@@ -16510,21 +16815,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "16",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "24",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "16",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "21",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "32",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "56",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "32",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "56",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "32",
       "leftMotorTotal": "45",
       "upperMotorTotal": "40",
@@ -16544,197 +16849,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 73,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Edge case 8.  Given that I enter all the values for case 19, then the algorighmt calculates the correct results\n    ",
+    "comments": "Edge case 8. Given that I enter all the values for case 19, then the algorighmt calculates the correct results",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t12": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l1": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
-        "rightMotor": "0",
-        "leftMotor": "2",
+      "L2": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "1",
+        "leftMotor": "2"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "1"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
+        "rightMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -16743,21 +17049,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "4",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "38",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "42",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "38",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "38",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "25",
       "leftMotorTotal": "29",
       "upperMotorTotal": "50",
@@ -16777,197 +17083,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 74,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "Yes",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Edge case 9.  Given that I enter all the values for case 20, then the algorighmt calculates the correct results\n    ",
+    "comments": "Edge case 9. Given that I enter all the values for case 20, then the algorighmt calculates the correct results",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
+        "leftMotor": "5"
       },
-      "c7": {
-        "rightMotor": "5",
-        "leftMotor": "5",
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "5",
-        "leftMotor": "4",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "0"
+        "leftPrick": "0",
+        "rightMotor": "5",
+        "leftMotor": "4"
       },
-      "t1": {
+      "T1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "4",
-        "leftMotor": "0",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
+        "leftMotor": "0"
       },
-      "t2": {
+      "T2": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T3": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "0"
       },
-      "t4": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "0",
         "leftPrick": "2"
       },
-      "t7": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T8": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T11": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "1"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "0",
+        "leftPrick": "1",
         "rightMotor": "4",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "L3": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "1"
-      },
-      "l3": {
+        "leftPrick": "1",
         "rightMotor": "5",
-        "leftMotor": "1",
+        "leftMotor": "1"
+      },
+      "L4": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "1"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "4",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "1",
         "rightMotor": "5",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
-        "leftPrick": "1"
-      },
-      "s1": {
+        "leftPrick": "1",
         "rightMotor": "5",
-        "leftMotor": "0",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "0",
-        "leftPrick": "1"
+        "leftMotor": "0"
       },
-      "s2": {
+      "S2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "0",
         "leftPrick": "2"
       },
-      "s3": {
+      "S3": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
@@ -16976,21 +17283,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "24",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "19",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "23",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "2",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "42",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "44",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "19",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "26",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "47",
       "leftMotorTotal": "21",
       "upperMotorTotal": "43",
@@ -17010,197 +17317,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 75,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Edge case 10.  Given that I enter all the values for case 21, then the algorighmt calculates the correct results\n    ",
+    "comments": "Edge case 10. Given that I enter all the values for case 21, then the algorighmt calculates the correct results",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "1",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "4",
-        "leftMotor": "4",
-        "rightTouch": "2",
-        "leftTouch": "1",
-        "rightPrick": "2",
-        "leftPrick": "2"
+        "leftMotor": "4"
       },
-      "c7": {
-        "rightMotor": "4",
-        "leftMotor": "4",
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "0"
+        "leftPrick": "0",
+        "rightMotor": "4",
+        "leftMotor": "4"
       },
-      "c8": {
-        "rightMotor": "2",
-        "leftMotor": "0",
+      "C8": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
+        "leftPrick": "0",
+        "rightMotor": "2",
+        "leftMotor": "0"
       },
-      "t1": {
-        "rightMotor": "3",
-        "leftMotor": "0",
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
+        "leftPrick": "0",
+        "rightMotor": "3",
+        "leftMotor": "0"
       },
-      "t2": {
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t3": {
+      "T3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t4": {
+      "T4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "T10": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T11": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -17209,21 +17517,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "18",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "12",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "15",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "9",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "11",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "10",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "18",
       "leftMotorTotal": "12",
       "upperMotorTotal": "30",
@@ -17243,197 +17551,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 76,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "Yes",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Edge case 11.  Given that I enter all the values for case 22, then the algorighmt calculates the correct results\n    ",
+    "comments": "Edge case 11. Given that I enter all the values for case 22, then the algorighmt calculates the correct results",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l2": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l3": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l4": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l5": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "S1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "S2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "s3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
@@ -17442,21 +17751,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "25",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "25",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "56",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "56",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "56",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "56",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "50",
       "leftMotorTotal": "50",
       "upperMotorTotal": "50",
@@ -17476,197 +17785,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 77,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "C8",
     "leftLowestNonKeyMuscleWithMotorFunction": "T5",
-    "comments": "\n      Given that I complete a form with all values set to Zero, I get an ASIA impairment of C1\n    ",
+    "comments": "Given that I complete a form with all values set to Zero, I get an ASIA impairment of C1",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c6": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c7": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "C8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "c8": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "t1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "T2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t4": {
+      "T5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "T10": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "T11": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T12": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l2": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -17675,21 +17985,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "0",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "0",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "6",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "6",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "6",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "6",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "0",
       "leftMotorTotal": "0",
       "upperMotorTotal": "0",
@@ -17709,197 +18019,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 78,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "",
     "leftLowestNonKeyMuscleWithMotorFunction": "L1",
-    "comments": "\n      Feature requested by Ron Reeves.  When expressing a non-key muscle with motor function through the dropdowns, the original code was not taking into consideration its value when calculating the Zone of Partial Preservation.  If the value is the lowest Motor value then it will be used to calculate the ZPP.  Given that I complete a form for a complete injury with motor values all the way to T1 and I select L1 as the left lowest non-key muscle with motor value WHEN I press the calculate button THEN the resulting right motor ZPP value is L1\n      Left motor function at 20\n    ",
+    "comments": "Feature requested by Ron Reeves. When expressing a non-key muscle with motor function through the dropdowns, the original code was not taking into consideration its value when calculating the Zone of Partial Preservation. If the value is the lowest Motor value then it will be used to calculate the ZPP. Given that I complete a form for a complete injury with motor values all the way to T1 and I select L1 as the left lowest non-key muscle with motor value WHEN I press the calculate button THEN the resulting right motor ZPP value is L1\n Left motor function at 20",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "1",
         "rightMotor": "4",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "1"
+        "leftMotor": "5"
       },
-      "c8": {
+      "C8": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
         "rightMotor": "3",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "T1": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t1": {
+        "leftPrick": "1",
         "rightMotor": "1",
-        "leftMotor": "3",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
+        "leftMotor": "3"
       },
-      "t2": {
+      "T2": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t3": {
+      "T3": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t4": {
+      "T4": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T6": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T7": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "t8": {
+      "T8": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "t9": {
+      "T9": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "t10": {
+      "T10": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T11": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "1",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "1",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -17908,21 +18219,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "18",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "22",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "33",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "19",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "14",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "16",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "18",
       "leftMotorTotal": "22",
       "upperMotorTotal": "40",
@@ -17942,197 +18253,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 79,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "L1",
     "leftLowestNonKeyMuscleWithMotorFunction": "",
-    "comments": "\n      Feature requested by Ron Reeves.  When expressing a non-key muscle with motor function through the dropdowns, the original code was not taking into consideration its value when calculating the Zone of Partial Preservation.  If the value is the lowest Motor value then it will be used to calculate the ZPP.  Given that I complete a form for a complete injury with motor values all the way to T1 and I select L1 as the right lowest non-key muscle with motor value WHEN I press the calculate button THEN the resulting right motor ZPP value is L1.\n      Right motor function at 20\n    ",
+    "comments": "Feature requested by Ron Reeves. When expressing a non-key muscle with motor function through the dropdowns, the original code was not taking into consideration its value when calculating the Zone of Partial Preservation. If the value is the lowest Motor value then it will be used to calculate the ZPP. Given that I complete a form for a complete injury with motor values all the way to T1 and I select L1 as the right lowest non-key muscle with motor value WHEN I press the calculate button THEN the resulting right motor ZPP value is L1.\n Right motor function at 20",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "1",
         "rightMotor": "4",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "1"
+        "leftMotor": "5"
       },
-      "c8": {
+      "C8": {
+        "rightTouch": "1",
+        "leftTouch": "1",
+        "rightPrick": "1",
+        "leftPrick": "1",
         "rightMotor": "3",
-        "leftMotor": "4",
+        "leftMotor": "4"
+      },
+      "T1": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t1": {
+        "leftPrick": "1",
         "rightMotor": "1",
-        "leftMotor": "3",
-        "rightTouch": "1",
-        "leftTouch": "1",
-        "rightPrick": "1",
-        "leftPrick": "1"
+        "leftMotor": "3"
       },
-      "t2": {
+      "T2": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t3": {
+      "T3": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t4": {
+      "T4": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T5": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T6": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T7": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "t8": {
+      "T8": {
         "rightTouch": "1",
         "leftTouch": "1",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "t9": {
+      "T9": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "1"
       },
-      "t10": {
+      "T10": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T11": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "1",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "1",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s3": {
-        "rightTouch": "1",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
@@ -18141,21 +18453,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "18",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "22",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "33",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "19",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "14",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "16",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "18",
       "leftMotorTotal": "22",
       "upperMotorTotal": "40",
@@ -18175,197 +18487,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 80,
+    "group": "OriginalCases",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "Yes",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Use of both the Asterisk and the Exclamation point flag on the same form\n    ",
+    "comments": "Use of both the Asterisk and the Exclamation point flag on the same form",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t2": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t3": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t5": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "1!",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t6": {
+      "T6": {
         "rightTouch": "0!",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t7": {
+      "T7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t8": {
+      "T8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t9": {
+      "T9": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t10": {
+      "T10": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t11": {
+      "T11": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l3": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l4": {
+        "leftPrick": "2",
         "rightMotor": "4!",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l5": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5*",
+        "leftMotor": "5*"
+      },
+      "S1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "S2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "s2": {
+      "S3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "s3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
@@ -18374,26 +18687,26 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "24!",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "25",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "54!",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "55!",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "56",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "56",
-      "leftPrickContainsNt": "false",
-      "rightMotorTotal": "49",
+      "leftPrickContainsNt": false,
+      "rightMotorTotal": "49!",
       "leftMotorTotal": "50",
       "upperMotorTotal": "50",
       "lowerMotorTotal": "49!",
-      "touchTotal": "109",
+      "touchTotal": "109!",
       "prickTotal": "112",
       "rightSensory": "S4_5",
       "leftSensory": "S4_5",
@@ -18408,197 +18721,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 81,
+    "group": "RevisionsToTheLogic",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "No",
     "analSensation": "No",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Motor function present in non-key muscle at T1 on the right and at T1 on the left.\n      It identifies this as L motor T3 but is it not actually T1 (as T1 motor testing was 5;\n      with T3 is normal sensation but above this sensation is abnormal).\n    ",
+    "comments": "Motor function present in non-key muscle at T1 on the right and at T1 on the left.\n It identifies this as L motor T3 but is it not actually T1 (as T1 motor testing was 5;\n with T3 is normal sensation but above this sensation is abnormal).",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
-        "rightMotor": "5",
-        "leftMotor": "5",
+      "C5": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "c6": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C6": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "c7": {
+        "leftPrick": "1",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "1"
-      },
-      "c8": {
+        "leftPrick": "1",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "1"
-      },
-      "t1": {
+        "leftPrick": "1",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "1"
+        "leftPrick": "1",
+        "rightMotor": "5",
+        "leftMotor": "5"
       },
-      "t2": {
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "1",
         "leftPrick": "2"
       },
-      "t3": {
+      "T3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "t4": {
+      "T4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t5": {
+      "T5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t6": {
+      "T6": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t7": {
+      "T7": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t8": {
+      "T8": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t9": {
+      "T9": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t10": {
+      "T10": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t11": {
+      "T11": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "t12": {
+      "T12": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l1": {
+      "L1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "l2": {
+      "L2": {
+        "rightTouch": "0",
+        "leftTouch": "0",
+        "rightPrick": "0",
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L3": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l3": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L4": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l4": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "L5": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "l5": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S1": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s1": {
+        "leftPrick": "0",
         "rightMotor": "0",
-        "leftMotor": "0",
+        "leftMotor": "0"
+      },
+      "S2": {
         "rightTouch": "0",
         "leftTouch": "0",
         "rightPrick": "0",
         "leftPrick": "0"
       },
-      "s2": {
-        "rightTouch": "0",
-        "leftTouch": "0",
-        "rightPrick": "0",
-        "leftPrick": "0"
-      },
-      "s3": {
+      "S3": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
         "leftPrick": "0!"
       },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "0!",
         "leftTouch": "0!",
         "rightPrick": "0!",
@@ -18607,21 +18921,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "0",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "0",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "23!",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "24!",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "15!",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "16!",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "25",
       "leftMotorTotal": "25",
       "upperMotorTotal": "50",
@@ -18641,197 +18955,198 @@ rhiIsncsciValidationTests.all = [
     }
   },
   {
-    "id": 0,
+    "id": 82,
+    "group": "RevisionsToTheLogic",
     "examDate": "0001-01-01T00:00:00",
     "analContraction": "Yes",
     "analSensation": "Yes",
     "rightLowestNonKeyMuscleWithMotorFunction": "0",
     "leftLowestNonKeyMuscleWithMotorFunction": "0",
-    "comments": "\n      Motor function present in non-key muscle at T1 on the right and at T1 on the left.\n      It identifies this as L motor T3 but is it not actually T1 (as T1 motor testing was 5;\n      with T3 is normal sensation but above this sensation is abnormal).\n    ",
+    "comments": "Motor function present in non-key muscle at T1 on the right and at T1 on the left.\n It identifies this as L motor T3 but is it not actually T1 (as T1 motor testing was 5;\n with T3 is normal sensation but above this sensation is abnormal).",
     "dermatomes": {
-      "c2": {
+      "C2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c3": {
+      "C3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c4": {
+      "C4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "c5": {
+      "C5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
+        "leftMotor": "5"
       },
-      "c6": {
-        "rightMotor": "5",
-        "leftMotor": "5",
+      "C6": {
         "rightTouch": "1",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "c7": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C7": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "c8": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "C8": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "1",
-        "leftPrick": "2"
-      },
-      "t1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T1": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t3": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t4": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t5": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t6": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t7": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t8": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t9": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t10": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t11": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "t12": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l1": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l2": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "T2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "l3": {
+      "T3": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T4": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T5": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T6": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T7": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T8": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T9": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T10": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T11": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "T12": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2"
+      },
+      "L2": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L3": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l4": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "5"
+      },
+      "L4": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "l5": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "4",
+        "leftMotor": "5"
+      },
+      "L5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s1": {
+        "leftPrick": "2",
         "rightMotor": "5",
-        "leftMotor": "5",
+        "leftMotor": "4"
+      },
+      "S1": {
+        "rightTouch": "2",
+        "leftTouch": "2",
+        "rightPrick": "2",
+        "leftPrick": "2",
+        "rightMotor": "5",
+        "leftMotor": "5"
+      },
+      "S2": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
         "leftPrick": "2"
       },
-      "s2": {
-        "rightTouch": "2",
-        "leftTouch": "2",
-        "rightPrick": "2",
-        "leftPrick": "2"
-      },
-      "s3": {
+      "S3": {
         "rightTouch": "2",
         "leftTouch": "1",
         "rightPrick": "2",
         "leftPrick": "1"
       },
-      "s4_5": {
+      "S4_5": {
         "rightTouch": "2",
         "leftTouch": "2",
         "rightPrick": "2",
@@ -18840,21 +19155,21 @@ rhiIsncsciValidationTests.all = [
     },
     "totals": {
       "rightUpperMotorTotal": "25",
-      "rightUpperMotorContainsNt": "false",
+      "rightUpperMotorContainsNt": false,
       "leftUpperMotorTotal": "25",
-      "leftUpperMotorContainsNt": "false",
+      "leftUpperMotorContainsNt": false,
       "rightLowerMotorTotal": "25",
-      "rightLowerMotorContainsNt": "false",
+      "rightLowerMotorContainsNt": false,
       "leftLowerMotorTotal": "24",
-      "leftLowerMotorContainsNt": "false",
+      "leftLowerMotorContainsNt": false,
       "rightTouchTotal": "55",
-      "rightTouchContainsNt": "false",
+      "rightTouchContainsNt": false,
       "leftTouchTotal": "55",
-      "leftTouchContainsNt": "false",
+      "leftTouchContainsNt": false,
       "rightPrickTotal": "54",
-      "rightPrickContainsNt": "false",
+      "rightPrickContainsNt": false,
       "leftPrickTotal": "55",
-      "leftPrickContainsNt": "false",
+      "leftPrickContainsNt": false,
       "rightMotorTotal": "50",
       "leftMotorTotal": "49",
       "upperMotorTotal": "50",
@@ -18873,9 +19188,4 @@ rhiIsncsciValidationTests.all = [
       "asiaImpairmentScale": "D"
     }
   }
-];
-
-rhiIsncsciValidationTests.revisionsToTheLogic = [
-  rhiIsncsciValidationTests.all[79],
-  rhiIsncsciValidationTests.all[80]
 ];
