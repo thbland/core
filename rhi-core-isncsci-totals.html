@@ -52,8 +52,7 @@ Author: Eduardo Echeverria (@eddiemachete)
     */
     function _getValuesString(values) {
       if (typeof values !== 'object')
-            throw new Error(_c + ' : _getValuesString : '
-                            + 'Invalid arguments passed. Expected values:RhiCoreIsncsciLevel[]');
+            throw new Error(`${_c} : _getValuesString : Invalid arguments passed. Expected values:RhiCoreIsncsciLevel[]`);
                             
       var result = '';
       const sortedList = values.sort((a,b) => { return a.ordinal - b.ordinal; });
@@ -321,7 +320,7 @@ Author: Eduardo Echeverria (@eddiemachete)
       * @return {Boolean} True if there are no recorded possible right sensory values.
       */
       isRightSensoryEmpty: function() {
-        this._rightSensoryValues.length === 0;
+        return this._rightSensoryValues.length === 0;
       },
       
       /**
@@ -331,8 +330,7 @@ Author: Eduardo Echeverria (@eddiemachete)
       */
       addRightSensoryValue: function(level) {
         if (typeof level !== 'object')
-              throw new Error(_c + ' : addRightSensoryValue : '
-                              + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+              throw new Error(`${_c} : addRightSensoryValue : Invalid arguments passed. Expected level:RhiCoreIsncsciLevel`);
       
         if (_containsLevelWithName(this._rightSensoryValues, level.name))
           return;
@@ -366,8 +364,7 @@ Author: Eduardo Echeverria (@eddiemachete)
       */
       rightSensoryContains: function(levelName) {
         if (!levelName || typeof levelName !== 'string')
-          throw new Error(_c + ' : rightSensoryContains : '
-                          + 'Invalid arguments passed. Expected levelName:String');
+          throw new Error(`${_c} : rightSensoryContains : Invalid arguments passed. Expected levelName:String`);
                           
         return _containsLevelWithName(this._rightSensoryValues, levelName);
       },
@@ -388,8 +385,7 @@ Author: Eduardo Echeverria (@eddiemachete)
       */
       addLeftSensoryValue: function(level) {
         if (typeof level !== 'object')
-              throw new Error(_c + ' : addRightSensoryValue : '
-                              + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+              throw new Error(`${_c} : addLeftSensoryValue : Invalid arguments passed. Expected level:RhiCoreIsncsciLevel`);
         
         if (_containsLevelWithName(this._leftSensoryValues, level.name))
           return;
@@ -423,8 +419,7 @@ Author: Eduardo Echeverria (@eddiemachete)
       */
       leftSensoryContains: function(levelName) {
         if (!levelName || typeof levelName !== 'string')
-          throw new Error(_c + ' : leftSensoryContains : '
-                          + 'Invalid arguments passed. Expected levelName:String');
+          throw new Error(`${_c} : leftSensoryContains : Invalid arguments passed. Expected levelName:String`);
                           
         return _containsLevelWithName(this._leftSensoryValues, levelName);
       },
@@ -445,8 +440,7 @@ Author: Eduardo Echeverria (@eddiemachete)
       */
       addRightMotorValue: function(level) {
         if (typeof level !== 'object')
-              throw new Error(_c + ' : addRightMotorValue : '
-                              + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+              throw new Error(`${_c} : addRightMotorValue : Invalid arguments passed. Expected level:RhiCoreIsncsciLevel`);
       
         if (_containsLevelWithName(this._rightMotorValues, level.name))
           return;
@@ -486,8 +480,7 @@ Author: Eduardo Echeverria (@eddiemachete)
       */
       rightMotorContains: function(levelName) {
         if (!levelName || typeof levelName !== 'string')
-          throw new Error(_c + ' : rightMotorContains : '
-                          + 'Invalid arguments passed. Expected levelName:String');
+          throw new Error(`${_c} : rightMotorContains : Invalid arguments passed. Expected levelName:String`);
                           
         return _containsLevelWithName(this._rightMotorValues, levelName);
       },
@@ -508,8 +501,7 @@ Author: Eduardo Echeverria (@eddiemachete)
       */
       addLeftMotorValue: function(level) {
         if (typeof level !== 'object')
-              throw new Error(_c + ' : addLeftMotorValue : '
-                              + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+              throw new Error(`${_c} : addLeftMotorValue : Invalid arguments passed. Expected level:RhiCoreIsncsciLevel`);
         
         if (_containsLevelWithName(this._leftMotorValues, level.name))
           return;
@@ -549,8 +541,7 @@ Author: Eduardo Echeverria (@eddiemachete)
       */
       leftMotorContains: function(levelName) {
         if (!levelName || typeof levelName !== 'string')
-          throw new Error(_c + ' : leftMotorContains : '
-                          + 'Invalid arguments passed. Expected levelName:String');
+          throw new Error(`${_c} : leftMotorContains : Invalid arguments passed. Expected levelName:String`);
                           
         return _containsLevelWithName(this._leftMotorValues, levelName);
       },
@@ -562,8 +553,7 @@ Author: Eduardo Echeverria (@eddiemachete)
       */
       addNeurologicalLevelOfInjury: function(level) {
         if (typeof level !== 'object')
-          throw new Error(_c + ' : addNeurologicalLevelOfInjury : '
-                          + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+          throw new Error(`${_c} : addNeurologicalLevelOfInjury : Invalid arguments passed. Expected level:RhiCoreIsncsciLevel`);
         
         if (_containsLevelWithName(this._neurologicalLevelsOfInjury, level.name))
           return;
@@ -600,7 +590,7 @@ Author: Eduardo Echeverria (@eddiemachete)
       *
       * @return {Boolean} True if there are no recorded possible right sensory ZPP values.
       */
-      isRightSensoryZppIsEmpty: function() {
+      isRightSensoryZppEmpty: function() {
         return this._rightSensoryZppValues.length === 0;
       },
       
@@ -611,8 +601,7 @@ Author: Eduardo Echeverria (@eddiemachete)
       */
       addRightSensoryZppValue: function(level) {
         if (typeof level !== 'object')
-          throw new Error(_c + ' : addRightMotorZppValue : '
-                          + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+          throw new Error(`${_c} : addRightSensoryZppValue : Invalid arguments passed. Expected level:RhiCoreIsncsciLevel`);
         
         if (_containsLevelWithName(this._rightSensoryZppValues, level.name)
             || 'S4_5' === level.name)
@@ -655,8 +644,7 @@ Author: Eduardo Echeverria (@eddiemachete)
       */
       addLeftSensoryZppValue: function(level) {
         if (typeof level !== 'object')
-          throw new Error(_c + ' : addRightMotorZppValue : '
-                          + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+          throw new Error(`${_c} : addLeftSensoryZppValue : Invalid arguments passed. Expected level:RhiCoreIsncsciLevel`);
         
         if (_containsLevelWithName(this._leftSensoryZppValues, level.name)
             || 'S4_5' === level.name)
@@ -699,8 +687,7 @@ Author: Eduardo Echeverria (@eddiemachete)
       */
       addRightMotorZppValue: function(level) {
         if (typeof level !== 'object')
-          throw new Error(_c + ' : addRightMotorZppValue : '
-                          + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+          throw new Error(`${_c} : addRightMotorZppValue : Invalid arguments passed. Expected level:RhiCoreIsncsciLevel`);
         
         if (_containsLevelWithName(this._rightMotorZppValues, level.name)
             || 'S4_5' === level.name)
@@ -743,8 +730,7 @@ Author: Eduardo Echeverria (@eddiemachete)
       */
       addLeftMotorZppValue: function(level) {
         if (typeof level !== 'object')
-          throw new Error(_c + ' : addLeftMotorZppValue : '
-                          + 'Invalid arguments passed. Expected level:RhiCoreIsncsciLevel');
+          throw new Error(`${_c} : addLeftMotorZppValue : Invalid arguments passed. Expected level:RhiCoreIsncsciLevel`);
         
         if (_containsLevelWithName(this._leftMotorZppValues, level.name)
             || 'S4_5' === level.name)
@@ -778,8 +764,7 @@ Author: Eduardo Echeverria (@eddiemachete)
       */
       addAsiaImpairmentScaleValue: function(value) {
         if (!value || typeof value !== 'string')
-          throw new Error(_c + ' : addAsiaImpairmentScaleValue : '
-                          + 'Invalid arguments passed. Expected value:String');
+          throw new Error(`${_c} : addAsiaImpairmentScaleValue : Invalid arguments passed. Expected value:String`);
         
         var valueToUpper = value.toUpperCase();
         

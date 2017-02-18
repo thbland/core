@@ -19,9 +19,9 @@ Author: Eduardo Echeverria (@eddiemachete)
         hidden: true
     },
     properties: {
-      user: {
-        type: Object,
-        value: null
+      hasOtherLeftMotorFunction: {
+        type: Boolean,
+        value: false
       },
       isKeyMuscle: {
         type: Boolean,
@@ -30,6 +30,9 @@ Author: Eduardo Echeverria (@eddiemachete)
       isLowerMuscle: {
         type: Boolean,
         value: false
+      },
+      isncsciExam: {
+        type: Object
       },
       leftTouchImpairmentNotDueToSci: {
         type: Boolean,
@@ -55,20 +58,16 @@ Author: Eduardo Echeverria (@eddiemachete)
         type: Boolean,
         value: false
       },
-      hasOtherLeftMotorFunction: {
-        type: Boolean,
-        value: false
-      },
       leftMotorName: {
         type: String
       },
       leftMotorValue: {
         type: Number
       },
-      next: {
-        type: Object
+      name: {
+        type: String
       },
-      isncsciExam: {
+      next: {
         type: Object
       },
       ordinal: {
