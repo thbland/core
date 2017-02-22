@@ -21,6 +21,19 @@ with ASIA raw values, and return an `rhi-core-isncsci-totals` element.
 </body>
 ```
 
+#### Installation:
+Download the component using bower:
+
+&nbsp;&nbsp;&nbsp;_bower install --save rhi-core-isncsci-algorithm_
+
+or [download as a zip file](https://github.com/EddieMachete/rhi-core-isncsci-algorithm/archive/master.zip).
+
+
+If you download the project as a zip file, make sure to also get the
+[Google Polymer library v1.1](https://github.com/Polymer/polymer/archive/v1.1.0.zip)
+and make sure that the algorithm component can reference Polymer.
+
+
 Visit our [UI project](https://github.com/EddieMachete/rhi-ui-isncsci) where I
 have interface elements which will allow you incorporate the algorithm to your
 web and hybrid application projects.
