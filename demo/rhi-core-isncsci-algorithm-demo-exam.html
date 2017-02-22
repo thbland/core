@@ -1,0 +1,612 @@
+<!--
+@license
+Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
+This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/LICENSE
+Author: Eduardo Echeverria (@eddiemachete)
+-->
+<link rel="import" href="../../../bower_components/polymer/polymer.html"/>
+<link rel="import" href="../../../bower_components/paper-styles/paper-styles.html"/>
+<link rel="import" href="../../../rhi-core-isncsci-algorithm/master/rhi-core-isncsci-exam.html" />
+<dom-module id="rhi-core-isncsci-algorithm-demo-exam">
+  <template>
+    <style>
+        /* local styles go here */
+        :host {
+            display: block;
+            @apply(--paper-font-body1);
+        }
+        
+        .font-title {
+            @apply(--paper-font-title);
+        }
+        
+        table.raw-values {
+            margin-right: 24px;
+            max-width: 440px;
+        }
+        
+        table.raw-values th {
+            color: #666;
+            font-weight: normal;
+            padding: 0 8px;
+        }
+        
+        table.raw-values td {
+            text-align: center;
+        }
+    
+        .color-dark-medium {
+            color: #666;
+        }
+        
+        .display-flex {
+            display: flex;
+        }
+        
+        .comments {
+            margin: 24px 0;
+            max-width: 540px;
+        }
+        
+        .comments .label {
+            margin-right: 16px;
+        }
+        
+        .totals {
+            /*margin: 24px 0;*/
+        }
+        
+        .totals .value {
+            margin-top: 16px;
+        }
+        
+        .totals .label {
+            color: #666;
+            margin-right: 8px;
+            width: 110px;
+        }
+    </style>
+    <!-- local DOM goes here -->
+    <div class="comments display-flex">
+        <div class="label">Comments:</div>
+        <div class="color-dark-medium">[[comments]]</div>
+    </div>
+    <div class="display-flex">
+        <div>
+            <table class="raw-values">
+              <thead>
+                <tr>
+                  <th colspan="4">Right</th>
+                  <th colspan="4">Left</th>
+                </tr>
+                <tr>
+                  <th>&nbsp;</th>
+                  <th>Motor</th>
+                  <th>Light Touch</th>
+                  <th>Pin Prick</th>
+                  <th>Light Touch</th>
+                  <th>Pin Prick</th>
+                  <th>Motor</th>
+                  <th>&nbsp;</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <th>[[c2.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[c2.rightTouchName]]</td>
+                    <td>[[c2.rightPrickName]]</td>
+                    <td>[[c2.leftTouchName]]</td>
+                    <td>[[c2.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[c2.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[c3.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[c3.rightTouchName]]</td>
+                    <td>[[c3.rightPrickName]]</td>
+                    <td>[[c3.leftTouchName]]</td>
+                    <td>[[c3.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[c3.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[c4.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[c4.rightTouchName]]</td>
+                    <td>[[c4.rightPrickName]]</td>
+                    <td>[[c4.leftTouchName]]</td>
+                    <td>[[c4.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[c4.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[c5.name]]</th>
+                    <td>[[c5.rightMotorName]]</td>
+                    <td>[[c5.rightTouchName]]</td>
+                    <td>[[c5.rightPrickName]]</td>
+                    <td>[[c5.leftTouchName]]</td>
+                    <td>[[c5.leftPrickName]]</td>
+                    <td>[[c5.leftMotorName]]</td>
+                    <th>[[c5.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[c6.name]]</th>
+                    <td>[[c6.rightMotorName]]</td>
+                    <td>[[c6.rightTouchName]]</td>
+                    <td>[[c6.rightPrickName]]</td>
+                    <td>[[c6.leftTouchName]]</td>
+                    <td>[[c6.leftPrickName]]</td>
+                    <td>[[c6.leftMotorName]]</td>
+                    <th>[[c6.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[c7.name]]</th>
+                    <td>[[c7.rightMotorName]]</td>
+                    <td>[[c7.rightTouchName]]</td>
+                    <td>[[c7.rightPrickName]]</td>
+                    <td>[[c7.leftTouchName]]</td>
+                    <td>[[c7.leftPrickName]]</td>
+                    <td>[[c7.leftMotorName]]</td>
+                    <th>[[c7.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[c8.name]]</th>
+                    <td>[[c8.rightMotorName]]</td>
+                    <td>[[c8.rightTouchName]]</td>
+                    <td>[[c8.rightPrickName]]</td>
+                    <td>[[c8.leftTouchName]]</td>
+                    <td>[[c8.leftPrickName]]</td>
+                    <td>[[c8.leftMotorName]]</td>
+                    <th>[[c8.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[t1.name]]</th>
+                    <td>[[t1.rightMotorName]]</td>
+                    <td>[[t1.rightTouchName]]</td>
+                    <td>[[t1.rightPrickName]]</td>
+                    <td>[[t1.leftTouchName]]</td>
+                    <td>[[t1.leftPrickName]]</td>
+                    <td>[[t1.leftMotorName]]</td>
+                    <th>[[t1.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[t2.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[t2.rightTouchName]]</td>
+                    <td>[[t2.rightPrickName]]</td>
+                    <td>[[t2.leftTouchName]]</td>
+                    <td>[[t2.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[t2.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[t3.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[t3.rightTouchName]]</td>
+                    <td>[[t3.rightPrickName]]</td>
+                    <td>[[t3.leftTouchName]]</td>
+                    <td>[[t3.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[t3.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[t4.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[t4.rightTouchName]]</td>
+                    <td>[[t4.rightPrickName]]</td>
+                    <td>[[t4.leftTouchName]]</td>
+                    <td>[[t4.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[t4.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[t5.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[t5.rightTouchName]]</td>
+                    <td>[[t5.rightPrickName]]</td>
+                    <td>[[t5.leftTouchName]]</td>
+                    <td>[[t5.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[t5.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[t6.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[t6.rightTouchName]]</td>
+                    <td>[[t6.rightPrickName]]</td>
+                    <td>[[t6.leftTouchName]]</td>
+                    <td>[[t6.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[t6.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[t7.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[t7.rightTouchName]]</td>
+                    <td>[[t7.rightPrickName]]</td>
+                    <td>[[t7.leftTouchName]]</td>
+                    <td>[[t7.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[t7.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[t8.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[t8.rightTouchName]]</td>
+                    <td>[[t8.rightPrickName]]</td>
+                    <td>[[t8.leftTouchName]]</td>
+                    <td>[[t8.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[t8.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[t9.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[t9.rightTouchName]]</td>
+                    <td>[[t9.rightPrickName]]</td>
+                    <td>[[t9.leftTouchName]]</td>
+                    <td>[[t9.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[t9.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[t10.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[t10.rightTouchName]]</td>
+                    <td>[[t10.rightPrickName]]</td>
+                    <td>[[t10.leftTouchName]]</td>
+                    <td>[[t10.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[t10.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[t11.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[t11.rightTouchName]]</td>
+                    <td>[[t11.rightPrickName]]</td>
+                    <td>[[t11.leftTouchName]]</td>
+                    <td>[[t11.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[t11.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[t12.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[t12.rightTouchName]]</td>
+                    <td>[[t12.rightPrickName]]</td>
+                    <td>[[t12.leftTouchName]]</td>
+                    <td>[[t12.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[t12.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[l1.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[l1.rightTouchName]]</td>
+                    <td>[[l1.rightPrickName]]</td>
+                    <td>[[l1.leftTouchName]]</td>
+                    <td>[[l1.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[l1.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[l2.name]]</th>
+                    <td>[[l2.rightMotorName]]</td>
+                    <td>[[l2.rightTouchName]]</td>
+                    <td>[[l2.rightPrickName]]</td>
+                    <td>[[l2.leftTouchName]]</td>
+                    <td>[[l2.leftPrickName]]</td>
+                    <td>[[l2.leftMotorName]]</td>
+                    <th>[[l2.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[l3.name]]</th>
+                    <td>[[l3.rightMotorName]]</td>
+                    <td>[[l3.rightTouchName]]</td>
+                    <td>[[l3.rightPrickName]]</td>
+                    <td>[[l3.leftTouchName]]</td>
+                    <td>[[l3.leftPrickName]]</td>
+                    <td>[[l3.leftMotorName]]</td>
+                    <th>[[l3.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[l4.name]]</th>
+                    <td>[[l4.rightMotorName]]</td>
+                    <td>[[l4.rightTouchName]]</td>
+                    <td>[[l4.rightPrickName]]</td>
+                    <td>[[l4.leftTouchName]]</td>
+                    <td>[[l4.leftPrickName]]</td>
+                    <td>[[l4.leftMotorName]]</td>
+                    <th>[[l4.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[l5.name]]</th>
+                    <td>[[l5.rightMotorName]]</td>
+                    <td>[[l5.rightTouchName]]</td>
+                    <td>[[l5.rightPrickName]]</td>
+                    <td>[[l5.leftTouchName]]</td>
+                    <td>[[l5.leftPrickName]]</td>
+                    <td>[[l5.leftMotorName]]</td>
+                    <th>[[l5.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[s1.name]]</th>
+                    <td>[[s1.rightMotorName]]</td>
+                    <td>[[s1.rightTouchName]]</td>
+                    <td>[[s1.rightPrickName]]</td>
+                    <td>[[s1.leftTouchName]]</td>
+                    <td>[[s1.leftPrickName]]</td>
+                    <td>[[s1.leftMotorName]]</td>
+                    <th>[[s1.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[s2.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[s2.rightTouchName]]</td>
+                    <td>[[s2.rightPrickName]]</td>
+                    <td>[[s2.leftTouchName]]</td>
+                    <td>[[s2.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[s2.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[s3.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[s3.rightTouchName]]</td>
+                    <td>[[s3.rightPrickName]]</td>
+                    <td>[[s3.leftTouchName]]</td>
+                    <td>[[s3.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[s3.name]]</th>
+                </tr>
+                <tr>
+                    <th>[[s4_5.name]]</th>
+                    <td>&nbsp;</td>
+                    <td>[[s4_5.rightTouchName]]</td>
+                    <td>[[s4_5.rightPrickName]]</td>
+                    <td>[[s4_5.leftTouchName]]</td>
+                    <td>[[s4_5.leftPrickName]]</td>
+                    <td>&nbsp;</td>
+                    <th>[[s4_5.name]]</th>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        <div class="totals">
+            <div class="font-title">Totals:</div>
+            <div class="value display-flex">
+                <div class="label">Right Sensory:</div>
+                <div>[[rightSensory]]</div>
+            </div>
+            <div class="value display-flex">
+                <div class="label">Left Sensory:</div>
+                <div>[[leftSensory]]</div>
+            </div>
+            <div class="value display-flex">
+                <div class="label">Right Motor:</div>
+                <div>[[rightMotor]]</div>
+            </div>
+            <div class="value display-flex">
+                <div class="label">Left Motor:</div>
+                <div>[[leftMotor]]</div>
+            </div>
+            <div class="value display-flex">
+                <div class="label">NLI:</div>
+                <div>[[nli]]</div>
+            </div>
+            <div class="value display-flex">
+                <div class="label">AIS:</div>
+                <div>[[ais]]</div>
+            </div>
+            <div class="value display-flex">
+                <div class="label">Right Sensory ZPP:</div>
+                <div>[[rightSensoryZpp]]</div>
+            </div>
+            <div class="value display-flex">
+                <div class="label">Left Sensory ZPP:</div>
+                <div>[[leftSensoryZpp]]</div>
+            </div>
+            <div class="value display-flex">
+                <div class="label">Right Motor ZPP:</div>
+                <div>[[rightMotorZpp]]</div>
+            </div>
+            <div class="value display-flex">
+                <div class="label">Left Motor ZPP:</div>
+                <div>[[leftMotorZpp]]</div>
+            </div>
+        </div>
+    </div>
+  </template>
+</dom-module>
+<script>
+  /* global Polymer */
+  'use strict';
+  Polymer({
+    is: 'rhi-core-isncsci-algorithm-demo-exam',
+    properties: {
+        comments: {
+            type: String,
+            value: ''
+        },
+        c2: {
+            type: Object
+        },
+        c3: {
+            type: Object
+        },
+        c4: {
+            type: Object
+        },
+        c5: {
+            type: Object
+        },
+        c6: {
+            type: Object
+        },
+        c7: {
+            type: Object
+        },
+        c8: {
+            type: Object
+        },
+        t1: {
+            type: Object
+        },
+        t2: {
+            type: Object
+        },
+        t3: {
+            type: Object
+        },
+        t4: {
+            type: Object
+        },
+        t5: {
+            type: Object
+        },
+        t6: {
+            type: Object
+        },
+        t7: {
+            type: Object
+        },
+        t8: {
+            type: Object
+        },
+        t9: {
+            type: Object
+        },
+        t10: {
+            type: Object
+        },
+        t11: {
+            type: Object
+        },
+        t12: {
+            type: Object
+        },
+        l1: {
+            type: Object
+        },
+        l2: {
+            type: Object
+        },
+        l3: {
+            type: Object
+        },
+        l4: {
+            type: Object
+        },
+        l5: {
+            type: Object
+        },
+        s1: {
+            type: Object
+        },
+        s2: {
+            type: Object
+        },
+        s3: {
+            type: Object
+        },
+        s4_5: {
+            type: Object
+        },
+        leftSensory: {
+            type: String,
+            value: ''
+        },
+        rightSensory: {
+            type: String,
+            value: ''
+        },
+        leftMotor: {
+            type: String,
+            value: ''
+        },
+        rightMotor: {
+            type: String,
+            value: ''
+        },
+        nli: {
+            type: String,
+            value: ''
+        },
+        ais: {
+            type: String,
+            value: ''
+        },
+        leftSensoryZpp: {
+            type: String,
+            value: ''
+        },
+        rightSensoryZpp: {
+            type: String,
+            value: ''
+        },
+        leftMotorZpp: {
+            type: String,
+            value: ''
+        },
+        rightMotorZpp: {
+            type: String,
+            value: ''
+        }
+    },
+    ready: function() {
+        this.isncsciExam = /** @type {!RhiCoreIsncsciExam} */ (document.createElement('rhi-core-isncsci-exam'));
+        this.c2 = this.isncsciExam.getLevelWithName('C2');
+    },
+    created: function() {
+        
+    },
+    setExam: function(isncsciExam, comments) {
+      this.comments = comments;
+      this.c2 = isncsciExam.getLevelWithName('C2');
+      this.c3 = isncsciExam.getLevelWithName('C3');
+      this.c4 = isncsciExam.getLevelWithName('C4');
+      this.c5 = isncsciExam.getLevelWithName('C5');
+      this.c6 = isncsciExam.getLevelWithName('C6');
+      this.c7 = isncsciExam.getLevelWithName('C7');
+      this.c8 = isncsciExam.getLevelWithName('C8');
+      this.t1 = isncsciExam.getLevelWithName('T1');
+      this.t2 = isncsciExam.getLevelWithName('T2');
+      this.t3 = isncsciExam.getLevelWithName('T3');
+      this.t4 = isncsciExam.getLevelWithName('T4');
+      this.t5 = isncsciExam.getLevelWithName('T5');
+      this.t6 = isncsciExam.getLevelWithName('T6');
+      this.t7 = isncsciExam.getLevelWithName('T7');
+      this.t8 = isncsciExam.getLevelWithName('T8');
+      this.t9 = isncsciExam.getLevelWithName('T9');
+      this.t10 = isncsciExam.getLevelWithName('T10');
+      this.t11 = isncsciExam.getLevelWithName('T11');
+      this.t12 = isncsciExam.getLevelWithName('T12');
+      this.l1 = isncsciExam.getLevelWithName('L1');
+      this.l2 = isncsciExam.getLevelWithName('L2');
+      this.l3 = isncsciExam.getLevelWithName('L3');
+      this.l4 = isncsciExam.getLevelWithName('L4');
+      this.l5 = isncsciExam.getLevelWithName('L5');
+      this.s1 = isncsciExam.getLevelWithName('S1');
+      this.s2 = isncsciExam.getLevelWithName('S2');
+      this.s3 = isncsciExam.getLevelWithName('S3');
+      this.s4_5 = isncsciExam.getLevelWithName('S4_5');
+    },
+    setTotals: function(totals) {
+        this.rightSensory = totals.getRightSensoryLongValueString().replace(/,/g, ', ');
+        this.leftSensory = totals.getRightSensoryLongValueString().replace(/,/g, ', ');
+        this.rightMotor = totals.getRightMotorLongValueString().replace(/,/g, ', ');
+        this.leftMotor = totals.getLeftMotorLongValueString().replace(/,/g, ', ');
+        this.nli = totals.getNeurologicalLevelsOfInjuryLongValueString().replace(/,/g, ', ');
+        this.ais = totals.getAsiaImpairmentScaleValues().replace(/,/g, ', ');
+        
+        let isComplete = this.ais.indexOf('A') !== -1;
+        
+        this.rightSensoryZpp = isComplete ? totals.getRightSensoryZppLongValueString().replace(/,/g, ', ') : '';
+        this.leftSensoryZpp = isComplete ? totals.getLeftSensoryZppLongValueString().replace(/,/g, ', ') : '';
+        this.rightMotorZpp = isComplete ? totals.getRightMotorZppLongValueString().replace(/,/g, ', ') : '';
+        this.leftMotorZpp = isComplete ? totals.getLeftMotorZppLongValueString().replace(/,/g, ', ') : '';
+    }
+  });
+</script>

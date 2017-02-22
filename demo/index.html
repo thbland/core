@@ -3,18 +3,65 @@
 <head>
   <meta charset="utf-8">
   <title>rhi-core-isncscialgorithm :: Polymer :: Demo</title>
+  <script src="../tests/isncsci-tests.js"></script>
   <script src="../../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
   <link rel="import" href="../../../bower_components/iron-demo-helpers/demo-snippet.html" />
-  <link rel="import" href="../../../rhi-core-isncsci-algorithm/master/rhi-core-isncsci-algorithm.html" />
+  <link rel="import" href="rhi-core-isncsci-algorithm-demo.html" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .main-content {
+      margin: 24px;
+    }
+    
+    demo-snippet {
+      margin-top: 24px;
+    }
+    
+    .code .tag {
+      color: #905;
+    }
+    
+    .code .block {
+      margin-left:16px;
+    }
+  </style>
+  
+  <style is="custom-style">
+    .font-body-1 {
+      @apply(--paper-font-body1);
+    }
+  </style>
 </head>
 <body>
   <div class="main-content">
-        <demo-snippet>
-            <template>
-                <rhi-core-isncsci-algorithm></rhi-core-isncsci-algorithm>
-            </template>
-        </demo-snippet>
-    </div>
+    <rhi-core-isncsci-algorithm-demo id="demo"></rhi-core-isncsci-algorithm-demo>
+    <demo-snippet>
+        <div class="code">
+          <div class="tag">&lt;script&gt;</div>
+          <div class="block">
+            <div>var isncsciAlgorithm = document.getElementById('isncsciAlgorithm');</div>
+            <div>var isncsciExam = document.createElement('rhi-core-isncsci-exam');</div>
+            <div>var totals = isncsciAlgorithm.getTotalsFor(isncsciExam);</div>
+          </div>
+          <div class="tag">&lt;/script&gt;</div>
+        </div>
+        <template>
+            <rhi-core-isncsci-algorithm id="isncsciAlgorithm"></rhi-core-isncsci-algorithm>
+        </template>
+    </demo-snippet>
+    <!--<marked-element markdown="```\n```" id="marked">
+        <div class="markdown-html code" id="code"></div>
+    </marked-element>-->
   </div>
+  <script>
+    /* global rhiIsncsciValidationTests */ // Loaded from isncsci-tests.js to keep this file clean.
+    const demo = /** @type {RhiCoreIsncsciAlgorithmDemo} */ document.getElementById('demo');
+    demo.tests = rhiIsncsciValidationTests.all;
+    demo.loadRandomTest();
+  </script>
 </body>
 </html>

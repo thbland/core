@@ -1,0 +1,80 @@
+<!--
+@license
+Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
+This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/LICENSE
+Author: Eduardo Echeverria (@eddiemachete)
+-->
+<link rel="import" href="../../../bower_components/polymer/polymer.html"/>
+<link rel="import" href="../../../bower_components/iron-demo-helpers/demo-snippet.html" />
+<link rel="import" href="../../../bower_components/paper-button/paper-button.html" />
+<link rel="import" href="../../../bower_components/paper-styles/paper-styles.html"/>
+<link rel="import" href="../../../rhi-core-isncsci-algorithm/master/rhi-core-isncsci-exam.html" />
+<link rel="import" href="../../../rhi-core-isncsci-algorithm/master/rhi-core-isncsci-algorithm.html" />
+<link rel="import" href="../tests/rhi-core-isncsci-algorithm-tests-helpers.html" />
+<link rel="import" href="rhi-core-isncsci-algorithm-demo-exam.html" />
+<dom-module id="rhi-core-isncsci-algorithm-demo">
+  <template>
+    <style>
+        .background-orange {
+            background-color: #F15A24;
+        }
+        
+        .color-dark-medium {
+            color: #666;
+        }
+        
+        .color-white {
+            color: #FFF;
+        }
+        
+        .font-size-normal {
+            font-size: 13px;
+        }
+        
+        .details {
+            margin: 24px 0;
+        }
+    </style>
+    <div class="controls">
+      <paper-button raised
+                  class="background-orange color-white"
+                  on-click="loadTest_clicked">Load new random test</paper-button>
+    </div>
+    <div class="details color-dark-medium font-body-1">
+      Forms are loaded randomly from /tests/isncsci-tests.js
+    </div>
+    <rhi-core-isncsci-algorithm-tests-helpers id="testHelpers"></rhi-core-isncsci-algorithm-tests-helpers>
+    <rhi-core-isncsci-algorithm-demo-exam id="demoExam"></rhi-core-isncsci-algorithm-demo-exam>
+    <rhi-core-isncsci-algorithm id="isncsciAlgorithm"></rhi-core-isncsci-algorithm>
+  </template>
+</dom-module>
+<script>
+  /* global Polymer */
+  'use strict';
+  
+  Polymer({
+    is: 'rhi-core-isncsci-algorithm-demo',
+    properties: {
+        tests: {
+            type: Object,
+            value: []
+        }
+    },
+    //ready: function() { },
+    //created: function() { },
+    loadRandomTest: function() {
+        if (!this.tests || !this.tests.length)
+            return;
+            
+        let randomTest = this.tests[Math.floor((Math.random() * this.tests.length))];
+        let isncsciExam = document.createElement('rhi-core-isncsci-exam');
+        
+        this.$.testHelpers.bindExamToTest(isncsciExam, randomTest);
+        this.$.demoExam.setExam(isncsciExam, randomTest.comments);
+        this.$.demoExam.setTotals(this.$.isncsciAlgorithm.getTotalsFor(isncsciExam));
+    },
+    loadTest_clicked: function() {
+        this.loadRandomTest();
+    }
+  });
+</script>

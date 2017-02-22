@@ -1,0 +1,54 @@
+<!--
+@license
+Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
+This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/LICENSE
+Author: Eduardo Echeverria (@eddiemachete)
+-->
+<link rel="import" href="../../../bower_components/polymer/polymer.html"/>
+<script>
+  /* global Polymer */
+  'use strict';
+  Polymer({
+    is: 'rhi-core-isncsci-algorithm-tests-helpers',
+    hostAttributes: {
+        hidden: true
+    },
+    properties: {},
+    bindExamToTest: function(isncsciExam, test) {
+        var keys = ['C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8',
+                    'T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10', 'T11', 'T12',
+                    'L1', 'L2', 'L3', 'L4', 'L5', 'S1', 'S2', 'S3', 'S4_5'];
+        var dermatomes = test.dermatomes;
+        isncsciExam.analContraction = this.getBinaryObservationFor(test.analContraction);
+        isncsciExam.analSensation = this.getBinaryObservationFor(test.analSensation);
+        
+        if (test.rightLowestNonKeyMuscleWithMotorFunction
+                && test.rightLowestNonKeyMuscleWithMotorFunction.length > 1)
+            isncsciExam.setRightLowestNonKeyMuscleWithMotorFunction(test.rightLowestNonKeyMuscleWithMotorFunction);
+        
+        if (test.leftLowestNonKeyMuscleWithMotorFunction
+                && test.leftLowestNonKeyMuscleWithMotorFunction.length > 1)
+            isncsciExam.setLeftLowestNonKeyMuscleWithMotorFunction(test.leftLowestNonKeyMuscleWithMotorFunction);
+        
+        for (var i=0; i<keys.length; i++) {
+            var key = keys[i];
+            var dermatome = dermatomes[key];
+            isncsciExam.updateLevelAt(key, dermatome.rightTouch, dermatome.leftTouch, dermatome.rightPrick, dermatome.leftPrick, dermatome.rightMotor, dermatome.leftMotor);
+        }
+    },
+    getBinaryObservationFor: function(value) {
+        var valueToLower = value ? value.toLowerCase() : 'none';
+            
+        if (valueToLower === 'yes')
+            return Polymer.rhiCoreIsncsciBinaryObservationYes;
+            
+        if (valueToLower === 'no')
+            return Polymer.rhiCoreIsncsciBinaryObservationNo;
+            
+        if (valueToLower === 'nt')
+            return Polymer.rhiCoreIsncsciBinaryObservationNt;
+        
+        return Polymer.rhiCoreIsncsciBinaryObservationNone;
+    }
+  });
+</script>
