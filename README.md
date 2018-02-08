@@ -1,6 +1,6 @@
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/rick-hansen-institute/rhi-core-isncsci-algorithm)
 
-## &lt;rhi-core-isncsci-algorithm&gt; v2.0.1
+## &lt;rhi-core-isncsci-algorithm&gt;
 
 JavaScript version of the ISNCSCI algorithm written for Google Polymer v2.
 
@@ -32,7 +32,7 @@ or [download as a zip file](https://github.com/rick-hansen-institute/rhi-core-is
 
 
 If you download the project as a zip file, make sure to also get the
-[Google Polymer library v1.1](https://github.com/Polymer/polymer/archive/v2.3.0.zip)
+[Google Polymer library v2.3.0](https://github.com/Polymer/polymer/archive/v2.3.0.zip)
 and make sure that the algorithm component can reference Polymer.
 
 
