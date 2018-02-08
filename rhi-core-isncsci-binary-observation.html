@@ -2,9 +2,8 @@
 @license
 Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
 This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/LICENSE
-Author: Eduardo Echeverria (@eddiemachete)
+Author: RhiTech <tech@rickhanseninstitute.org>
 -->
-<link rel="import" href="../../bower_components/polymer/polymer.html"/>
 <!--
 The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI Examination through the ISNCSCI Algorithm.
 @demo demo/index.html
@@ -12,8 +11,12 @@ The 'rhi-core-isncsci-totals' contains the raw results from running an ISNCSCI E
 <script>
   /* global Polymer */
   'use strict';
-  Polymer.rhiCoreIsncsciBinaryObservationNone = 0;
-  Polymer.rhiCoreIsncsciBinaryObservationYes = 1;
-  Polymer.rhiCoreIsncsciBinaryObservationNo = 2;
-  Polymer.rhiCoreIsncsciBinaryObservationNt = 4;
+  
+  class BinaryObservation {
+      static get is() { return 'rhi-core-isncsci.BinaryObservation'; }
+      static get none() { return 0; }
+      static get yes() { return 1; }
+      static get no() { return 2; }
+      static get nt() { return 4; }
+  }
 </script>

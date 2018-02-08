@@ -1,0 +1,28 @@
+{
+    "author": "RhiTech <tech@rickhanseninstitute.org>",
+    "dependencies": {},
+    "description": "JavaScript version of the ISNCSCI algorithm written as a web compnent with Google Polymer.",
+    "devDependencies": {
+      "@types/jasmine": "^2.6.0",
+      "express": "^4.16.2",
+      "jasmine-core": "^2.8.0",
+      "karma": "^1.7.1",
+      "karma-chrome-launcher": "^2.2.0",
+      "karma-coverage": "^1.1.1",
+      "karma-jasmine": "^1.1.0",
+      "karma-phantomjs-launcher": "^1.0.4",
+      "karma-typescript": "^3.0.7",
+      "phantomjs": "^2.1.7",
+      "typescript": "^2.5.3"
+    },
+    "homepage": "https://github.com/rick-hansen-institute/rhi-core-isncsci-algorithm",
+    "license": "https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE",
+    "main": "em-core-isncsci-algorithm.html",
+    "name": "rhi-core-isncsci-algorithm",
+    "private": false,
+    "repository": "https://github.com/rick-hansen-institute/rhi-core-isncsci-algorithm.git",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "version": "2.0.1"
+  }

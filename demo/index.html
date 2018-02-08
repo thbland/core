@@ -1,10 +1,15 @@
+<!--
+@license
+Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
+This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/LICENSE
+Author: RhiTech <tech@rickhanseninstitute.org>
+-->
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <title>rhi-core-isncscialgorithm :: Polymer :: Demo</title>
-  <script src="../tests/isncsci-tests.js"></script>
-  <script src="../../../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+  <script src="isncsci-tests.js"></script>
   <link rel="import" href="../../../bower_components/iron-demo-helpers/demo-snippet.html" />
   <link rel="import" href="rhi-core-isncsci-algorithm-demo.html" />
   <style>
@@ -28,6 +33,11 @@
     .code .block {
       margin-left:16px;
     }
+
+    .code .block .comment {
+      color:darkolivegreen;
+      font-style:italic;
+    }
   </style>
   
   <style is="custom-style">
@@ -43,19 +53,16 @@
         <div class="code">
           <div class="tag">&lt;script&gt;</div>
           <div class="block">
-            <div>var isncsciAlgorithm = document.getElementById('isncsciAlgorithm');</div>
-            <div>var isncsciExam = document.createElement('rhi-core-isncsci-exam');</div>
-            <div>var totals = isncsciAlgorithm.getTotalsFor(isncsciExam);</div>
+            <div class="comment">// The <rhi-core-isncsci-algorithm/> component has been re-written as an ES6 class.</div>
+            <div>var isncsciExam = new IncsciExam();</div>
+            <div>var totals = Algorithm.getTotalsFor(isncsciExam);</div>
           </div>
           <div class="tag">&lt;/script&gt;</div>
         </div>
         <template>
-            <rhi-core-isncsci-algorithm id="isncsciAlgorithm"></rhi-core-isncsci-algorithm>
+          <rhi-core-isncsci-algorithm></rhi-core-isncsci-algorithm>
         </template>
     </demo-snippet>
-    <!--<marked-element markdown="```\n```" id="marked">
-        <div class="markdown-html code" id="code"></div>
-    </marked-element>-->
   </div>
   <script>
     /* global rhiIsncsciValidationTests */ // Loaded from isncsci-tests.js to keep this file clean.
