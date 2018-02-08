@@ -4,14 +4,14 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.1",
-    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0-rc.4",
-    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
-    "paper-button": "PolymerElements/paper-button#^2.0.0",
-    "paper-styles": "PolymerElements/paper-styles#^2.0.0"
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0-rc.4"
   },
   "description": "JavaScript version of the ISNCSCI algorithm written as a web compnent with Google Polymer.",
   "devDependencies": {
-    "iron-component-page": "PolymerElements/iron-component-page#^3.0.1"
+    "iron-component-page": "PolymerElements/iron-component-page#^3.0.1",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "paper-button": "PolymerElements/paper-button#^2.0.0",
+    "paper-styles": "PolymerElements/paper-styles#^2.0.0"
   },
   "homepage": "https://github.com/rick-hansen-institute/rhi-core-isncsci-algorithm",
   "ignore": [
