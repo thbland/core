@@ -1,3 +1,5 @@
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/rick-hansen-institute/rhi-core-isncsci-algorithm)
+
 ## &lt;rhi-core-isncsci-algorithm&gt; v2.0.1
 
 JavaScript version of the ISNCSCI algorithm written for Google Polymer v2.
