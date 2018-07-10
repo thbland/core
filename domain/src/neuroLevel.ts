@@ -1,10 +1,9 @@
 /*
 @license
 Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
-This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/LICENSE
+This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
 Author: RhiTech <tech@rickhanseninstitute.org>
 */
-
 'use strict';
 
 import { IsncsciExam } from "./isncsciExam";
@@ -69,7 +68,7 @@ export class NeuroLevel {
     * @param {number} leftMotorValue
     * @param {boolean} leftMotorImpairmentNotDueToSci
     * 
-    * @return {NeuroLevel} Returns itself to allow chaining methods.
+    * @returns {NeuroLevel} Returns itself to allow chaining methods.
     */
     public setValues(ordinal:number, isKeyMuscle:boolean, isLowerMuscle:boolean,
             rightTouch:string, rightTouchValue:number, rightTouchImpairmentNotDueToSci:boolean,

@@ -1,10 +1,9 @@
 /*
 @license
 Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
-This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/LICENSE
+This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
 Author: RhiTech <tech@rickhanseninstitute.org>
 */
-
 'use strict';
 
 import { BinaryObservation } from "./binaryObservation";
@@ -47,7 +46,7 @@ export class IsncsciExam {
     /**
     * Creates an array with all the neurological levels required in a ISNCSCI form
     *
-    * @return {NeuroLevel[]}
+    * @returns {NeuroLevel[]}
     */
     private static getIsncsciExamLevels():NeuroLevel[] {
         let levels:NeuroLevel[] = [];
@@ -93,7 +92,7 @@ export class IsncsciExam {
     *
     * @param {string} text (required) The text with the raw entry.
     * @param {number} normalValue (required) The numeric value considered 'normal' for that type of neurological level.
-    * @return {number} The numeric value for a neurology level entry.
+    * @returns {number} The numeric value for a neurology level entry.
     */
     private static getDermatomeValue(text:string, normalValue:number):number
     {
@@ -179,7 +178,7 @@ export class IsncsciExam {
     * Use this method to find neurological level in the exam based on a level name.  E.g. C2,C3,C4...S1,S2,S3,S4_5
     *
     * @param {string} levelName The level name being searched.
-    * @return {NeuroLevel} The neurology level that matches the specified level name.
+    * @returns {NeuroLevel} The neurology level that matches the specified level name.
     */
     public getLevelWithName(levelName:string):NeuroLevel {
         const levelNameUpper:string = levelName.toUpperCase()
@@ -191,7 +190,7 @@ export class IsncsciExam {
     *
     * @param {number} ordinal The ordinal position at which we are trying to find a neurological level.
     * The valid values are those between 1 and 28.
-    * @return {NeuroLevel} The neurology level that matches the specified ordinal position.
+    * @returns {NeuroLevel} The neurology level that matches the specified ordinal position.
     */
     public getLevelAt(ordinal):NeuroLevel {
         if (ordinal < 1 || ordinal >= this.levels.length)
@@ -252,7 +251,7 @@ export class IsncsciExam {
     * @param {string} leftPrick Left prick
     * @param {string} rightMotor Right motor
     * @param {string} leftMotor Left motor
-    * @return {IsncsciExam} This exam to allow chaining more requests.
+    * @returns {IsncsciExam} This exam to allow chaining more requests.
     */
     public updateLevelByName(levelName:string, rightTouch:string, leftTouch:string,
             rightPrick:string, leftPrick:string, rightMotor:string, leftMotor:string):IsncsciExam {

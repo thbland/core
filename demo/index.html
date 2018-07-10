@@ -1,17 +1,16 @@
 <!--
 @license
 Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
-This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/LICENSE
+This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
 Author: RhiTech <tech@rickhanseninstitute.org>
 -->
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
   <title>rhi-core-isncscialgorithm :: Polymer :: Demo</title>
-  <script src="isncsci-tests.js"></script>
-  <link rel="import" href="../../../bower_components/iron-demo-helpers/demo-snippet.html" />
-  <link rel="import" href="rhi-core-isncsci-algorithm-demo.html" />
   <style>
     body {
       margin: 0;
@@ -22,12 +21,8 @@ Author: RhiTech <tech@rickhanseninstitute.org>
       margin: 24px;
     }
     
-    demo-snippet {
+    .code {
       margin-top: 24px;
-    }
-    
-    .code .tag {
-      color: #905;
     }
     
     .code .block {
@@ -39,35 +34,46 @@ Author: RhiTech <tech@rickhanseninstitute.org>
       font-style:italic;
     }
   </style>
-  
-  <style is="custom-style">
-    .font-body-1 {
-      @apply(--paper-font-body1);
-    }
-  </style>
+  <script type="module" src="scripts/demo/rhi-core-isncsci-algorithm-demo.js"></script>
+  <script type="module" src="scripts/demo/rhi-core-isncsci-algorithm-demo-exam.js"></script>
 </head>
 <body>
   <div class="main-content">
     <rhi-core-isncsci-algorithm-demo id="demo"></rhi-core-isncsci-algorithm-demo>
-    <demo-snippet>
-        <div class="code">
-          <div class="tag">&lt;script&gt;</div>
-          <div class="block">
-            <div class="comment">// The <rhi-core-isncsci-algorithm/> component has been re-written as an ES6 class.</div>
-            <div>var isncsciExam = new IncsciExam();</div>
-            <div>var totals = Algorithm.getTotalsFor(isncsciExam);</div>
-          </div>
-          <div class="tag">&lt;/script&gt;</div>
-        </div>
-        <template>
-          <rhi-core-isncsci-algorithm></rhi-core-isncsci-algorithm>
-        </template>
-    </demo-snippet>
+    <div class="code">
+      <div class="block">
+        <div>'use strict';</div>
+        <div class="comment">// The <rhi-core-isncsci-algorithm/> component has been re-written in TypeScript.</div>
+        <br/>
+        <div>import { iIsncsciAppStoreProvider } from 'rhi-core-isncsci-algorithm.boundaries';</div>
+        <div>import { IsncsciTotals } from 'rhi-core-isncsci-algorithm.domain';</div>
+        <div>import { CalculateTotalsUseCase, iIsncsciExamModel } from 'rhi-core-isncsci-algorithm.usecases';</div>
+        <br/>
+        <div class="comment">// Set totals will be called when the calculation has been completed.</div>
+        <div class="comment">// We are following Clean Architecture principles in the implementation of our use cases:</div>
+        <div class="comment">// https://www.linkedin.com/pulse/designing-typescript-todo-list-application-following-clean-eduardo/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_post_details%3Bo8kh9v7zTOuNHXWXrFhT9g%3D%3D</div>
+        <div>const appStoreProvider = {</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;setDermatomeValue: (dermatomeName: string, value: string) => Promise.resolve(),</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;setTotals: (totals: IsncsciTotals) => { console.log(`These are the totals produced by the algorithm: ${totals}`); };</div>
+        <div>};</div>
+        <br/>
+        <div class="comment">// Set you exam's raw data in an object that implements the interface `iIsncsciExamModel`</div>
+        <div>const examData: iIsncsciExamModel = {</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;c5RicghtTouch: '2',</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;c5RightPrick: '2',</div>
+        <div class="comment">&nbsp;&nbsp;// Fully implement the interface</div>
+        <div>};</div>
+        <br/>
+        <div>new CalculateTotalsUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute(examData);</div>
+      </div>
+    </div>
   </div>
-  <script>
-    /* global rhiIsncsciValidationTests */ // Loaded from isncsci-tests.js to keep this file clean.
-    const demo = /** @type {RhiCoreIsncsciAlgorithmDemo} */ document.getElementById('demo');
-    demo.tests = rhiIsncsciValidationTests.all;
+  <script type="module">
+    'use strict';
+
+    import { isncsciValidationTests } from './scripts/domain/specs/isncsci-validation-tests';
+    const demo = document.getElementById('demo');
+    demo.tests = isncsciValidationTests;
     demo.loadRandomTest();
   </script>
 </body>

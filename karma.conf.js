@@ -16,11 +16,14 @@ module.exports = function (config) {
       // list of files / patterns to load in the browser
       files: [
         './node_modules/phantomjs-polyfill-object-assign/object-assign-polyfill.js',
-        { pattern: './src/**/*.ts' },
-        { pattern: './specs/**/*.ts' },
-        //{ pattern: './specs/isncsciTests.ts' },
-        //{ pattern: './specs/algorithm.spec.ts' },
-        { pattern: 'index.ts' }
+        { pattern: './boundaries.ts' },
+        { pattern: './domain.ts' },
+        { pattern: './usecases.ts' },
+        { pattern: './boundaries/src/**/*.ts' },
+        { pattern: './domain/src/**/*.ts' },
+        { pattern: './usecases/src/**/*.ts' },
+        { pattern: './domain/specs/**/*.ts' },
+        { pattern: './usecases/specs/**/*.ts' }
       ],
   
   
@@ -33,9 +36,14 @@ module.exports = function (config) {
       // preprocess matching files before serving them to the browser
       // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
       preprocessors: {
-        './src/**/*.ts': ['karma-typescript', 'coverage'],
-        './specs/**/*.ts': ['karma-typescript', 'coverage'],
-        './index.ts': ['karma-typescript', 'coverage']
+        './boundaries/src/**/*.ts': ['karma-typescript', 'coverage'],
+        './domain/src/**/*.ts': ['karma-typescript', 'coverage'],
+        './usecases/src/**/*.ts': ['karma-typescript', 'coverage'],
+        './domain/specs/**/*.ts': ['karma-typescript', 'coverage'],
+        './usecases/specs/**/*.ts': ['karma-typescript', 'coverage'],
+        './boundaries.ts': ['karma-typescript', 'coverage'],
+        './domain.ts': ['karma-typescript', 'coverage'],
+        './usecases.ts': ['karma-typescript', 'coverage']
       },
   
       karmaTypescriptConfig: {
@@ -43,7 +51,7 @@ module.exports = function (config) {
           module: "commonjs"
         },
         "files": [
-            "./specs/isncsiExam.spec.ts"
+            "./domain/specs/isncsiExam.spec.ts"
         ],
         tsconfig: "./tsconfig.karma.json"
       },

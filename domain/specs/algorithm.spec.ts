@@ -1,49 +1,67 @@
 /*
 @license
 Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
-This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/LICENSE
+This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
 Author: RhiTech <tech@rickhanseninstitute.org>
 */
-
-///<reference path="../node_modules/@types/jasmine/index.d.ts"/>
+///<reference path="../../node_modules/@types/jasmine/index.d.ts"/>
 
 'use strict';
 
-import { Algorithm, BinaryObservation, IsncsciExam, IsncsciTotals } from '../';
-import { iDermatomeModel, iDermatomesModel, iDermatomeWithMotorModel, iTotalsModel, iValidationTestModel, rhiIsncsciValidationTests } from './isncsciTests';
+import { iIsncsciAppStoreProvider } from '../../boundaries';
+import { IsncsciTotals } from '../../domain';
+import { CalculateTotalsUseCase, iIsncsciExamModel } from '../../usecases';
+import { isncsciValidationTests, iTotalsModel } from './isncsci-validation-tests';
 
 describe('Isncsci Algorithm ::', () => {
     it('can calculate the totals for test at [52]', () => {
         // Arrange
-        const test:iValidationTestModel = rhiIsncsciValidationTests[52];
-        const expectedTotals:iTotalsModel = test.totals;
-        const isncsciExam:IsncsciExam = new IsncsciExam();
-        _bind(isncsciExam, test);
+        const examData: iIsncsciExamModel = isncsciValidationTests[52];
+        const expectedTotals: iTotalsModel = examData['totals'];
+        let isncsciTotals: IsncsciTotals;
         
+        const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['setTotals']);
+        
+        appStoreProvider.setTotals.and.callFake(
+            (totals: IsncsciTotals) => {
+                isncsciTotals = totals;
+                runAsserts();
+                
+                return Promise.resolve();
+            }
+        );
+
         // Act
-        const totals:IsncsciTotals = Algorithm.getTotalsFor(isncsciExam);
+        new CalculateTotalsUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute(examData);
         
         // Assert
-        _compare(expectedTotals, totals);
+        function runAsserts() {
+            _compare(expectedTotals, isncsciTotals);
+        }
     });
 
     it('can calculate the totals for the entire test suite', () => {
         // Arrange
-        const testsLength:number = rhiIsncsciValidationTests.length;
+        const testsLength: number = isncsciValidationTests.length;
 
         // Act - Assert
-        for (let i:number=0; i<testsLength; i++) {
-            const test:iValidationTestModel = rhiIsncsciValidationTests[i];
-            const isncsciExam:IsncsciExam = new IsncsciExam();
-            _bind(isncsciExam, test);
-            const totals:IsncsciTotals = Algorithm.getTotalsFor(isncsciExam);
+        for (let i: number=0; i<testsLength; i++) {
+            const testData: iIsncsciExamModel = isncsciValidationTests[i];
+            const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['setTotals']);
         
-            console.log(i + '. ' + test.group + ' / ' + test.comments);
-            _compare(test.totals, totals);
+            appStoreProvider.setTotals.and.callFake(
+                (totals: IsncsciTotals) => {
+                    _compare(testData['totals'], totals);
+                    return Promise.resolve();
+                }
+            );
+
+            // console.log(i + '. ' + testData['group'] + ' / ' + testData.comments);
+            new CalculateTotalsUseCase(appStoreProvider).execute(testData);
         }
     });
         
-    function _compare(expectedTotals:iTotalsModel, totals:IsncsciTotals) {
+    function _compare(expectedTotals: iTotalsModel, totals: IsncsciTotals) {
         expect(expectedTotals.asiaImpairmentScale).toBe(totals.getAsiaImpairmentScaleValues());
         
         expect(expectedTotals.leftLowerMotorContainsNt).toBe(totals.leftLowerMotorContainsNt);
@@ -81,43 +99,5 @@ describe('Isncsci Algorithm ::', () => {
         expect(expectedTotals.touchTotal).toBe(totals.getTouchTotal());
         expect(expectedTotals.upperMotorTotal).toBe(totals.getUpperMotorTotal());
         
-    }
-        
-    function _bind(isncsciExam:IsncsciExam, test:iValidationTestModel) {
-        const keys:string[] = ['C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8',
-                    'T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10', 'T11', 'T12',
-                    'L1', 'L2', 'L3', 'L4', 'L5', 'S1', 'S2', 'S3', 'S4_5'];
-        const dermatomes:iDermatomesModel = test.dermatomes;
-        isncsciExam.analContraction = _getBinaryObservationFor(test.analContraction);
-        isncsciExam.analSensation = _getBinaryObservationFor(test.analSensation);
-        
-        if (test.rightLowestNonKeyMuscleWithMotorFunction
-                && test.rightLowestNonKeyMuscleWithMotorFunction.length > 1)
-            isncsciExam.setRightLowestNonKeyMuscleWithMotorFunction(test.rightLowestNonKeyMuscleWithMotorFunction);
-        
-        if (test.leftLowestNonKeyMuscleWithMotorFunction
-                && test.leftLowestNonKeyMuscleWithMotorFunction.length > 1)
-            isncsciExam.setLeftLowestNonKeyMuscleWithMotorFunction(test.leftLowestNonKeyMuscleWithMotorFunction);
-        
-        for (var i:number=0; i<keys.length; i++) {
-            const key:string = keys[i];
-            const dermatome = dermatomes[key];
-            isncsciExam.updateLevelByName(key, dermatome.rightTouch, dermatome.leftTouch, dermatome.rightPrick, dermatome.leftPrick, dermatome.rightMotor, dermatome.leftMotor);
-        }
-    }
-    
-    function _getBinaryObservationFor(value) {
-        var valueToLower = value ? value.toLowerCase() : 'none';
-            
-        if (valueToLower === 'yes')
-            return BinaryObservation.yes;
-            
-        if (valueToLower === 'no')
-            return BinaryObservation.no;
-            
-        if (valueToLower === 'nt')
-            return BinaryObservation.nt;
-        
-        return BinaryObservation.none;
     }
 });

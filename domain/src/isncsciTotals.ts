@@ -1,10 +1,9 @@
 /*
 @license
 Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
-This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/LICENSE
+This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
 Author: RhiTech <tech@rickhanseninstitute.org>
 */
-
 'use strict';
 
 import { NeuroLevel } from "./neuroLevel";
@@ -87,7 +86,7 @@ export class IsncsciTotals {
     *
     * @param {NeuroLevel[]} values (required) The value array where we are trying to find a match.
     * @param {string} levelName (required) The name of the ISNCSCI Level name we are searching for.
-    * @return {boolean} True if a match for levelName is found in the value array, false otherwise.
+    * @returns {boolean} True if a match for levelName is found in the value array, false otherwise.
     */
     private static containsLevelWithName(values:NeuroLevel[], levelName:string) {
         const key:string = levelName.toUpperCase();
@@ -99,7 +98,7 @@ export class IsncsciTotals {
     * Produces a string containing the values in the provided array, ordered by ordinal, and separated by commas.
     *
     * @param {NeuroLevel[]} values (required) The value array to be converted to a string.
-    * @return {string} Comma separated list.
+    * @returns {string} Comma separated list.
     */
     private static getValuesString(values:NeuroLevel[]):string {
         if (!values)
@@ -122,7 +121,7 @@ export class IsncsciTotals {
     * @param {boolean} hasImpairmentNotDueToSci Flag indicating if any value used in the calculation of this total presents impairment not due to a spinal cord injury.
     * @param {boolean} containsNt Flag indicating if any value used in the calculation of this total is set to Not Testable.
     *
-    * @return {string} The value, followed by an exclamation mark if the hasImpairmentNotDueToSci is set to true or UTD (Unable to determine) if the containsNt flag is set to true.
+    * @returns {string} The value, followed by an exclamation mark if the hasImpairmentNotDueToSci is set to true or UTD (Unable to determine) if the containsNt flag is set to true.
     */
     private static getSummaryStringFor(total:number, hasImpairmentNotDueToSci:boolean, containsNt:boolean):string {
         if (containsNt)
@@ -134,7 +133,7 @@ export class IsncsciTotals {
     /**
      * Checks if there the totals currently have no possible right sensory values.
     *
-    * @return {boolean} True if there are no recorded possible right sensory values.
+    * @returns {boolean} True if there are no recorded possible right sensory values.
     */
     public isRightSensoryEmpty():boolean {
         return this.rightSensoryValues.length === 0;
@@ -158,7 +157,7 @@ export class IsncsciTotals {
     /**
      * Produces a list of possible right sensory values.
     *
-    * @return {NeuroLevel[]} List possible right sensory values.
+    * @returns {NeuroLevel[]} List possible right sensory values.
     */
     public getRightSensoryValues():NeuroLevel[] {
         return this.rightSensoryValues.slice(0);
@@ -167,7 +166,7 @@ export class IsncsciTotals {
     /**
      * Produces an ordered list of all possible right sensory values, separated by commas.
     *
-    * @return {string} Comma separated list of possible right sensory values.
+    * @returns {string} Comma separated list of possible right sensory values.
     */
     public getRightSensoryLongValueString():string {
         return IsncsciTotals.getValuesString(this.rightSensoryValues);
@@ -177,7 +176,7 @@ export class IsncsciTotals {
      * Returns true if the specified levelName belongs to right sensory values list.
     *
     * @param {string} levelName (required) The name of the ISNCSCI Level name we are searching for.
-    * @return {boolean} True if a match for levelName is found in the right sensory value list, false otherwise.
+    * @returns {boolean} True if a match for levelName is found in the right sensory value list, false otherwise.
     */
     public rightSensoryContains(levelName:string):boolean {
         if (!levelName)
@@ -189,7 +188,7 @@ export class IsncsciTotals {
     /**
      * Checks if there the totals currently have no possible leftSensory values.
     *
-    * @return {boolean} True if there are no recorded possible left sensory values.
+    * @returns {boolean} True if there are no recorded possible left sensory values.
     */
     public isLeftSensoryEmpty():boolean {
         return this.leftSensoryValues.length === 0;
@@ -213,7 +212,7 @@ export class IsncsciTotals {
     /**
      * Produces a list of possible left sensory values.
     *
-    * @return {NeuroLevel[]} List possible left sensory values.
+    * @returns {NeuroLevel[]} List possible left sensory values.
     */
     public getLeftSensoryValues():NeuroLevel[] {
         return this.leftSensoryValues.slice(0);
@@ -222,7 +221,7 @@ export class IsncsciTotals {
     /**
      * Produces an ordered list of all possible left sensory values, separated by commas.
     *
-    * @return {string} Comma separated list of possible left sensory values.
+    * @returns {string} Comma separated list of possible left sensory values.
     */
     public getLeftSensoryLongValueString():string {
         return IsncsciTotals.getValuesString(this.leftSensoryValues);
@@ -232,7 +231,7 @@ export class IsncsciTotals {
      * Returns true if the specified levelName belongs to left sensory values list.
     *
     * @param {string} levelName (required) The name of the ISNCSCI Level name we are searching for.
-    * @return {boolean} True if a match for levelName is found in the left sensory value list, false otherwise.
+    * @returns {boolean} True if a match for levelName is found in the left sensory value list, false otherwise.
     */
     public leftSensoryContains(levelName:string):boolean {
         if (!levelName)
@@ -244,7 +243,7 @@ export class IsncsciTotals {
     /**
      * Checks if there the totals currently have no possible right motor values.
     *
-    * @return {boolean} True if there are no recorded possible right motor values.
+    * @returns {boolean} True if there are no recorded possible right motor values.
     */
     public isRightMotorEmpty():boolean {
         return this.rightMotorValues.length === 0;
@@ -274,7 +273,7 @@ export class IsncsciTotals {
     /**
      * Produces a list of possible right motor values.
     *
-    * @return {NeuroLevel[]} List possible right motor values.
+    * @returns {NeuroLevel[]} List possible right motor values.
     */
     public getRightMotorValues():NeuroLevel[] {
         return this.rightMotorValues.slice(0);
@@ -283,7 +282,7 @@ export class IsncsciTotals {
     /**
      * Produces an ordered list of all possible right motor values, separated by commas.
     *
-    * @return {string} Comma separated list of possible right motor values.
+    * @returns {string} Comma separated list of possible right motor values.
     */
     public getRightMotorLongValueString():string {
         return IsncsciTotals.getValuesString(this.rightMotorValues);
@@ -293,7 +292,7 @@ export class IsncsciTotals {
      * Returns true if the specified levelName belongs to right motor values list.
     *
     * @param {string} levelName (required) The name of the ISNCSCI Level name we are searching for.
-    * @return {boolean} True if a match for levelName is found in the right motor value list, false otherwise.
+    * @returns {boolean} True if a match for levelName is found in the right motor value list, false otherwise.
     */
     public rightMotorContains(levelName:string):boolean {
         if (!levelName)
@@ -305,7 +304,7 @@ export class IsncsciTotals {
     /**
      * Checks if there the totals currently have no possible left motor values.
     *
-    * @return {boolean} True if there are no recorded possible left motor values.
+    * @returns {boolean} True if there are no recorded possible left motor values.
     */
     public isLeftMotorEmpty():boolean {
         return this.leftMotorValues.length === 0;
@@ -335,7 +334,7 @@ export class IsncsciTotals {
     /**
      * Produces a list of possible left motor values.
     *
-    * @return {NeuroLevel[]} List possible left motor values.
+    * @returns {NeuroLevel[]} List possible left motor values.
     */
     public getLeftMotorValues():NeuroLevel[] {
         return this.leftMotorValues.slice(0);
@@ -344,7 +343,7 @@ export class IsncsciTotals {
     /**
      * Produces an ordered list of all possible left motor values, separated by commas.
     *
-    * @return {string} Comma separated list of possible left motor values.
+    * @returns {string} Comma separated list of possible left motor values.
     */
     public getLeftMotorLongValueString():string {
         return IsncsciTotals.getValuesString(this.leftMotorValues);
@@ -354,7 +353,7 @@ export class IsncsciTotals {
      * Returns true if the specified levelName belongs to left motor values list.
     *
     * @param {string} levelName (required) The name of the ISNCSCI Level name we are searching for.
-    * @return {boolean} True if a match for levelName is found in the left motor value list, false otherwise.
+    * @returns {boolean} True if a match for levelName is found in the left motor value list, false otherwise.
     */
     public leftMotorContains(levelName:string):boolean {
         if (!levelName)
@@ -387,7 +386,7 @@ export class IsncsciTotals {
     /**
      * Produces a list of possible neurological levels of injury.
     *
-    * @return {NeuroLevel[]} List possible neurological levels of injury.
+    * @returns {NeuroLevel[]} List possible neurological levels of injury.
     */
     public getNeurologicalLevelsOfInjury():NeuroLevel[] {
         return this.neurologicalLevelsOfInjury.slice(0);
@@ -396,7 +395,7 @@ export class IsncsciTotals {
     /**
      * Produces an alphabetically ordered list of all possible Neurological Levels of Injury, separated by commas.
     *
-    * @return {string} Comma separated list of possible Neurological Levels of Injury.
+    * @returns {string} Comma separated list of possible Neurological Levels of Injury.
     */
     public getNeurologicalLevelsOfInjuryLongValueString():string {
         return IsncsciTotals.getValuesString(this.neurologicalLevelsOfInjury);
@@ -405,7 +404,7 @@ export class IsncsciTotals {
     /**
      * Checks if there the totals currently have no possible right sensory ZPP values.
     *
-    * @return {boolean} True if there are no recorded possible right sensory ZPP values.
+    * @returns {boolean} True if there are no recorded possible right sensory ZPP values.
     */
     public isRightSensoryZppEmpty():boolean {
         return this.rightSensoryZppValues.length === 0;
@@ -430,7 +429,7 @@ export class IsncsciTotals {
     /**
      * Produces a list of possible right sensory ZPP values.
     *
-    * @return {NeuroLevel[]} List possible right sensory ZPP values
+    * @returns {NeuroLevel[]} List possible right sensory ZPP values
     */
     public getRightSensoryZppValues():NeuroLevel[] {
         return this.rightSensoryZppValues.slice(0);
@@ -439,7 +438,7 @@ export class IsncsciTotals {
     /**
      * Produces an ordered list of all possible right sensory Zone of Partial Preservation values, separated by commas.
     *
-    * @return {string} Comma separated list of possible right sensory Zone of Partial Preservation values.
+    * @returns {string} Comma separated list of possible right sensory Zone of Partial Preservation values.
     */
     public getRightSensoryZppLongValueString():string {
         return IsncsciTotals.getValuesString(this.rightSensoryZppValues);
@@ -448,7 +447,7 @@ export class IsncsciTotals {
     /**
      * Checks if there the totals currently have no possible left sensory ZPP values.
     *
-    * @return {boolean} True if there are no recorded possible left sensory ZPP values.
+    * @returns {boolean} True if there are no recorded possible left sensory ZPP values.
     */
     public isLeftSensoryZppEmpty():boolean {
         return this.leftSensoryZppValues.length === 0;
@@ -473,7 +472,7 @@ export class IsncsciTotals {
     /**
      * Produces a list of possible left sensory ZPP values.
     *
-    * @return {NeuroLevel[]} List possible left sensory ZPP values
+    * @returns {NeuroLevel[]} List possible left sensory ZPP values
     */
     public getLeftSensoryZppValues():NeuroLevel[] {
         return this.leftSensoryZppValues.slice(0);
@@ -482,7 +481,7 @@ export class IsncsciTotals {
     /**
      * Produces an ordered list of all possible left sensory Zone of Partial Preservation values, separated by commas.
     *
-    * @return {string} Comma separated list of possible left sensory Zone of Partial Preservation values.
+    * @returns {string} Comma separated list of possible left sensory Zone of Partial Preservation values.
     */
     public getLeftSensoryZppLongValueString():string {
         return IsncsciTotals.getValuesString(this.leftSensoryZppValues);
@@ -491,7 +490,7 @@ export class IsncsciTotals {
     /**
      * Checks if there the totals currently have no possible right motor ZPP values.
     *
-    * @return {boolean} True if there are no recorded possible right motor ZPP values.
+    * @returns {boolean} True if there are no recorded possible right motor ZPP values.
     */
     public isRightMotorZppEmpty():boolean {
         return this.rightMotorZppValues.length === 0;
@@ -516,7 +515,7 @@ export class IsncsciTotals {
     /**
      * Produces a list of possible right motor ZPP values.
     *
-    * @return {NeuroLevel[]} List possible right motor ZPP values
+    * @returns {NeuroLevel[]} List possible right motor ZPP values
     */
     public getRightMotorZppValues():NeuroLevel[] {
         return this.rightMotorZppValues.slice(0);
@@ -525,7 +524,7 @@ export class IsncsciTotals {
     /**
      * Produces an ordered list of all possible right motor Zone of Partial Preservation values, separated by commas.
     *
-    * @return {string} Comma separated list of possible right motor Zone of Partial Preservation values.
+    * @returns {string} Comma separated list of possible right motor Zone of Partial Preservation values.
     */
     public getRightMotorZppLongValueString():string {
         return IsncsciTotals.getValuesString(this.rightMotorZppValues);
@@ -534,7 +533,7 @@ export class IsncsciTotals {
     /**
      * Checks if there the totals currently have no possible left motor ZPP values.
     *
-    * @return {boolean} True if there are no recorded possible left motor ZPP values.
+    * @returns {boolean} True if there are no recorded possible left motor ZPP values.
     */
     public isLeftMotorZppEmpty():boolean {
         return this.leftMotorZppValues.length === 0;
@@ -559,7 +558,7 @@ export class IsncsciTotals {
     /**
      * Produces a list of possible left motor ZPP values.
     *
-    * @return {NeuroLevel[]} List possible left motor ZPP values
+    * @returns {NeuroLevel[]} List possible left motor ZPP values
     */
     public getLeftMotorZppValues():NeuroLevel[] {
         return this.leftMotorZppValues.slice(0);
@@ -568,7 +567,7 @@ export class IsncsciTotals {
     /**
      * Produces an ordered list of all possible left motor Zone of Partial Preservation values, separated by commas.
     *
-    * @return {string} Comma separated list of possible left motor Zone of Partial Preservation values.
+    * @returns {string} Comma separated list of possible left motor Zone of Partial Preservation values.
     */
     public getLeftMotorZppLongValueString():string {
         return IsncsciTotals.getValuesString(this.leftMotorZppValues);
@@ -595,7 +594,7 @@ export class IsncsciTotals {
     /**
      * Produces a string of alphabetically sorted AIS values concatenated by commas.
     *
-    * @return {string} List of AIS values, sorted alphabetically, and concatenated by commas. E.g. 'A,C,E'
+    * @returns {string} List of AIS values, sorted alphabetically, and concatenated by commas. E.g. 'A,C,E'
     */
     public getAsiaImpairmentScaleValues():string {
         return this.asiaImpairmentScaleValues.sort().join();
@@ -604,7 +603,7 @@ export class IsncsciTotals {
     /**
      * Total from adding all left lower motor values.
     *
-    * @return {string} The total produced by adding all left lower motor values.
+    * @returns {string} The total produced by adding all left lower motor values.
     * An ! is added if any of the values involved has some type of impairment not due to an SCI.
     * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
     */
@@ -615,7 +614,7 @@ export class IsncsciTotals {
     /**
      * Total from adding all left motor values.
     *
-    * @return {string} The total produced by adding all left motor values.
+    * @returns {string} The total produced by adding all left motor values.
     * An ! is added if any of the values involved has some type of impairment not due to an SCI.
     * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
     */
@@ -628,7 +627,7 @@ export class IsncsciTotals {
     /**
      * Total from adding all left prick values.
     *
-    * @return {string} The total produced by adding all left prick values.
+    * @returns {string} The total produced by adding all left prick values.
     * An ! is added if any of the values involved has some type of impairment not due to an SCI.
     * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
     */
@@ -639,7 +638,7 @@ export class IsncsciTotals {
     /**
      * Total from adding all left touch values.
     *
-    * @return {string} The total produced by adding all left touch values.
+    * @returns {string} The total produced by adding all left touch values.
     * An ! is added if any of the values involved has some type of impairment not due to an SCI.
     * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
     */
@@ -650,7 +649,7 @@ export class IsncsciTotals {
     /**
      * Total from adding all left upper motor values.
     *
-    * @return {string} The total produced by adding all left upper motor values.
+    * @returns {string} The total produced by adding all left upper motor values.
     * An ! is added if any of the values involved has some type of impairment not due to an SCI.
     * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
     */
@@ -661,7 +660,7 @@ export class IsncsciTotals {
     /**
      * Total from adding all lower motor values.
     *
-    * @return {string} The total produced by adding all lower motor values.
+    * @returns {string} The total produced by adding all lower motor values.
     * An ! is added if any of the values involved has some type of impairment not due to an SCI.
     * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
     */
@@ -674,7 +673,7 @@ export class IsncsciTotals {
     /**
      * Total from adding all prick values.
     *
-    * @return {string} The total produced by adding all prick values.
+    * @returns {string} The total produced by adding all prick values.
     * An ! is added if any of the values involved has some type of impairment not due to an SCI.
     * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
     */
@@ -687,7 +686,7 @@ export class IsncsciTotals {
     /**
      * Total from adding all right lower motor values.
     *
-    * @return {string} The total produced by adding all right lower motor values.
+    * @returns {string} The total produced by adding all right lower motor values.
     * An ! is added if any of the values involved has some type of impairment not due to an SCI.
     * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
     */
@@ -698,7 +697,7 @@ export class IsncsciTotals {
     /**
      * Total from adding all right motor values.
     *
-    * @return {string} The total produced by adding all right motor values.
+    * @returns {string} The total produced by adding all right motor values.
     * An ! is added if any of the values involved has some type of impairment not due to an SCI.
     * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
     */
@@ -711,7 +710,7 @@ export class IsncsciTotals {
     /**
      * Total from adding all right prick values.
     *
-    * @return {string} The total produced by adding all right prick values.
+    * @returns {string} The total produced by adding all right prick values.
     * An ! is added if any of the values involved has some type of impairment not due to an SCI.
     * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
     */
@@ -722,7 +721,7 @@ export class IsncsciTotals {
     /**
      * Total from adding all right touch values.
     *
-    * @return {string} The total produced by adding all right touch values.
+    * @returns {string} The total produced by adding all right touch values.
     * An ! is added if any of the values involved has some type of impairment not due to an SCI.
     * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
     */
@@ -733,7 +732,7 @@ export class IsncsciTotals {
     /**
      * Total from adding all right upper motor values.
     *
-    * @return {string} The total produced by adding all right upper motor values.
+    * @returns {string} The total produced by adding all right upper motor values.
     * An ! is added if any of the values involved has some type of impairment not due to an SCI.
     * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
     */
@@ -744,7 +743,7 @@ export class IsncsciTotals {
     /**
      * Total from adding all touch values.
     *
-    * @return {string} The total produced by adding all touch values.
+    * @returns {string} The total produced by adding all touch values.
     * An ! is added if any of the values involved has some type of impairment not due to an SCI.
     * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
     */
@@ -757,7 +756,7 @@ export class IsncsciTotals {
     /**
      * Total from adding all upper motor values.
     *
-    * @return {string} The total produced by adding all upper motor values.
+    * @returns {string} The total produced by adding all upper motor values.
     * An ! is added if any of the values involved has some type of impairment not due to an SCI.
     * UTD is returned if one of the values cannot be used to produce a total. The presence of NT is a typical case.
     */

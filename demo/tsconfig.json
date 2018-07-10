@@ -10,14 +10,17 @@
         "moduleResolution": "node",
         "noEmitOnError": true,
         "noImplicitAny": false,
-        "outDir": "./dist",
+        "outDir": "./scripts",
         "removeComments": false,
         "sourceMap": false,
         "target": "es6"
     },
     "files": [
-        "./boundaries.ts",
-        "./domain.ts",
-        "./usecases.ts"
+        "../boundaries.ts",
+        "../domain.ts",
+        "../usecases.ts",
+        "../domain/specs/isncsci-validation-tests.ts",
+        "./rhi-core-isncsci-algorithm-demo.ts",
+        "./rhi-core-isncsci-algorithm-demo-exam.ts"
     ]
 }

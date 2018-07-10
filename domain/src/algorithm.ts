@@ -1,10 +1,9 @@
 /*
 @license
 Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
-This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/EddieMachete/rhi-core-isncsci-algorithm/master/LICENSE
+This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
 Author: RhiTech <tech@rickhanseninstitute.org>
 */
-
 'use strict';
 
 import { BinaryObservation } from "./binaryObservation";
@@ -13,7 +12,7 @@ import { IsncsciTotals  } from "./isncsciTotals";
 import { NeuroLevel } from "./neuroLevel";
 
 /**
-* 'rhi-core-isncsci-exam' contains the raw values from a ISNCSCI Examination.
+* 'rhi-core-isncsci-domain.Algorithm' contains the raw values from a ISNCSCI Examination.
 * Instances of this class can be passed to the Algorithm methods to obtain totals.
 * @demo demo/index.html
 */
@@ -21,7 +20,7 @@ export class Algorithm {
     /***********************************************/
     /* ***** Private, static properties ********** */
     /***********************************************/
-    public static get is():string { return 'rhi-core-isncsci-algorithm'; }
+    public static get is():string { return 'rhi-core-isncsci-domain.Algorithm'; }
     static ntRegex:RegExp = /\bNT\b/i;
     static notDeterminable:string = 'UTD';
     static notApplicable:string = 'NA';
@@ -344,7 +343,7 @@ export class Algorithm {
     *
     * @param {IsncsciExam} isncsciExam that was used to produce the totals.
     * @param {IsncsciTotals} totals Totals retunred by the algorithm.
-    * @return {boolean} Flag indicating if any combination in the totals could have a case with motor function more than 3 levels below the injury level.
+    * @returns {boolean} Flag indicating if any combination in the totals could have a case with motor function more than 3 levels below the injury level.
     */
     private static couldNotHaveMotorFunctionMoreThan3LevelsBelowMotorLevel(isncsciExam:IsncsciExam, totals:IsncsciTotals):boolean {
         var mostRostralRightLevelWithMotor = null;
@@ -376,7 +375,7 @@ export class Algorithm {
     *
     * @param {IsncsciExam} isncsciExam that was used to produce the totals.
     * @param {IsncsciTotals} totals Totals retunred by the algorithm.
-    * @return {couldBeAsiaC:boolean,couldBeAsiaD:boolean} Object with the flags couldBeAsiaC:boolean and  couldBeAsiaD:boolean
+    * @returns {couldBeAsiaC:boolean,couldBeAsiaD:boolean} Object with the flags couldBeAsiaC:boolean and  couldBeAsiaD:boolean
     * couldBeAsiaC indicates if this case is a possible ASIA C.
     * couldBeAsiaD indicates if this case is a possible ASIA D.
     */
@@ -497,7 +496,7 @@ export class Algorithm {
     * Returns the results produced by the ISNCSCI Algorithm in a raw values format.
     *
     * @param {IsncsciExam} isncsciExam Neurology form that has been populated with the values to be used in the algorithm calculations.
-    * @return {IsncsciTotals} Totals in raw values format.
+    * @returns {IsncsciTotals} Totals in raw values format.
     * The results contain lists with every prossible value for each field.
     * You can use the resulting object to obtained a summarized version, which uses ranges, by passing the result to the method GetTotalsSummaryFor
     */

@@ -16,7 +16,13 @@
         "target": "es5"
     },
     "include": [
-        "./index.ts",
-        "./specs/**/*.ts"
+        "./boundaries.ts",
+        "./domain.ts",
+        "./usecases.ts",
+        "./boundaries/src/**/*.ts",
+        "./domain/src/**/*.ts",
+        "./usecases/src/**/*.ts",
+        "./domain/specs/**/*.ts",
+        "./usecases/specs/**/*.ts"
     ]
 }
