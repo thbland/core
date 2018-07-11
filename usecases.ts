@@ -12,8 +12,9 @@ Author: RhiTech <tech@rickhanseninstitute.org>
  */
 
 export { CalculateTotalsUseCase } from './usecases/src/calculateTotals.usecase';
+export { ClearDermatomeSelectionUseCase } from './usecases/src/clearDermatomeSelection.usecase';
+export { validateDermatomeName, validateDermatomeNameAndValue } from './usecases/src/helpers';
 export { iIsncsciExamModel } from './usecases/src/iIsncsciExamModel';
-export { SetDermatomeValueUseCase } from './usecases/src/setDermatomeValue.usecase';
 export {
     motorLevelNameRegExp,
     validMotorNameRegExp,
@@ -21,3 +22,6 @@ export {
     validSensoryNameRegExp,
     validSensoryValueRegExp
 } from './usecases/src/regularExpressions';
+export { SelectDermatomeUseCase } from './usecases/src/selectDermatome.usecase';
+export { SetDermatomeValueUseCase } from './usecases/src/setDermatomeValue.usecase';
+export { UpdateDermatomesInRangeUseCase } from './usecases/src/updateDermatomesInRange.usecase';
