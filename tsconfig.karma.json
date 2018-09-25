@@ -1,28 +1,11 @@
 {
+    "extends": "./tsconfig",
     "compilerOptions": {
-        "declaration": true,
-        "lib": [
-            "dom",
-            "es2015",
-            "scripthost"
-        ],
-        "module": "amd",
-        "moduleResolution": "node",
-        "noEmitOnError": true,
-        "noImplicitAny": false,
+        "module": "commonjs",
         "outDir": "./dist",
-        "removeComments": false,
-        "sourceMap": false,
-        "target": "es5"
     },
     "include": [
-        "./boundaries.ts",
-        "./domain.ts",
-        "./usecases.ts",
-        "./boundaries/src/**/*.ts",
-        "./domain/src/**/*.ts",
-        "./usecases/src/**/*.ts",
-        "./domain/specs/**/*.ts",
-        "./usecases/specs/**/*.ts"
+        "./src/**/*.ts",
+        "./spec/**/*.ts",
     ]
 }
