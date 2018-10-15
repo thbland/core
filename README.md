@@ -4,7 +4,7 @@ This code should not be modified and/or distributed without explicit permission 
 Author: RhiTech <tech@rickhanseninstitute.org>
 ==============================================================================-->
 
-# rhi-core-isncsci-algorithm
+# @rhi-isncsci/core
 
 ISNCSCI algorithm written in TypeScript
 
@@ -18,7 +18,7 @@ Just pass your exam data to the `usecases.CalculateTotalsUseCase.execute` method
 The data must follow implement the interface  `usecases.iIsncsciExamModel`.
 
 ```ts
-import { iIsncsciAppStoreProvider, IsncsciTotals, CalculateTotalsUseCase, iIsncsciExamModel } from 'rhi-core-isncsci-algorithm';
+import { iIsncsciAppStoreProvider, IsncsciTotals, CalculateTotalsUseCase, iIsncsciExamModel } from '@rhi-isncsci/core';
 
 // Set totals will be called when the calculation has been completed.
 // We are following Clean Architecture principles in the implementation of our use cases:
@@ -43,17 +43,22 @@ have interface elements which will allow you incorporate the algorithm to your
 web and hybrid application projects.
 
 ## Installation:
-Download the component using npm:
+Download the package using npm:
 ```
-npm install --save rhi-core-isncsci-algorithm
+npm install --save @rhi-isncsci/core
+```
+
+To download the prerelease version of the package:
+```
+npm install --save @rhi-isncsci/core@next
 ```
 
 ## Demo and Development
 To view a demo and contribute to this project you can download the project using git:
 ```
-git clone https://github.com/rick-hansen-institute/rhi-core-isncsci-algorithm.git
+git clone https://github.com/rhi-isncsci/core.git
 ```
-or [download as a zip file](https://github.com/rick-hansen-institute/rhi-core-isncsci-algorithm/archive/master.zip).
+or [download as a zip file](https://github.com/rhi-isncsci/core/archive/master.zip).
 
 ## Run the unit tests
 Install dependencies:
