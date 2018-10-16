@@ -2,22 +2,17 @@
     "compilerOptions": {
         "declaration": true,
         "lib": [
-          "dom",
-          "es6",
-          "scripthost"
+            "dom",
+            "es6",
         ],
-        "module": "es6",
         "moduleResolution": "node",
         "noEmitOnError": true,
         "noImplicitAny": false,
-        "outDir": "./dist",
         "removeComments": false,
         "sourceMap": false,
         "target": "es6"
     },
-    "files": [
-        "./boundaries.ts",
-        "./domain.ts",
-        "./usecases.ts"
+    "include": [
+        "./src/**/*.ts"
     ]
 }

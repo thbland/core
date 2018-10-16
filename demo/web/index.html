@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>rhi-core-isncsci-algorithm</title>
+  <script src="./demo-snippet.js"></script>
+</head>
+<body>
+  <demo-snippet>
+    <template>
+      <button id="load-test-btn">New Exam</button>
+      <code id="totals" style="display:block">...</code>
+
+      <script type="module">
+        import { CalculateTotalsUseCase } from "/node_modules/rhi-core-isncsci-algorithm/index.js";
+        import { isncsciValidationTests as tests } from './isncsci-validation-tests.js';
+
+        // define usecase behavior
+        const useCase = new CalculateTotalsUseCase({
+          setTotals: (totals) => {
+            displayTotals(totals);
+            return Promise.resolve()
+          }
+        });
+
+        // define how to display calculated totals information
+        const displayTotals = (totals) => {
+          document.getElementById('totals').innerText = `
+            id: ${window.randomTest.id}
+            ASIA: ${totals.getAsiaImpairmentScaleValues()}
+
+            LeftMotorTotal: ${totals.getLeftMotorTotal()}
+            LeftPrickTotal: ${totals.getLeftPrickTotal()}
+            LeftTouchTotal: ${totals.getLeftTouchTotal()}
+
+            RightMotorTotal: ${totals.getRightMotorTotal()}
+            RightPrickTotal: ${totals.getRightPrickTotal()}
+            RightTouchTotal: ${totals.getRightTouchTotal()}
+            `;
+        }
+
+        // load new test and execute the usecase
+        document.getElementById('load-test-btn').onclick = () => {
+          window.randomTest = tests[Math.floor((Math.random() * tests.length))];
+          useCase.execute(randomTest)
+        }
+      </script>
+    </template>
+  </demo-snippet>
+</body>
+</html>
