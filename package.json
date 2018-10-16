@@ -2,7 +2,7 @@
   "author": "RhiTech <tech@rickhanseninstitute.org>",
   "description": "TypeScript version of the ISNCSCI algorithm.",
   "devDependencies": {
-    "@types/jasmine": "^2.8.8",
+    "@types/jasmine": "^2.8.9",
     "cpx": "^1.5.0",
     "http-server": "^0.11.1",
     "jasmine-core": "^3.2.1",
@@ -33,5 +33,5 @@
     "start:demo:web": "http-server -p 8080 -o http://localhost:8080/demo/web/",
     "test": "karma start"
   },
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
