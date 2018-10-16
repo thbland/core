@@ -8,7 +8,6 @@ Author: RhiTech <tech@rickhanseninstitute.org>
 
 'use strict';
 
-// import { Promise } from 'es6-promise'; // Polyfill promise as PhantomJS is still missing it [2017-06-14]
 import { iIsncsciAppStoreProvider } from '../../src/boundaries';
 import { UpdateDermatomesInRangeUseCase } from '../../src/usecases/updateDermatomesInRange.usecase';
 
@@ -19,7 +18,7 @@ describe('Update dermatomes in range use case', () => {
 
     // beforeAll((done) => { });
     // beforeEach((done) => { done(); });
-    
+
     it('sets the value of 2 for the range [c5RightMotor,  c8RightPrick]', (done) => {
         // Arrange
         const dermatomeRange: string[] = [
@@ -30,16 +29,16 @@ describe('Update dermatomes in range use case', () => {
 
         //#region AppStoreProvider
         const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['updateDermatomesInRange']);
-        
+
         appStoreProvider.updateDermatomesInRange.and.callFake(
             (dermatomeRange: string[], value: string) => {
                 runAsserts();
-                
+
                 return Promise.resolve();
             }
         );
         //#endregion
-        
+
         // Act
         new UpdateDermatomesInRangeUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute(dermatomeRange, '2');
 
@@ -49,7 +48,7 @@ describe('Update dermatomes in range use case', () => {
             done();
         };
     });
-    
+
     it('throws an exception when setting a value of 5 in a range containing sensory values', (done) => {
         // Arrange
         let errorMessage: string;
@@ -61,7 +60,7 @@ describe('Update dermatomes in range use case', () => {
         const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['updateDermatomesInRange']);
         appStoreProvider.updateDermatomesInRange.and.returnValue(Promise.resolve());
         //#endregion
-        
+
         // Act
         try {
             new UpdateDermatomesInRangeUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute(dermatomeRange, '5');

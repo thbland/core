@@ -8,7 +8,6 @@ Author: RhiTech <tech@rickhanseninstitute.org>
 
 'use strict';
 
-// import { Promise } from 'es6-promise'; // Polyfill promise as PhantomJS is still missing it [2017-06-14]
 import { iIsncsciAppStoreProvider } from '../../src/boundaries';
 import { ClearDermatomeSelectionUseCase } from '../../src/usecases/clearDermatomeSelection.usecase';
 
@@ -19,21 +18,21 @@ describe('Clear dermatome selection use case', () => {
 
     // beforeAll((done) => { });
     // beforeEach((done) => { done(); });
-    
+
     it('clears the dermatome selection', (done) => {
         // Arrange
         //#region AppStoreProvider
         const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['clearDermatomeSelection']);
-        
+
         appStoreProvider.clearDermatomeSelection.and.callFake(
             () => {
                 runAsserts();
-                
+
                 return Promise.resolve();
             }
         );
         //#endregion
-        
+
         // Act
         new ClearDermatomeSelectionUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute();
 

@@ -8,7 +8,6 @@ Author: RhiTech <tech@rickhanseninstitute.org>
 
 'use strict';
 
-// import { Promise } from 'es6-promise'; // Polyfill promise as PhantomJS is still missing it [2017-06-14]
 import { iIsncsciAppStoreProvider } from '../../src/boundaries';
 import { SetDermatomeValueUseCase } from '../../src/usecases/setDermatomeValue.usecase';
 
@@ -45,7 +44,7 @@ describe('Set dermatome value usecase', () => {
         for (let i: number=1; i<=3; i++) {
             addSensoryVariantsToDermatomeNames(`s${i}`, dermatomeNames);
         }
-        
+
         addSensoryVariantsToDermatomeNames('s4_5', dermatomeNames);
 
         return dermatomeNames;
@@ -73,7 +72,7 @@ describe('Set dermatome value usecase', () => {
 
         return dermatomeNames;
     }
-    
+
     it('sets the value of c2RightPrick to 2', (done) => {
         // Arrange
         let dermatomeNameUpdated: string;
@@ -81,18 +80,18 @@ describe('Set dermatome value usecase', () => {
 
         //#region AppStoreProvider
         const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['setDermatomeValue']);
-        
+
         appStoreProvider.setDermatomeValue.and.callFake(
             (dermatomeName: string, value: string) => {
                 dermatomeNameUpdated = dermatomeName;
                 valueAssigned = value;
                 runAsserts();
-                
+
                 return Promise.resolve();
             }
         );
         //#endregion
-        
+
         // Act
         new SetDermatomeValueUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute('c2RightPrick', '2');
 
@@ -105,14 +104,14 @@ describe('Set dermatome value usecase', () => {
             done();
         };
     });
-    
+
     it('throws an exception when setting a value for an invalid dermatome name [c5RightMotormotor]', () => {
         // Arrange
         let errorMessage: string;
 
         //#region AppStoreProvider
         const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['setDermatomeValue']);
-        
+
         // Act
         try {
             new SetDermatomeValueUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute('c5RightMotormotor', '2');
@@ -123,7 +122,7 @@ describe('Set dermatome value usecase', () => {
         // Assert
         expect(errorMessage).toBe(`${SetDermatomeValueUseCase.is} :: invalid-dermatome-name`);
     });
-    
+
     it('sets any valid sensory value to any valid sensory dermatome', (done) => {
         // Arrange
         const validDermatomeNames: string[] = getValidSensoryDermatomeNames();
@@ -132,7 +131,7 @@ describe('Set dermatome value usecase', () => {
 
         //#region AppStoreProvider
         const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['setDermatomeValue']);
-        
+
         appStoreProvider.setDermatomeValue.and.callFake(
             (dermatomeName: string, value: string) => {
                 dermatomesAssigned++;
@@ -141,15 +140,15 @@ describe('Set dermatome value usecase', () => {
                 if (dermatomesAssigned === validDermatomeNames.length * validSensoryValues.length) {
                     runAsserts();
                 }
-                
+
                 return Promise.resolve();
             }
         );
         //#endregion
-        
+
         // Act
         validDermatomeNames.forEach(
-            (dermatomeName: string) => 
+            (dermatomeName: string) =>
                 validSensoryValues.forEach((value: string) => new SetDermatomeValueUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute(dermatomeName, value))
         );
 
@@ -159,7 +158,7 @@ describe('Set dermatome value usecase', () => {
             done();
         };
     });
-    
+
     it('sets any valid motor value to any valid motor dermatome', (done) => {
         // Arrange
         const validDermatomeNames: string[] = getValidMotorDermatomeNames();
@@ -168,7 +167,7 @@ describe('Set dermatome value usecase', () => {
 
         //#region AppStoreProvider
         const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['setDermatomeValue']);
-        
+
         appStoreProvider.setDermatomeValue.and.callFake(
             (dermatomeName: string, value: string) => {
                 dermatomesAssigned++;
@@ -177,15 +176,15 @@ describe('Set dermatome value usecase', () => {
                 if (dermatomesAssigned === validDermatomeNames.length * validMotorValues.length) {
                     runAsserts();
                 }
-                
+
                 return Promise.resolve();
             }
         );
         //#endregion
-        
+
         // Act
         validDermatomeNames.forEach(
-            (dermatomeName: string) => 
+            (dermatomeName: string) =>
             validMotorValues.forEach((value: string) => new SetDermatomeValueUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute(dermatomeName, value))
         );
 

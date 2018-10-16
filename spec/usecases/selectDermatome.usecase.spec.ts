@@ -8,7 +8,6 @@ Author: RhiTech <tech@rickhanseninstitute.org>
 
 'use strict';
 
-// import { Promise } from 'es6-promise'; // Polyfill promise as PhantomJS is still missing it [2017-06-14]
 import { iIsncsciAppStoreProvider } from '../../src/boundaries';
 import { SelectDermatomeUseCase } from '../../src/usecases/selectDermatome.usecase';
 
@@ -19,24 +18,24 @@ describe('Select dermatome use case', () => {
 
     // beforeAll((done) => { });
     // beforeEach((done) => { done(); });
-    
+
     it('sets the value of c2RightPrick to 2', (done) => {
         // Arrange
         let dermatomeSelected: string;
 
         //#region AppStoreProvider
         const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['selectDermatome']);
-        
+
         appStoreProvider.selectDermatome.and.callFake(
             (dermatomeName: string) => {
                 dermatomeSelected = dermatomeName;
                 runAsserts();
-                
+
                 return Promise.resolve();
             }
         );
         //#endregion
-        
+
         // Act
         new SelectDermatomeUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute('c2RightPrick');
 
@@ -48,14 +47,14 @@ describe('Select dermatome use case', () => {
             done();
         };
     });
-    
+
     it('throws an exception when attempting to select [c5RightMotormotor]', () => {
         // Arrange
         let errorMessage: string;
 
         //#region AppStoreProvider
         const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['selectDermatome']);
-        
+
         // Act
         try {
             new SelectDermatomeUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute('c5RightMotormotor');

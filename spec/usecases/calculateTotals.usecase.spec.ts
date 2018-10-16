@@ -8,7 +8,6 @@ Author: RhiTech <tech@rickhanseninstitute.org>
 
 'use strict';
 
-// import { Promise } from 'es6-promise'; // Polyfill promise as PhantomJS is still missing it [2017-06-14]
 import { iIsncsciAppStoreProvider } from '../../src/boundaries';
 import { IsncsciTotals } from '../../src/domain';
 import { CalculateTotalsUseCase } from '../../src/usecases/calculateTotals.usecase';
@@ -22,7 +21,7 @@ describe('Calculate totals usecase', () => {
 
     // beforeAll((done) => { });
     // beforeEach((done) => { done(); });
-    
+
     it('updates the application state with the totals generated from a valid exam', (done) => {
         // Arrange
         let isncsciTotals: IsncsciTotals;
@@ -30,17 +29,17 @@ describe('Calculate totals usecase', () => {
 
         //#region AppStoreProvider
         const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['setTotals']);
-        
+
         appStoreProvider.setTotals.and.callFake(
             (totals: IsncsciTotals) => {
                 isncsciTotals = totals;
                 runAsserts();
-                
+
                 return Promise.resolve();
             }
         );
         //#endregion
-        
+
         // Act
         new CalculateTotalsUseCase(<iIsncsciAppStoreProvider>appStoreProvider)
         .execute(isncsciExamModel);
@@ -51,13 +50,13 @@ describe('Calculate totals usecase', () => {
             done();
         };
     });
-    
+
     it('throws an exception when l3RightMotor is missing from the data model', (done) => {
         // Arrange
         let errorMessage: string;
         const isncsciExamModel: iIsncsciExamModel = Object.assign({}, isncsciValidationTests[0]);
         const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['setTotals']);
-        
+
         // Act
         delete isncsciExamModel['l3RightMotor'];
 
@@ -68,7 +67,7 @@ describe('Calculate totals usecase', () => {
             errorMessage = ex;
             runAsserts();
         }
-        
+
         // Assert
         function runAsserts() {
             expect(errorMessage).toBe('invalid-motor-value[l3RightMotor]');
@@ -78,7 +77,7 @@ describe('Calculate totals usecase', () => {
 
     function _compare(expectedTotals: any, totals: IsncsciTotals) {
         expect(expectedTotals.asiaImpairmentScale).toBe(totals.getAsiaImpairmentScaleValues());
-        
+
         expect(expectedTotals.leftLowerMotorContainsNt).toBe(totals.leftLowerMotorContainsNt);
         expect(expectedTotals.leftLowerMotorTotal).toBe(totals.getLeftLowerMotorTotal());
         expect(expectedTotals.leftMotor).toBe(totals.getLeftMotorLongValueString());
@@ -92,11 +91,11 @@ describe('Calculate totals usecase', () => {
         expect(expectedTotals.leftTouchTotal).toBe(totals.getLeftTouchTotal());
         expect(expectedTotals.leftUpperMotorContainsNt).toBe(totals.leftUpperMotorContainsNt);
         expect(expectedTotals.leftUpperMotorTotal).toBe(totals.getLeftUpperMotorTotal());
-        
+
         expect(expectedTotals.lowerMotorTotal).toBe(totals.getLowerMotorTotal());
         expect(expectedTotals.neurologicalLevelOfInjury).toBe(totals.getNeurologicalLevelsOfInjuryLongValueString());
         expect(expectedTotals.prickTotal).toBe(totals.getPrickTotal());
-        
+
         expect(expectedTotals.rightLowerMotorContainsNt).toBe(totals.rightLowerMotorContainsNt);
         expect(expectedTotals.rightLowerMotorTotal).toBe(totals.getRightLowerMotorTotal());
         expect(expectedTotals.rightMotor).toBe(totals.getRightMotorLongValueString());
@@ -110,7 +109,7 @@ describe('Calculate totals usecase', () => {
         expect(expectedTotals.rightTouchTotal).toBe(totals.getRightTouchTotal());
         expect(expectedTotals.rightUpperMotorContainsNt).toBe(totals.rightUpperMotorContainsNt);
         expect(expectedTotals.rightUpperMotorTotal).toBe(totals.getRightUpperMotorTotal());
-        
+
         expect(expectedTotals.touchTotal).toBe(totals.getTouchTotal());
         expect(expectedTotals.upperMotorTotal).toBe(totals.getUpperMotorTotal());
     }
