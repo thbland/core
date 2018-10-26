@@ -4,12 +4,11 @@ Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
 This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
 Author: RhiTech <tech@rickhanseninstitute.org>
 */
-///<reference path="../../node_modules/@types/jasmine/index.d.ts"/>
-
 'use strict';
 
+///<reference path="../../node_modules/@types/jasmine/index.d.ts"/>
 import { iIsncsciAppStoreProvider } from '../../src/boundaries';
-import { SelectDermatomeUseCase } from '../../src/usecases/selectDermatome.usecase';
+import { selectDermatome } from '../../src/usecases/selectDermatome.usecase';
 
 describe('Select dermatome use case', () => {
     // The promise polyfill works in the spec files but not inside the actual app files.
@@ -37,7 +36,7 @@ describe('Select dermatome use case', () => {
         //#endregion
 
         // Act
-        new SelectDermatomeUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute('c2RightPrick');
+        selectDermatome('c2RightPrick', appStoreProvider);
 
         // Assert
         function runAsserts() {
@@ -57,12 +56,12 @@ describe('Select dermatome use case', () => {
 
         // Act
         try {
-            new SelectDermatomeUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute('c5RightMotormotor');
+            selectDermatome('c5RightMotormotor', appStoreProvider);
         } catch (ex) {
             errorMessage = ex;
         }
 
         // Assert
-        expect(errorMessage).toBe(`${SelectDermatomeUseCase.is} :: invalid-dermatome-name`);
+        expect(errorMessage).toBe(`SelectDermatomeUseCase :: invalid-dermatome-name`);
     });
 });

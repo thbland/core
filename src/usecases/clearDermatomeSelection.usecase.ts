@@ -14,20 +14,13 @@ import { iIsncsciAppStoreProvider } from '../boundaries.js';
  * Steps:
  * 1. The clinician requests for the dermatome selection to be cleared.
  * 2. The system updates the application state.
-*/
-export class ClearDermatomeSelectionUseCase {
-    static get is(): string { return "rhi-core-isncsci-usecases.ClearDermatomeSelectionUseCase"; }
+ */
 
-    /**
-     * @param {iIsncsciAppStoreProvider} appStoreProvider Allow's the system to update the application's state.
-    */
-    public constructor(private appStoreProvider: iIsncsciAppStoreProvider) {}
-
-    /**
-     * 1. The clinician requests for the dermatome selection to be cleared.
-    */
-    public execute(): void {
-        // 2. The system updates the application state with the new value.
-        this.appStoreProvider.clearDermatomeSelection();
-    }
+/**
+ * 1. The clinician requests for the dermatome selection to be cleared.
+ * @param {iIsncsciAppStoreProvider} appStoreProvider Allow's the system to update the application's state.
+ */
+export function clearDermatomeSelection(appStoreProvider: iIsncsciAppStoreProvider): void {
+    // 2. The system updates the application state with the new value.
+    appStoreProvider.clearDermatomeSelection();
 }

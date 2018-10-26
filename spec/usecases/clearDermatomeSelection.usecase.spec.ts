@@ -4,12 +4,10 @@ Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
 This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
 Author: RhiTech <tech@rickhanseninstitute.org>
 */
-///<reference path="../../node_modules/@types/jasmine/index.d.ts"/>
-
 'use strict';
 
-import { iIsncsciAppStoreProvider } from '../../src/boundaries';
-import { ClearDermatomeSelectionUseCase } from '../../src/usecases/clearDermatomeSelection.usecase';
+///<reference path="../../node_modules/@types/jasmine/index.d.ts"/>
+import { clearDermatomeSelection } from '../../src/usecases/clearDermatomeSelection.usecase';
 
 describe('Clear dermatome selection use case', () => {
     // The promise polyfill works in the spec files but not inside the actual app files.
@@ -34,7 +32,7 @@ describe('Clear dermatome selection use case', () => {
         //#endregion
 
         // Act
-        new ClearDermatomeSelectionUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute();
+        new clearDermatomeSelection(appStoreProvider);
 
         // Assert
         function runAsserts() {

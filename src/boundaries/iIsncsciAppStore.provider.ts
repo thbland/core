@@ -11,7 +11,7 @@ import { IsncsciTotals } from "../domain.js";
 export interface iIsncsciAppStoreProvider {
     clearDermatomeSelection(): Promise<void>;
     selectDermatome(dermatomeName: string): Promise<void>;
-    setDermatomeValue(dermatomeName: string, value: string): Promise<void>;
+    setDermatomeValue(dermatomeName: string, value: string, nextDermatomeName: string): Promise<void>;
     setTotals(totals: IsncsciTotals): Promise<void>;
     updateDermatomesInRange(dermatomeNames: string[], value: string): Promise<void>;
 }

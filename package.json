@@ -33,5 +33,5 @@
     "start:demo:web": "http-server -p 8080 -o http://localhost:8080/demo/web/",
     "test": "karma start"
   },
-  "version": "0.0.2"
+  "version": "0.1.0"
 }

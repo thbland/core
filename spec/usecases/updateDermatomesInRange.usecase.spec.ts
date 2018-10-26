@@ -4,12 +4,10 @@ Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
 This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
 Author: RhiTech <tech@rickhanseninstitute.org>
 */
-///<reference path="../../node_modules/@types/jasmine/index.d.ts"/>
-
 'use strict';
 
-import { iIsncsciAppStoreProvider } from '../../src/boundaries';
-import { UpdateDermatomesInRangeUseCase } from '../../src/usecases/updateDermatomesInRange.usecase';
+///<reference path="../../node_modules/@types/jasmine/index.d.ts"/>
+import { updateDermatomesInRange } from '../../src/usecases/updateDermatomesInRange.usecase';
 
 describe('Update dermatomes in range use case', () => {
     // The promise polyfill works in the spec files but not inside the actual app files.
@@ -27,7 +25,7 @@ describe('Update dermatomes in range use case', () => {
             'c7RightMotor', 'c7RightTouch', 'c7RightPrick',
             'c8RightMotor', 'c8RightTouch', 'c8RightPrick'];
 
-        //#region AppStoreProvider
+        //#region AppStoreProviders
         const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['updateDermatomesInRange']);
 
         appStoreProvider.updateDermatomesInRange.and.callFake(
@@ -40,7 +38,7 @@ describe('Update dermatomes in range use case', () => {
         //#endregion
 
         // Act
-        new UpdateDermatomesInRangeUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute(dermatomeRange, '2');
+        updateDermatomesInRange(dermatomeRange, '2', appStoreProvider);
 
         // Assert
         function runAsserts() {
@@ -63,7 +61,7 @@ describe('Update dermatomes in range use case', () => {
 
         // Act
         try {
-            new UpdateDermatomesInRangeUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute(dermatomeRange, '5');
+            updateDermatomesInRange(dermatomeRange, '5', appStoreProvider);
         } catch(error) {
             errorMessage = error;
             runAsserts();
@@ -71,7 +69,7 @@ describe('Update dermatomes in range use case', () => {
 
         // Assert
         function runAsserts() {
-            expect(errorMessage).toBe(`${UpdateDermatomesInRangeUseCase.is} :: c5RightTouch - invalid-sensory-value :: c5RightPrick - invalid-sensory-value :: c6RightTouch - invalid-sensory-value :: c6RightPrick - invalid-sensory-value`);
+            expect(errorMessage).toBe(`UpdateDermatomesInRangeUseCase :: c5RightTouch - invalid-sensory-value :: c5RightPrick - invalid-sensory-value :: c6RightTouch - invalid-sensory-value :: c6RightPrick - invalid-sensory-value`);
             done();
         };
     });

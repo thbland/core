@@ -10,7 +10,7 @@ Author: RhiTech <tech@rickhanseninstitute.org>
 
 import { iIsncsciAppStoreProvider } from '../../src/boundaries';
 import { IsncsciTotals } from '../../src/domain';
-import { CalculateTotalsUseCase, iIsncsciExamModel } from '../../src/usecases';
+import { calculateTotals, iIsncsciExamModel } from '../../src/usecases';
 import { isncsciValidationTests, iTotalsModel } from './isncsci-validation-tests';
 
 describe('Isncsci Algorithm ::', () => {
@@ -32,7 +32,7 @@ describe('Isncsci Algorithm ::', () => {
         );
 
         // Act
-        new CalculateTotalsUseCase(<iIsncsciAppStoreProvider>appStoreProvider).execute(examData);
+        calculateTotals(examData, appStoreProvider);
         
         // Assert
         function runAsserts() {
@@ -57,7 +57,7 @@ describe('Isncsci Algorithm ::', () => {
             );
 
             // console.log(i + '. ' + testData['group'] + ' / ' + testData.comments);
-            new CalculateTotalsUseCase(appStoreProvider).execute(testData);
+            calculateTotals(testData, appStoreProvider);
         }
     });
         

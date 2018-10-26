@@ -16,29 +16,22 @@ import { validateDermatomeName } from './helpers.js';
  * 1. The clinician requests for a specific dermatome to be selected.
  * 2. The system validates the request.
  * 3. The system updates the application state with the selection.
-*/
-export class SelectDermatomeUseCase {
-    static get is(): string { return "rhi-core-isncsci-usecases.SelectDermatomeUseCase"; }
+ */
 
-    /**
-     * @param {iIsncsciAppStoreProvider} appStoreProvider Allow's the system to update the application's state.
-    */
-    public constructor(private appStoreProvider: iIsncsciAppStoreProvider) {}
+/**
+ * 1. The clinician requests for a specific dermatome to be selected.
+ * @param {string} dermatomeName
+ * @param {iIsncsciAppStoreProvider} appStoreProvider Allow's the system to update the application's state.
+ */
+export function selectDermatome(dermatomeName: string, appStoreProvider: iIsncsciAppStoreProvider): void {
+    // 2. The system validates the request.
+    const validationMessage = validateDermatomeName(dermatomeName);
 
-    /**
-    * 1. The clinician requests for a specific dermatome to be selected.
-    * @param {string} dermatomeName
-    */
-    public execute(dermatomeName: string): void {
-        // 2. The system validates the request.
-        const validationMessage = validateDermatomeName(dermatomeName);
-
-        if (validationMessage) {
-            console.log(`${dermatomeName} :: ${validationMessage}`);
-            throw `${SelectDermatomeUseCase.is} :: ${validationMessage}`;
-        }
-
-        // 3. The system updates the application state with the selection.
-        this.appStoreProvider.selectDermatome(dermatomeName);
+    if (validationMessage) {
+        console.log(`${dermatomeName} :: ${validationMessage}`);
+        throw `SelectDermatomeUseCase :: ${validationMessage}`;
     }
+
+    // 3. The system updates the application state with the selection.
+    appStoreProvider.selectDermatome(dermatomeName);
 }

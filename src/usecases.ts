@@ -11,8 +11,8 @@ Author: RhiTech <tech@rickhanseninstitute.org>
  * @description Collection of use cases that implement the business logic used in the ISNCSCI apps.
  */
 
-export { CalculateTotalsUseCase } from './usecases/calculateTotals.usecase.js';
-export { ClearDermatomeSelectionUseCase } from './usecases/clearDermatomeSelection.usecase.js';
+export { calculateTotals } from './usecases/calculateTotals.usecase.js';
+export { clearDermatomeSelection } from './usecases/clearDermatomeSelection.usecase.js';
 export { validateDermatomeName, validateDermatomeNameAndValue } from './usecases/helpers.js';
 export { iIsncsciExamModel } from './usecases/iIsncsciExamModel.js';
 export {
@@ -22,6 +22,6 @@ export {
     validSensoryNameRegExp,
     validSensoryValueRegExp
 } from './usecases/regularExpressions.js';
-export { SelectDermatomeUseCase } from './usecases/selectDermatome.usecase.js';
-export { SetDermatomeValueUseCase } from './usecases/setDermatomeValue.usecase.js';
-export { UpdateDermatomesInRangeUseCase } from './usecases/updateDermatomesInRange.usecase.js';
+export { selectDermatome } from './usecases/selectDermatome.usecase.js';
+export { setDermatomeValue } from './usecases/setDermatomeValue.usecase.js';
+export { updateDermatomesInRange } from './usecases/updateDermatomesInRange.usecase.js';

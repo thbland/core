@@ -8,9 +8,8 @@ Author: RhiTech <tech@rickhanseninstitute.org>
 
 'use strict';
 
-import { iIsncsciAppStoreProvider } from '../../src/boundaries';
 import { IsncsciTotals } from '../../src/domain';
-import { CalculateTotalsUseCase } from '../../src/usecases/calculateTotals.usecase';
+import { calculateTotals } from '../../src/usecases/calculateTotals.usecase';
 import { iIsncsciExamModel } from '../../src/usecases/iIsncsciExamModel';
 import { isncsciValidationTests } from '../domain/isncsci-validation-tests';
 
@@ -41,8 +40,7 @@ describe('Calculate totals usecase', () => {
         //#endregion
 
         // Act
-        new CalculateTotalsUseCase(<iIsncsciAppStoreProvider>appStoreProvider)
-        .execute(isncsciExamModel);
+        calculateTotals(isncsciExamModel, appStoreProvider);
 
         // Assert
         function runAsserts() {
@@ -61,8 +59,7 @@ describe('Calculate totals usecase', () => {
         delete isncsciExamModel['l3RightMotor'];
 
         try {
-            new CalculateTotalsUseCase(<iIsncsciAppStoreProvider>appStoreProvider)
-            .execute(isncsciExamModel);
+            calculateTotals(isncsciExamModel, appStoreProvider)
         } catch (ex) {
             errorMessage = ex;
             runAsserts();

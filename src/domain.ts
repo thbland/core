@@ -17,3 +17,4 @@ export { BinaryObservation } from './domain/binaryObservation.js';
 export { IsncsciExam } from './domain/isncsciExam.js';
 export { IsncsciTotals } from './domain/isncsciTotals.js';
 export { NeuroLevel } from './domain/neuroLevel.js';
+export { Region } from './domain/region.js';

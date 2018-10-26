@@ -18,37 +18,30 @@ import { validateDermatomeNameAndValue } from './helpers.js';
  * 3. The system validates the request.
  * 4. The system updates the dermatome range with the value from the dermatome marked as selected.
 */
-export class UpdateDermatomesInRangeUseCase {
-    static get is(): string { return "rhi-core-isncsci-usecases.UpdateDermatomesInRangeUseCase"; }
 
-    /**
-     * @param {iIsncsciAppStoreProvider} appStoreProvider Allow's the system to update the application's state.
-    */
-    public constructor(private appStoreProvider: iIsncsciAppStoreProvider) {}
+/**
+ * 1. The clinician selects a dermatome.
+ * 2. The clinician selects a dermatome range.
+ * @param {string} dermatomeName
+ * @param {string[]} dermatomeRange
+ * @param {iIsncsciAppStoreProvider} appStoreProvider Allow's the system to update the application's state.
+*/
+export function updateDermatomesInRange(dermatomeRange: string[], value: string, appStoreProvider: iIsncsciAppStoreProvider): void {
+    // 3. The system validates the request.
+    let validationMessage: string = '';
+    dermatomeRange.forEach((dermatomeName: string) => {
+        const message = validateDermatomeNameAndValue(dermatomeName, value);
 
-    /**
-     * 1. The clinician selects a dermatome.
-     * 2. The clinician selects a dermatome range.
-     * @param {string} dermatomeName
-     * @param {string[]} dermatomeRange
-    */
-    public execute(dermatomeRange: string[], value: string): void {
-        // 3. The system validates the request.
-        let validationMessage: string = '';
-        dermatomeRange.forEach((dermatomeName: string) => {
-            const message = validateDermatomeNameAndValue(dermatomeName, value);
-
-            if (message) {
-                validationMessage += ` :: ${dermatomeName} - ${message}`;
-            }
-        });
-
-        if (validationMessage) {
-            console.log(value + validationMessage);
-            throw UpdateDermatomesInRangeUseCase.is +validationMessage;
+        if (message) {
+            validationMessage += ` :: ${dermatomeName} - ${message}`;
         }
+    });
 
-        // 4. The system updates the dermatome range with the value from the dermatome marked as selected.
-        this.appStoreProvider.updateDermatomesInRange(dermatomeRange, value);
+    if (validationMessage) {
+        console.log(value + validationMessage);
+        throw 'UpdateDermatomesInRangeUseCase' + validationMessage;
     }
+
+    // 4. The system updates the dermatome range with the value from the dermatome marked as selected.
+    appStoreProvider.updateDermatomesInRange(dermatomeRange, value);
 }
