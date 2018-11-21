@@ -1,9 +1,12 @@
-/*
-@license
-Copyright (c) 2017 Rick Hansen Institute. All rights reserved.
-This code should not be modified and/or distributed without explicit permission from the Rick Hansen Institute.
-Author: RhiTech <tech@rickhanseninstitute.org>
-*/
+/**
+ * @license
+ * Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
+ *
+ * This code may only be used under the modified Apache license found at
+ * https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
+ *
+ * Author: RhiTech <tech@rickhanseninstitute.org>
+ */
 'use strict';
 
 /**
@@ -14,13 +17,13 @@ Author: RhiTech <tech@rickhanseninstitute.org>
 export { calculateTotals } from './usecases/calculateTotals.usecase.js';
 export { clearDermatomeSelection } from './usecases/clearDermatomeSelection.usecase.js';
 export { validateDermatomeName, validateDermatomeNameAndValue } from './usecases/helpers.js';
-export { iIsncsciExamModel } from './usecases/iIsncsciExamModel.js';
+export { IIsncsciExamModel } from './usecases/iIsncsciExamModel.js';
 export {
     motorLevelNameRegExp,
     validMotorNameRegExp,
     validMotorValueRegExp,
     validSensoryNameRegExp,
-    validSensoryValueRegExp
+    validSensoryValueRegExp,
 } from './usecases/regularExpressions.js';
 export { selectDermatome } from './usecases/selectDermatome.usecase.js';
 export { setDermatomeValue } from './usecases/setDermatomeValue.usecase.js';

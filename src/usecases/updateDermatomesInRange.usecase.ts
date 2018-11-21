@@ -1,12 +1,15 @@
-/*
-@license
-Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
-This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
-Author: RhiTech <tech@rickhanseninstitute.org>
-*/
+/**
+ * @license
+ * Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
+ *
+ * This code may only be used under the modified Apache license found at
+ * https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
+ *
+ * Author: RhiTech <tech@rickhanseninstitute.org>
+ */
 'use strict';
 
-import { iIsncsciAppStoreProvider } from '../boundaries.js';
+import { IIsncsciAppStoreProvider } from '../boundaries.js';
 import { validateDermatomeNameAndValue } from './helpers.js';
 
 /**
@@ -17,16 +20,17 @@ import { validateDermatomeNameAndValue } from './helpers.js';
  * 2. The clinician selects a dermatome range.
  * 3. The system validates the request.
  * 4. The system updates the dermatome range with the value from the dermatome marked as selected.
-*/
+ */
 
 /**
  * 1. The clinician selects a dermatome.
  * 2. The clinician selects a dermatome range.
  * @param {string} dermatomeName
  * @param {string[]} dermatomeRange
- * @param {iIsncsciAppStoreProvider} appStoreProvider Allow's the system to update the application's state.
-*/
-export function updateDermatomesInRange(dermatomeRange: string[], value: string, appStoreProvider: iIsncsciAppStoreProvider): void {
+ * @param {IIsncsciAppStoreProvider} appStoreProvider Allows the system to update the application's state.
+ */
+export function updateDermatomesInRange(
+    dermatomeRange: string[], value: string, appStoreProvider: IIsncsciAppStoreProvider): void {
     // 3. The system validates the request.
     let validationMessage: string = '';
     dermatomeRange.forEach((dermatomeName: string) => {
@@ -38,8 +42,8 @@ export function updateDermatomesInRange(dermatomeRange: string[], value: string,
     });
 
     if (validationMessage) {
-        console.log(value + validationMessage);
-        throw 'UpdateDermatomesInRangeUseCase' + validationMessage;
+        // console.log(value + validationMessage);
+        throw new Error('UpdateDermatomesInRangeUseCase' + validationMessage);
     }
 
     // 4. The system updates the dermatome range with the value from the dermatome marked as selected.

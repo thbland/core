@@ -1,44 +1,51 @@
-/*
-@license
-Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
-This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
-Author: RhiTech <tech@rickhanseninstitute.org>
-*/
+/**
+ * @license
+ * Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
+ *
+ * This code may only be used under the modified Apache license found at
+ * https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
+ *
+ * Author: RhiTech <tech@rickhanseninstitute.org>
+ */
 'use strict';
 
-export interface iTotalsModel {
-  rightUpperMotorTotal:string,
-  rightUpperMotorContainsNt:boolean,
-  leftUpperMotorTotal:string,
-  leftUpperMotorContainsNt:boolean,
-  rightLowerMotorTotal:string,
-  rightLowerMotorContainsNt:boolean,
-  leftLowerMotorTotal:string,
-  leftLowerMotorContainsNt:boolean,
-  rightTouchTotal:string,
-  rightTouchContainsNt:boolean,
-  leftTouchTotal:string,
-  leftTouchContainsNt:boolean,
-  rightPrickTotal:string,
-  rightPrickContainsNt:boolean,
-  leftPrickTotal:string,
-  leftPrickContainsNt:boolean,
-  rightMotorTotal:string,
-  leftMotorTotal:string,
-  upperMotorTotal:string,
-  lowerMotorTotal:string,
-  touchTotal:string,
-  prickTotal:string,
-  rightSensory:string,
-  leftSensory:string,
-  rightMotor:string,
-  leftMotor:string,
-  neurologicalLevelOfInjury:string,
-  rightSensoryZpp:string,
-  leftSensoryZpp:string,
-  rightMotorZpp:string,
-  leftMotorZpp:string,
-  asiaImpairmentScale:string
+// tslint:disable:max-line-length
+// tslint:disable:object-literal-key-quotes
+// tslint:disable:object-literal-sort-keys
+// tslint:disable:quotemark
+export interface ITotalsModel {
+  rightUpperMotorTotal: string;
+  rightUpperMotorContainsNt: boolean;
+  leftUpperMotorTotal: string;
+  leftUpperMotorContainsNt: boolean;
+  rightLowerMotorTotal: string;
+  rightLowerMotorContainsNt: boolean;
+  leftLowerMotorTotal: string;
+  leftLowerMotorContainsNt: boolean;
+  rightTouchTotal: string;
+  rightTouchContainsNt: boolean;
+  leftTouchTotal: string;
+  leftTouchContainsNt: boolean;
+  rightPrickTotal: string;
+  rightPrickContainsNt: boolean;
+  leftPrickTotal: string;
+  leftPrickContainsNt: boolean;
+  rightMotorTotal: string;
+  leftMotorTotal: string;
+  upperMotorTotal: string;
+  lowerMotorTotal: string;
+  touchTotal: string;
+  prickTotal: string;
+  rightSensory: string;
+  leftSensory: string;
+  rightMotor: string;
+  leftMotor: string;
+  neurologicalLevelOfInjury: string;
+  rightSensoryZpp: string;
+  leftSensoryZpp: string;
+  rightMotorZpp: string;
+  leftMotorZpp: string;
+  asiaImpairmentScale: string;
 }
 
 export let isncsciValidationTests = [
@@ -215,8 +222,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C6",
         "rightMotorZpp": "T1",
         "leftMotorZpp": "C7",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 2,
@@ -391,8 +398,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "T12",
         "rightMotorZpp": "T12",
         "leftMotorZpp": "T11",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 3,
@@ -567,8 +574,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "L2",
         "leftMotorZpp": "L2",
-        "asiaImpairmentScale": "B"
-      }
+        "asiaImpairmentScale": "B",
+      },
     },
     {
       "id": 4,
@@ -743,8 +750,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "S1",
         "leftMotorZpp": "S1",
-        "asiaImpairmentScale": "D"
-      }
+        "asiaImpairmentScale": "D",
+      },
     },
     {
       "id": 5,
@@ -919,8 +926,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "L2",
         "rightMotorZpp": "L2",
         "leftMotorZpp": "L3",
-        "asiaImpairmentScale": "B"
-      }
+        "asiaImpairmentScale": "B",
+      },
     },
     {
       "id": 6,
@@ -1095,8 +1102,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C6",
         "rightMotorZpp": "C7",
         "leftMotorZpp": "C7",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 7,
@@ -1271,8 +1278,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C5",
         "rightMotorZpp": "C6",
         "leftMotorZpp": "C6",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 8,
@@ -1447,8 +1454,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "L4",
         "rightMotorZpp": "T12",
         "leftMotorZpp": "L4",
-        "asiaImpairmentScale": "C"
-      }
+        "asiaImpairmentScale": "C",
+      },
     },
     {
       "id": 9,
@@ -1623,8 +1630,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "L4",
         "rightMotorZpp": "T12",
         "leftMotorZpp": "L2",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 10,
@@ -1799,8 +1806,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "C7",
         "leftMotorZpp": "C7",
-        "asiaImpairmentScale": "C"
-      }
+        "asiaImpairmentScale": "C",
+      },
     },
     {
       "id": 11,
@@ -1975,8 +1982,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "S1",
         "leftMotorZpp": "S1",
-        "asiaImpairmentScale": "D"
-      }
+        "asiaImpairmentScale": "D",
+      },
     },
     {
       "id": 12,
@@ -2151,8 +2158,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C6",
         "rightMotorZpp": "C7",
         "leftMotorZpp": "C7",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 13,
@@ -2327,8 +2334,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "C8",
         "leftMotorZpp": "C8,T1",
-        "asiaImpairmentScale": "B,C"
-      }
+        "asiaImpairmentScale": "B,C",
+      },
     },
     {
       "id": 14,
@@ -2503,8 +2510,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "S1",
         "leftMotorZpp": "S1",
-        "asiaImpairmentScale": "C,D"
-      }
+        "asiaImpairmentScale": "C,D",
+      },
     },
     {
       "id": 15,
@@ -2679,8 +2686,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "T6",
         "rightMotorZpp": "T6",
         "leftMotorZpp": "T6",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 16,
@@ -2855,8 +2862,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C5",
         "rightMotorZpp": "T1",
         "leftMotorZpp": "C8",
-        "asiaImpairmentScale": "B"
-      }
+        "asiaImpairmentScale": "B",
+      },
     },
     {
       "id": 17,
@@ -3031,8 +3038,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C7",
         "rightMotorZpp": "C7",
         "leftMotorZpp": "C8",
-        "asiaImpairmentScale": "C"
-      }
+        "asiaImpairmentScale": "C",
+      },
     },
     {
       "id": 18,
@@ -3207,8 +3214,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "",
         "leftMotorZpp": "",
-        "asiaImpairmentScale": "E"
-      }
+        "asiaImpairmentScale": "E",
+      },
     },
     {
       "id": 19,
@@ -3383,8 +3390,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C2",
         "rightMotorZpp": "C2",
         "leftMotorZpp": "C2",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 20,
@@ -3559,8 +3566,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C2",
         "rightMotorZpp": "T1",
         "leftMotorZpp": "C2",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 21,
@@ -3735,8 +3742,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "S1",
         "rightMotorZpp": "L5",
         "leftMotorZpp": "L5",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 22,
@@ -3911,8 +3918,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "S2",
         "rightMotorZpp": "L5",
         "leftMotorZpp": "L5",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 23,
@@ -4087,8 +4094,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "T2",
         "leftMotorZpp": "T5",
-        "asiaImpairmentScale": "C"
-      }
+        "asiaImpairmentScale": "C",
+      },
     },
     {
       "id": 24,
@@ -4263,8 +4270,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "S1",
         "leftMotorZpp": "S1",
-        "asiaImpairmentScale": "D"
-      }
+        "asiaImpairmentScale": "D",
+      },
     },
     {
       "id": 25,
@@ -4439,8 +4446,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "S1",
         "leftMotorZpp": "C4",
-        "asiaImpairmentScale": "C"
-      }
+        "asiaImpairmentScale": "C",
+      },
     },
     {
       "id": 26,
@@ -4615,8 +4622,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C8",
         "rightMotorZpp": "T1",
         "leftMotorZpp": "C4",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 27,
@@ -4791,8 +4798,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "S1",
         "leftMotorZpp": "S1",
-        "asiaImpairmentScale": "D"
-      }
+        "asiaImpairmentScale": "D",
+      },
     },
     {
       "id": 28,
@@ -4967,8 +4974,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "",
         "leftMotorZpp": "",
-        "asiaImpairmentScale": "E"
-      }
+        "asiaImpairmentScale": "E",
+      },
     },
     {
       "id": 29,
@@ -5143,8 +5150,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C5",
         "rightMotorZpp": "C4",
         "leftMotorZpp": "C4",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 30,
@@ -5319,8 +5326,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C3",
         "rightMotorZpp": "C2",
         "leftMotorZpp": "C1",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 31,
@@ -5495,8 +5502,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "L4",
         "rightMotorZpp": "T12",
         "leftMotorZpp": "S1",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 32,
@@ -5671,8 +5678,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C4",
         "rightMotorZpp": "C4",
         "leftMotorZpp": "C4",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 33,
@@ -5847,8 +5854,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C6,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
         "rightMotorZpp": "C6,L2,L3,L4,L5,S1",
         "leftMotorZpp": "C6,L2,L3,L4,L5,S1",
-        "asiaImpairmentScale": "B,C,D"
-      }
+        "asiaImpairmentScale": "B,C,D",
+      },
     },
     {
       "id": 34,
@@ -6023,8 +6030,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "T6",
         "rightMotorZpp": "T6",
         "leftMotorZpp": "C7,C8,T1,T6",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 35,
@@ -6199,8 +6206,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "S2,S3",
         "rightMotorZpp": "S1",
         "leftMotorZpp": "S1",
-        "asiaImpairmentScale": "A,D"
-      }
+        "asiaImpairmentScale": "A,D",
+      },
     },
     {
       "id": 36,
@@ -6375,8 +6382,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "C8,L5",
         "leftMotorZpp": "C7",
-        "asiaImpairmentScale": "B,C"
-      }
+        "asiaImpairmentScale": "B,C",
+      },
     },
     {
       "id": 37,
@@ -6551,8 +6558,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "S1",
         "leftMotorZpp": "S1",
-        "asiaImpairmentScale": "D"
-      }
+        "asiaImpairmentScale": "D",
+      },
     },
     {
       "id": 38,
@@ -6727,8 +6734,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "S1",
         "leftMotorZpp": "",
-        "asiaImpairmentScale": "D,E"
-      }
+        "asiaImpairmentScale": "D,E",
+      },
     },
     {
       "id": 39,
@@ -6903,8 +6910,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "S1",
         "leftMotorZpp": "",
-        "asiaImpairmentScale": "D,E"
-      }
+        "asiaImpairmentScale": "D,E",
+      },
     },
     {
       "id": 40,
@@ -7079,8 +7086,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C4",
         "rightMotorZpp": "C4,S1",
         "leftMotorZpp": "C4",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 41,
@@ -7255,8 +7262,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C4",
         "rightMotorZpp": "C4",
         "leftMotorZpp": "C4,S1",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 42,
@@ -7431,8 +7438,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C4",
         "rightMotorZpp": "C4",
         "leftMotorZpp": "C4",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 43,
@@ -7607,8 +7614,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C4,T1",
         "rightMotorZpp": "C4",
         "leftMotorZpp": "C4",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 44,
@@ -7783,8 +7790,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C4,T1",
         "rightMotorZpp": "C4",
         "leftMotorZpp": "C4",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 45,
@@ -7959,8 +7966,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C4",
         "rightMotorZpp": "C4,T1",
         "leftMotorZpp": "C4",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 46,
@@ -8135,8 +8142,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C4",
         "rightMotorZpp": "C4",
         "leftMotorZpp": "C4,T1",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 47,
@@ -8311,8 +8318,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "",
         "leftMotorZpp": "",
-        "asiaImpairmentScale": "E"
-      }
+        "asiaImpairmentScale": "E",
+      },
     },
     {
       "id": 48,
@@ -8487,8 +8494,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "C5,L2,L3,L4,L5,S1",
         "leftMotorZpp": "C5,L2,L3,L4,L5,S1",
-        "asiaImpairmentScale": "C,D"
-      }
+        "asiaImpairmentScale": "C,D",
+      },
     },
     {
       "id": 49,
@@ -8663,8 +8670,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "T12",
         "rightMotorZpp": "T10",
         "leftMotorZpp": "T10",
-        "asiaImpairmentScale": "A,B"
-      }
+        "asiaImpairmentScale": "A,B",
+      },
     },
     {
       "id": 50,
@@ -8839,8 +8846,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "T12",
         "rightMotorZpp": "T10",
         "leftMotorZpp": "T10",
-        "asiaImpairmentScale": "A,B,C"
-      }
+        "asiaImpairmentScale": "A,B,C",
+      },
     },
     {
       "id": 51,
@@ -9015,8 +9022,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "S3",
         "rightMotorZpp": "S3",
         "leftMotorZpp": "S3",
-        "asiaImpairmentScale": "A,B,D,E"
-      }
+        "asiaImpairmentScale": "A,B,D,E",
+      },
     },
     {
       "id": 52,
@@ -9191,8 +9198,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
         "rightMotorZpp": "C6,L2,L3,L4,L5,S1",
         "leftMotorZpp": "T1,L2,L3,L4,L5,S1",
-        "asiaImpairmentScale": "A,B,C,D"
-      }
+        "asiaImpairmentScale": "A,B,C,D",
+      },
     },
     {
       "id": 53,
@@ -9367,8 +9374,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
         "rightMotorZpp": "T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
         "leftMotorZpp": "T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
-        "asiaImpairmentScale": "B,C,D,E"
-      }
+        "asiaImpairmentScale": "B,C,D,E",
+      },
     },
     {
       "id": 54,
@@ -9543,8 +9550,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
         "leftMotorZpp": "C4,C5,C6,C7,C8,T1,L1,L2,L3,L4,L5,S1",
-        "asiaImpairmentScale": "B,C,D,E"
-      }
+        "asiaImpairmentScale": "B,C,D,E",
+      },
     },
     {
       "id": 55,
@@ -9719,8 +9726,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
         "rightMotorZpp": "T1",
         "leftMotorZpp": "T1",
-        "asiaImpairmentScale": "A,B,D"
-      }
+        "asiaImpairmentScale": "A,B,D",
+      },
     },
     {
       "id": 56,
@@ -9895,8 +9902,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "S3",
         "rightMotorZpp": "T12,L4,S1",
         "leftMotorZpp": "T12,L4,S1",
-        "asiaImpairmentScale": "B,C"
-      }
+        "asiaImpairmentScale": "B,C",
+      },
     },
     {
       "id": 57,
@@ -10071,8 +10078,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "T4",
         "rightMotorZpp": "T1",
         "leftMotorZpp": "T1",
-        "asiaImpairmentScale": "A,B"
-      }
+        "asiaImpairmentScale": "A,B",
+      },
     },
     {
       "id": 58,
@@ -10247,8 +10254,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
         "rightMotorZpp": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1",
         "leftMotorZpp": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1",
-        "asiaImpairmentScale": "B,C,D"
-      }
+        "asiaImpairmentScale": "B,C,D",
+      },
     },
     {
       "id": 59,
@@ -10423,8 +10430,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "L1,L2,L3,L4,L5,S1,S2,S3",
         "rightMotorZpp": "L3",
         "leftMotorZpp": "S1",
-        "asiaImpairmentScale": "C,D"
-      }
+        "asiaImpairmentScale": "C,D",
+      },
     },
     {
       "id": 60,
@@ -10599,8 +10606,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "L3,L4,L5,S1",
         "leftMotorZpp": "L3,L4,L5,S1",
-        "asiaImpairmentScale": "B,C,D"
-      }
+        "asiaImpairmentScale": "B,C,D",
+      },
     },
     {
       "id": 61,
@@ -10775,8 +10782,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C1,C2,C3,C4,C5,C6,C7,C8,T1,T2,T3,T4,T5,T6,T7,T8,T9,T10,T11,T12,L1,L2,L3,L4,L5,S1,S2,S3",
         "rightMotorZpp": "T1",
         "leftMotorZpp": "C8,T1",
-        "asiaImpairmentScale": "C"
-      }
+        "asiaImpairmentScale": "C",
+      },
     },
     {
       "id": 62,
@@ -10951,8 +10958,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "T4",
         "rightMotorZpp": "T1",
         "leftMotorZpp": "T1",
-        "asiaImpairmentScale": "A,B"
-      }
+        "asiaImpairmentScale": "A,B",
+      },
     },
     {
       "id": 63,
@@ -11127,8 +11134,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "",
         "leftMotorZpp": "",
-        "asiaImpairmentScale": "E"
-      }
+        "asiaImpairmentScale": "E",
+      },
     },
     {
       "id": 64,
@@ -11303,8 +11310,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C1",
         "rightMotorZpp": "C1",
         "leftMotorZpp": "C1",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 65,
@@ -11479,8 +11486,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "",
         "leftMotorZpp": "",
-        "asiaImpairmentScale": "E"
-      }
+        "asiaImpairmentScale": "E",
+      },
     },
     {
       "id": 66,
@@ -11655,8 +11662,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "T4",
         "leftMotorZpp": "C7",
-        "asiaImpairmentScale": "C"
-      }
+        "asiaImpairmentScale": "C",
+      },
     },
     {
       "id": 67,
@@ -11831,8 +11838,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "T12",
         "rightMotorZpp": "T12",
         "leftMotorZpp": "T11",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 68,
@@ -12007,8 +12014,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "L2",
         "leftMotorZpp": "L2",
-        "asiaImpairmentScale": "B"
-      }
+        "asiaImpairmentScale": "B",
+      },
     },
     {
       "id": 69,
@@ -12183,8 +12190,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C6",
         "rightMotorZpp": "C7",
         "leftMotorZpp": "C7",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 70,
@@ -12359,8 +12366,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "S1",
         "leftMotorZpp": "S1",
-        "asiaImpairmentScale": "C"
-      }
+        "asiaImpairmentScale": "C",
+      },
     },
     {
       "id": 71,
@@ -12535,8 +12542,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "T12",
         "rightMotorZpp": "L2",
         "leftMotorZpp": "L3",
-        "asiaImpairmentScale": "B"
-      }
+        "asiaImpairmentScale": "B",
+      },
     },
     {
       "id": 72,
@@ -12711,8 +12718,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "S1",
         "leftMotorZpp": "S1",
-        "asiaImpairmentScale": "D"
-      }
+        "asiaImpairmentScale": "D",
+      },
     },
     {
       "id": 73,
@@ -12887,8 +12894,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "L4",
         "rightMotorZpp": "T12",
         "leftMotorZpp": "L4",
-        "asiaImpairmentScale": "C"
-      }
+        "asiaImpairmentScale": "C",
+      },
     },
     {
       "id": 74,
@@ -13063,8 +13070,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "S1",
         "leftMotorZpp": "L3",
-        "asiaImpairmentScale": "D"
-      }
+        "asiaImpairmentScale": "D",
+      },
     },
     {
       "id": 75,
@@ -13239,8 +13246,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C7",
         "rightMotorZpp": "T1",
         "leftMotorZpp": "C7",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 76,
@@ -13415,8 +13422,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "",
         "leftMotorZpp": "",
-        "asiaImpairmentScale": "E"
-      }
+        "asiaImpairmentScale": "E",
+      },
     },
     {
       "id": 77,
@@ -13591,8 +13598,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "C4",
         "rightMotorZpp": "C8",
         "leftMotorZpp": "T5",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 78,
@@ -13767,8 +13774,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "T9",
         "rightMotorZpp": "T1",
         "leftMotorZpp": "L1",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 79,
@@ -13943,8 +13950,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "T9",
         "rightMotorZpp": "L1",
         "leftMotorZpp": "T1",
-        "asiaImpairmentScale": "A"
-      }
+        "asiaImpairmentScale": "A",
+      },
     },
     {
       "id": 80,
@@ -14119,8 +14126,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "",
         "leftMotorZpp": "",
-        "asiaImpairmentScale": "E"
-      }
+        "asiaImpairmentScale": "E",
+      },
     },
     {
       "id": 81,
@@ -14295,8 +14302,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "T1",
         "leftMotorZpp": "T1",
-        "asiaImpairmentScale": "B"
-      }
+        "asiaImpairmentScale": "B",
+      },
     },
     {
       "id": 82,
@@ -14471,8 +14478,8 @@ export let isncsciValidationTests = [
         "leftSensoryZpp": "",
         "rightMotorZpp": "S1",
         "leftMotorZpp": "S1",
-        "asiaImpairmentScale": "D"
-      }
-    }
+        "asiaImpairmentScale": "D",
+      },
+    },
   ];
 export default isncsciValidationTests;

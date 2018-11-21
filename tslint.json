@@ -1,0 +1,18 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+      "tslint:recommended"
+  ],
+  "rules": {
+      "no-any": { "severity": "warning" },
+      "quotemark": [
+          true,
+          "single",
+          "avoid-escape"
+      ],
+      "variable-name": [
+          true,
+          "ban-keywords"
+      ]
+  }
+}

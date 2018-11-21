@@ -1,41 +1,46 @@
-/*
-@license
-Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
-This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
-Author: RhiTech <tech@rickhanseninstitute.org>
-*/
+/**
+ * @license
+ * Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
+ *
+ * This code may only be used under the modified Apache license found at
+ * https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
+ *
+ * Author: RhiTech <tech@rickhanseninstitute.org>
+ */
 'use strict';
 
-import { iIsncsciAppStoreProvider } from '../boundaries.js';
+import { IIsncsciAppStoreProvider } from '../boundaries.js';
 import { Region } from '../domain.js';
 import { validateDermatomeNameAndValue } from './helpers.js';
 
 /**
-* 'SetDermatomeValueUseCase' contains the business logic to
-* set the value for the dermatome specified.
-* Steps:
-* 1. The clinician enters a new meassurement in the system.
-* 2. The system validates the entry.
-*    Valid sensory values: '', '0', '0!', '1', '1!', '2', 'NT', 'NT!', 'NT*'.
-*    Valid motor values: '', '0', '0!', '1', '1!', '2!', '3', '3!', '4', '4!', '5', '5*', 'NT', 'NT!', 'NT*'.
-* 3. If the value set does not imply impairment not due to SCI, the system picks the next dermatome to be selected.
-* 4. The system updates the application state with the new value and new dermatome selection.
-*/
+ * 'SetDermatomeValueUseCase' contains the business logic to
+ * set the value for the dermatome specified.
+ * Steps:
+ * 1. The clinician enters a new measurement in the system.
+ * 2. The system validates the entry.
+ *    Valid sensory values: '', '0', '0!', '1', '1!', '2', 'NT', 'NT!', 'NT*'.
+ *    Valid motor values: '', '0', '0!', '1', '1!', '2!', '3', '3!', '4', '4!', '5', '5*', 'NT', 'NT!', 'NT*'.
+ * 3. If the value set does not imply impairment not due to SCI, the system picks the next dermatome to be selected.
+ * 4. The system updates the application state with the new value and new dermatome selection.
+ */
 
 /**
- * 1. The clinician enters a new meassurement in the system.
+ * 1. The clinician enters a new measurement in the system.
  * @param {string} dermatomeName
  * @param {string} value
- * @param {string} region Body region currently being tested. Used to determine the next dermatome to be selected. Options: upper, lower.
- * @param {iIsncsciAppStoreProvider} appStoreProvider Allow's the system to update the application's state.
+ * @param {string} region Body region currently being tested. Used to determine the next dermatome to be selected.
+ *                        Options: upper, lower.
+ * @param {IIsncsciAppStoreProvider} appStoreProvider Allows the system to update the application's state.
  */
-export function setDermatomeValue(dermatomeName: string, value: string, region: Region, appStoreProvider: iIsncsciAppStoreProvider): void {
+export function setDermatomeValue(
+    dermatomeName: string, value: string, region: Region, appStoreProvider: IIsncsciAppStoreProvider): void {
     // 2. the system validates the entry.
     const validationMessage = validateDermatomeNameAndValue(dermatomeName, value);
 
     if (validationMessage) {
-        console.log(`${dermatomeName} :: ${value} :: ${validationMessage}`);
-        throw `SetDermatomeValueUseCase :: ${validationMessage}`;
+        // console.log(`${dermatomeName} :: ${value} :: ${validationMessage}`);
+        throw new Error(`SetDermatomeValueUseCase :: ${validationMessage}`);
     }
 
     // 3. If the value set does not imply impairment not due to SCI, the system picks the next dermatome to be selected.
@@ -49,7 +54,7 @@ export function setDermatomeValue(dermatomeName: string, value: string, region: 
 function getNextDermatomeName(currentDermatomeName: string, region: Region): string {
     const isMotor: boolean = /motor/i.test(currentDermatomeName);
     const levelRegion: string = currentDermatomeName.substring(0, 1).toLowerCase();
-    const levelPosition: number = parseInt(/[0-9]+/i.exec(currentDermatomeName)[0]);
+    const levelPosition: number = parseInt(/[0-9]+/i.exec(currentDermatomeName)![0], 10);
     const levelName: string = levelRegion + levelPosition;
     const suffix: string = currentDermatomeName.substring(levelName.length);
 
@@ -84,7 +89,6 @@ function getNextDermatomeName(currentDermatomeName: string, region: Region): str
     if (levelName === 's4') {
         return currentDermatomeName;
     }
-
 
     return `${levelRegion}${levelPosition + 1}${suffix}`;
 }

@@ -1,20 +1,18 @@
-/*
-@license
-Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
-This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
-Author: RhiTech <tech@rickhanseninstitute.org>
-*/
+/**
+ * @license
+ * Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
+ *
+ * This code may only be used under the modified Apache license found at
+ * https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
+ *
+ * Author: RhiTech <tech@rickhanseninstitute.org>
+ */
 'use strict';
 
-///<reference path="../../node_modules/@types/jasmine/index.d.ts"/>
-import { iIsncsciAppStoreProvider } from '../../src/boundaries';
+import { IIsncsciAppStoreProvider } from '../../src/boundaries';
 import { selectDermatome } from '../../src/usecases/selectDermatome.usecase';
 
 describe('Select dermatome use case', () => {
-    // The promise polyfill works in the spec files but not inside the actual app files.
-    // Double polyfill.
-    window['Promise'] = Promise;
-
     // beforeAll((done) => { });
     // beforeEach((done) => { done(); });
 
@@ -23,7 +21,7 @@ describe('Select dermatome use case', () => {
         let dermatomeSelected: string;
 
         //#region AppStoreProvider
-        const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['selectDermatome']);
+        const appStoreProvider = jasmine.createSpyObj('IIsncsciAppStoreProvider', ['selectDermatome']);
 
         appStoreProvider.selectDermatome.and.callFake(
             (dermatomeName: string) => {
@@ -31,8 +29,7 @@ describe('Select dermatome use case', () => {
                 runAsserts();
 
                 return Promise.resolve();
-            }
-        );
+        });
         //#endregion
 
         // Act
@@ -44,24 +41,16 @@ describe('Select dermatome use case', () => {
 
             expect(appStoreProvider.selectDermatome).toHaveBeenCalled();
             done();
-        };
+        }
     });
 
     it('throws an exception when attempting to select [c5RightMotormotor]', () => {
-        // Arrange
-        let errorMessage: string;
-
         //#region AppStoreProvider
-        const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['selectDermatome']);
+        const appStoreProvider = jasmine.createSpyObj('IIsncsciAppStoreProvider', ['selectDermatome']);
 
         // Act
-        try {
-            selectDermatome('c5RightMotormotor', appStoreProvider);
-        } catch (ex) {
-            errorMessage = ex;
-        }
-
+        expect(() => selectDermatome('c5RightMotormotor', appStoreProvider))
         // Assert
-        expect(errorMessage).toBe(`SelectDermatomeUseCase :: invalid-dermatome-name`);
+        .toThrow(new Error('SelectDermatomeUseCase :: invalid-dermatome-name'));
     });
 });

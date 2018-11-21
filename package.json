@@ -2,18 +2,19 @@
   "author": "RhiTech <tech@rickhanseninstitute.org>",
   "description": "TypeScript version of the ISNCSCI algorithm.",
   "devDependencies": {
-    "@types/jasmine": "^2.8.9",
+    "@types/jasmine": "^3.3.0",
     "cpx": "^1.5.0",
     "http-server": "^0.11.1",
-    "jasmine-core": "^3.2.1",
-    "karma": "^3.0.0",
+    "jasmine-core": "^3.3.0",
+    "karma": "^3.1.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.2",
-    "karma-jasmine": "^1.1.2",
+    "karma-jasmine": "^2.0.1",
     "karma-typescript": "^3.0.13",
-    "puppeteer": "^1.9.0",
+    "puppeteer": "^1.10.0",
     "rimraf": "^2.6.2",
-    "typescript": "^3.1.3"
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
   },
   "homepage": "https://github.com/rhi-isncsci/core",
   "license": "https://raw.githubusercontent.com/rhi-isncsci/core/master/LICENSE",
@@ -31,7 +32,8 @@
     "prepare:demo": "npm run build && npm link ./dist",
     "start:demo:node": "node ./demo/node/server",
     "start:demo:web": "http-server -p 8080 -o http://localhost:8080/demo/web/",
+    "tslint": "tslint -p tsconfig.karma.json",
     "test": "karma start"
   },
-  "version": "0.1.0"
+  "version": "0.2.0"
 }

@@ -1,33 +1,30 @@
-/*
-@license
-Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
-This code may only be used under the modified Apache license found at https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
-Author: RhiTech <tech@rickhanseninstitute.org>
-*/
-///<reference path="../../node_modules/@types/jasmine/index.d.ts"/>
-
+/**
+ * @license
+ * Copyright (c) 2015 Rick Hansen Institute. All rights reserved.
+ *
+ * This code may only be used under the modified Apache license found at
+ * https://raw.githubusercontent.com/rick-hansen-institute/rhi-core-isncsci-algorithm/master/LICENSE
+ *
+ * Author: RhiTech <tech@rickhanseninstitute.org>
+ */
 'use strict';
 
 import { IsncsciTotals } from '../../src/domain';
 import { calculateTotals } from '../../src/usecases/calculateTotals.usecase';
-import { iIsncsciExamModel } from '../../src/usecases/iIsncsciExamModel';
+import { IIsncsciExamModel } from '../../src/usecases/iIsncsciExamModel';
 import { isncsciValidationTests } from '../domain/isncsci-validation-tests';
 
 describe('Calculate totals usecase', () => {
-    // The promise polyfill works in the spec files but not inside the actual app files.
-    // Double polyfill.
-    window['Promise'] = Promise;
-
     // beforeAll((done) => { });
     // beforeEach((done) => { done(); });
 
     it('updates the application state with the totals generated from a valid exam', (done) => {
         // Arrange
         let isncsciTotals: IsncsciTotals;
-        const isncsciExamModel: iIsncsciExamModel = Object.assign({}, isncsciValidationTests[0]);
+        const isncsciExamModel: IIsncsciExamModel = Object.assign({}, isncsciValidationTests[0]);
 
         //#region AppStoreProvider
-        const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['setTotals']);
+        const appStoreProvider = jasmine.createSpyObj('IIsncsciAppStoreProvider', ['setTotals']);
 
         appStoreProvider.setTotals.and.callFake(
             (totals: IsncsciTotals) => {
@@ -35,8 +32,7 @@ describe('Calculate totals usecase', () => {
                 runAsserts();
 
                 return Promise.resolve();
-            }
-        );
+        });
         //#endregion
 
         // Act
@@ -44,32 +40,22 @@ describe('Calculate totals usecase', () => {
 
         // Assert
         function runAsserts() {
-            _compare(isncsciExamModel['totals'], isncsciTotals);
+            _compare(isncsciExamModel.totals, isncsciTotals);
             done();
-        };
+        }
     });
 
     it('throws an exception when l3RightMotor is missing from the data model', (done) => {
         // Arrange
-        let errorMessage: string;
-        const isncsciExamModel: iIsncsciExamModel = Object.assign({}, isncsciValidationTests[0]);
-        const appStoreProvider = jasmine.createSpyObj('iIsncsciAppStoreProvider', ['setTotals']);
+        const isncsciExamModel: IIsncsciExamModel = Object.assign({}, isncsciValidationTests[0]);
+        const appStoreProvider = jasmine.createSpyObj('IIsncsciAppStoreProvider', ['setTotals']);
 
         // Act
-        delete isncsciExamModel['l3RightMotor'];
+        delete isncsciExamModel.l3RightMotor;
 
-        try {
-            calculateTotals(isncsciExamModel, appStoreProvider)
-        } catch (ex) {
-            errorMessage = ex;
-            runAsserts();
-        }
-
-        // Assert
-        function runAsserts() {
-            expect(errorMessage).toBe('invalid-motor-value[l3RightMotor]');
-            done();
-        };
+        expect(() => calculateTotals(isncsciExamModel, appStoreProvider))
+        .toThrow(new Error('invalid-motor-value[l3RightMotor]'));
+        done();
     });
 
     function _compare(expectedTotals: any, totals: IsncsciTotals) {
