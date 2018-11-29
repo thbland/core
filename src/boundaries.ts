@@ -15,3 +15,4 @@
  */
 
 export { IIsncsciAppStoreProvider } from './boundaries/iIsncsciAppStore.provider.js';
+export { IIsncsciAppSettingProvider } from './boundaries/iIsncsciSetting.provider.js';

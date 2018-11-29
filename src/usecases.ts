@@ -27,4 +27,5 @@ export {
 } from './usecases/regularExpressions.js';
 export { selectDermatome } from './usecases/selectDermatome.usecase.js';
 export { setDermatomeValue } from './usecases/setDermatomeValue.usecase.js';
+export { updatePropagateValue } from './usecases/updatePropagateValue.usecase.js';
 export { updateDermatomesInRange } from './usecases/updateDermatomesInRange.usecase.js';

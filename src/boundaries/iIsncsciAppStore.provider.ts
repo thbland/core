@@ -13,8 +13,10 @@ import { IsncsciTotals } from '../domain.js';
 
 export interface IIsncsciAppStoreProvider {
     clearDermatomeSelection(): Promise<void>;
+    logError(errorMessage: string): Promise<void>;
     selectDermatome(dermatomeName: string): Promise<void>;
     setDermatomeValue(dermatomeName: string, value: string, nextDermatomeName: string): Promise<void>;
     setTotals(totals: IsncsciTotals): Promise<void>;
     updateDermatomesInRange(dermatomeNames: string[], value: string): Promise<void>;
+    updatePropagateValue(value: boolean): Promise<void>;
 }
