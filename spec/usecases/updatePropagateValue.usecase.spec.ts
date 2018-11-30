@@ -53,15 +53,14 @@ describe('Update propagate value usecase ::', () => {
             expect(storeUpdatePropagateValueFlag).toBe(true);
             expect(appStoreProvider.updatePropagateValue).toHaveBeenCalled();
             expect(appStoreProvider.logError).not.toHaveBeenCalled();
-            expect(appStoreProvider.updatePropagateValue).not.toThrowError();
             expect(appSettingProvider.updatePropagateValue).toHaveBeenCalled();
-            expect(appSettingProvider.updatePropagateValue).not.toThrowError();
             done();
         }
     });
 
     it('logs an error when the appStoreProvider fails to update the "propagate value" flag', (done) => {
         // Arrange
+        let settingsUpdatePropagateValueFlag: boolean = false;
         let storeErrorMessage: string;
 
         //#region AppStoreProvider
@@ -85,8 +84,12 @@ describe('Update propagate value usecase ::', () => {
 
         //#region AppSettingProvider
         const appSettingProvider = jasmine.createSpyObj('IIsncsciAppSettingProvider', ['updatePropagateValue']);
-        appSettingProvider.updatePropagateValue.and
-            .callFake((value: boolean): Promise<void> => Promise.resolve());
+
+        const settingsPromise: Promise<void> = appSettingProvider.updatePropagateValue.and
+            .callFake((value: boolean) => {
+                settingsUpdatePropagateValueFlag = value;
+                return Promise.resolve();
+            });
         //#endregion
 
         // Act
@@ -96,8 +99,10 @@ describe('Update propagate value usecase ::', () => {
         function runAsserts() {
             expect(storeErrorMessage)
                 .toBe('updatePropagateValueUseCase :: update app store failed');
+            expect(settingsUpdatePropagateValueFlag).toBe(true);
             expect(appStoreProvider.updatePropagateValue).toHaveBeenCalled();
-            expect(appSettingProvider.updatePropagateValue).not.toHaveBeenCalled();
+            expect(appStoreProvider.logError).toHaveBeenCalled();
+            expect(appSettingProvider.updatePropagateValue).toHaveBeenCalled();
             done();
         }
     });
@@ -137,7 +142,8 @@ describe('Update propagate value usecase ::', () => {
         function runAsserts() {
             expect(settingsErrorMessage)
                 .toBe('updatePropagateValueUseCase :: update app settings failed');
-            expect(appStoreProvider.updatePropagateValue).toHaveBeenCalled();
+            expect(appStoreProvider.updatePropagateValue).not.toHaveBeenCalled();
+            expect(appStoreProvider.logError).toHaveBeenCalled();
             expect(appSettingProvider.updatePropagateValue).toHaveBeenCalled();
             done();
         }

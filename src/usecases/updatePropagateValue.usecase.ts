@@ -16,8 +16,8 @@ import { IIsncsciAppSettingProvider, IIsncsciAppStoreProvider } from '../boundar
  * change the ‘propagateValue’ flag.
  * Steps:
  * 1. The clinician switches the ‘propagate values down’ control.
- * 2. The system updates the application state with the new value.
- * 3. The system updates the application settings so that the change gets picked on application re-start.
+ * 2. The system updates the application settings so that the change gets picked on application re-start.
+ * 3. The system updates the application state with the new value.
  */
 
 /**
@@ -28,10 +28,10 @@ import { IIsncsciAppSettingProvider, IIsncsciAppStoreProvider } from '../boundar
  */
 export function updatePropagateValue(
     value: boolean, appStoreProvider: IIsncsciAppStoreProvider, appSettingProvider: IIsncsciAppSettingProvider): void {
-    // 2. The system updates the application state with the new value.
-    appStoreProvider.updatePropagateValue(value)
-    // 3. The system updates the application settings so that the change gets picked on application re-start.
-    .then(() => appSettingProvider.updatePropagateValue(value))
+    // 2. The system updates the application settings so that the change gets picked on application re-start.
+    appSettingProvider.updatePropagateValue(value)
+    // 3. The system updates the application state with the new value.
+    .then(() => appStoreProvider.updatePropagateValue(value))
     .catch((error: Error) => {
         // Handle the error, if necessary
         appStoreProvider.logError(`updatePropagateValueUseCase :: ${error.message}`);
