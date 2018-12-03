@@ -26,6 +26,9 @@ export {
     validSensoryValueRegExp,
 } from './usecases/regularExpressions.js';
 export { selectDermatome } from './usecases/selectDermatome.usecase.js';
+export { setDapValue } from './usecases/setDapValue.usecase.js';
 export { setDermatomeValue } from './usecases/setDermatomeValue.usecase.js';
+export { setGeneralComments } from './usecases/setGeneralComments.usecase.js';
+export { setVacValue } from './usecases/setVacValue.usecase.js';
 export { updatePropagateValue } from './usecases/updatePropagateValue.usecase.js';
 export { updateDermatomesInRange } from './usecases/updateDermatomesInRange.usecase.js';
