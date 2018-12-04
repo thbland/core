@@ -16,6 +16,8 @@ import {
     validSensoryValueRegExp,
 } from './regularExpressions.js';
 
+import { BinaryObservation } from '../domain/binaryObservation.js';
+
 /**
  * Checks that the dermatomeName is valid.
  * @param {string} dermatomeName
@@ -59,4 +61,17 @@ export function validateDermatomeNameAndValue(dermatomeName: string, value: stri
     // We reach this point when both, sensory and motor names, are invalid.
     // We return that as the error.
     return 'invalid-dermatome-name';
+}
+
+/**
+ * Checks that the dap or vac value is valid.
+ * @param {string} value
+ * @returns {string} An empty string when the value is valid,
+ *                   or 'invalid-value' when the value is invalid.
+ */
+export function validateBinaryObservation(value: string): string {
+    // 'none', 'yes', 'no', 'nt'
+    // console.log(Object.getOwnPropertyNames(BinaryObservation));
+    // ['length', 'prototype', 'is', 'none', 'yes', 'no', 'nt', 'name']
+    return Object.getOwnPropertyNames(BinaryObservation).indexOf(value) === -1 ? 'invalid-value' : '';
 }
