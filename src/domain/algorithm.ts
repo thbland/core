@@ -139,6 +139,28 @@ export class Algorithm {
     }
 
     /**
+     * Returns the results produced by the ISNCSCI Algorithm in a raw values format from an incomplete exam.
+     *
+     * @param {IsncsciExam} isncsciExam Neurology form that has been populated with
+     *                                  the values to be used in the algorithm calculations.
+     * @returns {IsncsciTotals} Totals in raw values format.
+     * The results contain limited lists with motor and sensory totals from an incomplete exam.
+     */
+    public static getPartialTotalsFor(isncsciExam: IsncsciExam): IsncsciTotals {
+        if (!isncsciExam) {
+            throw new Error(`${Algorithm.is} : getPartialTotalsFor :
+                            Missing the expected argument isncsciExam:IsncsciExam`);
+        }
+
+        const totals: IsncsciTotals = new IsncsciTotals();
+        const c2: NeuroLevel = isncsciExam.getLevelWithName('C2');
+
+        Algorithm.updateTotalsWithLevelAt(isncsciExam, totals, c2, false, false);
+
+        return totals;
+    }
+
+    /**
      * Recursive method which iterates through the values in a neurology form
      * while it updates the totals generating the results produced by the algorithm.
      *

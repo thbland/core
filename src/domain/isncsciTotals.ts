@@ -825,4 +825,16 @@ export class IsncsciTotals {
                         || this.leftUpperMotorTotalHasImpairmentNotDueToSci,
                     this.rightUpperMotorContainsNt || this.leftUpperMotorContainsNt);
     }
+
+    /**
+     *  Determine whether the injury is Complete or Incomplete
+     *
+     * @returns {string} Complete or Incomplete injury based on ais values
+     * If injury Complete then AIS = A
+     * else injury is Incomplete
+     */
+    public getCompleteOrIncomplete(): string {
+        return this.asiaImpairmentScaleValues.indexOf('A') === -1 ? 'I'
+            : this.asiaImpairmentScaleValues.length === 1 ? 'C' : 'C,I';
+    }
 }

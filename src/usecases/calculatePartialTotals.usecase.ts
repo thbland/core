@@ -10,16 +10,16 @@
 'use strict';
 
 import { IIsncsciAppStoreProvider } from '../boundaries.js';
-import { Algorithm, BinaryObservation, IsncsciExam, IsncsciTotals } from '../domain.js';
+import { Algorithm, IsncsciExam, IsncsciTotals } from '../domain.js';
+import { getBinaryObservationFor } from './calculateTotals.usecase.js';
 import { IIsncsciExamModel } from './iIsncsciExamModel.js';
-import { motorLevelNameRegExp, validMotorValueRegExp, validSensoryValueRegExp } from './regularExpressions.js';
 
 /**
- * 'CalculateTotalsUseCase' contains the business logic to
- * generate the totals for a valid exam.
+ * 'CalculatePartialTotalsUseCase' contains the business logic to
+ * generate the totals for a partially valid exam.
  * Steps:
- * 1. The clinician provides the values required for a full exam.
- * 2. the system validates the exam.
+ * 1. The clinician provides the partial values required for a exam.
+ * 2. the system get the partial exam.
  * 3. The system runs the exam through the algorithm.
  * 4. The system updates the application state with the generated totals.
  */
@@ -28,13 +28,13 @@ import { motorLevelNameRegExp, validMotorValueRegExp, validSensoryValueRegExp } 
  * 1. The clinician provides the values required for a full exam.
  * @param {IIsncsciAppStoreProvider} appStoreProvider Allows the system to update the application's state.
  */
-export function calculateTotals(examModel: IIsncsciExamModel, appStoreProvider: IIsncsciAppStoreProvider): void {
-    // 2. the system validates the exam.
+export function calculatePartialTotals(examModel: IIsncsciExamModel, appStoreProvider: IIsncsciAppStoreProvider): void {
+    // 2. the system get the partial exam.
     const isncsciExam: IsncsciExam = getIsncsciExamFrom(examModel);
     // 3. The system runs the exam through the algorithm.
-    const isncsciTotals: IsncsciTotals = Algorithm.getTotalsFor(isncsciExam);
+    const isncsciPartialTotals: IsncsciTotals = Algorithm.getPartialTotalsFor(isncsciExam);
     // 4. The system updates the application state with the generated totals.
-    appStoreProvider.setTotals(isncsciTotals);
+    appStoreProvider.setPartialTotals(isncsciPartialTotals);
 }
 
 /**
@@ -54,14 +54,6 @@ function getIsncsciExamFrom(examData: IIsncsciExamModel): IsncsciExam {
 
     isncsciExam.analContraction = getBinaryObservationFor(examData.analContraction);
     isncsciExam.analSensation = getBinaryObservationFor(examData.analSensation);
-
-    if (isncsciExam.analContraction === BinaryObservation.none) {
-        throw new Error(`invalid-anal-contraction-value[none]`);
-    }
-
-    if (isncsciExam.analSensation === BinaryObservation.none) {
-        throw new Error(`invalid-anal-sensation-value[none]`);
-    }
 
     if (examData.rightLowestNonKeyMuscleWithMotorFunction
         && examData.rightLowestNonKeyMuscleWithMotorFunction.length > 1) {
@@ -88,8 +80,9 @@ function getIsncsciExamFrom(examData: IIsncsciExamModel): IsncsciExam {
 
 /**
  * Updates an IsncsciExam level using the data and level name provided.
- * More importantly, it makes sure that the data provided is complete and that the values are valid.
- * Throws an exception if it finds a missing field of a value is not valid.
+ * Contrary from the calculateTotals.usecase it does not check that
+ * the data provided is complete and that the values are valid.
+ * This enables to calculate partial totals without validation.
  * @param {string} levelName
  * @param {IsncsciExam} isncsciExam
  * @param {IIsncsciExamModel} examData Raw data values to be associated to the IsncsciExam instance.
@@ -101,31 +94,6 @@ function updateLevelByName(levelName: string, isncsciExam: IsncsciExam, examData
     const leftPrickValue: string = examData[`${levelName}LeftPrick`];
     const rightMotorValue: string = examData[`${levelName}RightMotor`];
     const leftMotorValue: string = examData[`${levelName}LeftMotor`];
-    const isMotorLevel: boolean = motorLevelNameRegExp.test(levelName);
-
-    if (!validSensoryValueRegExp.test(rightTouchValue)) {
-        throw new Error(`invalid-sensory-value[${levelName}RightTouch]`);
-    }
-
-    if (!validSensoryValueRegExp.test(leftTouchValue)) {
-        throw new Error(`invalid-sensory-value[${levelName}LeftTouch]`);
-    }
-
-    if (!validSensoryValueRegExp.test(rightPrickValue)) {
-        throw new Error(`invalid-sensory-value[${levelName}RightPrick]`);
-    }
-
-    if (!validSensoryValueRegExp.test(leftPrickValue)) {
-        throw new Error(`invalid-sensory-value[${levelName}LeftPrick]`);
-    }
-
-    if (isMotorLevel && !validMotorValueRegExp.test(rightMotorValue)) {
-        throw new Error(`invalid-motor-value[${levelName}RightMotor]`);
-    }
-
-    if (isMotorLevel && !validMotorValueRegExp.test(leftMotorValue)) {
-        throw new Error(`invalid-motor-value[${levelName}LeftMotor]`);
-    }
 
     isncsciExam.updateLevelByName(
         levelName,
@@ -136,23 +104,4 @@ function updateLevelByName(levelName: string, isncsciExam: IsncsciExam, examData
         rightMotorValue,
         leftMotorValue,
     );
-}
-
-/**
- * Returns a BinaryObservation option that matches the specified string value;
- * @param {string} value The string value to be matched to a BinaryObservation option.
- * @returns {BinaryObservation} BinaryObservation value that matches the string specified.
- */
-export function getBinaryObservationFor(value: string): BinaryObservation {
-    const valueToLower = value ? value.toLowerCase() : 'none';
-    switch (valueToLower) {
-        case 'yes':
-            return BinaryObservation.yes;
-        case 'no':
-            return BinaryObservation.no;
-        case 'nt':
-            return BinaryObservation.nt;
-        default:
-            return BinaryObservation.none;
-    }
 }
