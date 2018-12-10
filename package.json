@@ -35,5 +35,5 @@
     "tslint": "tslint -p tsconfig.karma.json",
     "test": "karma start"
   },
-  "version": "0.3.0"
+  "version": "0.3.1"
 }
