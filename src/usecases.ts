@@ -14,6 +14,7 @@
  * @description Collection of use cases that implement the business logic used in the ISNCSCI apps.
  */
 
+export { calculatePartialTotals } from './usecases/calculatePartialTotals.usecase.js';
 export { calculateTotals } from './usecases/calculateTotals.usecase.js';
 export { clearDermatomeSelection } from './usecases/clearDermatomeSelection.usecase.js';
 export { validateDermatomeName, validateDermatomeNameAndValue } from './usecases/helpers.js';

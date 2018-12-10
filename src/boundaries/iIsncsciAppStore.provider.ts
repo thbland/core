@@ -18,6 +18,7 @@ export interface IIsncsciAppStoreProvider {
     setDapValue(value: string): Promise<void>;
     setDermatomeValue(dermatomeName: string, value: string, nextDermatomeName: string): Promise<void>;
     setGeneralComments(value: string): Promise<void>;
+    setPartialTotals(partialTotals: IsncsciTotals): Promise<void>;
     setTotals(totals: IsncsciTotals): Promise<void>;
     setVacValue(value: string): Promise<void>;
     updateDermatomesInRange(dermatomeNames: string[], value: string): Promise<void>;
