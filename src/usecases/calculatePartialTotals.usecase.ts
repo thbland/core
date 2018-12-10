@@ -13,6 +13,7 @@ import { IIsncsciAppStoreProvider } from '../boundaries.js';
 import { Algorithm, IsncsciExam, IsncsciTotals } from '../domain.js';
 import { getBinaryObservationFor } from './calculateTotals.usecase.js';
 import { IIsncsciExamModel } from './iIsncsciExamModel.js';
+import { validMotorValueRegExp, validSensoryValueRegExp } from './regularExpressions.js';
 
 /**
  * 'CalculatePartialTotalsUseCase' contains the business logic to
@@ -88,12 +89,36 @@ function getIsncsciExamFrom(examData: IIsncsciExamModel): IsncsciExam {
  * @param {IIsncsciExamModel} examData Raw data values to be associated to the IsncsciExam instance.
  */
 function updateLevelByName(levelName: string, isncsciExam: IsncsciExam, examData: IIsncsciExamModel): void {
-    const rightTouchValue: string = examData[`${levelName}RightTouch`];
-    const leftTouchValue: string = examData[`${levelName}LeftTouch`];
-    const rightPrickValue: string = examData[`${levelName}RightPrick`];
-    const leftPrickValue: string = examData[`${levelName}LeftPrick`];
-    const rightMotorValue: string = examData[`${levelName}RightMotor`];
-    const leftMotorValue: string = examData[`${levelName}LeftMotor`];
+    let rightTouchValue: string = examData[`${levelName}RightTouch`];
+    let leftTouchValue: string = examData[`${levelName}LeftTouch`];
+    let rightPrickValue: string = examData[`${levelName}RightPrick`];
+    let leftPrickValue: string = examData[`${levelName}LeftPrick`];
+    let rightMotorValue: string = examData[`${levelName}RightMotor`];
+    let leftMotorValue: string = examData[`${levelName}LeftMotor`];
+
+    if (!validSensoryValueRegExp.test(rightTouchValue)) {
+        rightTouchValue = '';
+    }
+
+    if (!validSensoryValueRegExp.test(leftTouchValue)) {
+        leftTouchValue = '';
+    }
+
+    if (!validSensoryValueRegExp.test(rightPrickValue)) {
+        rightPrickValue = '';
+    }
+
+    if (!validSensoryValueRegExp.test(leftPrickValue)) {
+        leftPrickValue = '';
+    }
+
+    if (!validMotorValueRegExp.test(rightMotorValue)) {
+        rightMotorValue = '';
+    }
+
+    if (!validMotorValueRegExp.test(leftMotorValue)) {
+        leftMotorValue = '';
+    }
 
     isncsciExam.updateLevelByName(
         levelName,

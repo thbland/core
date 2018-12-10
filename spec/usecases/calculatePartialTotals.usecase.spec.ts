@@ -55,13 +55,12 @@ describe('Calculate partial totals usecase', () => {
     it('do not throws an exception when l3RightMotor is missing from the data model', (done) => {
         // Arrange
         const isncsciExamModel: IIsncsciExamModel = Object.assign({}, isncsciValidationTests[0]);
-        const appStoreProvider = jasmine.createSpyObj('IIsncsciAppStoreProvider', ['setTotals']);
+        const appStoreProvider = jasmine.createSpyObj('IIsncsciAppStoreProvider', ['setPartialTotals']);
 
         // Act
         delete isncsciExamModel.l3RightMotor;
 
-        expect(() => calculatePartialTotals(isncsciExamModel, appStoreProvider))
-        .not.toThrow(new Error('invalid-motor-value[l3RightMotor]'));
+        expect(() => calculatePartialTotals(isncsciExamModel, appStoreProvider)).not.toThrowError();
         done();
     });
 
