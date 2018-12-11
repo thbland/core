@@ -17,6 +17,7 @@
 export { calculatePartialTotals } from './usecases/calculatePartialTotals.usecase.js';
 export { calculateTotals } from './usecases/calculateTotals.usecase.js';
 export { clearDermatomeSelection } from './usecases/clearDermatomeSelection.usecase.js';
+export { clearValues } from './usecases/clearValues.usecase.js';
 export { validateDermatomeName, validateDermatomeNameAndValue } from './usecases/helpers.js';
 export { IIsncsciExamModel } from './usecases/iIsncsciExamModel.js';
 export {
